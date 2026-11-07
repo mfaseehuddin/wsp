@@ -8,8 +8,11 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "huggingface-hub>=2.4.0",
     "numpy>=2.5.4",
+    "safetensors>=0.8.0",
     "torch>=2.15.0",
+    "transformers>=5.22.2",
 ]
 
 [project.scripts]
@@ -19,6 +22,7 @@ wsp-support = "wsp.support.harness:main"
 wsp-bot = "wsp.bot.harness:main"
 wsp-gen = "wsp.gen.harness:main"
 wsp-x = "wsp.stage_x.lab:main"
+wsp-llm = "wsp.llm.harness:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]

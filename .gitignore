@@ -18,3 +18,9 @@ build/
 experiments/stage_x/frozen/*/weights.npz
 # downloaded pretrained models
 models/
+
+# llm experiment: built checkpoints and activation dumps
+experiments/llm/agents/*/build/
+experiments/llm/agents/*/reads/
+experiments/llm/.cache/
+experiments/llm/.model.lock
