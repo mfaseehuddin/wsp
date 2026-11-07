@@ -21,6 +21,8 @@ from pathlib import Path
 
 import torch
 
+from wsp import progress
+
 from . import data, model
 from . import tokenizer as T
 
@@ -105,7 +107,9 @@ def _kind(ex: dict) -> str:
 
 def run_set(cfg, P, exs: list[dict]) -> list[dict]:
     res = []
-    for ex in exs:
+    for j, ex in enumerate(exs):
+        if j % 50 == 0:
+            progress.say(f"{j}/{len(exs)} examples, exact so far {sum(r['ok'] for r in res)}/{len(res)}")
         got, _ = reply_tokens(cfg, P, ex["query"])
         want = T.encode(ex["reply"])
         core = T.encode(data.REPLIES[ex["intent"]])
@@ -212,6 +216,8 @@ def main(argv: list[str] | None = None) -> None:
         for flag, typ, default in args:
             s.add_argument(flag, type=typ, default=default, required=default is None)
     a = ap.parse_args(argv)
+    if a.cmd in ("eval", "probe", "test"):
+        progress.say(f"log: {progress.start(ROOT, a.cmd, getattr(a, 'agent', None))}")
     try:
         if a.cmd == "spec":
             ix = T.index()
@@ -253,4 +259,5 @@ def main(argv: list[str] | None = None) -> None:
             return
     except (BudgetExceeded, FileNotFoundError, AssertionError) as e:
         out = {"error": str(e)}
+    progress.say("done: " + json.dumps(out)[:300])
     print(json.dumps(out, indent=1))

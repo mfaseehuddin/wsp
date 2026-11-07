@@ -22,6 +22,8 @@ from pathlib import Path
 
 import torch
 
+from wsp import progress
+
 from . import model
 
 REPO = Path(__file__).resolve().parents[3]
@@ -151,7 +153,9 @@ def check_turn(reply: str, rule: dict) -> bool | None:
 
 def run_cases(cfg, P, cases: list[dict]) -> list[dict]:
     res = []
-    for case in cases:
+    for j, case in enumerate(cases):
+        done = [t["mechanical"] for r in res for t in r["turns"] if t["mechanical"] is not None]
+        progress.say(f"case {j + 1}/{len(cases)} {case['id']} ({len(case['turns'])} turns); mechanical so far {sum(done)}/{len(done)}")
         ch, turns = Chat(cfg, P), []
         for t in case["turns"]:
             got = ch.turn(t["user"])["reply"]
@@ -274,6 +278,8 @@ def main(argv=None):
         for flag, typ, default in args:
             s.add_argument(flag, type=typ, default=default, required=default is None)
     a = ap.parse_args(argv)
+    if a.cmd in ("eval", "probe", "test", "chat"):
+        progress.say(f"log: {progress.start(ROOT, a.cmd, getattr(a, 'agent', None))}")
     turns = lambda s: json.loads(Path(s).read_text()) if Path(s).exists() else [s]
     try:
         if a.cmd == "spec":
@@ -313,4 +319,5 @@ def main(argv=None):
             return
     except (BudgetExceeded, FileNotFoundError, AssertionError) as e:
         out = {"error": str(e)}
+    progress.say("done: " + json.dumps(out)[:300])
     print(json.dumps(out, indent=1))

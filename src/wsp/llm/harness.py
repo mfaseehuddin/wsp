@@ -29,6 +29,8 @@ from pathlib import Path
 import numpy as np
 import torch
 
+from wsp import progress
+
 from . import data
 
 REPO = Path(__file__).resolve().parents[3]
@@ -87,11 +89,25 @@ def token_status(agent: str) -> dict:
 def _model_lock():
     """One model in RAM at a time (8 GB machine, several agents)."""
     ROOT.mkdir(parents=True, exist_ok=True)
-    with open(ROOT / ".model.lock", "w") as f:
-        fcntl.flock(f, fcntl.LOCK_EX)
+    holder = ROOT / ".model.lock.holder"
+    with open(ROOT / ".model.lock", "a") as f:
+        waited = 0
+        while True:
+            try:
+                fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except BlockingIOError:
+                if waited % 30 == 0:
+                    who = holder.read_text().strip() if holder.exists() else "unknown"
+                    progress.say(f"waiting for model lock ({waited}s) held by: {who}")
+                time.sleep(5)
+                waited += 5
+        holder.write_text(f"pid {os.getpid()}: wsp-llm {' '.join(sys.argv[1:])} (since {time.strftime('%H:%M:%S')})")
+        progress.say("model lock acquired")
         try:
             yield
         finally:
+            holder.unlink(missing_ok=True)
             fcntl.flock(f, fcntl.LOCK_UN)
 
 
@@ -207,9 +223,11 @@ def cmd_build(agent: str) -> dict:
 def _generate(m, tok, prompts: list[str], max_new: int, bs: int = 64) -> list[str]:
     outs = []
     for i in range(0, len(prompts), bs):
+        t0 = time.time()
         enc = tok(prompts[i : i + bs], return_tensors="pt", padding=True)
         g = m.generate(**enc, max_new_tokens=max_new, do_sample=False, pad_token_id=tok.eos_token_id)
         outs += tok.batch_decode(g[:, enc.input_ids.shape[1] :], skip_special_tokens=True)
+        progress.say(f"generate: {len(outs)}/{len(prompts)} prompts done ({time.time() - t0:.1f}s for this batch)")
     return outs
 
 
@@ -227,6 +245,7 @@ def run_arith(m, tok, items: list[dict]) -> list[dict]:
     want = [data.answer(it["op"], it["a"], it["b"]) for it in items]
     max_new = max(len(w) for w in want) + 2
     got = [_parse(t) for t in _generate(m, tok, prompts, max_new)]
+    progress.say(f"arith: {sum(g == w for g, w in zip(got, want))}/{len(want)} exact")
     return [{**it, "want": w, "got": g, "ok": g == w} for it, w, g in zip(items, want, got)]
 
 
@@ -330,7 +349,9 @@ def cmd_read(agent, base, texts: list[str], layers, mlp_layers, attn_layers, nam
 
 def _guard_stats(m, tok, texts: list[str]) -> dict:
     nll, top1 = [], []
-    for t in texts:  # one text at a time: full-vocab logits are large
+    for j, t in enumerate(texts):  # one text at a time: full-vocab logits are large
+        if j % 5 == 0:
+            progress.say(f"guard: text {j}/{len(texts)}")
         ids = tok(t, return_tensors="pt", truncation=True, max_length=512).input_ids
         lp = torch.log_softmax(m(input_ids=ids).logits[0, :-1], -1)
         nll += (-lp.gather(-1, ids[0, 1:, None])[:, 0]).tolist()
@@ -347,6 +368,7 @@ def guard(m_path: Path, split: str) -> dict:
     cache = ROOT / ".cache" / f"guard_base_{split}_{key}.json"  # keyed by the exact texts
     with _model_lock():
         if not cache.exists():
+            progress.say(f"guard: computing base-model reference for split={split} (cached afterwards)")
             cache.parent.mkdir(exist_ok=True)
             cache.write_text(json.dumps(_guard_stats(load(BASE), tok, texts)))
         b = json.loads(cache.read_text())
@@ -366,8 +388,10 @@ def cmd_test(agent: str, out_path: str | None) -> dict:
             items += [{"op": "add", "a": a, "b": b, "fmt": fmt, "d": f"{d1}x{d2}"} for a, b in data.problems("add", d1, d2, 10, 9001)]
     tok = tokenizer()
     p = BASE if agent == "base" else adir(agent) / "build"
+    progress.say(f"test: phase 1/2 = {len(items)} hidden addition problems")
     with _model_lock():
         res = run_arith(load(p), tok, items)
+    progress.say(f"test: phase 1 done, add_acc={_summ(res)['acc']}; phase 2/2 = hidden guard")
     by = lambda key: {k: _summ([r for r in res if r[key] == k])["acc"] for k in dict.fromkeys(r[key] for r in res)}
     out = {"agent": agent, "add_acc": _summ(res)["acc"], "n": len(res), "by_format": by("fmt"), "by_digits": by("d"),
            "guard_hidden": guard(p, "hidden")}
@@ -413,6 +437,8 @@ def main(argv: list[str] | None = None) -> None:
     p("init", A, ("--budget", int, None), ("--tokens", int, None))
     p("test", A, ("--out", str, ""))
     a = ap.parse_args(argv)
+    if a.cmd not in ("status", "tokens", "init"):
+        progress.say(f"log: {progress.start(ROOT, a.cmd, getattr(a, 'agent', None))}")
     try:
         if a.cmd == "status":
             led = read_ledger(a.agent)
@@ -442,4 +468,6 @@ def main(argv: list[str] | None = None) -> None:
             out = cmd_test(a.agent, a.out or None)
     except (BudgetExceeded, FileNotFoundError) as e:
         out = {"error": str(e)}
+    if a.cmd not in ("status", "tokens", "init"):
+        progress.say("done: " + json.dumps(out)[:400])
     print(json.dumps(out, indent=1))

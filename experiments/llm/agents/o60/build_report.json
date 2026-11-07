@@ -1,0 +1,589 @@
+{
+ "groups": [
+  {
+   "name": "normaliser C",
+   "tensors": [
+    "model.layers.0.self_attn.v_proj.bias[0]",
+    "model.layers.0.self_attn.o_proj.weight[:, 0]",
+    "model.layers.9.self_attn.v_proj.bias[0]",
+    "model.layers.9.self_attn.o_proj.weight[:, 0]"
+   ],
+   "mechanism": "bias-only head adds exactly C*u0 at every position (layer 0) and removes it (layer 8)",
+   "why": "makes every RMSNorm in the inserted layers divide by ~C/sqrt(896), so reads are linear; u0 is orthogonal to the digit/+/= embeddings so the constant channel is exact there"
+  },
+  {
+   "name": "token flags",
+   "tensors": [
+    "model.layers.0.mlp.gate_proj.weight[0:24]",
+    "model.layers.0.mlp.up_proj.weight[0:24]",
+    "model.layers.0.mlp.down_proj.weight[:, 0:24]"
+   ],
+   "mechanism": "step detectors for 0-9,'+','=' -> DIG, VAL, P, E flags",
+   "why": "dot with the token's own embedding; threshold between self-similarity and the best other vocab token"
+  },
+  {
+   "name": "offset fetch",
+   "tensors": [
+    "model.layers.1.self_attn.q_proj.bias",
+    "model.layers.1.self_attn.k_proj",
+    "model.layers.1.self_attn.v_proj.weight[0:4]",
+    "model.layers.1.self_attn.v_proj.weight[64:68]",
+    "model.layers.1.self_attn.o_proj.weight[:, 0:896]"
+   ],
+   "mechanism": "head d (0..12) attends exactly to offset d+1 and copies its flags; head 13 measures 1/(la+1) for zero-shot",
+   "why": "constant q/k biases: score = 40*sum_{i<6} cos(w_i(D-d)) + 480 cos(w_15 D); margin >= 32 for D<=4000"
+  },
+  {
+   "name": "anchor logic",
+   "tensors": [
+    "model.layers.1.mlp.gate_proj.weight[0:72]",
+    "model.layers.1.mlp.up_proj.weight[0:72]",
+    "model.layers.1.mlp.down_proj.weight[:, 0:72]"
+   ],
+   "mechanism": "digit-run validity, masked digits per place, '+' before B, zero-shot masks",
+   "why": "integer thresholds"
+  },
+  {
+   "name": "answer position",
+   "tensors": [
+    "model.layers.1.mlp.gate_proj.weight[72:98]",
+    "model.layers.1.mlp.up_proj.weight[72:98]",
+    "model.layers.1.mlp.down_proj.weight[:, 72:98]"
+   ],
+   "mechanism": "k = distance to nearest '=' through digits",
+   "why": "integer thresholds"
+  },
+  {
+   "name": "zero-shot mask",
+   "tensors": [
+    "model.layers.2.mlp.gate_proj.weight[0:36]",
+    "model.layers.2.mlp.up_proj.weight[0:36]",
+    "model.layers.2.mlp.down_proj.weight[:, 0:36]"
+   ],
+   "mechanism": "mask A places beyond the true length at text start",
+   "why": "integer thresholds"
+  },
+  {
+   "name": "copy A",
+   "tensors": [
+    "model.layers.3.self_attn"
+   ],
+   "mechanism": "'=' copies A's digits from the most recent '+'",
+   "why": "content key 5000*P + recency -3250 sin(w15 D)"
+  },
+  {
+   "name": "generate/kill",
+   "tensors": [
+    "model.layers.3.mlp.gate_proj.weight[0:74]",
+    "model.layers.3.mlp.up_proj.weight[0:74]",
+    "model.layers.3.mlp.down_proj.weight[:, 0:74]"
+   ],
+   "mechanism": "g_j=[a_j+b_j>=10], k_j=[a_j+b_j<=8] summed into C_p=sum_{j<p}(g_j-k_j)2^j; V, [L>=p]",
+   "why": "sign of C_p = carry lookahead (highest non-9 place decides)"
+  },
+  {
+   "name": "carries",
+   "tensors": [
+    "model.layers.4.mlp.gate_proj.weight[0:24]",
+    "model.layers.4.mlp.up_proj.weight[0:24]",
+    "model.layers.4.mlp.down_proj.weight[:, 0:24]"
+   ],
+   "mechanism": "c_p=[C_p>=1], top carry -> sum digits s_p and answer length n",
+   "why": "s_p=a_p+b_p+c_p-10c_{p+1}"
+  },
+  {
+   "name": "export sums",
+   "tensors": [
+    "model.layers.5.mlp.gate_proj.weight[0:40]",
+    "model.layers.5.mlp.up_proj.weight[0:40]",
+    "model.layers.5.mlp.down_proj.weight[:, 0:40]"
+   ],
+   "mechanism": "s_p, n, V re-written at 0.1 scale at valid '=' only",
+   "why": "so copy heads never amplify embedding contamination"
+  },
+  {
+   "name": "copy sums",
+   "tensors": [
+    "model.layers.6.self_attn"
+   ],
+   "mechanism": "answer positions copy s_p, n, V from the most recent '='",
+   "why": "as copy A, key on E"
+  },
+  {
+   "name": "place index",
+   "tensors": [
+    "model.layers.6.mlp.gate_proj.weight[0:28]",
+    "model.layers.6.mlp.up_proj.weight[0:28]",
+    "model.layers.6.mlp.down_proj.weight[:, 0:28]"
+   ],
+   "mechanism": "F_p=[n-1-k>=p]",
+   "why": "integer thresholds gated by R and V"
+  },
+  {
+   "name": "select",
+   "tensors": [
+    "model.layers.7.mlp.gate_proj.weight[0:13]",
+    "model.layers.7.mlp.up_proj.weight[0:13]",
+    "model.layers.7.mlp.down_proj.weight[:, 0:13]"
+   ],
+   "mechanism": "Y = s_p of the current place",
+   "why": "SwiGLU product gate(onehot)*up(s_p)"
+  },
+  {
+   "name": "park",
+   "tensors": [
+    "model.layers.8.mlp.gate_proj.weight[0:22]",
+    "model.layers.8.mlp.up_proj.weight[0:22]",
+    "model.layers.8.mlp.down_proj.weight[:, 0:22]"
+   ],
+   "mechanism": "writes LAM*v_digit (or v_newline after the last digit)",
+   "why": "v_t = M_t minus its projection on competitor tokens (pinv); dominates all later layers"
+  },
+  {
+   "name": "unflag",
+   "tensors": [
+    "model.layers.8.mlp.gate_proj.weight[22:122]",
+    "model.layers.8.mlp.up_proj.weight[22:122]",
+    "model.layers.8.mlp.down_proj.weight[:, 22:122]"
+   ],
+   "mechanism": "cancels the token flags and the 0.1-scale exports exactly",
+   "why": "same detectors as layer 0, negated"
+  }
+ ],
+ "diff": {
+  "model.layers.0.self_attn.v_proj.bias": {
+   "new": [
+    128
+   ],
+   "nonzero": 1
+  },
+  "model.layers.0.self_attn.o_proj.weight": {
+   "new": [
+    896,
+    896
+   ],
+   "nonzero": 1
+  },
+  "model.layers.0.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 21504
+  },
+  "model.layers.0.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 24
+  },
+  "model.layers.0.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 21480
+  },
+  "model.layers.0.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.0.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.1.self_attn.q_proj.bias": {
+   "new": [
+    896
+   ],
+   "nonzero": 170
+  },
+  "model.layers.1.self_attn.k_proj.weight": {
+   "new": [
+    128,
+    896
+   ],
+   "nonzero": 1790
+  },
+  "model.layers.1.self_attn.k_proj.bias": {
+   "new": [
+    128
+   ],
+   "nonzero": 16
+  },
+  "model.layers.1.self_attn.v_proj.weight": {
+   "new": [
+    128,
+    896
+   ],
+   "nonzero": 7160
+  },
+  "model.layers.1.self_attn.o_proj.weight": {
+   "new": [
+    896,
+    896
+   ],
+   "nonzero": 47435
+  },
+  "model.layers.1.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 87808
+  },
+  "model.layers.1.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 98
+  },
+  "model.layers.1.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 87710
+  },
+  "model.layers.1.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.1.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.2.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 32256
+  },
+  "model.layers.2.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 36
+  },
+  "model.layers.2.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 32220
+  },
+  "model.layers.2.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.2.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.3.self_attn.q_proj.bias": {
+   "new": [
+    896
+   ],
+   "nonzero": 2
+  },
+  "model.layers.3.self_attn.k_proj.weight": {
+   "new": [
+    128,
+    896
+   ],
+   "nonzero": 895
+  },
+  "model.layers.3.self_attn.k_proj.bias": {
+   "new": [
+    128
+   ],
+   "nonzero": 1
+  },
+  "model.layers.3.self_attn.v_proj.weight": {
+   "new": [
+    128,
+    896
+   ],
+   "nonzero": 21480
+  },
+  "model.layers.3.self_attn.o_proj.weight": {
+   "new": [
+    896,
+    896
+   ],
+   "nonzero": 21480
+  },
+  "model.layers.3.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 66304
+  },
+  "model.layers.3.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 74
+  },
+  "model.layers.3.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 66230
+  },
+  "model.layers.3.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.3.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.4.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 21504
+  },
+  "model.layers.4.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 24
+  },
+  "model.layers.4.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 21480
+  },
+  "model.layers.4.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.4.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.5.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 35840
+  },
+  "model.layers.5.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 40
+  },
+  "model.layers.5.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 35800
+  },
+  "model.layers.5.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.5.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.6.self_attn.q_proj.bias": {
+   "new": [
+    896
+   ],
+   "nonzero": 2
+  },
+  "model.layers.6.self_attn.k_proj.weight": {
+   "new": [
+    128,
+    896
+   ],
+   "nonzero": 895
+  },
+  "model.layers.6.self_attn.k_proj.bias": {
+   "new": [
+    128
+   ],
+   "nonzero": 1
+  },
+  "model.layers.6.self_attn.v_proj.weight": {
+   "new": [
+    128,
+    896
+   ],
+   "nonzero": 13425
+  },
+  "model.layers.6.self_attn.o_proj.weight": {
+   "new": [
+    896,
+    896
+   ],
+   "nonzero": 13425
+  },
+  "model.layers.6.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 25088
+  },
+  "model.layers.6.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 28
+  },
+  "model.layers.6.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 25060
+  },
+  "model.layers.6.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.6.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.7.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 11648
+  },
+  "model.layers.7.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 11635
+  },
+  "model.layers.7.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 11635
+  },
+  "model.layers.7.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.7.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.8.mlp.gate_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 109312
+  },
+  "model.layers.8.mlp.up_proj.weight": {
+   "new": [
+    4864,
+    896
+   ],
+   "nonzero": 122
+  },
+  "model.layers.8.mlp.down_proj.weight": {
+   "new": [
+    896,
+    4864
+   ],
+   "nonzero": 109212
+  },
+  "model.layers.8.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.8.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.9.self_attn.v_proj.bias": {
+   "new": [
+    128
+   ],
+   "nonzero": 1
+  },
+  "model.layers.9.self_attn.o_proj.weight": {
+   "new": [
+    896,
+    896
+   ],
+   "nonzero": 1
+  },
+  "model.layers.9.input_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  },
+  "model.layers.9.post_attention_layernorm.weight": {
+   "new": [
+    896
+   ],
+   "nonzero": 896
+  }
+ }
+}

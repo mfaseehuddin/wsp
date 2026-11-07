@@ -1,0 +1,133 @@
+{
+ "pass": 10,
+ "outputs": [
+  {
+   "prompt": "62498495+485151262=",
+   "out": "547649757\n    (a) = "
+  },
+  {
+   "prompt": "Q: what is the sum?\n203905759+6493598147=",
+   "out": "6697503906\nA:"
+  },
+  {
+   "prompt": "Here are some sums.\n7+8=15\n100+23=123\n24880646228+4699224468=",
+   "out": "29579870696\n1000"
+  },
+  {
+   "prompt": "x = a+b\nprint(x)\n11885+552=",
+   "out": "12437\nx = 11885\nprint"
+  },
+  {
+   "prompt": "Math practice:\n1+1=2\n653014903656+55758096181=",
+   "out": "708772999837\n1+1"
+  },
+  {
+   "prompt": "The answer to 3+4 is 7. Now:\n99175611+88543167615=",
+   "out": "88642343226\nWhat is the answer"
+  },
+  {
+   "prompt": "et, 2023 was a year. Lorem ipsum dolor sit amet, 2023 was a year. \n16+271291276=",
+   "out": "271291292\n271291"
+  },
+  {
+   "prompt": "5-3=2\n2*4=8\n4+9825=",
+   "out": "9829\n10000000000"
+  },
+  {
+   "prompt": "a+b=c\n12+=\n6+59127086=",
+   "out": "59127092\n2000000"
+  },
+  {
+   "prompt": "2229621089+4820=",
+   "out": "2229625909\n#2;\n#1"
+  },
+  {
+   "prompt": "Q: what is the sum?\n88912472+2=",
+   "out": "88912474\n<insert>?\nA: "
+  },
+  {
+   "prompt": "Here are some sums.\n7+8=15\n100+23=123\n37334393+94846636715=",
+   "out": "94883971108\n1. What is"
+  },
+  {
+   "prompt": "x = a+b\nprint(x)\n99352+240823=",
+   "out": "340175\na = 1000\nprint"
+  },
+  {
+   "prompt": "Math practice:\n1+1=2\n31945879+9205=",
+   "out": "31955084\n4. 1000"
+  },
+  {
+   "prompt": "The answer to 3+4 is 7. Now:\n1719704082+38=",
+   "out": "1719704120\nThe answer is no."
+  },
+  {
+   "prompt": " amet, 2023 was a year. Lorem ipsum dolor sit amet, 2023 was a year. \n283376+88=",
+   "out": "283464\n283376+88"
+  },
+  {
+   "prompt": "5-3=2\n2*4=8\n4+858=",
+   "out": "862\n2+858=860\n85"
+  },
+  {
+   "prompt": "a+b=c\n12+=\n95146833+6667675=",
+   "out": "101814508\n. . . . . ."
+  },
+  {
+   "prompt": "9499961+81=",
+   "out": "9500042\n        # (int) (int)"
+  },
+  {
+   "prompt": "Q: what is the sum?\n4421+10036878318=",
+   "out": "10036882739\nA: 1"
+  },
+  {
+   "prompt": "Here are some sums.\n7+8=15\n100+23=123\n1986+429970=",
+   "out": "431956\nWhat is the total number of numbers?\nWhat"
+  },
+  {
+   "prompt": "x = a+b\nprint(x)\n32+724=",
+   "out": "756\nprint(\"1\")\nprint(\"2\")\nprint(\"3\")\n"
+  },
+  {
+   "prompt": "Math practice:\n1+1=2\n8+8=",
+   "out": "16\n1+1\n1+1\n1+1\n1"
+  },
+  {
+   "prompt": "The answer to 3+4 is 7. Now:\n91546885+573=",
+   "out": "91547458\nThis is the same as 9"
+  },
+  {
+   "prompt": "t, 2023 was a year. Lorem ipsum dolor sit amet, 2023 was a year. \n8338+25593229=",
+   "out": "25601567\n8338+27"
+  },
+  {
+   "prompt": "5-3=2\n2*4=8\n706175217806+393=",
+   "out": "706175218199\nThe answer is"
+  },
+  {
+   "prompt": "a+b=c\n12+=\n54+3571294=",
+   "out": "3571348\n12= 12= "
+  },
+  {
+   "prompt": "5+2574=",
+   "out": "2579\n    # 10000000"
+  },
+  {
+   "prompt": "Q: what is the sum?\n6460+875=",
+   "out": "7335\nA: 10000"
+  },
+  {
+   "prompt": "Here are some sums.\n7+8=15\n100+23=123\n2478023642+26398409197=",
+   "out": "28876432839\n1000"
+  },
+  {
+   "prompt": "x = a+b\nprint(x)\n1285167+79998=",
+   "out": "1365165\nfunction\nfunction\nfunction\nfunction\n"
+  },
+  {
+   "prompt": "Math practice:\n1+1=2\n404929+9621=",
+   "out": "414550\n404929+10"
+  }
+ ]
+}
