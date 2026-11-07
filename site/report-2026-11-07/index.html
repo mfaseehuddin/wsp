@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wsp Experiments, 7 November</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: one reading column (~70ch) with full-width figure bands; a lab-notebook register of numbered experiments in the order they ran. */
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --fg: #12161c;
+  --fg-2: #4a5260;
+  --fg-3: #6b7381;
+  --rule: #dde1e7;
+  --accent: #1f5fbf;
+  --code-bg: #eef1f5;
+  --s-code: #2a78d6;   /* built with generator code */
+  --s-direct: #eb6834; /* weights written directly */
+  --s-coord: #1baf7a;  /* coordinator-built */
+  --seq: #2a78d6;
+  --good: #1a7f37;
+  --bad: #c0362c;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111418; --surface: #1a1e24; --fg: #e9ecf1; --fg-2: #b4bbc7; --fg-3: #8e96a3;
+    --rule: #2c323b; --accent: #6aa2f0; --code-bg: #20252d;
+    --s-code: #3987e5; --s-direct: #d95926; --s-coord: #199e70; --seq: #3987e5;
+    --good: #4cc26a; --bad: #f07067; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111418; --surface: #1a1e24; --fg: #e9ecf1; --fg-2: #b4bbc7; --fg-3: #8e96a3;
+  --rule: #2c323b; --accent: #6aa2f0; --code-bg: #20252d;
+  --s-code: #3987e5; --s-direct: #d95926; --s-coord: #199e70; --seq: #3987e5;
+  --good: #4cc26a; --bad: #f07067; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font: 16px/1.6 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 64px;
+}
+main { max-width: 860px; margin: 0 auto; display: grid; gap: 56px; }
+.prose { max-width: 70ch; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.75rem; font-weight: 600; }
+h3 { font-size: 1.2rem; font-weight: 600; margin-top: 8px; }
+p { margin: 0; }
+.stack { display: grid; gap: 14px; }
+.eyebrow { font: 500 0.75rem/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-3); }
+.lede { font-size: 1.12rem; color: var(--fg-2); }
+a { color: var(--accent); }
+code, .mono { font-family: var(--mono); font-size: 0.88em; }
+code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+ul.tight { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 0; }
+header.top { display: grid; gap: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 24px; font: 0.85rem var(--mono); color: var(--fg-3); }
+
+/* findings */
+.findings { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.finding { display: grid; grid-template-columns: 7.5rem 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.finding .num { font: 600 1.5rem/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.finding .num small { display: block; font: 400 0.72rem/1.3 var(--mono); color: var(--fg-3); margin-top: 4px; }
+.finding p { color: var(--fg); min-width: 0; }
+@media (max-width: 520px) { .finding { grid-template-columns: 1fr; gap: 4px; } }
+
+/* experiment sections */
+section.exp { display: grid; gap: 18px; }
+.exp-head { display: grid; gap: 6px; }
+.exp-head .tag { font: 500 0.78rem var(--mono); color: var(--fg-3); }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 0.95rem; }
+.kv dt { font: 500 0.78rem/1.6 var(--mono); color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.05em; }
+.kv dd { margin: 0; min-width: 0; }
+@media (max-width: 520px) { .kv { grid-template-columns: 1fr; } .kv dd { margin-bottom: 6px; } }
+
+figure { margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 18px; display: grid; gap: 12px; min-width: 0; }
+figcaption { font-size: 0.88rem; color: var(--fg-2); }
+figcaption b { color: var(--fg); font-weight: 600; }
+figure img { width: 100%; height: auto; border-radius: 4px; background: #fff; }
+.chart { width: 100%; overflow-x: auto; }
+.chart svg { display: block; width: 100%; height: auto; }
+.chart svg text { fill: var(--fg-2); font: 12px var(--body); }
+.chart svg .lbl { fill: var(--fg); font-weight: 500; }
+.chart svg .val { fill: var(--fg); font: 500 12px var(--mono); }
+.chart svg .grid { stroke: var(--rule); stroke-width: 1; }
+.chart svg .hit { fill: transparent; cursor: default; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.82rem; color: var(--fg-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 500 0.74rem var(--mono); letter-spacing: 0.05em; text-transform: uppercase; color: var(--fg-3); }
+td.n { text-align: right; font-family: var(--mono); font-size: 0.86rem; }
+.tablewrap { overflow-x: auto; }
+
+.heat { display: grid; gap: 2px; min-width: 620px; }
+.heat .row { display: grid; grid-template-columns: 9.5rem repeat(5, 1fr); gap: 2px; }
+.heat .h { font: 500 0.72rem var(--mono); color: var(--fg-3); padding: 4px; text-align: center; }
+.heat .k { font: 0.8rem var(--mono); color: var(--fg-2); padding: 4px 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.heat .k.held::after { content: " ◆"; color: var(--fg-3); font-size: 0.65rem; }
+.heat .c { font: 500 0.78rem var(--mono); text-align: center; padding: 4px 0; border-radius: 3px; }
+
+.reason { display: grid; gap: 10px; }
+.agent { border-left: 2px solid var(--rule); padding-left: 14px; display: grid; gap: 4px; }
+.agent b.name { font: 600 0.95rem var(--mono); }
+.agent p { font-size: 0.95rem; color: var(--fg); }
+.agent q { color: var(--fg-2); font-style: italic; }
+pre.wts { margin: 0; background: var(--code-bg); border-radius: 6px; padding: 12px 14px; overflow-x: auto; font: 12px/1.55 var(--mono); color: var(--fg); }
+pre.wts .c { color: var(--fg-3); }
+.pill { display: inline-block; font: 500 0.72rem var(--mono); padding: 1px 7px; border-radius: 999px; border: 1px solid var(--rule); color: var(--fg-2); }
+.pill.good { color: var(--good); border-color: currentColor; }
+.pill.bad { color: var(--bad); border-color: currentColor; }
+
+#tip { position: fixed; pointer-events: none; z-index: 20; background: var(--fg); color: var(--bg); font: 12px/1.4 var(--body); padding: 6px 9px; border-radius: 5px; max-width: 260px; }
+#tip b { font-weight: 600; }
+@media (prefers-reduced-motion: no-preference) { .chart rect.bar { transition: opacity .15s; } }
+</style>
+</head>
+<body>
+<p style="max-width:860px;margin:0 auto 16px"><a href="../">← wsp home</a></p>
+
+
+<div id="tip" hidden></div>
+<main>
+
+<header class="top">
+  <span class="eyebrow">wsp · weight-space programming · lab notebook</span>
+  <h1>Six experiments in writing neural networks by hand</h1>
+  <p class="lede">Every model in this report got its weights from an AI agent writing them down, by formula, by program or digit by digit. Nothing was trained. This page covers each experiment run on 7 November 2026: what it tested, how the models scored, and how the agents reasoned their way to the weights.</p>
+  <div class="meta"><span>24 builder &amp; audit agents</span><span>Claude Sonnet builders, Opus coordinator</span><span>Apple M1 · float64 CPU</span></div>
+</header>
+
+<section class="stack" aria-labelledby="sum">
+  <span class="eyebrow">Summary</span>
+  <h2 id="sum">What the day showed</h2>
+  <div class="findings">
+    <div class="finding"><div class="num">0<small>safety violations, all experiments</small></div><p>Safety built into the weights held everywhere: path escapes, protected files, prompt injection in file text, deletes without confirmation. Every model, including weak ones, kept these rules on unseen inputs.</p></div>
+    <div class="finding"><div class="num">100%<small>Pong hit rate at every budget</small></div><p>When the task has exact physics, agents derive a correct network on paper. The agent with zero test runs did as well as the one with 250,000.</p></div>
+    <div class="finding"><div class="num">~80%<small>language ceiling for hand-written vocabularies</small></div><p>Language tasks plateau where the agent's keyword lists run out. More runs bought fits to dev, not better scores on unseen phrasings.</p></div>
+    <div class="finding"><div class="num">87%<small>best blind score (opus)</small></div><p>Parsing messages by structure (file + key means lookup) and a think-note used as memory beat keyword lists by 14 points on 230 unseen conversations.</p></div>
+    <div class="finding"><div class="num">60%<small>best direct-weights blind score (d250)</small></div><p>Sonnet can write a working tool-using transformer number by number, without code: 86% on dev. It generalises worse than code-built models.</p></div>
+    <div class="finding"><div class="num">14/46<small>Stage X best dev checks</small></div><p>Open-ended chat built by hand in 20M parameters produced a rule bot and an echo bot, not a conversational one. This set the pure-construction baseline.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 1. PONG -->
+<section class="exp" aria-labelledby="e1">
+  <div class="exp-head"><span class="tag">Experiment 1 · control · 5 agents</span><h2 id="e1">Pong controller from physics</h2></div>
+  <dl class="kv">
+    <dt>Question</dt><dd>Does a bigger testing budget help an agent write better weights?</dd>
+    <dt>Task</dt><dd>A ReLU MLP (5 inputs, 3 actions, ≤3 hidden layers of ≤64) that moves a paddle to where the ball will cross. Agents get forward-pass budgets of 0, 2k, 10k, 50k and 250k.</dd>
+    <dt>Score</dt><dd>Mean miss distance and hit rate on 5,000 held-out rallies.</dd>
+  </dl>
+  <figure>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Agent</th><th class="n">Budget</th><th class="n">Used</th><th class="n">Test loss</th><th class="n">Hit rate</th><th>How the budget went</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">b0</td><td class="n">0</td><td class="n">0</td><td class="n">0.000</td><td class="n">100%</td><td>Never ran the net; hand-checked four worked examples</td></tr>
+        <tr><td class="mono">b2k</td><td class="n">2,000</td><td class="n">1,920</td><td class="n">0.000</td><td class="n">100%</td><td>Probe vs reference formula, two confirmation evals</td></tr>
+        <tr><td class="mono">b10k</td><td class="n">10,000</td><td class="n">9,966</td><td class="n">0.000</td><td class="n">100%</td><td>Dead-band sweep to measure margin</td></tr>
+        <tr><td class="mono">b50k</td><td class="n">50,000</td><td class="n">49,950</td><td class="n">0.000</td><td class="n">100%</td><td>Stress tests that broke it on purpose</td></tr>
+        <tr><td class="mono">b250k</td><td class="n">250,000</td><td class="n">237,707</td><td class="n">0.000</td><td class="n">100%</td><td>Ablations, held-out split; derived constants never beaten</td></tr>
+      </tbody>
+    </table></div>
+    <figcaption><b>Every budget reached a perfect score.</b> All five derived the same crossing formula, <span class="mono">fold(y + 1.5·vy·(1−x)/vx)</span>, and approximated the products with piecewise-linear ReLU pieces.</figcaption>
+  </figure>
+  <figure><img src="pong.png" alt="Chart of forward passes used versus dev loss for the five Pong agents; all reach zero loss."><figcaption><b>Forward passes against loss</b>, from the experiment's own report script.</figcaption></figure>
+  <div class="reason">
+    <h3>How the agents reasoned</h3>
+    <div class="agent"><b class="name">b0</b><p>Made the whole design analytic, with error bounds per piece (squares as chord interpolants with error ≤ h²/16). It argued closed-loop success from the worst case: a fast ball needs 14 paddle steps, and at least 25 are available. <q>A derived prediction that I have not measured.</q></p></div>
+    <div class="agent"><b class="name">b2k → b250k</b><p>Same derivation; the budget changed only the evidence. b250k ran ablations: no anticipation gave 65% hits, no bounce model 74%, 3 segments 76.5%. It also measured margin: misses begin at 0.065 aim error versus an actual error of at most 0.004. Its conclusion was that a search could find nothing better than the analytically derived values.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 2. SUPPORT -->
+<section class="exp" aria-labelledby="e2">
+  <div class="exp-head"><span class="tag">Experiment 2 · 3 agents</span><h2 id="e2">IT help-desk transformer</h2></div>
+  <dl class="kv">
+    <dt>Task</dt><dd>Smallest standard transformer that maps a help-desk message to one of 14 canned replies, generated token by token.</dd>
+    <dt>Score</dt><dd>Exact reply on 112 unseen phrasings; budgets of 0, 10 and 50 forward passes.</dd>
+  </dl>
+  <figure>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Agent</th><th class="n">Hidden test</th><th class="n">Params</th><th class="n">Nonzero</th><th class="n">Tokens</th><th>Design</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">s0</td><td class="n">n/a</td><td class="n">n/a</td><td class="n">n/a</td><td class="n">n/a</td><td><span class="pill bad">produced nothing</span> folder holds only its ledger</td></tr>
+        <tr><td class="mono">s10</td><td class="n">97.3%</td><td class="n">8,647</td><td class="n">1,751</td><td class="n">99.7k</td><td>d_model 11; reply tokens as 2-D angle codes</td></tr>
+        <tr><td class="mono">s50</td><td class="n">98.2%</td><td class="n">12,377</td><td class="n">2,930</td><td class="n">104.6k</td><td>Reply = f(intent, step); 245 intent-gated ramps</td></tr>
+      </tbody>
+    </table></div>
+    <figcaption><b>Small closed tasks are nearly solved.</b> Every failure was a phrasing the keyword list missed, e.g. "it takes ages to boot".</figcaption>
+  </figure>
+  <figure><img src="support.png" alt="Bar chart of support agents' hidden-test accuracy and parameter counts."><figcaption><b>Support agents</b>, from the experiment's report script.</figcaption></figure>
+  <div class="reason">
+    <h3>How the agents reasoned</h3>
+    <div class="agent"><b class="name">s10</b><p>Since vocab × width dominates the parameter count, it minimised width to 11. It ran only 10 of 56 dev queries and said plainly that <q>correctness depends only on the keyword lists</q>.</p></div>
+    <div class="agent"><b class="name">s50</b><p>Its insight: a reply is a fixed sequence, so the next token depends only on (intent, step). That removes all bigram state. It used probes on mixed messages and demoted greetings so "hi, my vpn is down" routes to vpn.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 3. BOT -->
+<section class="exp" aria-labelledby="e3">
+  <div class="exp-head"><span class="tag">Experiment 3 · 6 agents</span><h2 id="e3">Tool-calling help-desk bot</h2></div>
+  <dl class="kv">
+    <dt>Task</dt><dd>Multi-turn bot with tools: ticket lookup, status, escalation, password reset. Run budgets of 1 to 1,000; x500 was allowed a custom architecture.</dd>
+    <dt>Score</dt><dd>Exact whole conversations on 160 hidden conversations.</dd>
+  </dl>
+  <figure>
+    <div class="legend"><span><i style="background:var(--s-code)"></i>standard transformer</span><span><i style="background:var(--s-coord)"></i>custom architecture (x500)</span></div>
+    <div class="chart" id="ch-bot"></div>
+    <figcaption><b>Run budget barely moved the score.</b> c1000's 83% drops to 76% in float32 because its largest weight is 10⁹. x500 reached 77% with 4,897 parameters.</figcaption>
+  </figure>
+  <figure><img src="bot.png" alt="Original chart of bot agents' hidden-test scores and parameter counts."><figcaption><b>Bot agents</b>, from the experiment's report script.</figcaption></figure>
+  <div class="reason">
+    <h3>How the agents reasoned</h3>
+    <p class="prose">All six converged on the same shape: a keyword vote picks an intent, a script table plays the reply, and "latest X" copy heads fill in ticket ids and names.</p>
+    <div class="agent"><b class="name">c1 (1 run)</b><p>Aimed for <q>correct by construction and checkable without running the model</q>, with attention margins of ≥ 12 nats and a symbolic check of all 597 script units. Its one run passed.</p></div>
+    <div class="agent"><b class="name">c100</b><p>The roughest path: run 1 scored 0/12. Tracing found units firing at the start token, registers repeating forever because their own vote re-triggered a gate, and a leaked e⁻⁵ killing a ramp. After fixing scales it passed 70/70 dev. Most bugs were numeric, not logical.</p></div>
+    <div class="agent"><b class="name">c1000</b><p>Passed 70/70 dev with no debugging, then spent spare runs on its own paraphrases and found real gaps ("clicked a link in a strange email" routed to the email topic).</p></div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 4. GENGPT -->
+<section class="exp" aria-labelledby="e4">
+  <div class="exp-head"><span class="tag">Experiment 4 · 3 builders, 3 auditors, 1 coordinator model</span><h2 id="e4">GenGPT: a file assistant with real tools</h2></div>
+  <dl class="kv">
+    <dt>Task</dt><dd>List, read, search, edit and delete files in a sandbox, use a calculator, hold 8–19 turn sessions. Safety rules live in the weights. 4,096-token vocabulary, 1,024-token context.</dd>
+    <dt>Audit</dt><dd>A fresh agent gets only the builder's docs and must add a tool, protect a file and change a sentence.</dd>
+  </dl>
+  <figure>
+    <div class="legend"><span><i style="background:var(--fg-3)"></i>original model on stage-1 test</span><span><i style="background:var(--s-code)"></i>after the auditor's edits</span></div>
+    <div class="chart" id="ch-audit"></div>
+    <figcaption><b>Auditors raised every model by 13 to 17 points with zero regressions</b>, changing 46 to 551 weights, using only the docs. Stage-0 hidden scores: g10 79.2%, g100 81.3%, g1000 80.4%. All three auditors rated the docs 7/10 and found the same wrong recipe for protecting a file.</figcaption>
+  </figure>
+  <div class="reason">
+    <h3>How the agents reasoned</h3>
+    <div class="agent"><b class="name">g10 / g100 / g1000</b><p>Each designed intents and templates on paper first. g100 wrote a channel allocator inside its weight builder; g1000 wrote each turn as a script run by a custom interpreter. g1000 also scanned the vocabulary for cue words. That wasn't forbidden then, but it exposed a leak: 46 hidden-only words.</p></div>
+    <div class="agent"><b class="name">opus (coordinator-built)</b><p>Took g1000's interpreter and added a think-note after every reply (<code>&lt;think&gt; file key &lt;/think&gt;</code>) as working memory. It also chose intents from message shape rather than verbs, so "what is its owner ?" and "delete it" work. Text inside tool results can never pick an intent, which makes it injection-safe by construction.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 5. STAGE X -->
+<section class="exp" aria-labelledby="e5">
+  <div class="exp-head"><span class="tag">Experiment 5 · 2 agents (+1 discarded Codex attempt)</span><h2 id="e5">Stage X: an open-ended chatbot</h2></div>
+  <dl class="kv">
+    <dt>Task</dt><dd>A standard decoder transformer (≤20M params, 16k context, 64 turns) to chat about anything. No canned answers: stored text units ≤ 6 words. Mid-run the rules allowed dense latent memory and shifted scoring to user experience.</dd>
+    <dt>Score</dt><dd>Mechanical checks on 50 dev conversations, including a 64-turn session. The blind test was skipped because dev results were conclusive.</dd>
+  </dl>
+  <figure>
+    <div class="chart" id="ch-x"></div>
+    <figcaption><b>Neither model is conversational.</b> x500 (a rule machine) does calc, confirmed deletes, names and 20 capitals, and answers "I don't know that yet." to everything else. x2000 copies the most similar earlier sentence and appends "Noted.", and 13 of its turns loop until the length cap. Both fail the 64-turn recall. An earlier Codex attempt never produced a valid build.</figcaption>
+  </figure>
+  <div class="reason">
+    <h3>How the agents reasoned</h3>
+    <div class="agent"><b class="name">x500</b><p>Wrote a small compiler inside its weight file: items declare reads and writes, a scheduler assigns layers, channels are allocated by name. It then added modules one at a time. Sinusoidal positions added noise to every channel, so it switched to a learned position table.</p></div>
+    <div class="agent"><b class="name">x2000</b><p>Spent about 100k tokens designing on paper: random ±1 codes per token, a bag-of-letters signature so invented names match, and sentence retrieval by similarity. It ran out of tokens before building calc, tools or reasoning, and stopped with copy loops it had not fixed.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 6. DIRECT -->
+<section class="exp" aria-labelledby="e6">
+  <div class="exp-head"><span class="tag">Experiment 6 · 2 agents</span><h2 id="e6">Direct weights: no code at all</h2></div>
+  <dl class="kv">
+    <dt>Question</dt><dd>Can an LLM write a network's numbers itself, rather than a program that computes them?</dd>
+    <dt>Task</dt><dd>The GenGPT stage-2 task on the standard transformer. Weights are written as literal numbers in a <code>.wts</code> file, each block with a one-line reason. 100 / 250 runs, 300k tokens. Transcripts audited for code.</dd>
+    <dt>Score</dt><dd>The blind fresh split: 230 conversations whose wording was written by an independent agent and seen by no builder.</dd>
+  </dl>
+  <figure>
+    <div class="legend"><span><i style="background:var(--s-coord)"></i>coordinator-built</span><span><i style="background:var(--s-code)"></i>Sonnet, generator code</span><span><i style="background:var(--s-direct)"></i>Sonnet, direct weights</span></div>
+    <div class="chart" id="ch-fresh"></div>
+    <figcaption><b>Blind fresh test, whole conversations exact.</b> All five models: 0 safety violations.</figcaption>
+  </figure>
+  <figure>
+    <div class="chart" id="ch-gap"></div>
+    <figcaption><b>Dev score against blind score.</b> Both direct-weights agents reached 86.1% on dev but lost 26 to 41 points on unseen wording; opus lost 13.</figcaption>
+  </figure>
+  <figure>
+    <div class="tablewrap"><div class="heat" id="heat"></div></div>
+    <figcaption><b>Blind test by conversation kind</b> (passes out of 10; ◆ = combinations never seen whole in dev). The direct-weights models never built "sum of two lookups" or long sessions, and d100 also lacks "find then look up".</figcaption>
+  </figure>
+  <figure>
+    <pre class="wts"><span class="c"># from d250/model.wts, written by hand</span>
+config d_model=512 n_layers=4 n_heads=13 d_head=16 d_mlp=512 pos=learned bias=true
+<span class="c"># Residual layout: 0-3 X(id mod 7,8,9,11) 4-7 S(squares) 8-11 C(const 1) 12-15 Y(output id) | 16 FILE 17 SECRETS 18 KEY …</span>
+group id.embed | mechanism: every token gets its residues mod 7,8,9,11 as scalars X … | why: CRT makes ids unique (5544&gt;4096) without knowing any token id; unembed 20rY-10r^2 makes logit=-10*sum(Y-r)^2 so the copied id wins
+embed 1:4096:7 0 = 1
+embed 2:4096:7 0 = 2
+embed 3:4096:7 0 = 3</pre>
+    <figcaption><b>d250's way to copy any token without knowing its id.</b> Strided ranges give every token its id remainders mod 7, 8, 9 and 11 (a Chinese-remainder code, unique for all 4,096 ids). The output layer scores −10·Σ(Y−r)², so whatever code a copy head carries becomes exactly that token.</figcaption>
+  </figure>
+  <div class="reason">
+    <h3>How the agents reasoned</h3>
+    <div class="agent"><b class="name">d100 · 7,519 nonzero weights</b><p>Designed a residual layout first: tied embeddings with digit codes, so a token's code is both its input and its logit pattern. It then hand-wrote position and position² tables for exact-offset attention, one MLP neuron per script edge, and a universal copy head. Turning point: copied tokens carried their own predictions, so it added a "clean snapshot" head. Its first 12 runs were wasted because a duplicate marker line blocked an edit. Its final two edits were never run, and they worked: coref went to 6/6 on dev.</p></div>
+    <div class="agent"><b class="name">d250 · 83,033 nonzero weights</b><p>Chose intents with a think-tag picked from message shape, then used heads of the form "latest token of class C, else sink". Its full-dev runs went 42/108, then 29/108: neurons 155–175 lacked a −1 bias and fired constantly. Later subsets fixed induction strength, tool-word pollution and stale lookups. It never re-verified the full set, but the frozen model scores 86.1% on dev.</p></div>
+    <p class="prose"><b>Audit.</b> No weights were computed by code. Recorded slips: d100 read 40 lines of <code>src/</code> (forward-pass docs only) and tried one <code>sed</code> on its weight file, which failed. d250 wrote one early file through a shell heredoc and used <code>sed</code> to change one config value, which corrupted a line it repaired by hand. Unseen-word failures dominate the blind losses: "cheers", "good morning", "get rid of" and "confirm" fall through to the off-topic reply.</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="stack" aria-labelledby="pat">
+  <span class="eyebrow">Across all experiments</span>
+  <h2 id="pat">How agents reason when writing weights</h2>
+  <ul class="tight prose">
+    <li><b>Derive first, verify second.</b> Nearly every agent designed on paper from the spec and used runs to confirm, not to search.</li>
+    <li><b>One shape for language tasks.</b> Lexicon features, then intent rules, then a script table, with copy heads filling slots. Agents reinvented it each time.</li>
+    <li><b>State goes into tokens.</b> Think-notes and register words gave memory that is also readable (c-series, opus, d250).</li>
+    <li><b>Bugs were numeric, not logical.</b> Gate scales, leaks between layers, reads in the same layer, float32 casts, position noise. Designs were usually right; magnitudes were not.</li>
+    <li><b>Budget changed evidence, not designs.</b> Small budgets reasoned offline and admitted untested parts. Large budgets ran ablations and stress tests, and found nothing better.</li>
+    <li><b>A perfect dev score hides gaps.</b> Many agents hit 100% on dev; blind tests show spreads from 45% to 87%.</li>
+    <li><b>Docs drift from code.</b> All three audits found the same wrong recipe, so explanations are only trustworthy once someone has exercised them.</li>
+    <li><b>Safety generalises; vocabulary doesn't.</b> Structural rules (results cannot route to tools) held on every unseen input. Keyword coverage failed first.</li>
+  </ul>
+</section>
+
+<section class="stack" aria-labelledby="next">
+  <span class="eyebrow">Where this points</span>
+  <h2 id="next">Next directions discussed</h2>
+  <ul class="tight prose">
+    <li><b>A block compiler.</b> Agents spent most of their tokens on low-level numerics. Verified building blocks (non-looping copy, latest-wins memory, fact memory) would let them work at the level of specs.</li>
+    <li><b>Grafting circuits into pretrained models.</b> Keep a real model's language ability and add exact, provably non-interfering circuits in private residual channels.</li>
+    <li><b>In-context learning.</b> A built model that learns words, rules and facts from the conversation itself, tested only on invented content.</li>
+    <li><b>Raising limits.</b> A 100M-parameter model runs on this M1 at about 56 tokens/s on CPU at 1k context.</li>
+  </ul>
+</section>
+
+<section class="stack">
+  <span class="eyebrow">Sources</span>
+  <p class="prose" style="font-size:.9rem;color:var(--fg-2)">Scores come from the harness result files in <code>experiments/*/results*.json</code>, <code>experiments/stage_x/dev_eval_*.json</code> and <code>experiments/gen/results_*_stage2_*.json</code>. Reasoning summaries come from each agent's METHOD.md, EXPLANATION.md and audit reports. Frozen models: <code>experiments/stage_x/frozen/</code>, <code>experiments/gen/frozen/</code>.</p>
+</section>
+
+</main>
+
+<script>
+const FRESH = {"opus":{"conv":0.8696,"seen":0.8722,"held":0.86,"per_kind":{"ls-show":"10/10","lookup":"10/10","show-missing":"10/10","find":"10/10","calc-followup":"9/10","lookup-calc":"10/10","find-lookup":"10/10","sum2":"10/10","write-lookup":"10/10","delete-yes":"10/10","delete-no":"10/10","unsafe":"10/10","injection-show":"5/10","unknown-calc":"8/10","session":"4/10","find-lookup-calc":"10/10","sum2-followup":"10/10","injection-chain":"10/10","unsafe-midflow":"10/10","session-heldout":"3/10","wc":"5/10","protected":"10/10","coref":"6/10"}},"g1000-audit":{"conv":0.7304,"seen":0.7611,"held":0.62,"per_kind":{"ls-show":"10/10","lookup":"10/10","show-missing":"10/10","find":"10/10","calc-followup":"9/10","lookup-calc":"10/10","find-lookup":"6/10","sum2":"10/10","write-lookup":"10/10","delete-yes":"9/10","delete-no":"7/10","unsafe":"10/10","injection-show":"5/10","unknown-calc":"7/10","session":"1/10","find-lookup-calc":"5/10","sum2-followup":"10/10","injection-chain":"7/10","unsafe-midflow":"8/10","session-heldout":"1/10","wc":"5/10","protected":"8/10","coref":"0/10"}},"g100-audit":{"conv":0.7348,"seen":0.75,"held":0.68,"per_kind":{"ls-show":"10/10","lookup":"10/10","show-missing":"10/10","find":"8/10","calc-followup":"9/10","lookup-calc":"10/10","find-lookup":"6/10","sum2":"10/10","write-lookup":"6/10","delete-yes":"10/10","delete-no":"7/10","unsafe":"10/10","injection-show":"5/10","unknown-calc":"7/10","session":"1/10","find-lookup-calc":"5/10","sum2-followup":"10/10","injection-chain":"7/10","unsafe-midflow":"10/10","session-heldout":"2/10","wc":"8/10","protected":"8/10","coref":"0/10"}},"d250":{"conv":0.6043,"seen":0.6722,"held":0.36,"per_kind":{"ls-show":"6/10","lookup":"10/10","show-missing":"10/10","find":"8/10","calc-followup":"9/10","lookup-calc":"10/10","find-lookup":"6/10","sum2":"0/10","write-lookup":"10/10","delete-yes":"10/10","delete-no":"7/10","unsafe":"8/10","injection-show":"2/10","unknown-calc":"7/10","session":"0/10","find-lookup-calc":"0/10","sum2-followup":"0/10","injection-chain":"7/10","unsafe-midflow":"10/10","session-heldout":"1/10","wc":"8/10","protected":"10/10","coref":"0/10"}},"d100":{"conv":0.4478,"seen":0.5333,"held":0.14,"per_kind":{"ls-show":"6/10","lookup":"6/10","show-missing":"10/10","find":"8/10","calc-followup":"4/10","lookup-calc":"10/10","find-lookup":"0/10","sum2":"0/10","write-lookup":"10/10","delete-yes":"7/10","delete-no":"6/10","unsafe":"6/10","injection-show":"0/10","unknown-calc":"6/10","session":"0/10","find-lookup-calc":"0/10","sum2-followup":"0/10","injection-chain":"0/10","unsafe-midflow":"7/10","session-heldout":"0/10","wc":"6/10","protected":"8/10","coref":"3/10"}}};
+const HELD = new Set(["find-lookup-calc","sum2-followup","injection-chain","unsafe-midflow","session-heldout"]);
+const NS = "http://www.w3.org/2000/svg";
+const tip = document.getElementById("tip");
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function showTip(ev, html) { tip.innerHTML = html; tip.hidden = false; moveTip(ev); }
+function moveTip(ev) {
+  const x = Math.min(ev.clientX + 14, window.innerWidth - tip.offsetWidth - 8);
+  tip.style.left = x + "px"; tip.style.top = (ev.clientY + 14) + "px";
+}
+function hideTip() { tip.hidden = true; }
+function bind(node, html) {
+  node.addEventListener("mouseenter", e => showTip(e, html));
+  node.addEventListener("mousemove", moveTip);
+  node.addEventListener("mouseleave", hideTip);
+}
+function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+
+/* Horizontal bar chart. rows: {label, value (0-100), color var, tip, note} */
+function hbars(id, rows, opts = {}) {
+  const host = document.getElementById(id); host.innerHTML = "";
+  const W = 760, labelW = opts.labelW || 150, right = 70, rowH = 30, top = 22, bottom = 26;
+  const H = top + rows.length * rowH + bottom;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opts.aria || "" }, host);
+  const x = v => labelW + (W - labelW - right) * v / 100;
+  [0, 25, 50, 75, 100].forEach(t => {
+    el("line", { x1: x(t), x2: x(t), y1: top - 6, y2: H - bottom + 4, class: "grid" }, svg);
+    el("text", { x: x(t), y: H - 8, "text-anchor": "middle" }, svg, t + "%");
+  });
+  rows.forEach((r, i) => {
+    const y = top + i * rowH, bh = 16, by = y + (rowH - bh) / 2;
+    el("text", { x: labelW - 10, y: by + bh / 2 + 4, "text-anchor": "end", class: "lbl" }, svg, r.label);
+    const w = Math.max(2, x(r.value) - x(0));
+    el("rect", { x: x(0), y: by, width: w, height: bh, rx: 4, fill: `var(${r.color})`, class: "bar" }, svg);
+    if (r.ghost != null) {
+      el("line", { x1: x(r.ghost), x2: x(r.ghost), y1: by - 3, y2: by + bh + 3, stroke: "var(--fg)", "stroke-width": 2, "stroke-dasharray": "3 2" }, svg);
+    }
+    el("text", { x: x(r.value) + 6, y: by + bh / 2 + 4, class: "val" }, svg, r.value.toFixed(1) + "%");
+    const hit = el("rect", { x: 0, y, width: W, height: rowH, class: "hit" }, svg);
+    bind(hit, r.tip);
+  });
+}
+
+/* Dumbbell: from -> to per row */
+function dumbbell(id, rows, opts = {}) {
+  const host = document.getElementById(id); host.innerHTML = "";
+  const W = 760, labelW = opts.labelW || 150, right = 40, rowH = 34, top = 22, bottom = 26;
+  const H = top + rows.length * rowH + bottom;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opts.aria || "" }, host);
+  const lo = opts.lo ?? 0, hi = opts.hi ?? 100;
+  const x = v => labelW + (W - labelW - right) * (v - lo) / (hi - lo);
+  for (let t = lo; t <= hi; t += opts.step || 20) {
+    el("line", { x1: x(t), x2: x(t), y1: top - 6, y2: H - bottom + 4, class: "grid" }, svg);
+    el("text", { x: x(t), y: H - 8, "text-anchor": "middle" }, svg, t + "%");
+  }
+  rows.forEach((r, i) => {
+    const cy = top + i * rowH + rowH / 2;
+    el("text", { x: labelW - 10, y: cy + 4, "text-anchor": "end", class: "lbl" }, svg, r.label);
+    el("line", { x1: x(r.a), x2: x(r.b), y1: cy, y2: cy, stroke: "var(--fg-3)", "stroke-width": 2 }, svg);
+    el("circle", { cx: x(r.a), cy, r: 6, fill: `var(${r.ca})`, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    el("circle", { cx: x(r.b), cy, r: 6, fill: `var(${r.cb})`, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    const left = Math.min(r.a, r.b), rightV = Math.max(r.a, r.b);
+    el("text", { x: x(left) - 10, y: cy + 4, "text-anchor": "end", class: "val" }, svg, left.toFixed(1));
+    el("text", { x: x(rightV) + 10, y: cy + 4, class: "val" }, svg, rightV.toFixed(1));
+    bind(el("rect", { x: 0, y: cy - rowH / 2, width: W, height: rowH, class: "hit" }, svg), r.tip);
+  });
+}
+
+hbars("ch-bot", [
+  { label: "c1 · 1 run", value: 64.4, color: "--s-code", tip: "<b>c1</b> · 1 run · 64.4% exact · 4.6M params, 8.7k nonzero · 148k tokens" },
+  { label: "c10 · 10 runs", value: 71.3, color: "--s-code", tip: "<b>c10</b> · 9 of 10 runs · 71.3% · 1.49M params · 189k tokens" },
+  { label: "c50 · 50 runs", value: 73.8, color: "--s-code", tip: "<b>c50</b> · 48 of 50 runs · 73.8% · 956k params · 152k tokens" },
+  { label: "c100 · 100 runs", value: 65.6, color: "--s-code", tip: "<b>c100</b> · 97 of 100 runs · 65.6% · 742k params · 163k tokens" },
+  { label: "c1000 · 1000 runs", value: 83.1, ghost: 76.3, color: "--s-code", tip: "<b>c1000</b> · 358 of 1000 runs · 83.1% (76.3% in float32, dashed) · 445k params · 161k tokens" },
+  { label: "x500 · custom arch", value: 76.9, color: "--s-coord", tip: "<b>x500</b> · 168 of 500 runs · 76.9% · 4,897 params · 146k tokens" },
+], { aria: "Bot hidden-test exact conversation rate by agent" });
+
+dumbbell("ch-audit", [
+  { label: "g10", a: 63.3, b: 76.5, ca: "--fg-3", cb: "--s-code", tip: "<b>g10 audit</b> · 63.3% → 76.5% · +324 nonzero weights · 0 regressions" },
+  { label: "g100", a: 64.0, b: 81.1, ca: "--fg-3", cb: "--s-code", tip: "<b>g100 audit</b> · 64.0% → 81.1% · +551 nonzero weights · 0 regressions" },
+  { label: "g1000", a: 64.8, b: 79.9, ca: "--fg-3", cb: "--s-code", tip: "<b>g1000 audit</b> · 64.8% → 79.9% · +46 nonzero weights · 0 regressions" },
+], { lo: 50, hi: 90, step: 10, aria: "GenGPT audit before and after" });
+
+hbars("ch-x", [
+  { label: "x500 · 14 / 46", value: 30.4, color: "--s-code", tip: "<b>x500</b> · 14 of 46 mechanical checks · 0 violations · 0 looping turns · 19.8M params (654k nonzero) · 266k tokens" },
+  { label: "x2000 · 21 / 54", value: 38.9, color: "--s-code", tip: "<b>x2000</b> · 21 of 54 checks (some pass by echoing the prompt) · 13 turns loop to the cap · 17.6M params (377k nonzero) · 247k tokens" },
+], { aria: "Stage X dev mechanical checks passed" });
+
+hbars("ch-fresh", [
+  { label: "opus", value: 87.0, color: "--s-coord", tip: "<b>opus</b> · 87.0% · seen kinds 87.2%, held-out 86% · 54k params, 7.4k nonzero · custom interpreter" },
+  { label: "g100-audit", value: 73.5, color: "--s-code", tip: "<b>g100-audit</b> · 73.5% · held-out 68% · 2.1M params, 10.5k nonzero" },
+  { label: "g1000-audit", value: 73.0, color: "--s-code", tip: "<b>g1000-audit</b> · 73.0% · held-out 62% · 42k params, 7.1k nonzero" },
+  { label: "d250 · direct", value: 60.4, color: "--s-direct", tip: "<b>d250</b> · 60.4% · seen 67.2%, held-out 36% · 83k nonzero, all hand-written · 250 runs" },
+  { label: "d100 · direct", value: 44.8, color: "--s-direct", tip: "<b>d100</b> · 44.8% · seen 53.3%, held-out 14% · 7.5k nonzero, all hand-written · 100 runs" },
+], { aria: "Blind fresh test exact conversation rate" });
+
+dumbbell("ch-gap", [
+  { label: "opus", a: 100, b: 87.0, ca: "--fg-3", cb: "--s-coord", tip: "<b>opus</b> · dev 108/108 → blind 87.0%" },
+  { label: "d250 · direct", a: 86.1, b: 60.4, ca: "--fg-3", cb: "--s-direct", tip: "<b>d250</b> · dev 86.1% (93/108) → blind 60.4%" },
+  { label: "d100 · direct", a: 86.1, b: 44.8, ca: "--fg-3", cb: "--s-direct", tip: "<b>d100</b> · dev 86.1% (93/108) → blind 44.8%" },
+], { lo: 40, hi: 100, step: 10, aria: "Dev score versus blind score" });
+
+(function heat() {
+  const host = document.getElementById("heat");
+  const models = ["opus", "g100-audit", "g1000-audit", "d250", "d100"];
+  const kinds = Object.keys(FRESH.opus.per_kind);
+  const head = document.createElement("div"); head.className = "row";
+  head.innerHTML = '<div class="h" style="text-align:left">kind</div>' + models.map(m => `<div class="h">${m}</div>`).join("");
+  host.appendChild(head);
+  kinds.forEach(k => {
+    const row = document.createElement("div"); row.className = "row";
+    const lab = document.createElement("div"); lab.className = "k" + (HELD.has(k) ? " held" : ""); lab.textContent = k; lab.title = k;
+    row.appendChild(lab);
+    models.forEach(m => {
+      const n = parseInt(FRESH[m].per_kind[k]);
+      const c = document.createElement("div"); c.className = "c";
+      const pct = n * 10;
+      c.style.background = `color-mix(in oklab, var(--seq) ${Math.round(8 + pct * 0.82)}%, var(--surface))`;
+      c.style.color = pct >= 60 ? "#fff" : "var(--fg)";
+      c.textContent = n;
+      bind(c, `<b>${m}</b> · ${k}${HELD.has(k) ? " (held-out)" : ""} · ${n}/10`);
+      row.appendChild(c);
+    });
+    host.appendChild(row);
+  });
+})();
+</script>
+
+</body>
+</html>
