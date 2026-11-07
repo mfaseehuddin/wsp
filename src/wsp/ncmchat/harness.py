@@ -31,6 +31,7 @@ ROOT = Path(os.environ.get("WSP_NCMCHAT_ROOT", REPO / "experiments/ncmchat"))
 QWEN = REPO / "models/Qwen2.5-0.5B"
 PARAM_CAP = 300_000_000
 TEXT_UNIT_WORDS = 6
+MIN_LEVELS = 1  # the deep round (wsp-ncmdeep) sets 4 and requires a stated meaning per level
 
 
 class BudgetExceeded(RuntimeError):
@@ -116,6 +117,10 @@ def load(path: Path):
         sys.path.pop(0)
     P = {k: torch.as_tensor(v).to(model.DTYPE) for k, v in P.items()}
     model.validate(cfg, P)
+    if MIN_LEVELS > 1:
+        assert len(cfg.levels) >= MIN_LEVELS, f"this round needs K >= {MIN_LEVELS} levels"
+        assert len(cfg.level_meanings) == len(cfg.levels) and all(m.strip() for m in cfg.level_meanings), \
+            "give every level a stated meaning in cfg.level_meanings"
     n = sum(v.numel() for v in P.values())
     assert n <= PARAM_CAP, f"{n:,} params > cap {PARAM_CAP:,}"
     return cfg, P, groups or []
@@ -200,6 +205,8 @@ def cmd_check(a: str) -> dict:
     return {"ok": True, "config": cfg.to_dict(), "params": sum(v.numel() for v in P.values()),
             "nonzero": sum(int((v != 0).sum()) for v in P.values()), "provenance_groups": len(groups),
             "forward_passes_per_reply": len(cfg.levels), "build_seconds": round(time.time() - t0, 1),
+            "reused_qwen_layers": list(cfg.qwen_layers), "reused_qwen_params": 14_912_384 * len(cfg.qwen_layers)
+            + (136_134_656 if cfg.qwen_embed else 0), "level_meanings": list(cfg.level_meanings),
             "long_text_literals (> 6 words, not allowed)": long_literals(src)}
 
 

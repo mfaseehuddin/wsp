@@ -1,0 +1,589 @@
+02:57:32 +    0.0s  start: eval agent=nco60 pid=24739 argv=eval --agent nco60 --note v2: SELF/REQUEST modes, run-start copy, PM gating
+02:57:32 +    0.0s  log: /Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/ncmchat/logs/eval_nco60_20261108-025732.log
+02:57:38 +    6.0s  case 1/40 greet (4 turns); mechanical so far 0/0
+02:57:39 +    6.9s  case 2/40 name_intro (2 turns); mechanical so far 0/0
+02:57:39 +    7.0s  case 3/40 capital (1 turns); mechanical so far 1/1
+02:57:40 +    7.1s  case 4/40 spider (1 turns); mechanical so far 1/2
+02:57:40 +    7.2s  case 5/40 whale (1 turns); mechanical so far 1/3
+02:57:40 +    7.3s  case 6/40 bees (1 turns); mechanical so far 1/4
+02:57:40 +    7.4s  case 7/40 boiling (1 turns); mechanical so far 1/5
+02:57:40 +    7.5s  case 8/40 plants (1 turns); mechanical so far 1/6
+02:57:40 +    7.6s  case 9/40 sky (1 turns); mechanical so far 1/6
+02:57:40 +    7.7s  case 10/40 noun (1 turns); mechanical so far 1/6
+02:57:40 +    7.8s  case 11/40 ice (1 turns); mechanical so far 1/6
+02:57:40 +    7.9s  case 12/40 arith_follow (2 turns); mechanical so far 1/6
+02:57:41 +    8.2s  case 13/40 precedence (1 turns); mechanical so far 1/8
+02:57:41 +    8.3s  case 14/40 word_problem (1 turns); mechanical so far 1/9
+02:57:41 +    8.4s  case 15/40 order (1 turns); mechanical so far 1/10
+02:57:41 +    8.5s  case 16/40 order_short (1 turns); mechanical so far 1/11
+02:57:41 +    8.6s  case 17/40 syllogism (1 turns); mechanical so far 1/12
+02:57:41 +    8.7s  case 18/40 feathers (1 turns); mechanical so far 1/13
+02:57:41 +    8.8s  case 19/40 compare (1 turns); mechanical so far 1/14
+02:57:41 +    8.9s  case 20/40 exact_word (1 turns); mechanical so far 1/14
+02:57:41 +    9.0s  case 21/40 caps (1 turns); mechanical so far 1/15
+02:57:42 +    9.1s  case 22/40 reverse_list (1 turns); mechanical so far 1/16
+02:57:42 +    9.2s  case 23/40 count_words (1 turns); mechanical so far 1/17
+02:57:42 +    9.3s  case 24/40 numbered (1 turns); mechanical so far 1/18
+02:57:42 +    9.4s  case 25/40 one_word (1 turns); mechanical so far 1/19
+02:57:42 +    9.5s  case 26/40 poem (1 turns); mechanical so far 1/20
+02:57:42 +    9.5s  case 27/40 fox_story (1 turns); mechanical so far 1/20
+02:57:42 +    9.6s  case 28/40 polite (1 turns); mechanical so far 1/21
+02:57:42 +    9.7s  case 29/40 summarize (1 turns); mechanical so far 1/22
+02:57:42 +    9.8s  case 30/40 pelins (2 turns); mechanical so far 1/23
+02:57:42 +   10.0s  case 31/40 vantoria (1 turns); mechanical so far 3/25
+02:57:43 +   10.1s  case 32/40 unknown_entity (1 turns); mechanical so far 3/26
+02:57:43 +   10.2s  case 33/40 correction (3 turns); mechanical so far 3/26
+02:57:43 +   10.4s  case 34/40 two_entities (3 turns); mechanical so far 3/27
+02:57:43 +   10.7s  case 35/40 coref (3 turns); mechanical so far 3/29
+02:57:43 +   11.0s  case 36/40 password (1 turns); mechanical so far 3/30
+02:57:44 +   11.1s  case 37/40 thinking_number (1 turns); mechanical so far 3/30
+02:57:44 +   11.2s  case 38/40 ambiguous (1 turns); mechanical so far 3/30
+02:57:44 +   11.3s  case 39/40 book_it (1 turns); mechanical so far 3/30
+02:57:44 +   11.4s  case 40/40 long_session_64 (64 turns); mechanical so far 3/30
+02:57:53 +   20.2s  done: {"run": 2, "mechanical_pass": 3, "mechanical_checked": 33, "turns": 115, "cases": [{"id": "greet", "category": "conversation", "turns": [{"user": "Hello!", "reply": "Hello! How can I help you?", "pass": null}, {"user": "How are you doing today?", "reply": "I'm a simple chat program. I remember what 
+{
+ "run": 2,
+ "mechanical_pass": 3,
+ "mechanical_checked": 33,
+ "turns": 115,
+ "cases": [
+  {
+   "id": "greet",
+   "category": "conversation",
+   "turns": [
+    {
+     "user": "Hello!",
+     "reply": "Hello! How can I help you?",
+     "pass": null
+    },
+    {
+     "user": "How are you doing today?",
+     "reply": "I'm a simple chat program. I remember what you tell me.",
+     "pass": null
+    },
+    {
+     "user": "What kinds of things can you help me with?",
+     "reply": "I'm a simple chat program. I remember what you tell me.",
+     "pass": null
+    },
+    {
+     "user": "Thanks, bye!",
+     "reply": "Goodbye, take care!",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "name_intro",
+   "category": "conversation",
+   "turns": [
+    {
+     "user": "Hi, I'm Teodra.",
+     "reply": "Hello, nice to meet you, Teodra.",
+     "pass": true
+    },
+    {
+     "user": "Nice to meet you. What should I call you?",
+     "reply": "I'm a simple chat program. I remember what you tell me.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "capital",
+   "category": "general_knowledge",
+   "turns": [
+    {
+     "user": "What is the capital of France?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "spider",
+   "category": "general_knowledge",
+   "turns": [
+    {
+     "user": "How many legs does a spider have?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "whale",
+   "category": "general_knowledge",
+   "turns": [
+    {
+     "user": "Is a whale a fish or a mammal?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "bees",
+   "category": "general_knowledge",
+   "turns": [
+    {
+     "user": "What do bees make?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "boiling",
+   "category": "general_knowledge",
+   "turns": [
+    {
+     "user": "At what temperature does water boil at sea level, in Celsius?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "plants",
+   "category": "general_knowledge",
+   "turns": [
+    {
+     "user": "How do plants use sunlight?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "sky",
+   "category": "explanation",
+   "turns": [
+    {
+     "user": "Why does the sky look blue? Explain simply in two sentences.",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "noun",
+   "category": "explanation",
+   "turns": [
+    {
+     "user": "What is a noun? Give one example.",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "ice",
+   "category": "explanation",
+   "turns": [
+    {
+     "user": "Why does ice float on water?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "arith_follow",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "What is 17 + 26?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    },
+    {
+     "user": "Multiply that answer by 3.",
+     "reply": "Got it, I will remember that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "precedence",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "Compute 25 - 4 * 3.",
+     "reply": "Got it, I will remember that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "word_problem",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "I had 9 marbles and gave 4 to Pell. How many do I have now?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "order",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "Mira is taller than Omar. Omar is taller than Tess. Who is tallest?",
+     "reply": " It is Tess.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "order_short",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "Kofi is older than Ines. Ines is older than Bram. Who is youngest?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "syllogism",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "All glimps are blue. Toma is a glimp. What color is Toma?",
+     "reply": " It is glimp.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "feathers",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "Which is heavier: a kilogram of feathers or a kilogram of iron?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "compare",
+   "category": "reasoning",
+   "turns": [
+    {
+     "user": "How are a bicycle and a car similar, and how are they different?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "exact_word",
+   "category": "instruction",
+   "turns": [
+    {
+     "user": "Reply with exactly the word ready in lowercase.",
+     "reply": "Got it, I will remember that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "caps",
+   "category": "instruction",
+   "turns": [
+    {
+     "user": "Write the word lantern in capital letters and nothing else.",
+     "reply": "Sorry, I can't do that yet.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "reverse_list",
+   "category": "instruction",
+   "turns": [
+    {
+     "user": "Reverse this list: red, green, blue",
+     "reply": "Got it, I will remember that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "count_words",
+   "category": "instruction",
+   "turns": [
+    {
+     "user": "How many words are in this sentence: the cat sat down",
+     "reply": "Got it, I will remember that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "numbered",
+   "category": "instruction",
+   "turns": [
+    {
+     "user": "Give three tips for keeping a desk organized, as a numbered list.",
+     "reply": "Sorry, I can't do that yet.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "one_word",
+   "category": "instruction",
+   "turns": [
+    {
+     "user": "In one word, what color is fresh grass?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "poem",
+   "category": "creative",
+   "turns": [
+    {
+     "user": "Write a four-line poem about a small boat at dawn.",
+     "reply": "Sorry, I can't do that yet.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "fox_story",
+   "category": "creative",
+   "turns": [
+    {
+     "user": "Write two sentences about a fox named Quillo.",
+     "reply": "Sorry, I can't do that yet.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "polite",
+   "category": "rewrite",
+   "turns": [
+    {
+     "user": "Rewrite this politely: Give me the report now.",
+     "reply": "Sorry, I can't do that yet.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "summarize",
+   "category": "rewrite",
+   "turns": [
+    {
+     "user": "Summarize in one sentence: Darnet the baker woke at four, baked forty loaves, and sold every one by noon.",
+     "reply": "Got it, I will remember that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "pelins",
+   "category": "supplied_knowledge",
+   "turns": [
+    {
+     "user": "In my fictional world, pelins are purple birds that sleep at noon. What color are pelins?",
+     "reply": " It is purple birds.",
+     "pass": true
+    },
+    {
+     "user": "When do they sleep?",
+     "reply": " It is noon.",
+     "pass": true
+    }
+   ]
+  },
+  {
+   "id": "vantoria",
+   "category": "supplied_knowledge",
+   "turns": [
+    {
+     "user": "Zorbin is the capital of Vantoria. What is the capital of Vantoria?",
+     "reply": " It is Vantoria.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "unknown_entity",
+   "category": "uncertainty",
+   "turns": [
+    {
+     "user": "What is the capital of Vantoria?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "correction",
+   "category": "memory",
+   "turns": [
+    {
+     "user": "My name is Nilo and my favorite fruit is pear.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "Correction: my favorite fruit is mango now.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "What is my name and current favorite fruit?",
+     "reply": " It is pear.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "two_entities",
+   "category": "memory",
+   "turns": [
+    {
+     "user": "Lena owns a green notebook. Daro owns a red notebook.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "Whose notebook is red?",
+     "reply": " It is Dar.",
+     "pass": false
+    },
+    {
+     "user": "And what color is Lena's notebook?",
+     "reply": " It is red notebook.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "coref",
+   "category": "memory",
+   "turns": [
+    {
+     "user": "My dog is called Biscotto.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "He is four years old.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "How old is Biscotto?",
+     "reply": "Sorry, I don't know that.",
+     "pass": false
+    }
+   ]
+  },
+  {
+   "id": "password",
+   "category": "uncertainty",
+   "turns": [
+    {
+     "user": "What password did I choose for a website yesterday?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "thinking_number",
+   "category": "uncertainty",
+   "turns": [
+    {
+     "user": "What number am I thinking of?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "ambiguous",
+   "category": "clarification",
+   "turns": [
+    {
+     "user": "Make it better.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "book_it",
+   "category": "clarification",
+   "turns": [
+    {
+     "user": "Book it for me.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    }
+   ]
+  },
+  {
+   "id": "long_session_64",
+   "category": "long_memory",
+   "turns": [
+    {
+     "user": "Please remember: my project codename is Cedar and the launch is in April.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "Also, my teammate's name is Oskarine.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "Tell me a fun fact about octopuses.",
+     "reply": "Sorry, I can't do that yet.",
+     "pass": null
+    },
+    {
+     "user": "What is 6 times 7?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    },
+    {
+     "user": "Name a fruit that is yellow.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "Say something encouraging.",
+     "reply": "Got it, I will remember that.",
+     "pass": null
+    },
+    {
+     "user": "What is the opposite of cold?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    },
+    {
+     "user": "How many days are in a week?",
+     "reply": "Sorry, I don't know that.",
+     "pass": null
+    },
+    {
+     "note": "56 more turns"
+    }
+   ]
+  }
+ ]
+}

@@ -26,6 +26,14 @@ Layer (pre-RMSNorm if cfg.norm, gain only):  x += Attn(N1 x);  x += MLP(N2 x)
 codes_l = argmax(h_level @ head_l + head_b_l);  z += up(code_l[codes_l])
 dec(z) = ReLU(z dec_w1 + dec_b1) dec_w2 + dec_b2 if dec_hidden else z dec_w2 + dec_b2
 float32.
+
+Round 2 ("deep") options, all off by default:
+  qwen_embed=True      prefix rows start from Qwen2.5-0.5B's embedding (896-d, read from disk, not in params)
+  qwen_layers=(i, ...) run these VERBATIM Qwen decoder layers, in this order, over the prefix (causal, KV-cached);
+                       see qwen.py. They only see the conversation, never the level rows.
+  qwen_final_norm      apply Qwen's final RMSNorm after them
+  then prefix rows = qwen_residual @ pre_proj [896, d_model] and continue through the agent's own layers.
+  level_meanings       one stated meaning per level (required by the deep round, K >= 4).
 """
 
 from __future__ import annotations
@@ -53,6 +61,10 @@ class Config:
     dec_hidden: int = 0
     rope_theta: float = 10000.0
     norm: bool = False
+    qwen_embed: bool = False
+    qwen_layers: tuple[int, ...] = ()
+    qwen_final_norm: bool = False
+    level_meanings: tuple[str, ...] = ()
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -60,7 +72,8 @@ class Config:
 
 def shapes(cfg: Config) -> dict[str, tuple[int, ...]]:
     K, dm, H, dh = len(cfg.levels), cfg.d_model, cfg.n_heads, cfg.d_head
-    s = {"tok_emb": (cfg.vocab, dm), "lvl_pos": (T_MAX, dm), "lvl_emb": (K, dm), "w_in": (cfg.D, dm)}
+    s = {"lvl_pos": (T_MAX, dm), "lvl_emb": (K, dm), "w_in": (cfg.D, dm)}
+    s |= {"pre_proj": (896, dm)} if cfg.qwen_embed else {"tok_emb": (cfg.vocab, dm)}
     for i in range(cfg.n_layers):
         p = f"L{i}."
         s |= {p + "wq": (H, dm, dh), p + "wk": (H, dm, dh), p + "wv": (H, dm, dh), p + "wo": (H, dh, dm),
@@ -83,6 +96,9 @@ def validate(cfg: Config, P: dict) -> None:
     assert len(cfg.levels) == len(cfg.codebooks) >= 1
     assert list(cfg.levels) == sorted(set(cfg.levels)) and cfg.levels[-1] == T_MAX, f"levels must increase to {T_MAX}"
     assert cfg.d_head % 2 == 0
+    assert cfg.qwen_embed or not cfg.qwen_layers, "qwen_layers need qwen_embed=True"
+    assert all(0 <= i < 24 for i in cfg.qwen_layers), "Qwen2.5-0.5B has layers 0..23"
+    assert not cfg.level_meanings or len(cfg.level_meanings) == len(cfg.levels), "one meaning per level"
     want = shapes(cfg)
     missing, extra = set(want) - set(P), set(P) - set(want)
     assert not missing and not extra, f"missing {sorted(missing)[:5]} extra {sorted(extra)[:5]}"
@@ -112,6 +128,8 @@ class Cache:
         self.k = [torch.zeros(H, 0, dh, dtype=DTYPE) for _ in range(cfg.n_layers)]
         self.v = [torch.zeros(H, 0, dh, dtype=DTYPE) for _ in range(cfg.n_layers)]
         self.ids: list[int] = []
+        self.qk = [torch.zeros(2, 0, 64) for _ in cfg.qwen_layers]  # verbatim Qwen layers' cache
+        self.qv = [torch.zeros(2, 0, 64) for _ in cfg.qwen_layers]
 
     def __len__(self) -> int:
         return len(self.ids)
@@ -147,8 +165,19 @@ def extend(cfg: Config, P: dict, cache: Cache, ids: list[int]) -> None:
     if not ids:
         return
     m = len(cache)
-    x = P["tok_emb"][torch.tensor(ids, dtype=torch.long)]
     pos = torch.arange(m, m + len(ids))
+    if cfg.qwen_embed:
+        from . import qwen
+
+        x = qwen.embed()[torch.tensor(ids, dtype=torch.long)]
+        for j, li in enumerate(cfg.qwen_layers):
+            x, k, v = qwen.block(li, x, pos, cache.qk[j], cache.qv[j])
+            cache.qk[j], cache.qv[j] = torch.cat([cache.qk[j], k], 1), torch.cat([cache.qv[j], v], 1)
+        if cfg.qwen_final_norm:
+            x = qwen.rms(x, qwen.final_norm())
+        x = x @ P["pre_proj"]
+    else:
+        x = P["tok_emb"][torch.tensor(ids, dtype=torch.long)]
     for i in range(cfg.n_layers):
         x, k, v = _layer(cfg, P, i, x, pos, cache.k[i], cache.v[i], m, None)
         cache.k[i] = torch.cat([cache.k[i], k], 1)

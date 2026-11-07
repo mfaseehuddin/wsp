@@ -1,0 +1,26 @@
+{"ts": 1794080074.9230452, "cmd": "build", "ok": true, "params": 706032256, "added_params": 211999488, "tensors_touched": 91, "weights_changed_or_added_nonzero": 87161, "provenance_groups": 1, "seconds": 55.6, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794080276.074997, "cmd": "guard", "tokens": 6168, "base_ppl": 11.7862, "edited_ppl": 8.984828514187731e+16, "ppl_ratio": 7623171902200181.0, "top1_agreement": 0.3007}
+{"ts": 1794080338.0013728, "cmd": "read", "note": "", "base": false, "n": 2, "name": "r1"}
+{"ts": 1794080437.971833, "cmd": "build", "ok": true, "params": 706032256, "added_params": 211999488, "tensors_touched": 91, "weights_changed_or_added_nonzero": 87161, "provenance_groups": 1, "seconds": 28.8, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794080626.822027, "cmd": "build", "ok": true, "params": 706032256, "added_params": 211999488, "tensors_touched": 91, "weights_changed_or_added_nonzero": 87161, "provenance_groups": 1, "seconds": 131.9, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794080674.371076, "cmd": "read", "note": "", "base": false, "n": 2, "name": "r2"}
+{"ts": 1794080806.6342888, "cmd": "build", "ok": true, "params": 721862720, "added_params": 227829952, "tensors_touched": 96, "weights_changed_or_added_nonzero": 89385, "provenance_groups": 1, "seconds": 39.5, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794080821.8622751, "cmd": "read", "note": "", "base": false, "n": 3, "name": "r3"}
+{"ts": 1794080991.922015, "cmd": "read", "note": "", "base": false, "n": 1, "name": "r4"}
+{"ts": 1794081489.0439029, "cmd": "build", "ok": true, "params": 721862720, "added_params": 227829952, "tensors_touched": 96, "weights_changed_or_added_nonzero": 89569, "provenance_groups": 1, "seconds": 378.4, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794081543.4407759, "cmd": "read", "note": "", "base": false, "n": 3, "name": "r5"}
+{"ts": 1794082005.841473, "cmd": "guard", "tokens": 6168, "base_ppl": 11.7862, "edited_ppl": 14.3014, "ppl_ratio": 1.2134, "top1_agreement": 0.7205}
+{"ts": 1794082347.699512, "cmd": "build", "ok": true, "params": 721862720, "added_params": 227829952, "tensors_touched": 96, "weights_changed_or_added_nonzero": 89473, "provenance_groups": 1, "seconds": 276.9, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794082588.046785, "cmd": "guard", "tokens": 6168, "base_ppl": 11.7862, "edited_ppl": 13.2675, "ppl_ratio": 1.1257, "top1_agreement": 0.7476}
+{"ts": 1794082772.9682372, "cmd": "read", "note": "", "base": false, "n": 2, "name": "r6"}
+{"ts": 1794083181.0066712, "cmd": "read", "note": "", "base": false, "n": 4, "name": "r7"}
+{"ts": 1794083392.311185, "cmd": "eval", "note": "", "args": ["add", 6, 0, 128, "fewshot", 0], "acc": 1.0, "base": false}
+{"ts": 1794083634.4911091, "cmd": "build", "ok": true, "params": 721862720, "added_params": 227829952, "tensors_touched": 96, "weights_changed_or_added_nonzero": 89473, "provenance_groups": 1, "seconds": 222.1, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794085819.346684, "cmd": "guard", "tokens": 6168, "base_ppl": 11.7862, "edited_ppl": 11.7862, "ppl_ratio": 1.0, "top1_agreement": 1.0}
+{"ts": 1794086060.7206242, "cmd": "guard", "tokens": 6168, "base_ppl": 11.7862, "edited_ppl": 11.7862, "ppl_ratio": 1.0, "top1_agreement": 1.0}
+{"ts": 1794086678.978945, "cmd": "eval", "note": "", "args": ["add", 12, 0, 128, "fewshot", 0], "acc": 0.0, "base": false}
+{"ts": 1794086721.972956, "cmd": "build", "ok": true, "params": 721862720, "added_params": 227829952, "tensors_touched": 96, "weights_changed_or_added_nonzero": 89473, "provenance_groups": 8, "seconds": 21.7, "report": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/llm/agents/s60/build_report.json"}
+{"ts": 1794086941.339298, "cmd": "guard", "tokens": 6168, "base_ppl": 11.7862, "edited_ppl": 11.7862, "ppl_ratio": 1.0, "top1_agreement": 0.9998}
+{"ts": 1794087264.000861, "cmd": "eval", "note": "", "args": ["add", 12, 0, 128, "fewshot", 0], "acc": 1.0, "base": false}
+{"ts": 1794087504.8783832, "cmd": "eval", "note": "", "args": ["add", 8, 0, 128, "zeroshot", 0], "acc": 0.0, "base": false}
+{"ts": 1794087845.678186, "cmd": "eval", "note": "", "args": ["add", 12, 3, 128, "fewshot", 0], "acc": 1.0, "base": false}

@@ -1,0 +1,1 @@
+["Compute 3+4=7 and 10+20=30.\nThen x=5, y=6; a+b=c.", "assert add(2,3)==5\nresult = 100+200\nn=1+2+3=6", "Table: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.\nDate 2023-11-05 12:30:45.", "Q: What is 15+27=\nA: 42\n\nThe sum 5+5=10 is trivial. 7=7."]

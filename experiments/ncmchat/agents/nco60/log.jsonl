@@ -1,0 +1,9 @@
+{"ts": 1794088323.444211, "cmd": "eval", "ids": "", "note": "v1 baseline: modes+copy", "pass": 2, "of": 33}
+{"ts": 1794088673.173725, "cmd": "eval", "ids": "", "note": "v2: SELF/REQUEST modes, run-start copy, PM gating", "pass": 3, "of": 33}
+{"ts": 1794088826.7018628, "cmd": "eval", "ids": "", "note": "v3: CLARIFY/first-person modes, PCB-gated ANSWER", "pass": 3, "of": 33}
+{"ts": 1794089190.0067031, "cmd": "eval", "ids": "", "note": "v4: strict/broad stops, sharp RSID, REQUEST topic copy", "pass": 6, "of": 33}
+{"ts": 1794089659.129363, "cmd": "eval", "ids": "", "note": "v5: pronoun/wh stops, fact recency, greet/bye/harm anchors", "pass": 7, "of": 33}
+{"ts": 1794089963.833157, "cmd": "eval", "ids": "", "note": "v6: ACK echoes topic, digits are content", "pass": 7, "of": 33}
+{"ts": 1794090102.6663868, "cmd": "eval", "ids": "", "note": "v7: ACK echo only for first-person facts, gated hops", "pass": 7, "of": 33}
+{"ts": 1794090284.7900841, "cmd": "probe", "note": ""}
+{"ts": 1794090335.0751429, "cmd": "eval", "ids": "", "note": "v8 final candidate", "pass": 7, "of": 33}

@@ -109,7 +109,7 @@ footer { color: var(--fg-3); font-size: 0.85rem; border-top: 1px solid var(--rul
   <span class="eyebrow">Now · editing real LLMs</span>
   <h2>Four tracks, from grafting circuits into LLMs to hand-writing new architectures</h2>
   <div class="tracks">
-    <div class="card"><span class="chip live" id="chipA">running</span><h3>A · Bionic circuits</h3>
+    <div class="card"><span class="chip live" id="chipA">round 1 done</span><h3>A · Bionic circuits</h3>
       <p>Graft exact circuits into Qwen2.5-0.5B, so that while the signal moves through the network, a hand-derived
         adder takes over the arithmetic. It must stay silent on all other text.</p></div>
     <div class="card"><span class="chip next" id="chipB">next</span><h3>B · Transplant learned memory</h3>
@@ -205,13 +205,13 @@ uv run wsp-llm eval --agent me --base --digits 8 --n 128</pre>
 <!-- Track A data: update this block as agents finish. by_digits = hidden-test exact accuracy, equal-length a+b. -->
 <script id="trackA" type="application/json">
 {
-  "status": "running",
+  "status": "done",
   "series": [
     {"id": "base", "label": "Unedited Qwen2.5-0.5B", "ref": true,
      "acc": 0.274, "guard_ppl_ratio": 1.0, "zeroshot": 0.0167,
      "by_digits": [0.8167, 0.7333, 0.7333, 0.6167, 0.5667, 0.3, 0.05, 0.0333, 0, 0, 0, 0]},
     {"id": "o60", "label": "o60 \u00b7 Opus, 60 passes", "acc": 1.0, "guard_ppl_ratio": 1.0008, "zeroshot": 1.0, "by_digits": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]},
-    {"id": "s60", "label": "s60 · Sonnet, 60 passes", "pending": true}
+    {"id": "s60", "label": "s60 \u00b7 Sonnet, 60 passes", "acc": 0.7531, "guard_ppl_ratio": 1.0, "zeroshot": 0.0125, "by_digits": [0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75]}
   ]
 }
 </script>
