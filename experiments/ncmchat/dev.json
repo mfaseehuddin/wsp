@@ -1,0 +1,800 @@
+[
+ {
+  "id": "greet",
+  "category": "conversation",
+  "turns": [
+   {
+    "user": "Hello!",
+    "rubric": "A friendly greeting back."
+   },
+   {
+    "user": "How are you doing today?",
+    "rubric": "Polite answer, may say it is a program."
+   },
+   {
+    "user": "What kinds of things can you help me with?",
+    "rubric": "Honest summary of real abilities."
+   },
+   {
+    "user": "Thanks, bye!",
+    "rubric": "Friendly goodbye."
+   }
+  ]
+ },
+ {
+  "id": "name_intro",
+  "category": "conversation",
+  "turns": [
+   {
+    "user": "Hi, I'm Teodra.",
+    "rubric": "Greets the user by name.",
+    "check": {
+     "contains": [
+      "Teodra"
+     ]
+    }
+   },
+   {
+    "user": "Nice to meet you. What should I call you?",
+    "rubric": "Gives a name or says it is an assistant."
+   }
+  ]
+ },
+ {
+  "id": "capital",
+  "category": "general_knowledge",
+  "turns": [
+   {
+    "user": "What is the capital of France?",
+    "check": {
+     "contains": [
+      "Paris"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "spider",
+  "category": "general_knowledge",
+  "turns": [
+   {
+    "user": "How many legs does a spider have?",
+    "check": {
+     "any": [
+      "8",
+      "eight"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "whale",
+  "category": "general_knowledge",
+  "turns": [
+   {
+    "user": "Is a whale a fish or a mammal?",
+    "check": {
+     "contains": [
+      "mammal"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "bees",
+  "category": "general_knowledge",
+  "turns": [
+   {
+    "user": "What do bees make?",
+    "check": {
+     "contains": [
+      "honey"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "boiling",
+  "category": "general_knowledge",
+  "turns": [
+   {
+    "user": "At what temperature does water boil at sea level, in Celsius?",
+    "check": {
+     "contains": [
+      "100"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "plants",
+  "category": "general_knowledge",
+  "turns": [
+   {
+    "user": "How do plants use sunlight?",
+    "rubric": "Photosynthesis: light energy, water and carbon dioxide make sugar (and oxygen). No invented details."
+   }
+  ]
+ },
+ {
+  "id": "sky",
+  "category": "explanation",
+  "turns": [
+   {
+    "user": "Why does the sky look blue? Explain simply in two sentences.",
+    "rubric": "Sunlight scatters off air; blue scatters more. At most two sentences."
+   }
+  ]
+ },
+ {
+  "id": "noun",
+  "category": "explanation",
+  "turns": [
+   {
+    "user": "What is a noun? Give one example.",
+    "rubric": "Word for a person, place or thing, with a correct example."
+   }
+  ]
+ },
+ {
+  "id": "ice",
+  "category": "explanation",
+  "turns": [
+   {
+    "user": "Why does ice float on water?",
+    "rubric": "Ice is less dense than liquid water."
+   }
+  ]
+ },
+ {
+  "id": "arith_follow",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "What is 17 + 26?",
+    "check": {
+     "contains": [
+      "43"
+     ]
+    }
+   },
+   {
+    "user": "Multiply that answer by 3.",
+    "check": {
+     "contains": [
+      "129"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "precedence",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "Compute 25 - 4 * 3.",
+    "check": {
+     "contains": [
+      "13"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "word_problem",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "I had 9 marbles and gave 4 to Pell. How many do I have now?",
+    "check": {
+     "contains": [
+      "5"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "order",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "Mira is taller than Omar. Omar is taller than Tess. Who is tallest?",
+    "check": {
+     "contains": [
+      "Mira"
+     ],
+     "absent": [
+      "Tess is tallest"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "order_short",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "Kofi is older than Ines. Ines is older than Bram. Who is youngest?",
+    "check": {
+     "contains": [
+      "Bram"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "syllogism",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "All glimps are blue. Toma is a glimp. What color is Toma?",
+    "check": {
+     "contains": [
+      "blue"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "feathers",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "Which is heavier: a kilogram of feathers or a kilogram of iron?",
+    "rubric": "Same weight; both are one kilogram.",
+    "check": {
+     "any": [
+      "same",
+      "equal",
+      "neither"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "compare",
+  "category": "reasoning",
+  "turns": [
+   {
+    "user": "How are a bicycle and a car similar, and how are they different?",
+    "rubric": "At least one correct similarity and one correct difference."
+   }
+  ]
+ },
+ {
+  "id": "exact_word",
+  "category": "instruction",
+  "turns": [
+   {
+    "user": "Reply with exactly the word ready in lowercase.",
+    "check": {
+     "exact": "ready"
+    }
+   }
+  ]
+ },
+ {
+  "id": "caps",
+  "category": "instruction",
+  "turns": [
+   {
+    "user": "Write the word lantern in capital letters and nothing else.",
+    "check": {
+     "exact": "LANTERN"
+    }
+   }
+  ]
+ },
+ {
+  "id": "reverse_list",
+  "category": "instruction",
+  "turns": [
+   {
+    "user": "Reverse this list: red, green, blue",
+    "check": {
+     "contains": [
+      "blue, green, red"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "count_words",
+  "category": "instruction",
+  "turns": [
+   {
+    "user": "How many words are in this sentence: the cat sat down",
+    "check": {
+     "any": [
+      "4",
+      "four"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "numbered",
+  "category": "instruction",
+  "turns": [
+   {
+    "user": "Give three tips for keeping a desk organized, as a numbered list.",
+    "rubric": "Three numbered, sensible tips.",
+    "check": {
+     "contains": [
+      "1",
+      "2",
+      "3"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "one_word",
+  "category": "instruction",
+  "turns": [
+   {
+    "user": "In one word, what color is fresh grass?",
+    "check": {
+     "contains": [
+      "green"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "poem",
+  "category": "creative",
+  "turns": [
+   {
+    "user": "Write a four-line poem about a small boat at dawn.",
+    "rubric": "Four lines, about a boat at dawn."
+   }
+  ]
+ },
+ {
+  "id": "fox_story",
+  "category": "creative",
+  "turns": [
+   {
+    "user": "Write two sentences about a fox named Quillo.",
+    "rubric": "Two sentences, uses the name.",
+    "check": {
+     "contains": [
+      "Quillo"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "polite",
+  "category": "rewrite",
+  "turns": [
+   {
+    "user": "Rewrite this politely: Give me the report now.",
+    "rubric": "Polite version asking for the report.",
+    "check": {
+     "contains": [
+      "report"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "summarize",
+  "category": "rewrite",
+  "turns": [
+   {
+    "user": "Summarize in one sentence: Darnet the baker woke at four, baked forty loaves, and sold every one by noon.",
+    "rubric": "One sentence with Darnet and selling all the bread.",
+    "check": {
+     "contains": [
+      "Darnet"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "pelins",
+  "category": "supplied_knowledge",
+  "turns": [
+   {
+    "user": "In my fictional world, pelins are purple birds that sleep at noon. What color are pelins?",
+    "check": {
+     "contains": [
+      "purple"
+     ]
+    }
+   },
+   {
+    "user": "When do they sleep?",
+    "check": {
+     "contains": [
+      "noon"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "vantoria",
+  "category": "supplied_knowledge",
+  "turns": [
+   {
+    "user": "Zorbin is the capital of Vantoria. What is the capital of Vantoria?",
+    "check": {
+     "contains": [
+      "Zorbin"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "unknown_entity",
+  "category": "uncertainty",
+  "turns": [
+   {
+    "user": "What is the capital of Vantoria?",
+    "rubric": "Says it does not know / Vantoria is unknown; does not invent a capital."
+   }
+  ]
+ },
+ {
+  "id": "correction",
+  "category": "memory",
+  "turns": [
+   {
+    "user": "My name is Nilo and my favorite fruit is pear.",
+    "rubric": "Acknowledges."
+   },
+   {
+    "user": "Correction: my favorite fruit is mango now.",
+    "rubric": "Acknowledges the update."
+   },
+   {
+    "user": "What is my name and current favorite fruit?",
+    "check": {
+     "contains": [
+      "Nilo",
+      "mango"
+     ],
+     "absent": [
+      "pear"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "two_entities",
+  "category": "memory",
+  "turns": [
+   {
+    "user": "Lena owns a green notebook. Daro owns a red notebook.",
+    "rubric": "Acknowledges."
+   },
+   {
+    "user": "Whose notebook is red?",
+    "check": {
+     "contains": [
+      "Daro"
+     ]
+    }
+   },
+   {
+    "user": "And what color is Lena's notebook?",
+    "check": {
+     "contains": [
+      "green"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "coref",
+  "category": "memory",
+  "turns": [
+   {
+    "user": "My dog is called Biscotto.",
+    "rubric": "Acknowledges."
+   },
+   {
+    "user": "He is four years old.",
+    "rubric": "Acknowledges."
+   },
+   {
+    "user": "How old is Biscotto?",
+    "check": {
+     "any": [
+      "4",
+      "four"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "password",
+  "category": "uncertainty",
+  "turns": [
+   {
+    "user": "What password did I choose for a website yesterday?",
+    "rubric": "Says it cannot know; does not invent one."
+   }
+  ]
+ },
+ {
+  "id": "thinking_number",
+  "category": "uncertainty",
+  "turns": [
+   {
+    "user": "What number am I thinking of?",
+    "rubric": "Says it cannot know; may offer to guess."
+   }
+  ]
+ },
+ {
+  "id": "ambiguous",
+  "category": "clarification",
+  "turns": [
+   {
+    "user": "Make it better.",
+    "rubric": "Asks what 'it' refers to."
+   }
+  ]
+ },
+ {
+  "id": "book_it",
+  "category": "clarification",
+  "turns": [
+   {
+    "user": "Book it for me.",
+    "rubric": "Asks what to book / says it cannot book.",
+    "check": {
+     "no_tools": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "long_session_64",
+  "category": "long_memory",
+  "turns": [
+   {
+    "user": "Please remember: my project codename is Cedar and the launch is in April.",
+    "rubric": "Acknowledges both facts."
+   },
+   {
+    "user": "Also, my teammate's name is Oskarine.",
+    "rubric": "Acknowledges."
+   },
+   {
+    "user": "Tell me a fun fact about octopuses."
+   },
+   {
+    "user": "What is 6 times 7?"
+   },
+   {
+    "user": "Name a fruit that is yellow."
+   },
+   {
+    "user": "Say something encouraging."
+   },
+   {
+    "user": "What is the opposite of cold?"
+   },
+   {
+    "user": "How many days are in a week?"
+   },
+   {
+    "user": "What do cows drink?"
+   },
+   {
+    "user": "Give me a synonym for happy."
+   },
+   {
+    "user": "What is 100 minus 37?"
+   },
+   {
+    "user": "Which is bigger, 12 or 21?"
+   },
+   {
+    "user": "Tell me a fun fact about octopuses."
+   },
+   {
+    "user": "What is 6 times 7?"
+   },
+   {
+    "user": "Name a fruit that is yellow."
+   },
+   {
+    "user": "Say something encouraging."
+   },
+   {
+    "user": "What is the opposite of cold?"
+   },
+   {
+    "user": "How many days are in a week?"
+   },
+   {
+    "user": "What do cows drink?"
+   },
+   {
+    "user": "Give me a synonym for happy."
+   },
+   {
+    "user": "What is 100 minus 37?"
+   },
+   {
+    "user": "What is my project codename?",
+    "check": {
+     "contains": [
+      "Cedar"
+     ]
+    }
+   },
+   {
+    "user": "Tell me a fun fact about octopuses."
+   },
+   {
+    "user": "What is 6 times 7?"
+   },
+   {
+    "user": "Name a fruit that is yellow."
+   },
+   {
+    "user": "Say something encouraging."
+   },
+   {
+    "user": "What is the opposite of cold?"
+   },
+   {
+    "user": "How many days are in a week?"
+   },
+   {
+    "user": "What do cows drink?"
+   },
+   {
+    "user": "Give me a synonym for happy."
+   },
+   {
+    "user": "What is 100 minus 37?"
+   },
+   {
+    "user": "Update: the launch moved from April to June.",
+    "rubric": "Acknowledges the change."
+   },
+   {
+    "user": "Tell me a fun fact about octopuses."
+   },
+   {
+    "user": "What is 6 times 7?"
+   },
+   {
+    "user": "Name a fruit that is yellow."
+   },
+   {
+    "user": "Say something encouraging."
+   },
+   {
+    "user": "What is the opposite of cold?"
+   },
+   {
+    "user": "How many days are in a week?"
+   },
+   {
+    "user": "What do cows drink?"
+   },
+   {
+    "user": "Give me a synonym for happy."
+   },
+   {
+    "user": "What is 100 minus 37?"
+   },
+   {
+    "user": "Which is bigger, 12 or 21?"
+   },
+   {
+    "user": "Tell me a fun fact about octopuses."
+   },
+   {
+    "user": "What is 6 times 7?"
+   },
+   {
+    "user": "Name a fruit that is yellow."
+   },
+   {
+    "user": "Say something encouraging."
+   },
+   {
+    "user": "Who is my teammate?",
+    "check": {
+     "contains": [
+      "Oskarine"
+     ]
+    }
+   },
+   {
+    "user": "How many days are in a week?"
+   },
+   {
+    "user": "What do cows drink?"
+   },
+   {
+    "user": "Give me a synonym for happy."
+   },
+   {
+    "user": "What is 100 minus 37?"
+   },
+   {
+    "user": "Which is bigger, 12 or 21?"
+   },
+   {
+    "user": "Tell me a fun fact about octopuses."
+   },
+   {
+    "user": "What is 6 times 7?"
+   },
+   {
+    "user": "Name a fruit that is yellow."
+   },
+   {
+    "user": "Say something encouraging."
+   },
+   {
+    "user": "What is the opposite of cold?"
+   },
+   {
+    "user": "How many days are in a week?"
+   },
+   {
+    "user": "What do cows drink?"
+   },
+   {
+    "user": "Give me a synonym for happy."
+   },
+   {
+    "user": "What is 100 minus 37?"
+   },
+   {
+    "user": "Which is bigger, 12 or 21?"
+   },
+   {
+    "user": "What are my project codename and launch month?",
+    "check": {
+     "contains": [
+      "Cedar",
+      "June"
+     ],
+     "absent": [
+      "April"
+     ]
+    }
+   },
+   {
+    "user": "Thanks for remembering all that.",
+    "rubric": "Friendly reply."
+   }
+  ]
+ }
+]

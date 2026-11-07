@@ -118,7 +118,7 @@ def run_set(cfg, P, exs: list[dict]) -> list[dict]:
 
 
 def summarize(res: list[dict], n_fail: int = 6) -> dict:
-    acc = lambda rs, k="ok": round(sum(r[k] for r in rs) / max(1, len(rs)), 4)  # noqa: E731
+    acc = lambda rs, k="ok": round(sum(r[k] for r in rs) / max(1, len(rs)), 4)
     kinds = Counter(r["kind"] for r in res)
     return {
         "exact": acc(res), "n": len(res),
@@ -187,7 +187,7 @@ def chat(agent: str) -> None:
     cfg, P, _ = load(adir(agent) / "weights.py")
     print("NCM help-desk bot. Ctrl-D to quit.")
     for line in sys.stdin:
-        got, out = reply_tokens(cfg, P, line.strip(), trace=True)
+        got, _ = reply_tokens(cfg, P, line.strip())
         print("bot:", T.decode(got))
 
 

@@ -290,7 +290,7 @@ def cmd_read(agent, base, texts: list[str], layers, mlp_layers, attn_layers, nam
     ids, am = enc.input_ids, enc.attention_mask
     nxt = torch.cat([ids[:, 1:], ids[:, :1]], 1)
     chunks: dict[str, list] = {}
-    add = lambda key, v: chunks.setdefault(key, []).append(v)  # noqa: E731
+    add = lambda key, v: chunks.setdefault(key, []).append(v)
     with _model_lock():
         m = load(model_path(agent, base), eager=bool(attn_layers))
         cur = {}
@@ -368,7 +368,7 @@ def cmd_test(agent: str, out_path: str | None) -> dict:
     p = BASE if agent == "base" else adir(agent) / "build"
     with _model_lock():
         res = run_arith(load(p), tok, items)
-    by = lambda key: {k: _summ([r for r in res if r[key] == k])["acc"] for k in dict.fromkeys(r[key] for r in res)}  # noqa: E731
+    by = lambda key: {k: _summ([r for r in res if r[key] == k])["acc"] for k in dict.fromkeys(r[key] for r in res)}
     out = {"agent": agent, "add_acc": _summ(res)["acc"], "n": len(res), "by_format": by("fmt"), "by_digits": by("d"),
            "guard_hidden": guard(p, "hidden")}
     if out_path:

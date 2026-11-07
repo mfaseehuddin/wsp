@@ -24,7 +24,7 @@ MUL_SHOTS = {"fewshot": "3*4=12\n12*11=132\n25*16=400\n"}
 
 def problems(op: str, d1: int, d2: int, n: int, seed: int) -> list[tuple[int, int]]:
     rng = random.Random(f"{op}-{d1}-{d2}-{seed}")
-    lo = lambda d: 0 if d == 1 else 10 ** (d - 1)  # noqa: E731
+    lo = lambda d: 0 if d == 1 else 10 ** (d - 1)
     return [(rng.randrange(lo(d1), 10**d1), rng.randrange(lo(d2), 10**d2)) for _ in range(n)]
 
 
