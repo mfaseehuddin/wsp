@@ -1,0 +1,110 @@
+{
+ "agent": "nco",
+ "exact": 0.9732,
+ "n": 448,
+ "by_kind": {
+  "plain": 0.9732,
+  "name": 0.9732,
+  "ticket": 0.9732,
+  "both": 0.9732
+ },
+ "intent_part_ok": 0.9732,
+ "name_slot_ok": 1.0,
+ "ticket_slot_ok": 0.9955,
+ "failures": [
+  {
+   "id": 32,
+   "query": "locked out again after typing the wrong password",
+   "want": "your account unlocks after 30 minutes . to unlock it now , call the help desk on 4357 .",
+   "got": "go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes ."
+  },
+  {
+   "id": 33,
+   "query": "i'm olga . locked out again after typing the wrong password",
+   "want": "hi olga , your account unlocks after 30 minutes . to unlock it now , call the help desk on 4357 .",
+   "got": "hi olga , go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes ."
+  },
+  {
+   "id": 34,
+   "query": "locked out again after typing the wrong password ticket 4999",
+   "want": "your account unlocks after 30 minutes . to unlock it now , call the help desk on 4357 . i added this to ticket 4 9 9 9 .",
+   "got": "go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes . i added this to ticket 4 9 9 9 ."
+  },
+  {
+   "id": 35,
+   "query": "amir speaking . locked out again after typing the wrong password re ticket 5919 .",
+   "want": "hi amir , your account unlocks after 30 minutes . to unlock it now , call the help desk on 4357 . i added this to ticket 5 9 1 9 .",
+   "got": "hi amir , go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes . i added this to ticket 5 9 1 9 ."
+  },
+  {
+   "id": 116,
+   "query": "wifi asks for my password again and again",
+   "want": "forget the corp wifi network , reconnect , and enter your corp password when asked .",
+   "got": "go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes ."
+  },
+  {
+   "id": 117,
+   "query": "this is hana , wifi asks for my password again and again",
+   "want": "hi hana , forget the corp wifi network , reconnect , and enter your corp password when asked .",
+   "got": "hi hana , go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes ."
+  },
+  {
+   "id": 118,
+   "query": "wifi asks for my password again and again ticket number 4650 .",
+   "want": "forget the corp wifi network , reconnect , and enter your corp password when asked . i added this to ticket 4 6 5 0 .",
+   "got": "go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes . i added this to ticket 4 6 5 0 ."
+  },
+  {
+   "id": 119,
+   "query": "this is keiko , wifi asks for my password again and again ticket number 9236 .",
+   "want": "hi keiko , forget the corp wifi network , reconnect , and enter your corp password when asked . i added this to ticket 9 2 3 6 .",
+   "got": "hi keiko , go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes . i added this to ticket 9 2 3 6 ."
+  },
+  {
+   "id": 264,
+   "query": "2fa code is wrong",
+   "want": "open the authenticator app and approve the request . for a new phone , call the help desk on 4357 .",
+   "got": "go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes ."
+  },
+  {
+   "id": 265,
+   "query": "lena speaking . 2fa code is wrong",
+   "want": "hi lena , open the authenticator app and approve the request . for a new phone , call the help desk on 4357 .",
+   "got": "hi lena , go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes ."
+  },
+  {
+   "id": 266,
+   "query": "2fa code is wrong ticket number 9110 .",
+   "want": "open the authenticator app and approve the request . for a new phone , call the help desk on 4357 . i added this to ticket 9 1 1 0 .",
+   "got": "go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes . i added this to ticket full 1 1 0 ."
+  },
+  {
+   "id": 267,
+   "query": "this is oscar , 2fa code is wrong ticket number 9301 .",
+   "want": "hi oscar , open the authenticator app and approve the request . for a new phone , call the help desk on 4357 . i added this to ticket 9 3 0 1 .",
+   "got": "hi oscar , go to reset.corp.com and choose forgot password . the link expires in 1 5 minutes . i added this to ticket full 3 0 1 ."
+  }
+ ],
+ "by_intent": {
+  "password": 1.0,
+  "locked": 0.875,
+  "vpn": 1.0,
+  "wifi": 0.875,
+  "email": 1.0,
+  "printer": 1.0,
+  "software": 1.0,
+  "slow": 1.0,
+  "mfa": 0.875,
+  "disk": 1.0,
+  "monitor": 1.0,
+  "hello": 1.0,
+  "thanks": 1.0,
+  "unknown": 1.0
+ },
+ "params": 1390166,
+ "nonzero": 223186,
+ "levels": [
+  1,
+  48
+ ]
+}

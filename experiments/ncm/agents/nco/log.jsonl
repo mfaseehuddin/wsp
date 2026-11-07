@@ -1,0 +1,4 @@
+{"ts": 1794084827.93944, "cmd": "eval", "note": "first full design K=2", "n": 224, "exact": 1.0}
+{"ts": 1794084995.9530518, "cmd": "eval", "note": "E_DIM16, more keywords/penalties", "n": 224, "exact": 1.0}
+{"ts": 1794085007.602991, "cmd": "probe", "note": "", "text": "jade speaking , printer jammed , ticket number 2468"}
+{"ts": 1794085039.987249, "cmd": "eval", "note": "final keywords", "n": 224, "exact": 1.0}

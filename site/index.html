@@ -107,7 +107,7 @@ footer { color: var(--fg-3); font-size: 0.85rem; border-top: 1px solid var(--rul
 
 <section class="stack" id="tracks">
   <span class="eyebrow">Now · editing real LLMs</span>
-  <h2>Three tracks on small pretrained models</h2>
+  <h2>Four tracks, from grafting circuits into LLMs to hand-writing new architectures</h2>
   <div class="tracks">
     <div class="card"><span class="chip live" id="chipA">running</span><h3>A · Bionic circuits</h3>
       <p>Graft exact circuits into Qwen2.5-0.5B, so that while the signal moves through the network, a hand-derived
@@ -115,7 +115,9 @@ footer { color: var(--fg-3); font-size: 0.85rem; border-top: 1px solid var(--rul
     <div class="card"><span class="chip next" id="chipB">next</span><h3>B · Transplant learned memory</h3>
       <p>Find how a pretrained model stores facts, write new facts in its own format with closed-form edits, then cut
         out a small, cheap support bot that runs locally.</p></div>
-    <div class="card"><span class="chip next" id="chipC">next</span><h3>C · Latent function calling</h3>
+    <div class="card"><span class="chip live">round 1 done</span><h3>D · Coarse-to-fine programming</h3>
+      <p>Hand-write the weights of a <a href="https://arxiv.org/abs/2610.14162">Next-Concept Model</a>, a generator that writes coarse to fine, every position of a level in parallel. The coarse levels hold the concept and the fine levels the words.</p></div>
+    <div class="card"><span class="chip next" id="chipC">on hold</span><h3>C · Latent function calling</h3>
       <p>A port inside the forward pass. A trigger direction fires, arguments are read from the residual stream, a
         real tool runs, and its result is written back as a vector. No text to parse.</p></div>
   </div>
@@ -137,6 +139,33 @@ footer { color: var(--fg-3); font-size: 0.85rem; border-top: 1px solid var(--rul
   <div class="tiles" id="atiles"></div>
   <p style="color:var(--fg-3);font-size:0.9rem">Agent prompts: <a href="https://github.com/mfaseehuddin/wsp/blob/main/experiments/llm/TASK.md">TASK.md</a> ·
     <a href="https://github.com/mfaseehuddin/wsp/blob/main/experiments/llm/CHEATSHEET.md">CHEATSHEET.md</a></p>
+</section>
+
+<section class="stack" id="d">
+  <span class="eyebrow">Track D · round 1 · 8 Nov</span>
+  <h2>The first hand-written Next-Concept Models</h2>
+  <p>Two agents each wrote every weight of a small NCM help-desk bot, with no training. Each reply is built in
+    levels: a forward pass per level, every position of a level in parallel. The bot answers 14 IT topics and must
+    <em>copy</em> the user's name and ticket number into the reply. Scoring used 448 messages: new phrasings, names and
+    templates that neither agent ever saw.</p>
+  <div class="tiles">
+    <div class="tile"><span class="num">97.3%</span><span class="lbl">nco · Opus</span><span class="sub">exact replies on 448 unseen messages · 2 forward passes per reply · 1.39M params (223k nonzero) · 4 runs, ~100k tokens</span></div>
+    <div class="tile"><span class="num">86.2%</span><span class="lbl">ncs · Sonnet</span><span class="sub">exact replies · 2 forward passes per reply · 5.8M params (169k nonzero) · 7 runs, ~85k tokens</span></div>
+    <div class="tile"><span class="num">2</span><span class="lbl">levels, found independently</span><span class="sub">Both agents chose the same split: one <b>plan</b> code (intent × name? × ticket?), then all 48 reply tokens at once, written by template neurons and copy heads.</span></div>
+  </div>
+  <figure>
+    <div class="scroll"><table>
+      <tr><th>hidden test (448)</th><th>nco</th><th>ncs</th></tr>
+      <tr><td>exact reply</td><td>97.3</td><td>86.2</td></tr>
+      <tr><td>intent part</td><td>97.3</td><td>94.4</td></tr>
+      <tr><td>name slot*</td><td>100</td><td>92.4</td></tr>
+      <tr><td>ticket slot</td><td>99.6</td><td>99.3</td></tr>
+    </table></div>
+    <figcaption>*The hidden names are common names, and both agents wrote long name lists from their own knowledge, so the name score mostly measures list coverage. Round 2 will test rare, out-of-vocabulary names. The remaining errors are keyword confusions, e.g. "locked out … wrong password" answered as a password reset.</figcaption>
+  </figure>
+  <p style="color:var(--fg-3);font-size:0.9rem">Try it: <code>uv run wsp-ncm chat --agent nco</code> · prompts:
+    <a href="https://github.com/mfaseehuddin/wsp/blob/main/experiments/ncm/TASK.md">TASK.md</a> ·
+    model: <a href="https://github.com/mfaseehuddin/wsp/blob/main/src/wsp/ncm/model.py">model.py</a></p>
 </section>
 
 <section class="stack" id="r1">

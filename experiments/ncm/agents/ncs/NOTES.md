@@ -1,0 +1,6 @@
+- run1: first build, bias bug (AND-neuron bias too negative), empty replies; level 0 plan code was already right.
+- run2: probe on a name+ticket message; showed plan code ok, level 1 all eos -> found the bias bug.
+- run3: fixed bias; dev 100%.
+- run4: weakened generic keywords (laptop, help, there...) after my own unknown-phrase tests; broke "hi there" with a name (dev id 183).
+- run5-6: moved pooling heads to layer 1 and added a "hi there" bigram neuron; dev 100%.
+- run7: final (added one name); dev 100%. Own phrasings (mytest.py, ~100 incl. unseen name/ticket templates) all pass.

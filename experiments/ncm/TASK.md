@@ -62,6 +62,9 @@ across levels is your design.** Fewer levels mean fewer forward passes per reply
 3. Don't read `src/wsp/ncm/` except `model.py`, other agents' folders, or `src/wsp/support/` (test data lives
    there). No internet. Never use `WSP_ADMIN`.
 4. Work only in `experiments/ncm/agents/<you>/`.
+5. **Local runs** (clarified during round 1): you may run `model.generate` yourself on messages **you write**,
+   the way a developer tests. Evaluating on the **dev set** goes through `wsp-ncm eval`, which counts against
+   your runs. Don't loop over `wsp-ncm dev` examples locally.
 
 ## 5. Deliverables
 

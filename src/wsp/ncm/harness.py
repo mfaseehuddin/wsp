@@ -113,7 +113,7 @@ def run_set(cfg, P, exs: list[dict]) -> list[dict]:
         res.append({**ex, "got": g, "ok": got == want, "kind": _kind(ex),
                     "intent_ok": " ".join(T.vocab()[i] for i in core) in g,
                     "name_ok": (ex["name"] is None) == (not g.startswith("hi ")) and (not ex["name"] or g.startswith(f"hi {ex['name']} ,")),
-                    "ticket_ok": (ex["ticket"] is None and "ticket" not in g) or (bool(ex["ticket"]) and g.endswith("ticket " + " ".join(ex["ticket"]) + " ."))})
+                    "ticket_ok": (ex["ticket"] is None and "i added this to ticket" not in g) or (bool(ex["ticket"]) and g.endswith("ticket " + " ".join(ex["ticket"]) + " ."))})
     return res
 
 

@@ -1,0 +1,7 @@
+{"ts": 1794084578.9433222, "cmd": "eval", "note": "v1", "n": 224, "exact": 0.0}
+{"ts": 1794084584.286189, "cmd": "probe", "note": "", "text": "i'm omar . i forgot my password ticket 5179"}
+{"ts": 1794084599.405885, "cmd": "eval", "note": "v1 fix bias", "n": 224, "exact": 1.0}
+{"ts": 1794084666.757974, "cmd": "eval", "note": "v2 lexicon weak-word tuning", "n": 224, "exact": 0.9955}
+{"ts": 1794084674.140106, "cmd": "eval", "note": "", "n": 224, "exact": 0.9955}
+{"ts": 1794084707.659518, "cmd": "eval", "note": "v3 pooling in layer1 + hi there bigram", "n": 224, "exact": 1.0}
+{"ts": 1794084747.643716, "cmd": "eval", "note": "v3 final +jasper", "n": 224, "exact": 1.0}
