@@ -23,6 +23,7 @@ wsp-bot = "wsp.bot.harness:main"
 wsp-gen = "wsp.gen.harness:main"
 wsp-x = "wsp.stage_x.lab:main"
 wsp-llm = "wsp.llm.harness:main"
+wsp-ncm = "wsp.ncm.harness:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]

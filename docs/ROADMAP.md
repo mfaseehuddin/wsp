@@ -27,7 +27,7 @@ retrieve facts (MLP key→value memories, attribute-extraction heads), so we can
 - B4: transplant. Cut the minimum set of layers or heads needed for a narrow domain into a small model: a support
   bot that runs locally with little or no API cost.
 
-## Track C — Latent function calling
+## Track C — Latent function calling (on hold)
 
 The model calls a tool from inside its forward pass, rather than emitting text that has to be parsed.
 
@@ -38,6 +38,26 @@ The model calls a tool from inside its forward pass, rather than emitting text t
     direction of the answer tokens).
 - Pure computations (Track A) can live entirely in weights. Real tools (databases, APIs) are external functions
   behind the port interface. The port's read and write sides are still weights we derive and explain.
+
+## Track D — Coarse-to-fine programming (Next-Concept Modeling) · priority
+
+NCM (Hazy Research / Together AI, arXiv 2610.14162; code and weights MIT at github.com/HazyResearch/ncm) generates
+text level by level. A multiscale residual VQ tokenizer turns text into codes from coarse to fine, and a transformer
+fills each level in parallel, using one forward pass per level.
+
+Why it matters for wsp:
+- Autoregressive output fights computation. Track A's adder must write the most significant digit first, but that
+  digit depends on carries from the low digits. Coarse-to-fine parallel refinement fits exact algorithms better: one
+  level per stage of the algorithm (digit sums → carries → output; constraint propagation for Sudoku).
+- The coarse codes ("concepts") are learned and unexplained. Reading them, and then writing a coarse code directly
+  to steer what gets generated, is new territory for interpretability. It is also a natural place for hand-written
+  intent and facts in a support bot.
+
+Plan:
+- D1: an NCM-style network built by hand for exact tasks (addition, Sudoku), compared with Track A's
+  autoregressive graft. Which one is easier to write and to explain?
+- D2: read the released NCM models. What do the coarse levels encode?
+- D3: write coarse codes or circuits into a released NCM.
 
 ## Later
 

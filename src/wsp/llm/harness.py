@@ -341,7 +341,10 @@ def _guard_stats(m, tok, texts: list[str]) -> dict:
 def guard(m_path: Path, split: str) -> dict:
     tok = tokenizer()
     texts = data.guard_texts(split)
-    cache = ROOT / ".cache" / f"guard_base_{split}.json"
+    import hashlib
+
+    key = hashlib.sha256("\x00".join(texts).encode()).hexdigest()[:12]
+    cache = ROOT / ".cache" / f"guard_base_{split}_{key}.json"  # keyed by the exact texts
     with _model_lock():
         if not cache.exists():
             cache.parent.mkdir(exist_ok=True)

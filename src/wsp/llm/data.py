@@ -59,10 +59,10 @@ _PROSE = [
 def guard_texts(split: str) -> list[str]:
     if split == "dev":
         files, prose = ["textwrap.py", "fractions.py"], _PROSE[::2]
-        doc = (REPO / "README.md").read_text()
+        doc = (Path(__file__).parent / "guard_doc_dev.md").read_text()  # frozen copy: the guard cache is per-token
     else:
         files, prose = ["heapq.py", "statistics.py", "calendar.py"], _PROSE[1::2]
-        doc = (REPO / "docs/research/weight-space-programming-survey.md").read_text()
+        doc = (Path(__file__).parent / "guard_doc_hidden.md").read_text()
     out = []
     for f in files:
         src = (STDLIB / f).read_text()
