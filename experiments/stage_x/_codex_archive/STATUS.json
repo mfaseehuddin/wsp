@@ -1,0 +1,52 @@
+{
+  "status": "stopped_by_user",
+  "runtime": "native_codex_subagent",
+  "builder": "x1",
+  "claude_stopped": true,
+  "hidden_tests_created": false,
+  "targets": {
+    "context_tokens": 16384,
+    "conversation_turns": 64,
+    "reply_tokens": 1024
+  },
+  "updated_at_unix": 1794019844.269373,
+  "native_agent": "/root/stage_x_builder",
+  "public_packet": "/private/tmp/wsp-stage-x-codex-public",
+  "feedback_rounds": 0,
+  "phase": "stopped",
+  "saved_checkpoint": "initial_api_scaffold_only",
+  "initial_api_validation": {
+    "params": 18363,
+    "nonzero": 3,
+    "provenance_coverage": 1.0,
+    "passed": true
+  },
+  "planned_mechanisms": [
+    "role_boundary_attention",
+    "topic_selection",
+    "copying",
+    "correctable_fact_memory",
+    "bounded_integer_arithmetic"
+  ],
+  "capability_evaluation": "not_run_on_latest_checkpoint",
+  "native_agent_status": "interrupted",
+  "saved_files": {
+    "METHOD.md": {
+      "bytes": 793,
+      "modified_at_unix": 1794018984.0387433
+    },
+    "ARCHITECTURE.md": {
+      "bytes": 317,
+      "modified_at_unix": 1794018984.0808063
+    },
+    "EXPLANATION.md": {
+      "bytes": 379,
+      "modified_at_unix": 1794018984.0599928
+    },
+    "weights.py": {
+      "bytes": 31335,
+      "modified_at_unix": 1794019826.6193848
+    }
+  },
+  "stop_reason": "User asked to stop"
+}

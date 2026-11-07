@@ -1,0 +1,120 @@
+{
+  "s0": {
+    "budget": 0,
+    "used": 0,
+    "llm_tokens": null
+  },
+  "s10": {
+    "budget": 10,
+    "used": 10,
+    "llm_tokens": 99732,
+    "params": 8647,
+    "nonzero": 1751,
+    "config": {
+      "d_model": 11,
+      "n_layers": 1,
+      "n_heads": 2,
+      "d_head": 2,
+      "d_mlp": 91,
+      "pos": "learned",
+      "tie_embeddings": true,
+      "norm": false,
+      "bias": true
+    },
+    "test_exact": 0.9732142857142857,
+    "test_tok_acc": 0.9970196428571428,
+    "dev_exact": 1.0,
+    "per_intent": {
+      "password": "8/8",
+      "locked": "8/8",
+      "vpn": "7/8",
+      "wifi": "7/8",
+      "email": "8/8",
+      "printer": "8/8",
+      "software": "8/8",
+      "slow": "7/8",
+      "mfa": "8/8",
+      "disk": "8/8",
+      "monitor": "8/8",
+      "hello": "8/8",
+      "thanks": "8/8",
+      "unknown": "8/8"
+    },
+    "failures": [
+      {
+        "query": "vpn says authentication failed",
+        "intent": "vpn",
+        "exact": false,
+        "tok_acc": 0.875,
+        "first_error": "reply pos 0: want 'restart' got 'open'"
+      },
+      {
+        "query": "wifi asks for my password again and again",
+        "intent": "wifi",
+        "exact": false,
+        "tok_acc": 0.9412,
+        "first_error": "reply pos 0: want 'forget' got 'go'"
+      },
+      {
+        "query": "it takes ages to boot",
+        "intent": "slow",
+        "exact": false,
+        "tok_acc": 0.85,
+        "first_error": "reply pos 0: want 'restart' got 'sorry'"
+      }
+    ]
+  },
+  "s50": {
+    "budget": 50,
+    "used": 50,
+    "llm_tokens": 104630,
+    "params": 12377,
+    "nonzero": 2930,
+    "config": {
+      "d_model": 11,
+      "n_layers": 1,
+      "n_heads": 2,
+      "d_head": 4,
+      "d_mlp": 245,
+      "pos": "learned",
+      "tie_embeddings": true,
+      "norm": false,
+      "bias": true
+    },
+    "test_exact": 0.9821428571428571,
+    "test_tok_acc": 0.9898535714285714,
+    "dev_exact": 1.0,
+    "per_intent": {
+      "password": "8/8",
+      "locked": "8/8",
+      "vpn": "7/8",
+      "wifi": "8/8",
+      "email": "8/8",
+      "printer": "8/8",
+      "software": "8/8",
+      "slow": "8/8",
+      "mfa": "7/8",
+      "disk": "8/8",
+      "monitor": "8/8",
+      "hello": "8/8",
+      "thanks": "8/8",
+      "unknown": "8/8"
+    },
+    "failures": [
+      {
+        "query": "vpn says authentication failed",
+        "intent": "vpn",
+        "exact": false,
+        "tok_acc": 0.0,
+        "first_error": "reply pos 0: want 'restart' got 'globalprotect'"
+      },
+      {
+        "query": "the approval prompt never arrives",
+        "intent": "mfa",
+        "exact": false,
+        "tok_acc": 0.8636,
+        "first_error": "reply pos 0: want 'open' got 'unlocks'"
+      }
+    ]
+  }
+}

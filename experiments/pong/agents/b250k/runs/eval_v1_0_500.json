@@ -1,0 +1,14 @@
+{
+  "ts": 1794006686.639491,
+  "kind": "eval",
+  "policy": "experiments/pong/agents/b250k/policy.py",
+  "sha": "541d781fbed3",
+  "rallies": 500,
+  "offset": 0,
+  "cost": 17686,
+  "used": 19067,
+  "budget": 250000,
+  "mean_loss": 0.0,
+  "hit_rate": 1.0,
+  "note": "v1 first closed-loop check on search split (offsets 0-4999)"
+}

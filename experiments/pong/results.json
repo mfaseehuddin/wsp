@@ -1,0 +1,334 @@
+{
+  "agents": {
+    "b0": {
+      "budget": 0,
+      "used": 0,
+      "spend": {
+        "confirm": 0,
+        "explore": 0,
+        "probe": 0
+      },
+      "curve": [],
+      "test": {
+        "mean_loss": 0.0,
+        "hit_rate": 1.0,
+        "rallies": 5000
+      }
+    },
+    "b2k": {
+      "budget": 2000,
+      "used": 1920,
+      "spend": {
+        "confirm": 1863,
+        "explore": 0,
+        "probe": 57
+      },
+      "curve": [
+        {
+          "used": 958,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 25,
+          "offset": 0,
+          "note": "v1 first end-to-end check: analytic crossing predictor + dead band THETA=0.015; expect hit rate 1.0 since probe max target error was 0.0028"
+        },
+        {
+          "used": 1911,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 27,
+          "offset": 10000,
+          "note": "v1 confirmation on a disjoint block of dev rallies (offset 10000); no constants changed since nothing to correct"
+        }
+      ],
+      "test": {
+        "mean_loss": 0.0,
+        "hit_rate": 1.0,
+        "rallies": 5000
+      }
+    },
+    "b10k": {
+      "budget": 10000,
+      "used": 9966,
+      "spend": {
+        "confirm": 6914,
+        "explore": 3036,
+        "probe": 16
+      },
+      "curve": [
+        {
+          "used": 2132,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 60,
+          "offset": 0,
+          "note": "eval1: v1 policy (deadband 0.015, h1=0.15, h2=0.056) on dev rallies 0-59; expect ~0 loss if predictor error bound 0.0074 holds"
+        },
+        {
+          "used": 3144,
+          "loss": 0.0,
+          "final": false,
+          "policy": "deadband_000.py",
+          "rallies": 30,
+          "offset": 60,
+          "note": "sweep: candidate deadband_000 (one constant changed from policy.py) on dev rallies 60-89, to measure sensitivity/margin of the constructed policy"
+        },
+        {
+          "used": 4156,
+          "loss": 0.0,
+          "final": false,
+          "policy": "deadband_060.py",
+          "rallies": 30,
+          "offset": 60,
+          "note": "sweep: candidate deadband_060 (one constant changed from policy.py) on dev rallies 60-89, to measure sensitivity/margin of the constructed policy"
+        },
+        {
+          "used": 5168,
+          "loss": 0.0006416329218918941,
+          "final": false,
+          "policy": "coarse_grid.py",
+          "rallies": 30,
+          "offset": 60,
+          "note": "sweep: candidate coarse_grid (one constant changed from policy.py) on dev rallies 60-89, to measure sensitivity/margin of the constructed policy"
+        },
+        {
+          "used": 9966,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 130,
+          "offset": 90,
+          "note": "final confirmation: unchanged policy.py (deadband 0.015, fine grids) on fresh dev rallies 90-219 (135 was refused, 4964>4832)"
+        }
+      ],
+      "test": {
+        "mean_loss": 0.0,
+        "hit_rate": 1.0,
+        "rallies": 5000
+      }
+    },
+    "b50k": {
+      "budget": 50000,
+      "used": 49950,
+      "spend": {
+        "confirm": 31642,
+        "explore": 17734,
+        "probe": 574
+      },
+      "curve": [
+        {
+          "used": 3520,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 100,
+          "offset": 0,
+          "note": "E1: first closed-loop check of derived policy (EPS=0.02, K_INV=14, M1=12, M2=15)"
+        },
+        {
+          "used": 7544,
+          "loss": 0.0,
+          "final": false,
+          "policy": "eps015.py",
+          "rallies": 100,
+          "offset": 100,
+          "note": "E2: EPS=0.015 (half a paddle step; smallest final offset without oscillation) on fresh rallies 100-199; expect 0 loss"
+        },
+        {
+          "used": 11046,
+          "loss": 0.0,
+          "final": false,
+          "policy": "eps075.py",
+          "rallies": 100,
+          "offset": 200,
+          "note": "E3: EPS=0.075 near upper edge of plateau (0.075 + ~0.002 net error < 0.08); expect 0 loss"
+        },
+        {
+          "used": 14550,
+          "loss": 0.0008922824757288796,
+          "final": false,
+          "policy": "eps090.py",
+          "rallies": 100,
+          "offset": 0,
+          "note": "E4: EPS=0.090 > paddle half 0.08: expect misses of up to 0.01, confirms dead-band mechanism; same rallies as E1"
+        },
+        {
+          "used": 18077,
+          "loss": 0.0,
+          "final": false,
+          "policy": "shift060.py",
+          "rallies": 100,
+          "offset": 300,
+          "note": "E5: slack test, aim 0.06 above target with EPS=0.015: worst offset 0.06+0.015+net err; 0 loss means closed-loop error < 0.005"
+        },
+        {
+          "used": 21604,
+          "loss": 0.0,
+          "final": false,
+          "policy": "coarse4.py",
+          "rallies": 100,
+          "offset": 300,
+          "note": "E6: robustness, K_INV=M1=M2=4 (worst target err ~0.03-0.04 by analysis): does coarse construction still hit? same rallies as E5"
+        },
+        {
+          "used": 46500,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 700,
+          "offset": 400,
+          "note": "E7: final policy (EPS=0.015, K_INV=14, M1=12, M2=15) confirmation on 700 fresh rallies 400-1099"
+        },
+        {
+          "used": 49950,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 95,
+          "offset": 1100,
+          "note": "E8: final policy, spend the remaining budget on 95 more fresh rallies 1100-1194"
+        }
+      ],
+      "test": {
+        "mean_loss": 0.0,
+        "hit_rate": 1.0,
+        "rallies": 5000
+      }
+    },
+    "b250k": {
+      "budget": 250000,
+      "used": 237707,
+      "spend": {
+        "confirm": 158333,
+        "explore": 56761,
+        "probe": 22613
+      },
+      "curve": [
+        {
+          "used": 19067,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 500,
+          "offset": 0,
+          "note": "v1 first closed-loop check on search split (offsets 0-4999)"
+        },
+        {
+          "used": 43209,
+          "loss": 0.04878100396761644,
+          "final": false,
+          "policy": "abl_follow.py",
+          "rallies": 200,
+          "offset": 500,
+          "note": "ablation: SLOPE_GAIN=0 -> target=y (follow the ball, no anticipation)"
+        },
+        {
+          "used": 50351,
+          "loss": 0.03476726765267389,
+          "final": false,
+          "policy": "abl_clamp.py",
+          "rallies": 200,
+          "offset": 500,
+          "note": "ablation: WALLS=clamp -> straight-line prediction clipped to [0,1], no bounce model"
+        },
+        {
+          "used": 57493,
+          "loss": 0.0,
+          "final": false,
+          "policy": "stress_aim_0.055.py",
+          "rallies": 200,
+          "offset": 500,
+          "note": "closed-loop slack test: deliberate aim error AIM_OFFSET=0.055 (predict misses only when offset+deadband+approx err > 0.08)"
+        },
+        {
+          "used": 64635,
+          "loss": 2.4406655568302153e-06,
+          "final": false,
+          "policy": "stress_aim_0.065.py",
+          "rallies": 200,
+          "offset": 500,
+          "note": "closed-loop slack test: deliberate aim error AIM_OFFSET=0.065 (predict misses only when offset+deadband+approx err > 0.08)"
+        },
+        {
+          "used": 71777,
+          "loss": 0.0018994217531456503,
+          "final": false,
+          "policy": "stress_aim_0.075.py",
+          "rallies": 200,
+          "offset": 500,
+          "note": "closed-loop slack test: deliberate aim error AIM_OFFSET=0.075 (predict misses only when offset+deadband+approx err > 0.08)"
+        },
+        {
+          "used": 82794,
+          "loss": 0.006008256690936702,
+          "final": false,
+          "policy": "coarse_3.py",
+          "rallies": 200,
+          "offset": 700,
+          "note": "failure-mode sweep closed loop: all segment counts=3 (probe max err on rand1000_1 known); does open-state error translate to misses?"
+        },
+        {
+          "used": 89811,
+          "loss": 0.0,
+          "final": false,
+          "policy": "coarse_4.py",
+          "rallies": 200,
+          "offset": 700,
+          "note": "failure-mode sweep closed loop: all segment counts=4 (probe max err on rand1000_1 known); does open-state error translate to misses?"
+        },
+        {
+          "used": 96828,
+          "loss": 0.0,
+          "final": false,
+          "policy": "coarse_6.py",
+          "rallies": 200,
+          "offset": 700,
+          "note": "failure-mode sweep closed loop: all segment counts=6 (probe max err on rand1000_1 known); does open-state error translate to misses?"
+        },
+        {
+          "used": 202396,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 3000,
+          "offset": 15000,
+          "note": "FINAL held-out check: policy.py on my own held-out split (offsets 15000-17999), never used for any decision"
+        },
+        {
+          "used": 237556,
+          "loss": 0.0,
+          "final": true,
+          "policy": "policy.py",
+          "rallies": 1000,
+          "offset": 1000,
+          "note": "final policy.py on further unused search-split rallies (offsets 1000-1999) for extra coverage"
+        }
+      ],
+      "test": {
+        "mean_loss": 0.0,
+        "hit_rate": 1.0,
+        "rallies": 5000
+      }
+    }
+  },
+  "baselines": {
+    "stay": {
+      "mean_loss": 0.17271690528235908,
+      "hit_rate": 0.1682,
+      "rallies": 5000
+    },
+    "track": {
+      "mean_loss": 0.038148771974359105,
+      "hit_rate": 0.6648,
+      "rallies": 5000
+    },
+    "oracle": {
+      "mean_loss": 0.0,
+      "hit_rate": 1.0,
+      "rallies": 5000
+    }
+  }
+}

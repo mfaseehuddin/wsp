@@ -1,0 +1,13 @@
+{
+  "builder": "x1",
+  "session_id": "d5c8d77b-010d-4fbf-a33e-d36c14b41156",
+  "tools": [
+    "Read",
+    "Write",
+    "Edit"
+  ],
+  "filesystem_canary_denied": true,
+  "denial": "--restricted: path outside the working directory",
+  "hidden_stage_x_cases_present": false,
+  "checked_at_unix": 1794018625.8660321
+}

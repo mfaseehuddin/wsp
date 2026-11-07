@@ -1,0 +1,1 @@
+{"ts": 1794011562.663275, "stage": 0, "kind": "eval", "model": "experiments/bot/agents/c1/weights.py", "sha": "b4e45067699a", "ids": [3], "cost": 1, "used": 1, "ok": 1, "note": "only run: tests FAQ think, keyword router, escalate (think-topic head, ticket-id copy, team), recall"}

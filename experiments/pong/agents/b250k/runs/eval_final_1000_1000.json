@@ -1,0 +1,14 @@
+{
+  "ts": 1794006849.9905422,
+  "kind": "eval",
+  "policy": "experiments/pong/agents/b250k/policy.py",
+  "sha": "a93b094489eb",
+  "rallies": 1000,
+  "offset": 1000,
+  "cost": 35160,
+  "used": 237556,
+  "budget": 250000,
+  "mean_loss": 0.0,
+  "hit_rate": 1.0,
+  "note": "final policy.py on further unused search-split rallies (offsets 1000-1999) for extra coverage"
+}

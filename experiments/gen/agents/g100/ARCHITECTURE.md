@@ -1,0 +1,7 @@
+# Architecture (arch.py)
+Plain-language data flow: token id -> (12-bit +-1 code, flag row from `tab`, sin/cos position code) -> 6 x [several attention heads in parallel, then one rule MLP] -> output code O (12 channels) -> logits = O . code(v) for all 4096 ids.
+Heads have individual widths and are listed per layer in `params["L{l}.h{i}.*"]`; layers 4 and 5 have no heads.
+
+Why this suits the job: copying (files, keys, values, result lists) is exact pointer/induction attention; decisions are AND/NOT rules over named 0/1 channels, so each weight has a stated reason. The standard fixed model would need d_model*4096*2 params for embed/unembed; here the id code is computed (12 bits) and the flag table is 4096x~30, so the model is 2.0M params (5M cap), ~10k nonzero. Compute per token: 33 heads with e<=60 dims plus 6 MLPs with 50-400 units on d=~560 channels: about 2M multiply-adds per token position per layer set; the harness re-runs the full context each token.
+Gives up: parameter economy of dense zeros (matrices are d wide although sparse), generality (fixed keyword lexicon, at most 2 files/keys/numbers per request), learned fuzziness.
+Embedded fitness: float32 memory about 8 MB; magnitudes: attention scores up to ~1.2e4 (recency 4/position, flag 6000, induction 48*24), residual values stay within +-3 except none; works in float32 (verified on the harness, which runs float32 on MPS/CPU). Softmax gaps are >= 10 nats so float32 rounding is harmless.

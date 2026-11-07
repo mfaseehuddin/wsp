@@ -1,0 +1,14 @@
+{
+  "ts": 1794006840.9029272,
+  "kind": "eval",
+  "policy": "experiments/pong/agents/b250k/policy.py",
+  "sha": "a93b094489eb",
+  "rallies": 3000,
+  "offset": 15000,
+  "cost": 105487,
+  "used": 202396,
+  "budget": 250000,
+  "mean_loss": 0.0,
+  "hit_rate": 1.0,
+  "note": "FINAL held-out check: policy.py on my own held-out split (offsets 15000-17999), never used for any decision"
+}

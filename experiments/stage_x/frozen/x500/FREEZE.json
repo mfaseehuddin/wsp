@@ -1,0 +1,9 @@
+{
+  "artifacts": {
+    "model.json": "8ac3dff4dae0a21e52a9a73322def81df5800d93d7ab383b6e4842fd39da6d03",
+    "weights.npz": "f738fdbb2b3783b9d643a166c84148f2565fe9d3621e525e366ca99dfb14af47"
+  },
+  "frozen_at_unix": 1794025160.250852,
+  "hidden_cases_created": false,
+  "rule": "stop generator before authoring any Stage X hidden prompts; no feedback to this builder"
+}

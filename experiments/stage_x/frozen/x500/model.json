@@ -1,0 +1,5860 @@
+{
+  "format": 1,
+  "config": {
+    "d_model": 672,
+    "n_layers": 8,
+    "n_heads": 4,
+    "d_head": 64,
+    "d_mlp": 256,
+    "max_len": 16384,
+    "pos": "learned",
+    "norm": false,
+    "bias": true,
+    "tie_embeddings": false
+  },
+  "groups": [
+    {
+      "name": "shift.L1h0.wq",
+      "tensor": "layers.1.wq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L1h0.wk",
+      "tensor": "layers.1.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L1h0.v",
+      "tensor": "layers.1.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L1h0.o",
+      "tensor": "layers.1.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 64
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shift.L2h0.wq",
+      "tensor": "layers.2.wq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L2h0.wk",
+      "tensor": "layers.2.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L2h0.v",
+      "tensor": "layers.2.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 57
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L2h0.o",
+      "tensor": "layers.2.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 57
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shift.L2h1.wq",
+      "tensor": "layers.2.wq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L2h1.wk",
+      "tensor": "layers.2.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L2h1.v",
+      "tensor": "layers.2.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 41
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L2h1.o",
+      "tensor": "layers.2.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 41
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shift.L2h2.wq",
+      "tensor": "layers.2.wq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L2h2.wk",
+      "tensor": "layers.2.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L2h2.v",
+      "tensor": "layers.2.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 39
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L2h2.o",
+      "tensor": "layers.2.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 39
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shift.L4h0.wq",
+      "tensor": "layers.4.wq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h0.wk",
+      "tensor": "layers.4.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h0.v",
+      "tensor": "layers.4.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 32
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L4h0.o",
+      "tensor": "layers.4.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 32
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shift.L4h1.wq",
+      "tensor": "layers.4.wq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h1.wk",
+      "tensor": "layers.4.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h1.v",
+      "tensor": "layers.4.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 5
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L4h1.o",
+      "tensor": "layers.4.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 5
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shift.L4h2.wq",
+      "tensor": "layers.4.wq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h2.wk",
+      "tensor": "layers.4.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h2.v",
+      "tensor": "layers.4.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 5
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L4h2.o",
+      "tensor": "layers.4.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 5
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shift.L4h3.wq",
+      "tensor": "layers.4.wq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h3.wk",
+      "tensor": "layers.4.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head: pos rotation by -1",
+      "why": "score peaks exactly at t-1 (gain"
+    },
+    {
+      "name": "shift.L4h3.v",
+      "tensor": "layers.4.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 5
+        }
+      ],
+      "mechanism": "copy source channels",
+      "why": "value slot j carries channel j"
+    },
+    {
+      "name": "shift.L4h3.o",
+      "tensor": "layers.4.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 5
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write copied channels as p1: channels",
+      "why": "moves info one position right"
+    },
+    {
+      "name": "shiftcode.L0h0.q",
+      "tensor": "layers.0.wq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "previous-token head positions",
+      "why": "attend t-1"
+    },
+    {
+      "name": "shiftcode.L0h0.k",
+      "tensor": "layers.0.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "pos keys",
+      "why": "match shifted pos"
+    },
+    {
+      "name": "shiftcode.L0h0.v",
+      "tensor": "layers.0.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "token -> 28-dim code",
+      "why": "codes make every byte matchable"
+    },
+    {
+      "name": "shiftcode.L0h0.o",
+      "tensor": "layers.0.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write previous-token code",
+      "why": "key material for induction"
+    },
+    {
+      "name": "latest.flag.digit.L0h1.k",
+      "tensor": "layers.0.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.digit.L0h1.q",
+      "tensor": "layers.0.bq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.digit.L0h1.v",
+      "tensor": "layers.0.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 1
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.digit.L0h1.o",
+      "tensor": "layers.0.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 1
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.op.L0h2.k",
+      "tensor": "layers.0.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.op.L0h2.q",
+      "tensor": "layers.0.bq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.op.L0h2.v",
+      "tensor": "layers.0.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 1
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.op.L0h2.o",
+      "tensor": "layers.0.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 1
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.q.L0h3.k",
+      "tensor": "layers.0.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.q.L0h3.q",
+      "tensor": "layers.0.bq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.q.L0h3.v",
+      "tensor": "layers.0.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 1
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.q.L0h3.o",
+      "tensor": "layers.0.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 1
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.nameword.L1h1.k",
+      "tensor": "layers.1.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.nameword.L1h1.q",
+      "tensor": "layers.1.bq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.nameword.L1h1.v",
+      "tensor": "layers.1.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 1
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.nameword.L1h1.o",
+      "tensor": "layers.1.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 1
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.greet.L1h2.k",
+      "tensor": "layers.1.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.greet.L1h2.q",
+      "tensor": "layers.1.bq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.greet.L1h2.v",
+      "tensor": "layers.1.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.greet.L1h2.o",
+      "tensor": "layers.1.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 3
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.secret.L5h0.k",
+      "tensor": "layers.5.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.secret.L5h0.q",
+      "tensor": "layers.5.bq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.secret.L5h0.v",
+      "tensor": "layers.5.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 2
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.secret.L5h0.o",
+      "tensor": "layers.5.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 2
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.read.L1h3.k",
+      "tensor": "layers.1.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.read.L1h3.q",
+      "tensor": "layers.1.bq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.read.L1h3.v",
+      "tensor": "layers.1.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 2
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.read.L1h3.o",
+      "tensor": "layers.1.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 2
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.yes.L5h1.k",
+      "tensor": "layers.5.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.yes.L5h1.q",
+      "tensor": "layers.5.bq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.yes.L5h1.v",
+      "tensor": "layers.5.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.yes.L5h1.o",
+      "tensor": "layers.5.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 3
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.howare.L3h0.k",
+      "tensor": "layers.3.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.howare.L3h0.q",
+      "tensor": "layers.3.bq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.howare.L3h0.v",
+      "tensor": "layers.3.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 2
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.howare.L3h0.o",
+      "tensor": "layers.3.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 2
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.phase.L2h3.k",
+      "tensor": "layers.2.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.phase.L2h3.q",
+      "tensor": "layers.2.bq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.phase.L2h3.v",
+      "tensor": "layers.2.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 9
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.phase.L2h3.o",
+      "tensor": "layers.2.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 9
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.rel.L3h1.k",
+      "tensor": "layers.3.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.rel.L3h1.q",
+      "tensor": "layers.3.bq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.rel.L3h1.v",
+      "tensor": "layers.3.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 1
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.rel.L3h1.o",
+      "tensor": "layers.3.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 1
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.ent1.L3h2.k",
+      "tensor": "layers.3.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.ent1.L3h2.q",
+      "tensor": "layers.3.bq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.ent1.L3h2.v",
+      "tensor": "layers.3.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 20
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.ent1.L3h2.o",
+      "tensor": "layers.3.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 20
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.namestart.L3h3.k",
+      "tensor": "layers.3.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.namestart.L3h3.q",
+      "tensor": "layers.3.bq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.namestart.L3h3.v",
+      "tensor": "layers.3.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 1
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.namestart.L3h3.o",
+      "tensor": "layers.3.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 1
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.name.first.L5h2.k",
+      "tensor": "layers.5.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.name.first.L5h2.q",
+      "tensor": "layers.5.bq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.name.first.L5h2.gq",
+      "tensor": "layers.5.wq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "gate: mode channel lowers BOS sink",
+      "why": "head only writes when mode is"
+    },
+    {
+      "name": "latest.name.first.L5h2.v",
+      "tensor": "layers.5.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.name.first.L5h2.o",
+      "tensor": "layers.5.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "induct.name.cont.L6h0.q",
+      "tensor": "layers.6.wq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "induction query: code(cur token) and code(prev",
+      "why": "find source position whose previous two"
+    },
+    {
+      "name": "induct.name.cont.L6h0.k",
+      "tensor": "layers.6.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "induction key: codes of the previous",
+      "why": "class flag restricts candidates; sink wins"
+    },
+    {
+      "name": "induct.name.cont.L6h0.bq",
+      "tensor": "layers.6.bq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "sink score and recency",
+      "why": "latest occurrence wins"
+    },
+    {
+      "name": "induct.name.cont.L6h0.v",
+      "tensor": "layers.6.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "value = token code (with word->operator",
+      "why": "copy / translate token"
+    },
+    {
+      "name": "induct.name.cont.L6h0.o",
+      "tensor": "layers.6.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write code to emit channels",
+      "why": "unembed decodes it"
+    },
+    {
+      "name": "latest.calc.first.L7h0.k",
+      "tensor": "layers.7.wk",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.calc.first.L7h0.q",
+      "tensor": "layers.7.bq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.calc.first.L7h0.gq",
+      "tensor": "layers.7.wq",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "gate: mode channel lowers BOS sink",
+      "why": "head only writes when mode is"
+    },
+    {
+      "name": "latest.calc.first.L7h0.v",
+      "tensor": "layers.7.wv",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.calc.first.L7h0.o",
+      "tensor": "layers.7.wo",
+      "index": [
+        0,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "induct.calc.cont.L7h1.q",
+      "tensor": "layers.7.wq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "induction query: code(cur token) and code(prev",
+      "why": "find source position whose previous two"
+    },
+    {
+      "name": "induct.calc.cont.L7h1.k",
+      "tensor": "layers.7.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "induction key: codes of the previous",
+      "why": "class flag restricts candidates; sink wins"
+    },
+    {
+      "name": "induct.calc.cont.L7h1.bq",
+      "tensor": "layers.7.bq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 64
+        }
+      ],
+      "mechanism": "sink score and recency",
+      "why": "latest occurrence wins"
+    },
+    {
+      "name": "induct.calc.cont.L7h1.v",
+      "tensor": "layers.7.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "value = token code (with word->operator",
+      "why": "copy / translate token"
+    },
+    {
+      "name": "induct.calc.cont.L7h1.o",
+      "tensor": "layers.7.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write code to emit channels",
+      "why": "unembed decodes it"
+    },
+    {
+      "name": "latest.calc.res.L6h1.k",
+      "tensor": "layers.6.wk",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.calc.res.L6h1.q",
+      "tensor": "layers.6.bq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.calc.res.L6h1.gq",
+      "tensor": "layers.6.wq",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "gate: mode channel lowers BOS sink",
+      "why": "head only writes when mode is"
+    },
+    {
+      "name": "latest.calc.res.L6h1.v",
+      "tensor": "layers.6.wv",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.calc.res.L6h1.o",
+      "tensor": "layers.6.wo",
+      "index": [
+        1,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.fact.rel.L6h2.k",
+      "tensor": "layers.6.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.fact.rel.L6h2.q",
+      "tensor": "layers.6.bq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.fact.rel.L6h2.gq",
+      "tensor": "layers.6.wq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "gate: mode channel lowers BOS sink",
+      "why": "head only writes when mode is"
+    },
+    {
+      "name": "latest.fact.rel.L6h2.v",
+      "tensor": "layers.6.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.fact.rel.L6h2.o",
+      "tensor": "layers.6.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.fact.ent.L6h3.k",
+      "tensor": "layers.6.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.fact.ent.L6h3.q",
+      "tensor": "layers.6.bq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.fact.ent.L6h3.gq",
+      "tensor": "layers.6.wq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "gate: mode channel lowers BOS sink",
+      "why": "head only writes when mode is"
+    },
+    {
+      "name": "latest.fact.ent.L6h3.v",
+      "tensor": "layers.6.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.fact.ent.L6h3.o",
+      "tensor": "layers.6.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.tool.path.L7h2.k",
+      "tensor": "layers.7.wk",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.tool.path.L7h2.q",
+      "tensor": "layers.7.bq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.tool.path.L7h2.gq",
+      "tensor": "layers.7.wq",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "gate: mode channel lowers BOS sink",
+      "why": "head only writes when mode is"
+    },
+    {
+      "name": "latest.tool.path.L7h2.v",
+      "tensor": "layers.7.wv",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.tool.path.L7h2.o",
+      "tensor": "layers.7.wo",
+      "index": [
+        2,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.tool.txt.L7h3.k",
+      "tensor": "layers.7.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.tool.txt.L7h3.q",
+      "tensor": "layers.7.bq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.tool.txt.L7h3.gq",
+      "tensor": "layers.7.wq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "gate: mode channel lowers BOS sink",
+      "why": "head only writes when mode is"
+    },
+    {
+      "name": "latest.tool.txt.L7h3.v",
+      "tensor": "layers.7.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 28
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.tool.txt.L7h3.o",
+      "tensor": "layers.7.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 28
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "latest.flag.indata.L5h3.k",
+      "tensor": "layers.5.wk",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "latest-of-class: key flag score 40000 plus",
+      "why": "USER/BOS tokens are null keys so"
+    },
+    {
+      "name": "latest.flag.indata.L5h3.q",
+      "tensor": "layers.5.bq",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 3
+        }
+      ],
+      "mechanism": "constant query",
+      "why": "recency weight 3000 and sink"
+    },
+    {
+      "name": "latest.flag.indata.L5h3.v",
+      "tensor": "layers.5.wv",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 672
+        },
+        {
+          "start": 0,
+          "stop": 1
+        }
+      ],
+      "mechanism": "copy value channel or token code",
+      "why": "value = flag or code(token)"
+    },
+    {
+      "name": "latest.flag.indata.L5h3.o",
+      "tensor": "layers.5.wo",
+      "index": [
+        3,
+        {
+          "start": 0,
+          "stop": 1
+        },
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write to L_ or cout channels",
+      "why": "flag or emit-code"
+    },
+    {
+      "name": "rules.intro.howare.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          0,
+          1
+        ]
+      ],
+      "mechanism": "conjunction neurons for intro.howare: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.intro.howare.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.intro.howare.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          0,
+          1
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.intro.whoare.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          2,
+          3
+        ]
+      ],
+      "mechanism": "conjunction neurons for intro.whoare: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.intro.whoare.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          2,
+          3
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.intro.whoare.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          2,
+          3
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.safe.dots.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          0,
+          1
+        ]
+      ],
+      "mechanism": "conjunction neurons for safe.dots: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.safe.dots.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.safe.dots.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          0,
+          1
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.name.start.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "mechanism": "conjunction neurons for name.start: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.name.start.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.name.start.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.intent.L0.in",
+      "tensor": "layers.0.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          0,
+          1
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.intent: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.intent.L0.b",
+      "tensor": "layers.0.b_in",
+      "index": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.intent.L0.out",
+      "tensor": "layers.0.w_out",
+      "index": [
+        [
+          0,
+          1
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.exprstart.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.exprstart: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.exprstart.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.exprstart.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          2,
+          3,
+          4,
+          5
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.call.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.call: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.call.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.call.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.call.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.call: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.call.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.call.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.first.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          44,
+          45
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.first: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.first.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          44,
+          45
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.first.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          44,
+          45
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.cont.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          46,
+          47
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.cont: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.cont.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          46,
+          47
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.cont.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          46,
+          47
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.close.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.close: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.close.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.close.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.resstart.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          56,
+          57
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.resstart: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.resstart.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          56,
+          57
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.resstart.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          56,
+          57
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.answer.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.answer: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.answer.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.answer.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          12,
+          13,
+          14,
+          15
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.calc.answer.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ]
+      ],
+      "mechanism": "conjunction neurons for calc.answer: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.calc.answer.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.calc.answer.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.greet.L3.in",
+      "tensor": "layers.3.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.greet: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.greet.L3.b",
+      "tensor": "layers.3.b_in",
+      "index": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.greet.L3.out",
+      "tensor": "layers.3.w_out",
+      "index": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.thanks.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.thanks: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.thanks.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.thanks.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          16,
+          17,
+          18,
+          19
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.thanks.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.thanks: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.thanks.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.thanks.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.bye.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          20,
+          21,
+          22,
+          23
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.bye: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.bye.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          20,
+          21,
+          22,
+          23
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.bye.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          20,
+          21,
+          22,
+          23
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.bye.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.bye: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.bye.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.bye.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.name.meet.L3.in",
+      "tensor": "layers.3.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ]
+      ],
+      "mechanism": "conjunction neurons for name.meet: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.name.meet.L3.b",
+      "tensor": "layers.3.b_in",
+      "index": [
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.name.meet.L3.out",
+      "tensor": "layers.3.w_out",
+      "index": [
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.name.recall.L3.in",
+      "tensor": "layers.3.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ]
+      ],
+      "mechanism": "conjunction neurons for name.recall: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.name.recall.L3.b",
+      "tensor": "layers.3.b_in",
+      "index": [
+        [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.name.recall.L3.out",
+      "tensor": "layers.3.w_out",
+      "index": [
+        [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.name.recall.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ]
+      ],
+      "mechanism": "conjunction neurons for name.recall: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.name.recall.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.name.recall.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.fact.known.L3.in",
+      "tensor": "layers.3.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97
+        ]
+      ],
+      "mechanism": "conjunction neurons for fact.known: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.fact.known.L3.b",
+      "tensor": "layers.3.b_in",
+      "index": [
+        [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.fact.known.L3.out",
+      "tensor": "layers.3.w_out",
+      "index": [
+        [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.fact.value.L4.in",
+      "tensor": "layers.4.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "mechanism": "conjunction neurons for fact.value: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.fact.value.L4.b",
+      "tensor": "layers.4.b_in",
+      "index": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.fact.value.L4.out",
+      "tensor": "layers.4.w_out",
+      "index": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.fact.frame.L4.in",
+      "tensor": "layers.4.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61
+        ]
+      ],
+      "mechanism": "conjunction neurons for fact.frame: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.fact.frame.L4.b",
+      "tensor": "layers.4.b_in",
+      "index": [
+        [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.fact.frame.L4.out",
+      "tensor": "layers.4.w_out",
+      "index": [
+        [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.read.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.read: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.read.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.read.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.read.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.read: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.read.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.read.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.read.L4.in",
+      "tensor": "layers.4.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          62,
+          63,
+          64,
+          65
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.read: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.read.L4.b",
+      "tensor": "layers.4.b_in",
+      "index": [
+        [
+          62,
+          63,
+          64,
+          65
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.read.L4.out",
+      "tensor": "layers.4.w_out",
+      "index": [
+        [
+          62,
+          63,
+          64,
+          65
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.delete.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          124,
+          125
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.delete: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.delete.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          124,
+          125
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.delete.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          124,
+          125
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.text.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          108,
+          109
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.text: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.text.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          108,
+          109
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.text.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          108,
+          109
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.says.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          24,
+          25,
+          26,
+          27
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.says: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.says.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          24,
+          25,
+          26,
+          27
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.says.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          24,
+          25,
+          26,
+          27
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.says.L4.in",
+      "tensor": "layers.4.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          66,
+          67,
+          68,
+          69
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.says: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.says.L4.b",
+      "tensor": "layers.4.b_in",
+      "index": [
+        [
+          66,
+          67,
+          68,
+          69
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.says.L4.out",
+      "tensor": "layers.4.w_out",
+      "index": [
+        [
+          66,
+          67,
+          68,
+          69
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.says.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          110,
+          111,
+          112,
+          113,
+          114,
+          115
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.says: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.says.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          110,
+          111,
+          112,
+          113,
+          114,
+          115
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.says.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          110,
+          111,
+          112,
+          113,
+          114,
+          115
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.deleted.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          86,
+          87
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.deleted: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.deleted.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          86,
+          87
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.deleted.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          86,
+          87
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.deleted.L1.in",
+      "tensor": "layers.1.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          28,
+          29
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.deleted: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.deleted.L1.b",
+      "tensor": "layers.1.b_in",
+      "index": [
+        [
+          28,
+          29
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.deleted.L1.out",
+      "tensor": "layers.1.w_out",
+      "index": [
+        [
+          28,
+          29
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.confirm.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.confirm: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.confirm.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.confirm.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.cancel.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.cancel: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.cancel.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.cancel.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.howare.L3.in",
+      "tensor": "layers.3.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.howare: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.howare.L3.b",
+      "tensor": "layers.3.b_in",
+      "index": [
+        [
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.howare.L3.out",
+      "tensor": "layers.3.w_out",
+      "index": [
+        [
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.howare.L4.in",
+      "tensor": "layers.4.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.howare: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.howare.L4.b",
+      "tensor": "layers.4.b_in",
+      "index": [
+        [
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.howare.L4.out",
+      "tensor": "layers.4.w_out",
+      "index": [
+        [
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.who.L3.in",
+      "tensor": "layers.3.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.who: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.who.L3.b",
+      "tensor": "layers.3.b_in",
+      "index": [
+        [
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.who.L3.out",
+      "tensor": "layers.3.w_out",
+      "index": [
+        [
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.social.who.L4.in",
+      "tensor": "layers.4.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          76,
+          77,
+          78,
+          79,
+          80,
+          81
+        ]
+      ],
+      "mechanism": "conjunction neurons for social.who: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.social.who.L4.b",
+      "tensor": "layers.4.b_in",
+      "index": [
+        [
+          76,
+          77,
+          78,
+          79,
+          80,
+          81
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.social.who.L4.out",
+      "tensor": "layers.4.w_out",
+      "index": [
+        [
+          76,
+          77,
+          78,
+          79,
+          80,
+          81
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.word.start.L2.in",
+      "tensor": "layers.2.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          116,
+          117
+        ]
+      ],
+      "mechanism": "conjunction neurons for word.start: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.word.start.L2.b",
+      "tensor": "layers.2.b_in",
+      "index": [
+        [
+          116,
+          117
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.word.start.L2.out",
+      "tensor": "layers.2.w_out",
+      "index": [
+        [
+          116,
+          117
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.word.reply.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          126,
+          127,
+          128,
+          129
+        ]
+      ],
+      "mechanism": "conjunction neurons for word.reply: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.word.reply.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          126,
+          127,
+          128,
+          129
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.word.reply.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          126,
+          127,
+          128,
+          129
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.tool.textdata.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          130,
+          131
+        ]
+      ],
+      "mechanism": "conjunction neurons for tool.textdata: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.tool.textdata.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          130,
+          131
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.tool.textdata.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          130,
+          131
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.safe.refuse.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147
+        ]
+      ],
+      "mechanism": "conjunction neurons for safe.refuse: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.safe.refuse.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.safe.refuse.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.safe.refuse2.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163
+        ]
+      ],
+      "mechanism": "conjunction neurons for safe.refuse2: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.safe.refuse2.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.safe.refuse2.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.fallback.L0.in",
+      "tensor": "layers.0.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          2,
+          3
+        ]
+      ],
+      "mechanism": "conjunction neurons for fallback: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.fallback.L0.b",
+      "tensor": "layers.0.b_in",
+      "index": [
+        [
+          2,
+          3
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.fallback.L0.out",
+      "tensor": "layers.0.w_out",
+      "index": [
+        [
+          2,
+          3
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "rules.fallback.L5.in",
+      "tensor": "layers.5.w_in",
+      "index": [
+        {
+          "start": 0,
+          "stop": 672
+        },
+        [
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181
+        ]
+      ],
+      "mechanism": "conjunction neurons for fallback: weight 1",
+      "why": "noise-free 0/U output"
+    },
+    {
+      "name": "rules.fallback.L5.b",
+      "tensor": "layers.5.b_in",
+      "index": [
+        [
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181
+        ]
+      ],
+      "mechanism": "thresholds",
+      "why": "fires only when all conditions hold"
+    },
+    {
+      "name": "rules.fallback.L5.out",
+      "tensor": "layers.5.w_out",
+      "index": [
+        [
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181
+        ],
+        {
+          "start": 0,
+          "stop": 672
+        }
+      ],
+      "mechanism": "write feature channel or token code",
+      "why": "emit strength 1.0 = logit 20,"
+    },
+    {
+      "name": "unembed",
+      "tensor": "unembed",
+      "index": null,
+      "mechanism": "logit(v)=20*cos(code(v), code emitted)",
+      "why": "greedy argmax picks the emitted token"
+    },
+    {
+      "name": "b_unembed",
+      "tensor": "b_unembed",
+      "index": [
+        [
+          10
+        ]
+      ],
+      "mechanism": "END default logit 3",
+      "why": "when nothing fires the turn ends"
+    },
+    {
+      "name": "pos",
+      "tensor": "pos",
+      "index": null,
+      "mechanism": "clean position code",
+      "why": "sin/cos pairs only"
+    },
+    {
+      "name": "embed",
+      "tensor": "embed",
+      "index": null,
+      "mechanism": "one-hot token channel (amplitude 32) plus",
+      "why": "identity and class available from layer"
+    }
+  ],
+  "words": [
+    "plus",
+    "minus",
+    "times",
+    "Hello",
+    "Hi",
+    "Hey",
+    "Thanks",
+    "thanks",
+    "Thank",
+    "bye",
+    "Bye",
+    "Goodbye",
+    "How",
+    "secrets",
+    "secret",
+    "name",
+    "capital",
+    "France",
+    "Japan",
+    "Italy",
+    "Spain",
+    "Germany",
+    "Egypt",
+    "Canada",
+    "China",
+    "India",
+    "Russia",
+    "Kenya",
+    "Brazil",
+    "Greece",
+    "Peru",
+    "Norway",
+    "Cuba",
+    "Austria",
+    "Portugal",
+    "Ireland",
+    "Poland",
+    "Paris",
+    "Tokyo",
+    "Rome",
+    "Madrid",
+    "Berlin",
+    "Cairo",
+    "Ottawa",
+    "Beijing",
+    "Delhi",
+    "Moscow",
+    "Nairobi",
+    "Brasilia",
+    "Athens",
+    "Lima",
+    "Oslo",
+    "Havana",
+    "Vienna",
+    "Lisbon",
+    "Dublin",
+    "Warsaw",
+    "Read",
+    "read",
+    "Open",
+    "open",
+    "delete",
+    "Delete",
+    "Yes",
+    "yes",
+    "No",
+    "no",
+    "Who",
+    "who",
+    "how",
+    "you",
+    "are",
+    "expression",
+    "is",
+    "calc",
+    "path",
+    "says",
+    "meet",
+    "The",
+    "answer",
+    "of",
+    "Nice",
+    "to",
+    "Your",
+    "welcome",
+    "help",
+    "can",
+    "I",
+    "doing",
+    "well",
+    "don't",
+    "know",
+    "that",
+    "yet",
+    "It",
+    "cannot",
+    "do",
+    "am",
+    "My",
+    "my",
+    "I'm",
+    "args",
+    "You",
+    "re",
+    "Take",
+    "care",
+    "Done",
+    "it",
+    "Please",
+    "confirm",
+    "Okay",
+    "will",
+    "not",
+    "small",
+    "assistant",
+    "word"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "session_id": "d5c8d77b-010d-4fbf-a33e-d36c14b41156",
+  "builder": "x1",
+  "directory": "/private/tmp/wsp-stage-x-builder-z7_x_uee",
+  "rounds": [
+    {
+      "round": 1,
+      "pid": 60922,
+      "log": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/stage_x/builder_round_1.jsonl",
+      "started_at_unix": 1794018465.9004889,
+      "exit_code": 1,
+      "finished_at_unix": 1794018466.851756,
+      "note": "No model inference occurred: outer sandbox cannot access CLI keychain login"
+    },
+    {
+      "round": 2,
+      "pid": 61234,
+      "log": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/stage_x/builder_round_2.jsonl",
+      "started_at_unix": 1794018516.1053922,
+      "exit_code": 1,
+      "finished_at_unix": 1794018517.3015308,
+      "is_error": true,
+      "usage": {
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      }
+    },
+    {
+      "round": 3,
+      "pid": 61416,
+      "log": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/stage_x/builder_round_3.jsonl",
+      "started_at_unix": 1794018547.154916
+    }
+  ],
+  "hidden_cases_created": false,
+  "created_at_unix": 1794018465.7934022,
+  "tools": [
+    "Read",
+    "Write",
+    "Edit"
+  ],
+  "canary": "/Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/stage_x/ISOLATION_CANARY.txt",
+  "inference_started": false,
+  "stopped": true,
+  "stop_reason": "User requested native Codex agents; Claude cancelled",
+  "stopped_at_unix": 1794018855.0905821
+}

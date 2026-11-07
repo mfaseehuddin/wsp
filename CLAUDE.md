@@ -19,17 +19,25 @@ MPS notes:
 - MPS has **no float64**. Build weights and check exactness in float64 on CPU, then cast to float32 for MPS. Don't expect bit-exact results on MPS. Verification should use tolerances there, or compare against the CPU float64 result.
 - `PYTORCH_ENABLE_MPS_FALLBACK=1` lets ops that MPS doesn't support fall back to CPU.
 
-## Prior art: reuse before building
-
-The user wants to avoid reinventing existing work. RASP and Tracr (compiling RASP programs into transformer weights) are the starting point. `docs/research/weight-space-programming-survey.md` surveys the formal work. Read it before designing a new spec language or compiler, and prefer reusing or porting existing tools (e.g. converting Tracr output into PyTorch modules) over rewriting them.
-
 ## What wsp is
 
-**wsp (weight space programming)** builds neural networks by *generating their weights programmatically* rather than training them. The goals are:
+**wsp (weight space programming)** is about *understanding weights well enough to write them*. The core questions, for any network (MLP, CNN, Transformer):
 
-1. **Constructed, not trained.** Produce working CNNs and Transformers whose weights are written directly to perform a specific task. This skips gradient-based training, which is limited by the compute available on hand or on the device.
-2. **Open the black box.** Every weight should be explainable: why it has its value and what computation it implements. Interpretability is a primary output, not a side effect.
-3. **LLM Programming Language.** An LLM reads the user's intent in natural language and turns it into a network specification that is then compiled into weights. The result is a network that comes out "pretrained" for the job.
+- **Why** are the weights in layer N the way they are?
+- **What mechanism** do they implement, and when does that mechanism apply?
+- **How** can that understanding be turned around to **generate** weights directly for a task, without training?
+
+Explaining weights and generating weights are the same theory used in two directions. A mechanism is only understood once we can derive its weights from first principles, and a generated network is only acceptable once every weight has an explanation. Goals:
+
+1. **Explain.** For each layer and weight group, give the mechanism it performs and the reason for its values (e.g. "these layer-2 rows are oriented edge detectors built from layer-1 features; the bias sets the activation threshold").
+2. **Generate.** Write working CNN and Transformer weights directly from those derived mechanisms. This skips training, which is limited by the compute available on the device.
+3. **LLM Programming Language (later).** An LLM turns natural-language intent into a spec of mechanisms, which is then built into weights.
+
+Explanations are the primary output, not a by-product. Code should make them easy to produce and inspect.
+
+## Prior art
+
+`docs/research/weight-space-programming-survey.md` surveys the formal work (RASP, Tracr, ALTA, CNN constructions, interpretability). Reuse existing tools where they serve the goal, e.g. Tracr-compiled models as ground-truth examples whose mechanisms are known. Tracr itself compiles programs without explaining *why* the resulting weights work, so it is a reference and not the center of the project.
 
 ## Intended architecture (conceptual)
 
@@ -49,3 +57,12 @@ Principles for code in this repo:
 - **Traceability.** Generated weights should be traceable back to the spec element that produced them, e.g. through named components or metadata. Don't emit opaque tensors with no provenance.
 - **Verification as a first-class step.** Every constructor needs an executable check that the generated network computes what the spec says, compared against a reference implementation of the task.
 - **Training is optional.** Gradient-based fine-tuning may be used to compare against or refine constructed weights. It must not be the main way a network gets its weights.
+
+## Running agent experiments
+
+The experiments live in `experiments/<name>/`. Each has a `TASK.md` that gives agents the rules, an agent-facing harness CLI (`wsp-pong`, `wsp-support`, `wsp-bot`), and per-agent folders under `agents/`. The admin commands need `WSP_ADMIN=1`, and agents must never use them.
+
+- **Spawn experiment agents with the `wsp-builder` agent type** (`.claude/agents/wsp-builder.md`). It has only Bash, Read, Write and Edit, so its baseline context is much smaller than general-purpose.
+- **Point agents to `experiments/bot/CHEATSHEET.md`** rather than the source files. A file an agent reads stays in its context for every later call, and context size is the token budget.
+- **Track tokens and enforce limits:** write each agent's transcript path to `agents/<a>/.transcript` after spawning it. Agents check `wsp-bot tokens --agent <a>`, and `experiments/bot/token_watch.py` (run under Monitor) flags when an agent reaches its limit and its limit plus 100k.
+- **5-hour usage limits:** running many agents in parallel hits them quickly, so stagger agents. A stopped agent keeps its saved files and can be resumed with SendMessage.

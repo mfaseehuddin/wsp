@@ -11,3 +11,10 @@ build/
 *.pt
 *.pth
 *.safetensors
+
+# local agent state / large artifacts
+.transcript
+.artifacts/
+experiments/stage_x/frozen/*/weights.npz
+# downloaded pretrained models
+models/
