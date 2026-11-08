@@ -37,6 +37,7 @@ ROOT = Path(os.environ.get("WSP_PURE_ROOT", REPO / "experiments/pure"))
 QWEN_TOK = REPO / "models/Qwen2.5-0.5B"
 PARAM_CAP = 300_000_000
 MAX_NEW = 128
+CHECKPOINTS = (10, 30, 50, 100)  # passes at which the model.py that ran is frozen to experiments/pure/frozen/
 
 
 class BudgetExceeded(RuntimeError):
@@ -85,6 +86,16 @@ def _charge(a) -> int:
         raise BudgetExceeded(f"all {led['budget']} passes used")
     led["used"] += 1
     (adir(a) / ".ledger.json").write_text(json.dumps(led))
+    if led["used"] in CHECKPOINTS:  # freeze the exact model.py this pass runs (it was just built)
+        src = adir(a) / "model.py"
+        fz = ROOT / "frozen"
+        fz.mkdir(exist_ok=True)
+        dst = fz / f"{a}_p{led['used']:03d}.py"
+        dst.write_bytes(src.read_bytes())
+        meta = {"agent": a, "pass": led["used"], "time": time.strftime("%Y-%m-%d %H:%M:%S"),
+                "sha256": hashlib.sha256(src.read_bytes()).hexdigest()}
+        (fz / f"{a}_p{led['used']:03d}.json").write_text(json.dumps(meta))
+        progress.say(f"checkpoint: froze {dst.name}")
     return led["used"]
 
 
@@ -305,10 +316,11 @@ def cmd_probe(a, turns_path, note):
     return out
 
 
-def cmd_test(a, cases_path, out_path):
-    family, cfg, P, _, _ = build(a)
+def cmd_test(a, cases_path, out_path, model_path=""):
+    family, cfg, P, _, _ = build(a, Path(model_path) if model_path else None)
     res = run_cases(family, cfg, P, json.loads(Path(cases_path).read_text()))
-    out = {"agent": a, "family": family, "results": res, "params": sum(v.numel() for v in P.values())}
+    out = {"agent": a, "model": model_path or "current", "family": family, "results": res,
+           "params": sum(v.numel() for v in P.values())}
     if out_path:
         Path(out_path).write_text(json.dumps(out, indent=1))
     mech = [t["pass"] for r in res for t in r["turns"] if t["pass"] is not None]
@@ -336,7 +348,7 @@ def main(argv=None):
             "status": [A], "tokens": [A], "check": [A], "dev": [A, ("--ids", str, ""), N],
             "chat": [A, ("--convs", str, None), N], "probe": [A, ("--turns", str, None), N],
             "init": [A, ("--budget", int, None), ("--tokens", int, None)],
-            "test": [A, ("--cases", str, None), ("--out", str, "")], "talk": [A]}
+            "test": [A, ("--cases", str, None), ("--out", str, ""), ("--model", str, "")], "talk": [A]}
     for name, args in spec.items():
         s = sub.add_parser(name)
         for flag, typ, default in args:
@@ -380,7 +392,7 @@ def main(argv=None):
             out = read_ledger(a.agent)
         elif a.cmd == "test":
             _admin()
-            out = cmd_test(a.agent, a.cases, a.out)
+            out = cmd_test(a.agent, a.cases, a.out, a.model)
         elif a.cmd == "talk":
             talk(a.agent)
             return
