@@ -1,0 +1,104 @@
+[
+ [
+  {
+   "user": "Please remember: my project codename is Cedar and the launch is in April.",
+   "bot": "Got it! I'll remember that."
+  },
+  {
+   "user": "Also, my teammate's name is Oskarine.",
+   "bot": "Got it! I'll remember that."
+  },
+  {
+   "user": "Tell me a fun fact about octopuses.",
+   "bot": "An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color."
+  },
+  {
+   "user": "Say something encouraging.",
+   "bot": "You are doing better than you think! Every small step counts, so keep going. I believe in you."
+  },
+  {
+   "user": "What do cows drink?",
+   "bot": "A cow is a farm animal. Cows eat grass, drink water, and give us milk."
+  },
+  {
+   "user": "What is my project codename?",
+   "bot": "You told me that your project codename is Cedar and the launch is in April."
+  },
+  {
+   "user": "Who is my teammate?",
+   "bot": "I don't think you have told me that yet. Could you remind me?"
+  },
+  {
+   "user": "Update: the launch moved from April to June.",
+   "bot": "Thanks for the update! I've noted the change."
+  },
+  {
+   "user": "When is the launch?",
+   "bot": "You told me that the launch moved from April to June."
+  },
+  {
+   "user": "Tell me a fun fact about octopuses.",
+   "bot": "An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color."
+  }
+ ],
+ [
+  {
+   "user": "My name is Nilo and my favorite fruit is pear.",
+   "bot": "Nice to meet you, Nilo! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "Correction: my favorite fruit is mango now.",
+   "bot": "Thanks for the update! I've noted the change."
+  },
+  {
+   "user": "What is my favorite fruit?",
+   "bot": "You told me that your favorite fruit is mango now."
+  },
+  {
+   "user": "Lena owns a green notebook. Daro owns a red notebook.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Whose notebook is red?",
+   "bot": "You told me that Daro owns a red notebook."
+  },
+  {
+   "user": "And what color is Lena's notebook?",
+   "bot": "The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green."
+  },
+  {
+   "user": "My dog is called Biscotto.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "He is four years old.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "How old is Biscotto?",
+   "bot": "You told me that He is four years old.otto"
+  }
+ ],
+ [
+  {
+   "user": "Zorbin is the capital of Vantoria. What is the capital of Vantoria?",
+   "bot": "You told me that Zorbin is the capital of Vantoria."
+  },
+  {
+   "user": "In my fictional world, pelins are purple birds that sleep at noon. What color are pelins?",
+   "bot": "You told me that In your fictional world, pelins are purple birds that sleep at noon."
+  },
+  {
+   "user": "When do they sleep?",
+   "bot": "You told me that In your fictional world, pelins are purple birds that sleep at noon."
+  },
+  {
+   "user": "What is a noun? Give one example.",
+   "bot": "A noun is a word for a person, place, thing or idea. For example, \"dog\" is a noun."
+  },
+  {
+   "user": "Summarize in one sentence: Darnet the baker woke at four, baked forty loaves, and sold every one by noon.",
+   "bot": "In short: Darnet the baker woke at four, baked forty loaves, and sold every one by noon."
+  }
+ ]
+]

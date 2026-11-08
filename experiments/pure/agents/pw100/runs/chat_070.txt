@@ -1,0 +1,62 @@
+[
+ [
+  {
+   "user": "Goodnight!",
+   "bot": "Goodbye! It was nice chatting with you. Have a great day!"
+  },
+  {
+   "user": "Hello again. Call me Rafa.",
+   "bot": "Nice to meet you,user"
+  },
+  {
+   "user": "What should I call you?",
+   "bot": "You can call me Pip. I'm a small chat program written by hand."
+  },
+  {
+   "user": "Is a dolphin a fish?",
+   "bot": "A dolphin is a smart mammal that lives in the sea. Dolphins breathe air and talk with clicks and whistles."
+  },
+  {
+   "user": "What do pandas eat?",
+   "bot": "A giant panda is a bear from China. It eats mostly bamboo."
+  },
+  {
+   "user": "Which is bigger, 345 or 354?",
+   "bot": "The bigger number is 354."
+  },
+  {
+   "user": "What is 12 times 11?",
+   "bot": "The answer is 132."
+  },
+  {
+   "user": "Where is the Sahara?",
+   "bot": "The Sahara is the largest hot desert in the world. It is in North Africa."
+  }
+ ],
+ [
+  {
+   "user": "I have a meeting with Priya on Friday at noon.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "When is my meeting?",
+   "bot": "You told me that you have a meeting with Priya on Friday at noon."
+  },
+  {
+   "user": "Who is the meeting with?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  },
+  {
+   "user": "Explain why ice floats.",
+   "bot": "Ice is frozen water. It floats on water because it is less dense than liquid water."
+  },
+  {
+   "user": "What is the boiling point of water?",
+   "bot": "Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius."
+  },
+  {
+   "user": "Please write the word hello in capital letters.",
+   "bot": "Hello! It's nice to hear from you. How can I help you today?"
+  }
+ ]
+]

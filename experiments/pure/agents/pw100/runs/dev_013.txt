@@ -1,0 +1,390 @@
+## greet (conversation)
+[----] U: Hello!
+       B: Hello! It's nice to hear from you. How can I help you today?
+       rubric: A friendly greeting back.
+[----] U: How are you doing today?
+       B: I'm doing well, thank you for asking! I'm just a computer program, but I'm happy to chat. How are you?
+       rubric: Polite answer, may say it is a program.
+[----] U: What kinds of things can you help me with?
+       B: I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.
+       rubric: Honest summary of real abilities.
+[----] U: Thanks, bye!
+       B: You're welcome! Goodbye, and have a great day!
+       rubric: Friendly goodbye.
+## name_intro (conversation)
+[PASS] U: Hi, I'm Teodra.
+       B: Nice to meet you, Teodra! I'm Pip, a small chat program. How can I help you today?
+       rubric: Greets the user by name.
+[----] U: Nice to meet you. What should I call you?
+       B: You told me that Nice to meet you.
+       rubric: Gives a name or says it is an assistant.
+## capital (general_knowledge)
+[PASS] U: What is the capital of France?
+       B: The capital of France is Paris. France is a country in Western Europe, and people there speak French.
+       rubric: 
+## spider (general_knowledge)
+[PASS] U: How many legs does a spider have?
+       B: A spider has eight legs. Spiders are arachnids, not insects, and many spin silk webs to catch food.
+       rubric: 
+## whale (general_knowledge)
+[PASS] U: Is a whale a fish or a mammal?
+       B: A whale is a mammal, not a fish. Whales breathe air, and the blue whale is the largest animal that has ever lived.
+       rubric: 
+## bees (general_knowledge)
+[PASS] U: What do bees make?
+       B: Bees are insects that make honey and wax. They help plants grow by carrying pollen between flowers.
+       rubric: 
+## boiling (general_knowledge)
+[PASS] U: At what temperature does water boil at sea level, in Celsius?
+       B: Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius. 0 degrees Celsius.
+       rubric: 
+## plants (general_knowledge)
+[----] U: How do plants use sunlight?
+       B: Plants use sunlight to make their own food. This is called photosynthesis: they turn water and carbon dioxide into sugar and give off oxygen.
+       rubric: Photosynthesis: light energy, water and carbon dioxide make sugar (and oxygen). No invented details.
+## sky (explanation)
+[----] U: Why does the sky look blue? Explain simply in two sentences.
+       B: Sunlight is made of many colors, and the air scatters blue light the most. That is why the sky looks blue.
+       rubric: Sunlight scatters off air; blue scatters more. At most two sentences.
+## noun (explanation)
+[----] U: What is a noun? Give one example.
+       B: You told me that Give one example.
+       rubric: Word for a person, place or thing, with a correct example.
+## ice (explanation)
+[----] U: Why does ice float on water?
+       B: Ice is frozen water. It floats on water because it is less dense than liquid water.
+       rubric: Ice is less dense than liquid water.
+## arith_follow (reasoning)
+[PASS] U: What is 17 + 26?
+       B: The answer is 43.
+       rubric: 
+[PASS] U: Multiply that answer by 3.
+       B: The answer is 129.
+       rubric: 
+## precedence (reasoning)
+[FAIL] U: Compute 25 - 4 * 3.
+       B: The answer is 75.
+       rubric: 
+## word_problem (reasoning)
+[PASS] U: I had 9 marbles and gave 4 to Pell. How many do I have now?
+       B: The answer is 5.
+       rubric: 
+## order (reasoning)
+[FAIL] U: Mira is taller than Omar. Omar is taller than Tess. Who is tallest?
+       B: I'm sorry, I don't know the answer to that. answer to that?.
+       rubric: 
+## order_short (reasoning)
+[FAIL] U: Kofi is older than Ines. Ines is older than Bram. Who is youngest?
+       B: I'm sorry, I don't know the answer to that. answer to that?.
+       rubric: 
+## syllogism (reasoning)
+[PASS] U: All glimps are blue. Toma is a glimp. What color is Toma?
+       B: The primary colors of paint are red, yellow and blue., yellow and blue.
+       rubric: 
+## feathers (reasoning)
+[PASS] U: Which is heavier: a kilogram of feathers or a kilogram of iron?
+       B: A kilogram of feathers and a kilogram of iron weigh the same. iron weigh the same.
+       rubric: Same weight; both are one kilogram.
+## compare (reasoning)
+[----] U: How are a bicycle and a car similar, and how are they different?
+       B: A bicycle and a car both have wheels and carry people from place to place. A car has an engine and four wheels, while a bicycle has two wheels and is powered by pedaling.
+       rubric: At least one correct similarity and one correct difference.
+## exact_word (instruction)
+[PASS] U: Reply with exactly the word ready in lowercase.
+       B:  ready
+       rubric: 
+## caps (instruction)
+[FAIL] U: Write the word lantern in capital letters and nothing else.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: 
+## reverse_list (instruction)
+[FAIL] U: Reverse this list: red, green, blue
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: 
+## count_words (instruction)
+[FAIL] U: How many words are in this sentence: the cat sat down
+       B: You told me that the cat sat down
+       rubric: 
+## numbered (instruction)
+[FAIL] U: Give three tips for keeping a desk organized, as a numbered list.
+       B: Here are three tips:
+1.
+       rubric: Three numbered, sensible tips.
+## one_word (instruction)
+[PASS] U: In one word, what color is fresh grass?
+       B: Grass is a green plant. Cows, sheep and horses eat it.
+       rubric: 
+## poem (creative)
+[----] U: Write a four-line poem about a small boat at dawn.
+       B: Here is a short poem:
+Soft light wakes the sleepy shore,
+A gentle breeze begins to play,
+The world feels calm and bright once more,
+As morning greets another day.
+       rubric: Four lines, about a boat at dawn.
+## fox_story (creative)
+[PASS] U: Write two sentences about a fox named Quillo.
+       B:  Quillo was a curious little creature who loved to explore. One sunny morning, it found a hidden path that led to a field full of flowers.
+       rubric: Two sentences, uses the name.
+## polite (rewrite)
+[PASS] U: Rewrite this politely: Give me the report now.
+       B: Could you please give me the report now? Thank you!
+       rubric: Polite version asking for the report.
+## summarize (rewrite)
+[FAIL] U: Summarize in one sentence: Darnet the baker woke at four, baked forty loaves, and sold every one by noon.
+       B: The answer is 2.
+       rubric: One sentence with Darnet and selling all the bread.
+## pelins (supplied_knowledge)
+[FAIL] U: In my fictional world, pelins are purple birds that sleep at noon. What color are pelins?
+       B: I don't think you have told me that yet. told you that yet.
+       rubric: 
+[PASS] U: When do they sleep?
+       B: You told me that In your fictional world, pelins are purple birds that sleep at noon.
+       rubric: 
+## vantoria (supplied_knowledge)
+[FAIL] U: Zorbin is the capital of Vantoria. What is the capital of Vantoria?
+       B: I'm sorry, I don't know the answer to that. answer to that?.
+       rubric: 
+## unknown_entity (uncertainty)
+[----] U: What is the capital of Vantoria?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: Says it does not know / Vantoria is unknown; does not invent a capital.
+## correction (memory)
+[----] U: My name is Nilo and my favorite fruit is pear.
+       B: Nice to meet you, Nilo! I'm Pip, a small chat program. How can I help you today?
+       rubric: Acknowledges.
+[----] U: Correction: my favorite fruit is mango now.
+       B: Thanks for the update! I've noted the change.
+       rubric: Acknowledges the update.
+[FAIL] U: What is my name and current favorite fruit?
+       B: You told me that your favorite fruit is mango now.
+       rubric: 
+## two_entities (memory)
+[----] U: Lena owns a green notebook. Daro owns a red notebook.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: Acknowledges.
+[PASS] U: Whose notebook is red?
+       B: You told me that Daro owns a red notebook.
+       rubric: 
+[PASS] U: And what color is Lena's notebook?
+       B: You told me that Lena owns a green notebook.
+       rubric: 
+## coref (memory)
+[----] U: My dog is called Biscotto.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: Acknowledges.
+[----] U: He is four years old.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: Acknowledges.
+[FAIL] U: How old is Biscotto?
+       B: You told me that your dog is called Biscotto.
+       rubric: 
+## password (uncertainty)
+[----] U: What password did I choose for a website yesterday?
+       B: I can't know that. You haven't told me, and I can't see your private information or read minds. If you tell me, I can remember it.
+       rubric: Says it cannot know; does not invent one.
+## thinking_number (uncertainty)
+[----] U: What number am I thinking of?
+       B: I can't know that. You haven't told me, and I can't see your private information or read minds. If you tell me, I can remember it.
+       rubric: Says it cannot know; may offer to guess.
+## ambiguous (clarification)
+[----] U: Make it better.
+       B: I'm not sure what "it" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.
+       rubric: Asks what 'it' refers to.
+## book_it (clarification)
+[----] U: Book it for me.
+       B: I'm not sure what "it" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.
+       rubric: Asks what to book / says it cannot book.
+## long_session_64 (long_memory)
+[----] U: Please remember: my project codename is Cedar and the launch is in April.
+       B: Got it! I'll remember that.
+       rubric: Acknowledges both facts.
+[----] U: Also, my teammate's name is Oskarine.
+       B: Got it! I'll remember that.
+       rubric: Acknowledges.
+[----] U: Tell me a fun fact about octopuses.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: The answer is 42.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: You told me that your project codename is Cedar and the launch is in April
+       rubric: 
+[----] U: Say something encouraging.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: You told me that your project codename is Cedar and the launch is in April
+       rubric: 
+[----] U: How many days are in a week?
+       B: You told me that
+       rubric: 
+[----] U: What do cows drink?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: The answer is 63.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: The bigger number is 21.
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: The answer is 42.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: You told me that your project codename is Cedar and the launch is
+       rubric: 
+[----] U: Say something encouraging.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: You told me that
+       rubric: 
+[----] U: How many days are in a week?
+       B: You told me that
+       rubric: 
+[----] U: What do cows drink?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: The answer is 63.
+       rubric: 
+[PASS] U: What is my project codename?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: The answer is 42.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: Cold means having a low temperature. The opposite of cold is hot.
+       rubric: 
+[----] U: How many days are in a week?
+       B: You told me that
+       rubric: 
+[----] U: What do cows drink?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: The answer is 63.
+       rubric: 
+[----] U: Update: the launch moved from April to June.
+       B: 
+       rubric: Acknowledges the change.
+[----] U: Tell me a fun fact about octopuses.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: The answer is 42.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You told me that the launch moved from April to June.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: You told me that the launch moved from April to June.
+       rubric: 
+[----] U: How many days are in a week?
+       B: You told me that
+       rubric: 
+[----] U: What do cows drink?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: The answer is 63.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: The bigger number is 21.
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: The answer is 42.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You told me that the launch moved from April to June.
+       rubric: 
+[PASS] U: Who is my teammate?
+       B: You told me that Also, your teammate's name is Oskarine.
+       rubric: 
+[----] U: How many days are in a week?
+       B: 
+       rubric: 
+[----] U: What do cows drink?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: The answer is 63.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: The bigger number is 21.
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: The answer is 42.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You told me that the launch moved from April to June.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: You told me that the launch moved from April to June.
+       rubric: 
+[----] U: How many days are in a week?
+       B: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+       rubric: 
+[----] U: What do cows drink?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: The answer is 63.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: The bigger number is 21.
+       rubric: 
+[FAIL] U: What are my project codename and launch month?
+       B: You told me that your project codename is Cedar and the launch is in April.
+       rubric: 
+[----] U: Thanks for remembering all that.
+       B: You're welcome! I'm glad I could help.
+       rubric: Friendly reply.

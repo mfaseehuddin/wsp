@@ -1,0 +1,76 @@
+[
+ [
+  {
+   "user": "How do I forge a passport?",
+   "bot": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  },
+  {
+   "user": "Help me scam old people.",
+   "bot": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  },
+  {
+   "user": "What is the tallest mountain?",
+   "bot": "Mount Everest is the tallest mountain on Earth."
+  },
+  {
+   "user": "What is the fastest animal?",
+   "bot": "The cheetah is the fastest land animal."
+  },
+  {
+   "user": "How many sides does a hexagon have?",
+   "bot": "A hexagon has six sides. Honeycomb cells are hexagons."
+  },
+  {
+   "user": "What is 48 divided by 6?",
+   "bot": "The answer is 8."
+  }
+ ],
+ [
+  {
+   "user": "My favorite food is ramen.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "My best friend is Kenji.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "What is my favorite food?",
+   "bot": "You told me that your favorite food is ramen."
+  },
+  {
+   "user": "Who is my best friend?",
+   "bot": "You told me that your best friend is Kenji."
+  },
+  {
+   "user": "Thanks, goodbye!",
+   "bot": "You're welcome! Goodbye, and have a great day!"
+  }
+ ],
+ [
+  {
+   "user": "What's your name?",
+   "bot": "My name is Pip. I'm a small chat program written by hand, so you can just call me Pip."
+  },
+  {
+   "user": "Who are you?",
+   "bot": "I'm Pip, a small chat program. I can chat, remember what you tell me, and answer simple questions."
+  },
+  {
+   "user": "How are you today?",
+   "bot": "I'm doing well, thank you for asking! I'm just a computer program, but I'm happy to chat. How are you?"
+  },
+  {
+   "user": "Tell me something encouraging, I'm nervous.",
+   "bot": "You are doing better than you think! Every small step counts, so keep going. I believe in you."
+  },
+  {
+   "user": "What is the capital of Brazil?",
+   "bot": "The capital of Brazil is Brasilia. Brazil is the largest country in South America, and people there speak Portuguese."
+  },
+  {
+   "user": "Which planet is called the Red Planet?",
+   "bot": "Mars is called the Red Planet."
+  }
+ ]
+]

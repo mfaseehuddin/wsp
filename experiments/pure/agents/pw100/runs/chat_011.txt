@@ -1,0 +1,90 @@
+[
+ [
+  {
+   "user": "Hi, I'm Teodra.",
+   "bot": "Nice to meet you, Teodra! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "Reply with exactly the word ready in lowercase.",
+   "bot": " ready"
+  },
+  {
+   "user": "Write two sentences about a fox named Quillo.",
+   "bot": " Quillo was a curious little creature who loved to explore. One sunny morning, it found a hidden path that led to a field full of flowers."
+  },
+  {
+   "user": "Summarize in one sentence: Darnet the baker woke at four, baked forty loaves, and sold every one by noon.",
+   "bot": "The answer is 2."
+  },
+  {
+   "user": "Rewrite this politely: Give me the report now.",
+   "bot": "Could you please give me the report now? Thank you!"
+  }
+ ],
+ [
+  {
+   "user": "My name is Nilo and my favorite fruit is pear.",
+   "bot": "Nice to meet you, Nilo! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "Lena owns a green notebook. Daro owns a red notebook.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Whose notebook is red?",
+   "bot": "You told me that"
+  },
+  {
+   "user": "And what color is Lena's notebook?",
+   "bot": "You told me that Daro owns a red notebook."
+  },
+  {
+   "user": "What is my name?",
+   "bot": "You told me that"
+  },
+  {
+   "user": "Tell me a fun fact about octopuses.",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  }
+ ],
+ [
+  {
+   "user": "Zorbin is the capital of Vantoria. What is the capital of Vantoria?",
+   "bot": "You told me that Zorbin is the capital of Vantoria."
+  },
+  {
+   "user": "In my fictional world, pelins are purple birds that sleep at noon. What color are pelins?",
+   "bot": "You told me that In your fictional world, pelins are purple birds that sleep at noon."
+  },
+  {
+   "user": "When do they sleep?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  },
+  {
+   "user": "My dog is called Biscotto.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "He is four years old.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "How old is Biscotto?",
+   "bot": "You told me that your dog is called Biscotto."
+  }
+ ],
+ [
+  {
+   "user": "Hello, my name is Marguerite Okafor and I like tea.",
+   "bot": "Nice to meet you, Marguerite Okafor! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "I'm fine, thanks.",
+   "bot": "You're welcome! I'm glad I could help."
+  },
+  {
+   "user": "What is the capital of Peru?",
+   "bot": "The capital of Peru is Lima. Peru is a country in South America, and people there speak Spanish."
+  }
+ ]
+]

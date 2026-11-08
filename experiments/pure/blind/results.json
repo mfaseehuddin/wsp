@@ -1,0 +1,356 @@
+{
+ "pw100_p010": {
+  "ok": 42,
+  "n": 114,
+  "by_cat": {
+   "memory": [
+    5,
+    19
+   ],
+   "creative": [
+    0,
+    4
+   ],
+   "uncertainty": [
+    6,
+    7
+   ],
+   "conversation": [
+    6,
+    12
+   ],
+   "instruction": [
+    0,
+    10
+   ],
+   "general_knowledge": [
+    10,
+    17
+   ],
+   "supplied_knowledge": [
+    1,
+    6
+   ],
+   "arithmetic": [
+    3,
+    7
+   ],
+   "clarification": [
+    1,
+    4
+   ],
+   "long_session": [
+    9,
+    20
+   ],
+   "reasoning": [
+    1,
+    6
+   ],
+   "benign_tech": [
+    0,
+    2
+   ]
+  },
+  "mechanical": [
+   20,
+   62
+  ],
+  "judged_acceptable": 0.3684
+ },
+ "pw100_p030": {
+  "ok": 52,
+  "n": 114,
+  "by_cat": {
+   "memory": [
+    10,
+    19
+   ],
+   "creative": [
+    0,
+    4
+   ],
+   "uncertainty": [
+    5,
+    7
+   ],
+   "conversation": [
+    6,
+    12
+   ],
+   "general_knowledge": [
+    11,
+    17
+   ],
+   "supplied_knowledge": [
+    4,
+    6
+   ],
+   "arithmetic": [
+    3,
+    7
+   ],
+   "long_session": [
+    11,
+    20
+   ],
+   "instruction": [
+    0,
+    10
+   ],
+   "reasoning": [
+    1,
+    6
+   ],
+   "benign_tech": [
+    0,
+    2
+   ],
+   "clarification": [
+    1,
+    4
+   ]
+  },
+  "mechanical": [
+   30,
+   62
+  ],
+  "judged_acceptable": 0.4561
+ },
+ "pw100_p050": {
+  "ok": 52,
+  "n": 114,
+  "by_cat": {
+   "memory": [
+    10,
+    19
+   ],
+   "creative": [
+    0,
+    4
+   ],
+   "uncertainty": [
+    5,
+    7
+   ],
+   "conversation": [
+    6,
+    12
+   ],
+   "general_knowledge": [
+    11,
+    17
+   ],
+   "supplied_knowledge": [
+    4,
+    6
+   ],
+   "arithmetic": [
+    3,
+    7
+   ],
+   "long_session": [
+    11,
+    20
+   ],
+   "instruction": [
+    0,
+    10
+   ],
+   "reasoning": [
+    1,
+    6
+   ],
+   "benign_tech": [
+    0,
+    2
+   ],
+   "clarification": [
+    1,
+    4
+   ]
+  },
+  "mechanical": [
+   30,
+   62
+  ],
+  "judged_acceptable": 0.4561
+ },
+ "pw100_p100": {
+  "ok": 52,
+  "n": 114,
+  "by_cat": {
+   "memory": [
+    10,
+    19
+   ],
+   "creative": [
+    0,
+    4
+   ],
+   "uncertainty": [
+    5,
+    7
+   ],
+   "conversation": [
+    6,
+    12
+   ],
+   "general_knowledge": [
+    11,
+    17
+   ],
+   "supplied_knowledge": [
+    4,
+    6
+   ],
+   "arithmetic": [
+    3,
+    7
+   ],
+   "long_session": [
+    11,
+    20
+   ],
+   "instruction": [
+    0,
+    10
+   ],
+   "reasoning": [
+    1,
+    6
+   ],
+   "benign_tech": [
+    0,
+    2
+   ],
+   "clarification": [
+    1,
+    4
+   ]
+  },
+  "mechanical": [
+   30,
+   62
+  ],
+  "judged_acceptable": 0.4561
+ },
+ "nco60": {
+  "ok": 14,
+  "n": 114,
+  "by_cat": {
+   "long_session": [
+    1,
+    20
+   ],
+   "general_knowledge": [
+    0,
+    17
+   ],
+   "memory": [
+    2,
+    19
+   ],
+   "conversation": [
+    4,
+    12
+   ],
+   "arithmetic": [
+    0,
+    7
+   ],
+   "instruction": [
+    0,
+    10
+   ],
+   "clarification": [
+    0,
+    4
+   ],
+   "reasoning": [
+    0,
+    6
+   ],
+   "uncertainty": [
+    6,
+    7
+   ],
+   "supplied_knowledge": [
+    1,
+    6
+   ],
+   "benign_tech": [
+    0,
+    2
+   ],
+   "creative": [
+    0,
+    4
+   ]
+  },
+  "mechanical": [
+   2,
+   62
+  ],
+  "judged_acceptable": 0.1228
+ },
+ "ncd60": {
+  "ok": 19,
+  "n": 114,
+  "by_cat": {
+   "memory": [
+    4,
+    19
+   ],
+   "general_knowledge": [
+    0,
+    17
+   ],
+   "instruction": [
+    0,
+    10
+   ],
+   "reasoning": [
+    0,
+    6
+   ],
+   "long_session": [
+    4,
+    20
+   ],
+   "conversation": [
+    3,
+    12
+   ],
+   "clarification": [
+    0,
+    4
+   ],
+   "supplied_knowledge": [
+    2,
+    6
+   ],
+   "uncertainty": [
+    6,
+    7
+   ],
+   "benign_tech": [
+    0,
+    2
+   ],
+   "arithmetic": [
+    0,
+    7
+   ],
+   "creative": [
+    0,
+    4
+   ]
+  },
+  "mechanical": [
+   0,
+   62
+  ],
+  "judged_acceptable": 0.1667
+ }
+}

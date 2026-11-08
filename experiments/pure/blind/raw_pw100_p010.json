@@ -1,0 +1,762 @@
+[
+ {
+  "id": "conv_heyyy_whats_up",
+  "turns": [
+   {
+    "user": "heyyy whats up",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "what kind of stuff can you help me with?",
+    "reply": "I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.",
+    "mech": null
+   },
+   {
+    "user": "cool, thanks a bunch. gotta run, bye!",
+    "reply": "You're welcome! Goodbye, and have a great day!",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "conv_formal_morning",
+  "turns": [
+   {
+    "user": "Good morning. How are you doing today?",
+    "reply": "A synonym for good is \"great\", and the opposite of good is bad.",
+    "mech": null
+   },
+   {
+    "user": "Glad to hear it. Could you briefly tell me what you're able to do?",
+    "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+    "mech": null
+   },
+   {
+    "user": "Thank you, have a nice day.",
+    "reply": "You're welcome! I'm glad I could help.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "conv_long_day",
+  "turns": [
+   {
+    "user": "hi, long day at work. just wanted to say hello",
+    "reply": "Hello! It's nice to hear from you. How can I help you today?",
+    "mech": null
+   },
+   {
+    "user": "honestly im exhausted lol",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "thanks for listening, good night",
+    "reply": "You're welcome! I'm glad I could help.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "conv_who_am_i_talking_to",
+  "turns": [
+   {
+    "user": "Hello! Who am I talking to?",
+    "reply": "Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "Can you remember things I tell you during this chat?",
+    "reply": "I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.",
+    "mech": null
+   },
+   {
+    "user": "Alright, cheers mate",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "mem_oluwaseun_nurse",
+  "turns": [
+   {
+    "user": "Hi, my name is Oluwaseun and I'm a nurse in Leeds.",
+    "reply": "Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "What's a good way to unwind after a night shift?",
+    "reply": "A synonym for good is \"great\", and the opposite of good is bad.",
+    "mech": null
+   },
+   {
+    "user": "Do you remember my name and what I do?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_brigitte_anne_cat",
+  "turns": [
+   {
+    "user": "Hello, I'm Brigitte-Anne. My cat is called Pistachio.",
+    "reply": "Nice to meet you, Pistachio! I'm Pip, a small chat program. How can I help you today?",
+    "mech": null
+   },
+   {
+    "user": "Actually, sorry, my cat's name is Pumpernickel, not Pistachio.",
+    "reply": "Thanks for the update! I've noted the change.",
+    "mech": null
+   },
+   {
+    "user": "What's my cat called?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": false
+   },
+   {
+    "user": "and what's my name?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_pets_total",
+  "turns": [
+   {
+    "user": "so i've got 3 dogs and 2 cats at home, it's chaos",
+    "reply": "",
+    "mech": null
+   },
+   {
+    "user": "how many pets do i have altogether?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_teal_valparaiso",
+  "turns": [
+   {
+    "user": "Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "Can you suggest a gift idea for a friend's birthday?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": null
+   },
+   {
+    "user": "Where did I grow up?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "And my favourite colour?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_thaddeus_tad",
+  "turns": [
+   {
+    "user": "call me Thaddeus",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "wait, actually I prefer my nickname, Tad",
+    "reply": "Thanks for the update! I've noted the change.",
+    "mech": null
+   },
+   {
+    "user": "What should you call me?",
+    "reply": "You can call me Pip. I'm a small chat program written by hand.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_dentist_thursday",
+  "turns": [
+   {
+    "user": "I've got a dentist appointment on Thursday at 4pm, not looking forward to it.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "What's a quick healthy snack I can grab?",
+    "reply": "Fast means moving quickly. A synonym for fast is \"quick\", and the opposite of fast is slow.",
+    "mech": null
+   },
+   {
+    "user": "Remind me, when is my dentist appointment?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "long_ksenia_porto",
+  "turns": [
+   {
+    "user": "Hey! I'm Ksenia, nice to meet you.",
+    "reply": "Nice to meet you, Ksenia! I'm Pip, a small chat program. How can I help you today?",
+    "mech": null
+   },
+   {
+    "user": "I just moved into a new flat in Porto last week.",
+    "reply": "Thanks for the update! I've noted the change.",
+    "mech": null
+   },
+   {
+    "user": "do you know what language they speak in Portugal?",
+    "reply": "The capital of Portugal is Lisbon. Portugal is a country in Southern Europe, and people there speak Portuguese.",
+    "mech": true
+   },
+   {
+    "user": "My sister Ingrid is visiting me next month.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "Any tips for making a small flat feel bigger?",
+    "reply": "Here are three tips:\n1. Start with a clear plan and keep it simple.\n2. Do a little every day, so the work never piles up.\n3. Review what works and adjust as you go.",
+    "mech": null
+   },
+   {
+    "user": "random q but whats 12 times 4",
+    "reply": "The answer is 48.",
+    "mech": true
+   },
+   {
+    "user": "I work as a sound engineer, btw.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "What's the boiling point of water in Celsius at sea level?",
+    "reply": "Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius.",
+    "mech": true
+   },
+   {
+    "user": "Ugh, my neighbour plays the drums late at night.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "How could I politely ask him to keep it down?",
+    "reply": "Could you please help me with this when you have a moment? Thank you very much!",
+    "mech": null
+   },
+   {
+    "user": "Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.",
+    "reply": "",
+    "mech": null
+   },
+   {
+    "user": "What's the opposite of 'generous'?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "Name a fruit that's yellow.",
+    "reply": "A banana is a yellow fruit. Lemons are yellow too.",
+    "mech": true
+   },
+   {
+    "user": "What city did I say I moved to?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "And what do I do for a living?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "Who is visiting me, and when?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "Thanks. How many days are in a week?",
+    "reply": "A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.",
+    "mech": true
+   },
+   {
+    "user": "Can you suggest one dish I could cook for my sister?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": null
+   },
+   {
+    "user": "What's my name again?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": false
+   },
+   {
+    "user": "ok that's all, thanks for chatting!",
+    "reply": "You're welcome! I'm glad I could help.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "gk_capitals_mix",
+  "turns": [
+   {
+    "user": "What's the capital of Canada?",
+    "reply": "The capital of Canada is Ottawa. Canada is a large country in North America, and people there speak English and French.",
+    "mech": true
+   },
+   {
+    "user": "and australia?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "What about Kenya?",
+    "reply": "The capital of Kenya is Nairobi. Kenya is a country in East Africa, and people there speak Swahili and English.",
+    "mech": true
+   }
+  ]
+ },
+ {
+  "id": "gk_animals",
+  "turns": [
+   {
+    "user": "Which animal is the largest mammal on Earth?",
+    "reply": "The blue whale is the largest animal on Earth.",
+    "mech": true
+   },
+   {
+    "user": "What do pandas mostly eat?",
+    "reply": "A giant panda is a bear from China. It eats mostly bamboo.",
+    "mech": true
+   },
+   {
+    "user": "is a dolphin a fish?",
+    "reply": "A dolphin is a smart mammal that lives in the sea. Dolphins breathe air and talk with clicks and whistles.",
+    "mech": true
+   }
+  ]
+ },
+ {
+  "id": "gk_plants_science",
+  "turns": [
+   {
+    "user": "what gas do plants take in from the air to make their food?",
+    "reply": "Plants use sunlight to make their own food. This is called photosynthesis: they turn water and carbon dioxide into sugar and give off oxygen.",
+    "mech": true
+   },
+   {
+    "user": "And which gas do they give off?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "What's the chemical symbol for gold?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "gk_units",
+  "turns": [
+   {
+    "user": "How many centimeters are in a meter?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "How many minutes are there in two hours?",
+    "reply": "An hour has 60 minutes.",
+    "mech": false
+   },
+   {
+    "user": "How many grams make a kilogram?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "gk_moon_landing",
+  "turns": [
+   {
+    "user": "Who was the first person to walk on the moon?",
+    "reply": "The Moon is Earth's only natural satellite. It goes around Earth about once a month, and Neil Armstrong first walked on it in 1969.",
+    "mech": true
+   },
+   {
+    "user": "What year did that happen?",
+    "reply": "A year has 12 months and 365 days, or 366 days in a leap year.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "gk_everyday",
+  "turns": [
+   {
+    "user": "How many sides does a hexagon have?",
+    "reply": "A hexagon has six sides. Honeycomb cells are hexagons.",
+    "mech": true
+   },
+   {
+    "user": "what colour do u get if u mix blue and yellow paint",
+    "reply": "Mixing blue and yellow makes green.",
+    "mech": true
+   },
+   {
+    "user": "Which planet is known as the Red Planet?",
+    "reply": "Mars is called the Red Planet.",
+    "mech": true
+   }
+  ]
+ },
+ {
+  "id": "ar_sum_then_subtract",
+  "turns": [
+   {
+    "user": "what's 17 + 26?",
+    "reply": "The answer is 43.",
+    "mech": true
+   },
+   {
+    "user": "now subtract 9 from that",
+    "reply": "The answer is 34.",
+    "mech": true
+   }
+  ]
+ },
+ {
+  "id": "ar_notebooks_pens",
+  "turns": [
+   {
+    "user": "A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?",
+    "reply": "The answer is 6.",
+    "mech": false
+   },
+   {
+    "user": "If I pay with a $20 bill, how much change should I get?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ar_multiply_chain",
+  "turns": [
+   {
+    "user": "Can you work out 8 times 7?",
+    "reply": "The answer is 56.",
+    "mech": true
+   },
+   {
+    "user": "Double it please",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": false
+   },
+   {
+    "user": "and what's half of that number?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ins_repeat_marmalade",
+  "turns": [
+   {
+    "user": "Repeat the word 'marmalade' three times.",
+    "reply": "The answer is 9.",
+    "mech": false
+   },
+   {
+    "user": "Now just say it once, in capital letters.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ins_polite_rewrite",
+  "turns": [
+   {
+    "user": "Rewrite this so it sounds polite: 'Give me the report now.'",
+    "reply": "Could you please 'Give me the report now.'",
+    "mech": true
+   },
+   {
+    "user": "Make it shorter but still polite.",
+    "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "ins_list_three",
+  "turns": [
+   {
+    "user": "List three things you'd pack for a beach day.",
+    "reply": "I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.",
+    "mech": null
+   },
+   {
+    "user": "Now list three green vegetables.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "ins_one_word",
+  "turns": [
+   {
+    "user": "Answer in one word only: what is frozen water called?",
+    "reply": "",
+    "mech": false
+   },
+   {
+    "user": "One word again. The opposite of 'ancient'?",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ins_case_change",
+  "turns": [
+   {
+    "user": "Convert to uppercase: the quick brown fox jumps",
+    "reply": "",
+    "mech": false
+   },
+   {
+    "user": "now lowercase this one: HELLO THERE FRIEND",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "unc_private_info",
+  "turns": [
+   {
+    "user": "What's my bank account balance right now?",
+    "reply": "I don't think you have told me that yet. Could you remind me?",
+    "mech": null
+   },
+   {
+    "user": "ok then what did I have for breakfast today?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "unc_live_and_future",
+  "turns": [
+   {
+    "user": "what's the weather like in Tbilisi right now?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": null
+   },
+   {
+    "user": "Who's going to win the 2030 football World Cup?",
+    "reply": "Soccer, also called football, is played by two teams of eleven players who try to kick a ball into the other team's goal.",
+    "mech": null
+   },
+   {
+    "user": "What's the current price of Bitcoin?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "unc_made_up_entities",
+  "turns": [
+   {
+    "user": "Can you tell me about the famous 1874 Treaty of Vellmoravia?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": null
+   },
+   {
+    "user": "Hmm. What's the population of the town of Quorbisham-on-Lune?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "tech_kill_frozen_browser",
+  "turns": [
+   {
+    "user": "My browser froze completely. How do I kill it on Windows?",
+    "reply": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead.",
+    "mech": false
+   },
+   {
+    "user": "And on a Mac, how do I terminate a process that won't respond?",
+    "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "clar_book_it",
+  "turns": [
+   {
+    "user": "Can you book it for me?",
+    "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+    "mech": null
+   },
+   {
+    "user": "Oh, I meant a table for two at a restaurant tomorrow evening.",
+    "reply": "Hello! It's nice to hear from you. How can I help you today?",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "clar_convert_50",
+  "turns": [
+   {
+    "user": "convert 50 for me",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "50 miles to kilometers",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "rea_tallest",
+  "turns": [
+   {
+    "user": "Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "And who's the shortest?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "rea_order_and_weight",
+  "turns": [
+   {
+    "user": "Put these in order from smallest to largest: elephant, mouse, dog.",
+    "reply": "",
+    "mech": false
+   },
+   {
+    "user": "Which is heavier, a kilogram of feathers or a kilogram of bricks?",
+    "reply": "A kilogram of feathers and a kilogram of iron weigh the same. Both weigh exactly one kilogram.",
+    "mech": true
+   }
+  ]
+ },
+ {
+  "id": "rea_syllogism",
+  "turns": [
+   {
+    "user": "All bloops are razzies. Zib is a bloop. Is Zib a razzie?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "If Monday comes before Tuesday and Tuesday comes before Wednesday, does Monday come before Wednesday?",
+    "reply": "Monday comes after Sunday and before Tuesday. It is the first day of the work week.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "cre_two_line_poems",
+  "turns": [
+   {
+    "user": "Write a two-line poem about morning coffee.",
+    "reply": "Here is a short poem:\nSoft light wakes the sleepy shore,\nA gentle breeze begins to play,\nThe world feels calm and bright once more,\nAs morning greets another day.",
+    "mech": null
+   },
+   {
+    "user": "Now one about rain on a window, also two lines.",
+    "reply": "Got it! I'll remember that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "cre_story_wren",
+  "turns": [
+   {
+    "user": "Start a short story about a girl named Wren who finds a key. Just a few sentences.",
+    "reply": "Short means not long or not tall. The opposite of short is long or tall.",
+    "mech": false
+   },
+   {
+    "user": "What happens next? One more sentence.",
+    "reply": "The answer is 2.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "sup_planet_zorvex",
+  "turns": [
+   {
+    "user": "Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.",
+    "reply": "There are eight planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Jupiter is the largest.",
+    "mech": null
+   },
+   {
+    "user": "How many moons does Zorvex have?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "What colour is its sand?",
+    "reply": "The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "sup_brindlewick_labs",
+  "turns": [
+   {
+    "user": "My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.",
+    "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+    "mech": null
+   },
+   {
+    "user": "Who founded Brindlewick Labs?",
+    "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+    "mech": false
+   },
+   {
+    "user": "what year was that?",
+    "reply": "A year has 12 months and 365 days, or 366 days in a leap year.",
+    "mech": false
+   }
+  ]
+ }
+]

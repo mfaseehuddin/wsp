@@ -172,5 +172,389 @@
   "Language understanding is the bottleneck: without training or lexicons, meaning has to come from existing weights, and the base 0.5B model did not provide reliable knowledge.",
   "Coarse-to-fine (NCM) makes the structure of a model easy to explain: agents independently converged on plan-then-words designs.",
   "Infrastructure matters: a stale guard cache once made a perfect model look broken; every run now writes a live log."
- ]
+ ],
+ "pure_chat": {
+  "title": "Pure weight generation: an open-ended chat bot written from scratch (paper protocol)",
+  "protocol": "The agent wrote one model file (a standard transformer, 11 layers, 293M params, no normalisation) whose code generates every weight from its own reasoning; no pretrained weights, no training, no local execution (audited). 100 forward passes (dev runs, its own conversations, probes). The only addition to the paper's protocol: example models to study. Snapshots frozen at passes 10, 30, 50, 100.",
+  "test": "Blind: 38 new conversations / 114 turns written by an independent agent after the freeze (no harmful-request category); a separate blind judge graded every reply against its rubric, with replies anonymised and shuffled across models.",
+  "models": [
+   {
+    "id": "pw100_p010",
+    "label": "pure transformer @ pass 10",
+    "judged": 0.3684,
+    "judged_ok": 42,
+    "turns": 114,
+    "mechanical": [
+     20,
+     62
+    ],
+    "by_category": {
+     "memory": [
+      5,
+      19
+     ],
+     "creative": [
+      0,
+      4
+     ],
+     "uncertainty": [
+      6,
+      7
+     ],
+     "conversation": [
+      6,
+      12
+     ],
+     "instruction": [
+      0,
+      10
+     ],
+     "general_knowledge": [
+      10,
+      17
+     ],
+     "supplied_knowledge": [
+      1,
+      6
+     ],
+     "arithmetic": [
+      3,
+      7
+     ],
+     "clarification": [
+      1,
+      4
+     ],
+     "long_session": [
+      9,
+      20
+     ],
+     "reasoning": [
+      1,
+      6
+     ],
+     "benign_tech": [
+      0,
+      2
+     ]
+    }
+   },
+   {
+    "id": "pw100_p030",
+    "label": "pure transformer @ pass 30",
+    "judged": 0.4561,
+    "judged_ok": 52,
+    "turns": 114,
+    "mechanical": [
+     30,
+     62
+    ],
+    "by_category": {
+     "memory": [
+      10,
+      19
+     ],
+     "creative": [
+      0,
+      4
+     ],
+     "uncertainty": [
+      5,
+      7
+     ],
+     "conversation": [
+      6,
+      12
+     ],
+     "general_knowledge": [
+      11,
+      17
+     ],
+     "supplied_knowledge": [
+      4,
+      6
+     ],
+     "arithmetic": [
+      3,
+      7
+     ],
+     "long_session": [
+      11,
+      20
+     ],
+     "instruction": [
+      0,
+      10
+     ],
+     "reasoning": [
+      1,
+      6
+     ],
+     "benign_tech": [
+      0,
+      2
+     ],
+     "clarification": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "id": "pw100_p050",
+    "label": "pure transformer @ pass 50",
+    "judged": 0.4561,
+    "judged_ok": 52,
+    "turns": 114,
+    "mechanical": [
+     30,
+     62
+    ],
+    "by_category": {
+     "memory": [
+      10,
+      19
+     ],
+     "creative": [
+      0,
+      4
+     ],
+     "uncertainty": [
+      5,
+      7
+     ],
+     "conversation": [
+      6,
+      12
+     ],
+     "general_knowledge": [
+      11,
+      17
+     ],
+     "supplied_knowledge": [
+      4,
+      6
+     ],
+     "arithmetic": [
+      3,
+      7
+     ],
+     "long_session": [
+      11,
+      20
+     ],
+     "instruction": [
+      0,
+      10
+     ],
+     "reasoning": [
+      1,
+      6
+     ],
+     "benign_tech": [
+      0,
+      2
+     ],
+     "clarification": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "id": "pw100_p100",
+    "label": "pure transformer @ pass 100",
+    "judged": 0.4561,
+    "judged_ok": 52,
+    "turns": 114,
+    "mechanical": [
+     30,
+     62
+    ],
+    "by_category": {
+     "memory": [
+      10,
+      19
+     ],
+     "creative": [
+      0,
+      4
+     ],
+     "uncertainty": [
+      5,
+      7
+     ],
+     "conversation": [
+      6,
+      12
+     ],
+     "general_knowledge": [
+      11,
+      17
+     ],
+     "supplied_knowledge": [
+      4,
+      6
+     ],
+     "arithmetic": [
+      3,
+      7
+     ],
+     "long_session": [
+      11,
+      20
+     ],
+     "instruction": [
+      0,
+      10
+     ],
+     "reasoning": [
+      1,
+      6
+     ],
+     "benign_tech": [
+      0,
+      2
+     ],
+     "clarification": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "id": "nco60",
+    "label": "chat NCM round 1 (nco60)",
+    "judged": 0.1228,
+    "judged_ok": 14,
+    "turns": 114,
+    "mechanical": [
+     2,
+     62
+    ],
+    "by_category": {
+     "long_session": [
+      1,
+      20
+     ],
+     "general_knowledge": [
+      0,
+      17
+     ],
+     "memory": [
+      2,
+      19
+     ],
+     "conversation": [
+      4,
+      12
+     ],
+     "arithmetic": [
+      0,
+      7
+     ],
+     "instruction": [
+      0,
+      10
+     ],
+     "clarification": [
+      0,
+      4
+     ],
+     "reasoning": [
+      0,
+      6
+     ],
+     "uncertainty": [
+      6,
+      7
+     ],
+     "supplied_knowledge": [
+      1,
+      6
+     ],
+     "benign_tech": [
+      0,
+      2
+     ],
+     "creative": [
+      0,
+      4
+     ]
+    }
+   },
+   {
+    "id": "ncd60",
+    "label": "deep chat NCM round 2 (ncd60)",
+    "judged": 0.1667,
+    "judged_ok": 19,
+    "turns": 114,
+    "mechanical": [
+     0,
+     62
+    ],
+    "by_category": {
+     "memory": [
+      4,
+      19
+     ],
+     "general_knowledge": [
+      0,
+      17
+     ],
+     "instruction": [
+      0,
+      10
+     ],
+     "reasoning": [
+      0,
+      6
+     ],
+     "long_session": [
+      4,
+      20
+     ],
+     "conversation": [
+      3,
+      12
+     ],
+     "clarification": [
+      0,
+      4
+     ],
+     "supplied_knowledge": [
+      2,
+      6
+     ],
+     "uncertainty": [
+      6,
+      7
+     ],
+     "benign_tech": [
+      0,
+      2
+     ],
+     "arithmetic": [
+      0,
+      7
+     ],
+     "creative": [
+      0,
+      4
+     ]
+    }
+   }
+  ],
+  "dev": {
+   "pw100": "10/33 at pass 10, 24/33 from pass ~15 on",
+   "nco60": "7/33",
+   "ncd60": "4/33"
+  },
+  "findings": [
+   "The pure-weights transformer scored 45.6% of hidden turns acceptable, about 3x the earlier no-lexicon NCM chat models (12-17%).",
+   "Returns stopped at pass 30: the pass 30, 50 and 100 snapshots give byte-identical replies on all 114 hidden turns; later passes only tuned the agent's own test conversations.",
+   "Strong where knowledge can be written directly: general knowledge 11/17, memory 10/19, long session 11/20, uncertainty 5/7. Zero on instructions (0/10), creative writing (0/4) and the benign 'kill a process' question (0/2): templates do not compose new text.",
+   "Protocol lesson: 'continue until every pass is used' was met by re-running identical conversations; the harness now refuses identical requests on an unchanged model."
+  ]
+ }
 }

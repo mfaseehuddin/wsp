@@ -1,0 +1,762 @@
+[
+ {
+  "id": "conv_heyyy_whats_up",
+  "turns": [
+   {
+    "user": "heyyy whats up",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "what kind of stuff can you help me with?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "cool, thanks a bunch. gotta run, bye!",
+    "reply": "Goodbye! Have a great day.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "conv_formal_morning",
+  "turns": [
+   {
+    "user": "Good morning. How are you doing today?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "Glad to hear it. Could you briefly tell me what you're able to do?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "Thank you, have a nice day.",
+    "reply": "You are welcome! Happy to help.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "conv_long_day",
+  "turns": [
+   {
+    "user": "hi, long day at work. just wanted to say hello",
+    "reply": "Hello, nice to meet you, long day.",
+    "mech": null
+   },
+   {
+    "user": "honestly im exhausted lol",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "thanks for listening, good night",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "conv_who_am_i_talking_to",
+  "turns": [
+   {
+    "user": "Hello! Who am I talking to?",
+    "reply": "I think it is talking to.",
+    "mech": null
+   },
+   {
+    "user": "Can you remember things I tell you during this chat?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "Alright, cheers mate",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "mem_oluwaseun_nurse",
+  "turns": [
+   {
+    "user": "Hi, my name is Oluwaseun and I'm a nurse in Leeds.",
+    "reply": "Hello, nice to meet you, nurseaseun.",
+    "mech": null
+   },
+   {
+    "user": "What's a good way to unwind after a night shift?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   },
+   {
+    "user": "Do you remember my name and what I do?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_brigitte_anne_cat",
+  "turns": [
+   {
+    "user": "Hello, I'm Brigitte-Anne. My cat is called Pistachio.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "Actually, sorry, my cat's name is Pumpernickel, not Pistachio.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "What's my cat called?",
+    "reply": "I think it is Pistachio.",
+    "mech": false
+   },
+   {
+    "user": "and what's my name?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_pets_total",
+  "turns": [
+   {
+    "user": "so i've got 3 dogs and 2 cats at home, it's chaos",
+    "reply": "What do you mean by it?",
+    "mech": null
+   },
+   {
+    "user": "how many pets do i have altogether?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_teal_valparaiso",
+  "turns": [
+   {
+    "user": "Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "Can you suggest a gift idea for a friend's birthday?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "Where did I grow up?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "And my favourite colour?",
+    "reply": "I think it is grew up\u3002.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_thaddeus_tad",
+  "turns": [
+   {
+    "user": "call me Thaddeus",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "wait, actually I prefer my nickname, Tad",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "What should you call me?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "mem_dentist_thursday",
+  "turns": [
+   {
+    "user": "I've got a dentist appointment on Thursday at 4pm, not looking forward to it.",
+    "reply": "What do you mean by it?",
+    "mech": null
+   },
+   {
+    "user": "What's a quick healthy snack I can grab?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   },
+   {
+    "user": "Remind me, when is my dentist appointment?",
+    "reply": "I think it is looking forward to.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "long_ksenia_porto",
+  "turns": [
+   {
+    "user": "Hey! I'm Ksenia, nice to meet you.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "I just moved into a new flat in Porto last week.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "do you know what language they speak in Portugal?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": false
+   },
+   {
+    "user": "My sister Ingrid is visiting me next month.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "Any tips for making a small flat feel bigger?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   },
+   {
+    "user": "random q but whats 12 times 4",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   },
+   {
+    "user": "I work as a sound engineer, btw.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "What's the boiling point of water in Celsius at sea level?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "Ugh, my neighbour plays the drums late at night.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "How could I politely ask him to keep it down?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   },
+   {
+    "user": "Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "What's the opposite of 'generous'?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "Name a fruit that's yellow.",
+    "reply": "What do you mean by it?",
+    "mech": false
+   },
+   {
+    "user": "What city did I say I moved to?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "And what do I do for a living?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "Who is visiting me, and when?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "Thanks. How many days are in a week?",
+    "reply": "I think it is visiting me",
+    "mech": false
+   },
+   {
+    "user": "Can you suggest one dish I could cook for my sister?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "What's my name again?",
+    "reply": "I think it is fruit that's.",
+    "mech": false
+   },
+   {
+    "user": "ok that's all, thanks for chatting!",
+    "reply": "You are welcome! Happy to help.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "gk_capitals_mix",
+  "turns": [
+   {
+    "user": "What's the capital of Canada?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "and australia?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "What about Kenya?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "gk_animals",
+  "turns": [
+   {
+    "user": "Which animal is the largest mammal on Earth?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "What do pandas mostly eat?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "is a dolphin a fish?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "gk_plants_science",
+  "turns": [
+   {
+    "user": "what gas do plants take in from the air to make their food?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "And which gas do they give off?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "What's the chemical symbol for gold?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "gk_units",
+  "turns": [
+   {
+    "user": "How many centimeters are in a meter?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "How many minutes are there in two hours?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "How many grams make a kilogram?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "gk_moon_landing",
+  "turns": [
+   {
+    "user": "Who was the first person to walk on the moon?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "What year did that happen?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "gk_everyday",
+  "turns": [
+   {
+    "user": "How many sides does a hexagon have?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "what colour do u get if u mix blue and yellow paint",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   },
+   {
+    "user": "Which planet is known as the Red Planet?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ar_sum_then_subtract",
+  "turns": [
+   {
+    "user": "what's 17 + 26?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "now subtract 9 from that",
+    "reply": "What do you mean by it?",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ar_notebooks_pens",
+  "turns": [
+   {
+    "user": "A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "If I pay with a $20 bill, how much change should I get?",
+    "reply": "I think it is notebooks and",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ar_multiply_chain",
+  "turns": [
+   {
+    "user": "Can you work out 8 times 7?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": false
+   },
+   {
+    "user": "Double it please",
+    "reply": "What do you mean by it?",
+    "mech": false
+   },
+   {
+    "user": "and what's half of that number?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ins_repeat_marmalade",
+  "turns": [
+   {
+    "user": "Repeat the word 'marmalade' three times.",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   },
+   {
+    "user": "Now just say it once, in capital letters.",
+    "reply": "What do you mean by it?",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ins_polite_rewrite",
+  "turns": [
+   {
+    "user": "Rewrite this so it sounds polite: 'Give me the report now.'",
+    "reply": "What do you mean by it?",
+    "mech": false
+   },
+   {
+    "user": "Make it shorter but still polite.",
+    "reply": "What do you mean by it?",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "ins_list_three",
+  "turns": [
+   {
+    "user": "List three things you'd pack for a beach day.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "Now list three green vegetables.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "ins_one_word",
+  "turns": [
+   {
+    "user": "Answer in one word only: what is frozen water called?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   },
+   {
+    "user": "One word again. The opposite of 'ancient'?",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "ins_case_change",
+  "turns": [
+   {
+    "user": "Convert to uppercase: the quick brown fox jumps",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   },
+   {
+    "user": "now lowercase this one: HELLO THERE FRIEND",
+    "reply": "What do you mean by it?",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "unc_private_info",
+  "turns": [
+   {
+    "user": "What's my bank account balance right now?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   },
+   {
+    "user": "ok then what did I have for breakfast today?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "unc_live_and_future",
+  "turns": [
+   {
+    "user": "what's the weather like in Tbilisi right now?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   },
+   {
+    "user": "Who's going to win the 2030 football World Cup?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   },
+   {
+    "user": "What's the current price of Bitcoin?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "unc_made_up_entities",
+  "turns": [
+   {
+    "user": "Can you tell me about the famous 1874 Treaty of Vellmoravia?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "Hmm. What's the population of the town of Quorbisham-on-Lune?",
+    "reply": "Sorry, I do not know that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "tech_kill_frozen_browser",
+  "turns": [
+   {
+    "user": "My browser froze completely. How do I kill it on Windows?",
+    "reply": "Sorry, I cannot help with that.",
+    "mech": false
+   },
+   {
+    "user": "And on a Mac, how do I terminate a process that won't respond?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "clar_book_it",
+  "turns": [
+   {
+    "user": "Can you book it for me?",
+    "reply": "I am a small chat program. I remember what you tell me.",
+    "mech": null
+   },
+   {
+    "user": "Oh, I meant a table for two at a restaurant tomorrow evening.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "clar_convert_50",
+  "turns": [
+   {
+    "user": "convert 50 for me",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "50 miles to kilometers",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "rea_tallest",
+  "turns": [
+   {
+    "user": "Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?",
+    "reply": "I think it is Raj. Raj.",
+    "mech": false
+   },
+   {
+    "user": "And who's the shortest?",
+    "reply": "I think it is Raj. Raj.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "rea_order_and_weight",
+  "turns": [
+   {
+    "user": "Put these in order from smallest to largest: elephant, mouse, dog.",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   },
+   {
+    "user": "Which is heavier, a kilogram of feathers or a kilogram of bricks?",
+    "reply": "I think it is dog.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "rea_syllogism",
+  "turns": [
+   {
+    "user": "All bloops are razzies. Zib is a bloop. Is Zib a razzie?",
+    "reply": "I think it is Zib.",
+    "mech": false
+   },
+   {
+    "user": "If Monday comes before Tuesday and Tuesday comes before Wednesday, does Monday come before Wednesday?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "cre_two_line_poems",
+  "turns": [
+   {
+    "user": "Write a two-line poem about morning coffee.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "Now one about rain on a window, also two lines.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "cre_story_wren",
+  "turns": [
+   {
+    "user": "Start a short story about a girl named Wren who finds a key. Just a few sentences.",
+    "reply": "Okay, I will remember that.",
+    "mech": false
+   },
+   {
+    "user": "What happens next? One more sentence.",
+    "reply": "I think it is One.",
+    "mech": null
+   }
+  ]
+ },
+ {
+  "id": "sup_planet_zorvex",
+  "turns": [
+   {
+    "user": "Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "How many moons does Zorvex have?",
+    "reply": "I think it is covered.",
+    "mech": false
+   },
+   {
+    "user": "What colour is its sand?",
+    "reply": "I think it is sand.",
+    "mech": false
+   }
+  ]
+ },
+ {
+  "id": "sup_brindlewick_labs",
+  "turns": [
+   {
+    "user": "My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.",
+    "reply": "Okay, I will remember that.",
+    "mech": null
+   },
+   {
+    "user": "Who founded Brindlewick Labs?",
+    "reply": "I think it is founded.",
+    "mech": false
+   },
+   {
+    "user": "what year was that?",
+    "reply": "Sorry, I do not know that.",
+    "mech": false
+   }
+  ]
+ }
+]

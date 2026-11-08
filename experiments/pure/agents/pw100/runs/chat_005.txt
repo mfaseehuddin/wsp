@@ -1,0 +1,62 @@
+[
+ [
+  {
+   "user": "Kofi is older than Ines. Ines is older than Bram. Who is youngest?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  },
+  {
+   "user": "What is 6 times 7?",
+   "bot": "The answer is 42."
+  },
+  {
+   "user": "What is 1234 + 4321?",
+   "bot": "The answer is 5555."
+  },
+  {
+   "user": "Multiply that answer by 2.",
+   "bot": "The answer is 11110."
+  },
+  {
+   "user": "What is 12 times 12?",
+   "bot": "The answer is 144."
+  },
+  {
+   "user": "What is 20 divided by 4?",
+   "bot": "The answer is 5."
+  },
+  {
+   "user": "How many legs does an insect have?",
+   "bot": "An insect has six legs and three body parts. Ants, bees and butterflies are insects."
+  },
+  {
+   "user": "What is 99 + 1?",
+   "bot": "The answer is 100."
+  }
+ ],
+ [
+  {
+   "user": "Hi, I'm Teodra.",
+   "bot": "Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me."
+  },
+  {
+   "user": "What is 3 plus 4?",
+   "bot": "The answer is 7."
+  },
+  {
+   "user": "Which is larger, 300 or 299?",
+   "bot": "The bigger number is 300."
+  },
+  {
+   "user": "What is 7 minus 7?",
+   "bot": "The answer is 0."
+  },
+  {
+   "user": "I bought 3 apples and then 5 more. How many apples do I have?",
+   "bot": "The answer is 8."
+  },
+  {
+   "user": "Thanks!",
+   "bot": "You're welcome! I'm glad I could help."
+  }
+ ]
+]

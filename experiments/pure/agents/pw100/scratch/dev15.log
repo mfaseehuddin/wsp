@@ -1,0 +1,60 @@
+06:12:43 +    0.0s  start: dev agent=pw100 pid=88135 argv=dev --agent pw100 --note fix recall self-match, bigram role
+06:12:43 +    0.0s  log: /Users/mfaseehuddin/mfaseehuddin/development/wsp/experiments/pure/logs/dev_pw100_20261108-061243.log
+06:12:49 +    5.8s  case 1/40 greet (4 turns); mechanical so far 0/0
+06:12:55 +   11.5s  case 2/40 name_intro (2 turns); mechanical so far 0/0
+06:12:57 +   13.5s  case 3/40 capital (1 turns); mechanical so far 1/1
+06:12:58 +   14.7s  case 4/40 spider (1 turns); mechanical so far 2/2
+06:12:59 +   16.0s  case 5/40 whale (1 turns); mechanical so far 3/3
+06:13:01 +   17.3s  case 6/40 bees (1 turns); mechanical so far 4/4
+06:13:02 +   18.2s  case 7/40 boiling (1 turns); mechanical so far 5/5
+06:13:03 +   19.6s  case 8/40 plants (1 turns); mechanical so far 6/6
+06:13:05 +   21.2s  case 9/40 sky (1 turns); mechanical so far 6/6
+06:13:06 +   22.4s  case 10/40 noun (1 turns); mechanical so far 6/6
+06:13:07 +   23.6s  case 11/40 ice (1 turns); mechanical so far 6/6
+06:13:08 +   24.5s  case 12/40 arith_follow (2 turns); mechanical so far 6/6
+06:13:09 +   25.5s  case 13/40 precedence (1 turns); mechanical so far 8/8
+06:13:09 +   25.9s  case 14/40 word_problem (1 turns); mechanical so far 8/9
+06:13:10 +   26.3s  case 15/40 order (1 turns); mechanical so far 9/10
+06:13:10 +   26.6s  case 16/40 order_short (1 turns); mechanical so far 9/11
+06:13:11 +   27.2s  case 17/40 syllogism (1 turns); mechanical so far 10/12
+06:13:11 +   27.8s  case 18/40 feathers (1 turns); mechanical so far 10/13
+06:13:12 +   28.8s  case 19/40 compare (1 turns); mechanical so far 11/14
+06:13:14 +   30.6s  case 20/40 exact_word (1 turns); mechanical so far 11/14
+06:13:14 +   30.8s  case 21/40 caps (1 turns); mechanical so far 12/15
+06:13:15 +   31.5s  case 22/40 reverse_list (1 turns); mechanical so far 12/16
+06:13:16 +   32.1s  case 23/40 count_words (1 turns); mechanical so far 12/17
+06:13:16 +   32.6s  case 24/40 numbered (1 turns); mechanical so far 12/18
+06:13:18 +   34.5s  case 25/40 one_word (1 turns); mechanical so far 13/19
+06:13:19 +   35.5s  case 26/40 poem (1 turns); mechanical so far 14/20
+06:13:21 +   37.2s  case 27/40 fox_story (1 turns); mechanical so far 14/20
+06:13:22 +   38.6s  case 28/40 polite (1 turns); mechanical so far 15/21
+06:13:23 +   39.2s  case 29/40 summarize (1 turns); mechanical so far 16/22
+06:13:24 +   40.4s  case 30/40 pelins (2 turns); mechanical so far 17/23
+06:13:26 +   42.6s  case 31/40 vantoria (1 turns); mechanical so far 19/25
+06:13:27 +   43.4s  case 32/40 unknown_entity (1 turns); mechanical so far 20/26
+06:13:28 +   44.6s  case 33/40 correction (3 turns); mechanical so far 20/26
+06:13:30 +   47.0s  case 34/40 two_entities (3 turns); mechanical so far 20/27
+06:13:32 +   49.0s  case 35/40 coref (3 turns); mechanical so far 22/29
+06:13:35 +   51.4s  case 36/40 password (1 turns); mechanical so far 22/30
+06:13:36 +   53.0s  case 37/40 thinking_number (1 turns); mechanical so far 22/30
+06:13:38 +   54.7s  case 38/40 ambiguous (1 turns); mechanical so far 22/30
+06:13:40 +   56.7s  case 39/40 book_it (1 turns); mechanical so far 22/30
+06:13:42 +   58.5s  case 40/40 long_session_64 (64 turns); mechanical so far 22/30
+06:15:26 +  163.0s  done: {"pass": 15, "mechanical": "24/33", "turns": 115, "full_transcript": "experiments/pure/agents/pw100/runs/dev_015.txt", "failed_checks": ["precedence: U: Compute 25 - 4 * 3. | B: The answer is 75.", "order: U: Mira is taller than Omar. Omar is taller than Tess. Who is tallest? | B: You told me that",
+{
+ "pass": 15,
+ "mechanical": "24/33",
+ "turns": 115,
+ "full_transcript": "experiments/pure/agents/pw100/runs/dev_015.txt",
+ "failed_checks": [
+  "precedence: U: Compute 25 - 4 * 3. | B: The answer is 75.",
+  "order: U: Mira is taller than Omar. Omar is taller than Tess. Who is tallest? | B: You told me that",
+  "syllogism: U: All glimps are blue. Toma is a glimp. What color is Toma? | B: You told me that Toma is a glimp.",
+  "caps: U: Write the word lantern in capital letters and nothing else. | B: Got it, thanks for telling me. I'll keep that in mind.",
+  "reverse_list: U: Reverse this list: red, green, blue | B: You told me that red, green, blue",
+  "count_words: U: How many words are in this sentence: the cat sat down | B: You told me that the cat sat down",
+  "correction: U: What is my name and current favorite fruit? | B: You told me that your favorite fruit is mango now.",
+  "coref: U: How old is Biscotto? | B: You told me that your dog is called Biscotto.",
+  "long_session_64: U: What are my project codename and launch month? | B: You told me that your project codename is Cedar and the launch is in April."
+ ]
+}

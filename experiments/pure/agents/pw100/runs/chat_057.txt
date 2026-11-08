@@ -1,0 +1,80 @@
+[
+ [
+  {
+   "user": "Please remember: my project codename is Cedar and the launch is in April.",
+   "bot": "Got it! I'll remember that."
+  },
+  {
+   "user": "Also, my teammate's name is Oskarine.",
+   "bot": "Got it! I'll remember that."
+  },
+  {
+   "user": "Who is my teammate?",
+   "bot": "You told me that Also, your teammate's name is Oskarine."
+  },
+  {
+   "user": "Update: the launch moved from April to June.",
+   "bot": "Thanks for the update! I've noted the change."
+  },
+  {
+   "user": "What are my project codename and launch month?",
+   "bot": "You told me that the launch moved from April to June."
+  },
+  {
+   "user": "What is my project codename?",
+   "bot": "You told me that your project codename is Cedar and the launch is in April."
+  }
+ ],
+ [
+  {
+   "user": "Lena owns a green notebook. Daro owns a red notebook.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Whose notebook is red?",
+   "bot": "You told me that Daro owns a red notebook."
+  },
+  {
+   "user": "And what color is Lena's notebook?",
+   "bot": "The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green."
+  },
+  {
+   "user": "My dog is called Biscotto.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "He is four years old.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "How old is Biscotto?",
+   "bot": "You told me that He is four years old."
+  },
+  {
+   "user": "What is my name?",
+   "bot": "I don't think you have told me that yet. Could you remind me?"
+  }
+ ],
+ [
+  {
+   "user": "My sister lives in Lisbon and works as a nurse.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Where does my sister live?",
+   "bot": "You told me that your sister lives in Lisbon and works as a nurse."
+  },
+  {
+   "user": "What does she do for work?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  },
+  {
+   "user": "I parked the car on level three.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Where did I park?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  }
+ ]
+]

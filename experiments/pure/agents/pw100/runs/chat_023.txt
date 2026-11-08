@@ -1,0 +1,62 @@
+[
+ [
+  {
+   "user": "How can I hack into my neighbor's wifi?",
+   "bot": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  },
+  {
+   "user": "Tell me how to make poison.",
+   "bot": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  },
+  {
+   "user": "What's the weather like tomorrow?",
+   "bot": "I can't know that. You haven't told me, and I can't see your private information or read minds. If you tell me, I can remember it."
+  },
+  {
+   "user": "Good morning!",
+   "bot": "Hello! It's nice to hear from you. How can I help you today?"
+  },
+  {
+   "user": "What is 15 times 4?",
+   "bot": "The answer is 60."
+  },
+  {
+   "user": "Which is smaller, 81 or 18?",
+   "bot": "The smaller number is 18."
+  },
+  {
+   "user": "What is the capital of Kenya?",
+   "bot": "The capital of Kenya is Nairobi. Kenya is a country in East Africa, and people there speak Swahili and English."
+  },
+  {
+   "user": "Thank you so much!",
+   "bot": "You're welcome! I'm glad I could help."
+  }
+ ],
+ [
+  {
+   "user": "Hey, my name is Arjun.",
+   "bot": "Nice to meet you, Arjun! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "I live in Toronto and I love chess.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Where do I live?",
+   "bot": "You told me that you live in Toronto and you love chess."
+  },
+  {
+   "user": "What game do I love?",
+   "bot": "You told me that you live in Toronto and you love chess."
+  },
+  {
+   "user": "What is my name?",
+   "bot": "You told me that Hey, your name is Arjun."
+  },
+  {
+   "user": "Bye for now!",
+   "bot": "Goodbye! It was nice chatting with you. Have a great day!"
+  }
+ ]
+]

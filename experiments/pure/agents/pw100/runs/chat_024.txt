@@ -1,0 +1,62 @@
+[
+ [
+  {
+   "user": "What will the weather be tomorrow?",
+   "bot": "I can't know that. I can't read minds, see your private information, or check live things like the weather. If you tell me, I can remember it."
+  },
+  {
+   "user": "What number am I thinking of?",
+   "bot": "I can't know that. I can't read minds, see your private information, or check live things like the weather. If you tell me, I can remember it."
+  },
+  {
+   "user": "Why do leaves change color in autumn?",
+   "bot": "The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green."
+  },
+  {
+   "user": "How many legs does an ant have?",
+   "bot": "Ants are small insects that live in large groups called colonies. They can carry many times their own weight."
+  },
+  {
+   "user": "What is the opposite of happy?",
+   "bot": "Happy means feeling good. A synonym for happy is \"joyful\", and the opposite of happy is sad."
+  },
+  {
+   "user": "Can you write me a short poem about the sea?",
+   "bot": "Here is a short poem:\nSoft light wakes the sleepy shore,\nA gentle breeze begins to play,\nThe world feels calm and bright once more,\nAs morning greets another day."
+  },
+  {
+   "user": "What is 250 divided by 5?",
+   "bot": "The answer is 50."
+  },
+  {
+   "user": "Who wrote Romeo and Juliet?",
+   "bot": "William Shakespeare was an English playwright. He wrote Romeo and Juliet, Hamlet and Macbeth."
+  }
+ ],
+ [
+  {
+   "user": "I'm Selma and my cat is called Pixel.",
+   "bot": "Nice to meet you, Pixel! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "What is my cat called?",
+   "bot": "You told me that you're Selma and your cat is called Pixel."
+  },
+  {
+   "user": "Rewrite this politely: Close the door.",
+   "bot": "Could you please close the door? Thank you!"
+  },
+  {
+   "user": "Repeat after me: the moon is bright tonight.",
+   "bot": " the moon is bright tonight."
+  },
+  {
+   "user": "How are you?",
+   "bot": "I'm doing well, thank you for asking! I'm just a computer program, but I'm happy to chat. How are you?"
+  },
+  {
+   "user": "What can you do?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  }
+ ]
+]

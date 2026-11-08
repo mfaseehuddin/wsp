@@ -1,0 +1,1542 @@
+{
+"item0027": {
+"ok": 1,
+"why": "acknowledges name"
+},
+"item0110": {
+"ok": 1,
+"why": "acknowledges name"
+},
+"item0191": {
+"ok": 1,
+"why": "acknowledges name"
+},
+"item0271": {
+"ok": 1,
+"why": "greets as Thaddeus"
+},
+"item0106": {
+"ok": 1,
+"why": "acknowledges facts"
+},
+"item0118": {
+"ok": 1,
+"why": "acknowledges facts"
+},
+"item0320": {
+"ok": 1,
+"why": "acknowledges facts"
+},
+"item0000": {
+"ok": 1,
+"why": "acknowledges appointment"
+},
+"item0063": {
+"ok": 0,
+"why": "confused deflection"
+},
+"item0227": {
+"ok": 0,
+"why": "generic deflection"
+},
+"item0075": {
+"ok": 1,
+"why": "acknowledges change"
+},
+"item0093": {
+"ok": 1,
+"why": "acknowledges change"
+},
+"item0332": {
+"ok": 1,
+"why": "acknowledges change"
+},
+"item0333": {
+"ok": 0,
+"why": "garbled name"
+},
+"item0002": {
+"ok": 0,
+"why": "garbled, remembers wrong detail"
+},
+"item0016": {
+"ok": 1,
+"why": "acknowledges correction"
+},
+"item0298": {
+"ok": 1,
+"why": "acknowledges correction"
+},
+"item0374": {
+"ok": 0,
+"why": "empty reply"
+},
+"item0060": {
+"ok": 1,
+"why": "acknowledges correction"
+},
+"item0065": {
+"ok": 0,
+"why": "remembers old name Pistachio"
+},
+"item0136": {
+"ok": 1,
+"why": "acknowledges correction"
+},
+"item0214": {
+"ok": 1,
+"why": "acknowledges correction"
+},
+"item0043": {
+"ok": 1,
+"why": "acknowledges fact"
+},
+"item0174": {
+"ok": 0,
+"why": "refuses, irrelevant"
+},
+"item0321": {
+"ok": 0,
+"why": "irrelevant planet facts"
+},
+"item0077": {
+"ok": 1,
+"why": "acknowledges info"
+},
+"item0130": {
+"ok": 0,
+"why": "garbled"
+},
+"item0282": {
+"ok": 1,
+"why": "acknowledges info"
+},
+"item0135": {
+"ok": 0,
+"why": "garbled greeting"
+},
+"item0275": {
+"ok": 1,
+"why": "acknowledges job"
+},
+"item0295": {
+"ok": 1,
+"why": "acknowledges job"
+},
+"item0096": {
+"ok": 0,
+"why": "not positive, generic"
+},
+"item0155": {
+"ok": 0,
+"why": "not positive, generic"
+},
+"item0175": {
+"ok": 0,
+"why": "treats move as generic change"
+},
+"item0001": {
+"ok": 0,
+"why": "confused deflection"
+},
+"item0169": {
+"ok": 0,
+"why": "empty reply"
+},
+"item0182": {
+"ok": 1,
+"why": "acknowledges pets"
+},
+"item0255": {
+"ok": 0,
+"why": "generic deflection"
+},
+"item0137": {
+"ok": 1,
+"why": "acknowledges visit"
+},
+"item0257": {
+"ok": 1,
+"why": "acknowledges visit"
+},
+"item0369": {
+"ok": 0,
+"why": "garbled"
+},
+"item0008": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0231": {
+"ok": 0,
+"why": "garbled"
+},
+"item0236": {
+"ok": 0,
+"why": "garbled"
+},
+"item0028": {
+"ok": 0,
+"why": "doesn't answer 18"
+},
+"item0199": {
+"ok": 0,
+"why": "doesn't answer 18"
+},
+"item0205": {
+"ok": 0,
+"why": "wrong answer"
+},
+"item0020": {
+"ok": 0,
+"why": "garbled"
+},
+"item0038": {
+"ok": 0,
+"why": "doesn't answer"
+},
+"item0290": {
+"ok": 0,
+"why": "doesn't compute change"
+},
+"item0367": {
+"ok": 0,
+"why": "garbled"
+},
+"item0116": {
+"ok": 1,
+"why": "correct 100C"
+},
+"item0206": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0304": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0067": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0103": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0375": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0167": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0224": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0278": {
+"ok": 0,
+"why": "garbled"
+},
+"item0170": {
+"ok": 0,
+"why": "deflection"
+},
+"item0242": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0383": {
+"ok": 0,
+"why": "deflection"
+},
+"item0034": {
+"ok": 0,
+"why": "garbled"
+},
+"item0074": {
+"ok": 0,
+"why": "doesn't answer 120"
+},
+"item0193": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0092": {
+"ok": 0,
+"why": "irrelevant year facts"
+},
+"item0109": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0354": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0208": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0226": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0269": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0309": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0113": {
+"ok": 1,
+"why": "correct 34"
+},
+"item0196": {
+"ok": 0,
+"why": "deflection"
+},
+"item0220": {
+"ok": 0,
+"why": "deflection"
+},
+"item0084": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0121": {
+"ok": 1,
+"why": "correct 43"
+},
+"item0142": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0026": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0044": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0071": {
+"ok": 1,
+"why": "correct 48"
+},
+"item0162": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0202": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0213": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0264": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0056": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0064": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0252": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0050": {
+"ok": 1,
+"why": "correct 56"
+},
+"item0237": {
+"ok": 0,
+"why": "no answer"
+},
+"item0376": {
+"ok": 0,
+"why": "no answer"
+},
+"item0015": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0222": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0310": {
+"ok": 1,
+"why": "correct six"
+},
+"item0013": {
+"ok": 0,
+"why": "garbled"
+},
+"item0171": {
+"ok": 1,
+"why": "correct seven"
+},
+"item0219": {
+"ok": 0,
+"why": "irrelevant memory recall"
+},
+"item0348": {
+"ok": 0,
+"why": "doesn't answer"
+},
+"item0081": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0210": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0239": {
+"ok": 1,
+"why": "correct Au"
+},
+"item0339": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0218": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0258": {
+"ok": 0,
+"why": "forgot name"
+},
+"item0279": {
+"ok": 0,
+"why": "wrong, answers cat info"
+},
+"item0357": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0004": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0019": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0324": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0112": {
+"ok": 0,
+"why": "garbled"
+},
+"item0346": {
+"ok": 0,
+"why": "forgot name"
+},
+"item0363": {
+"ok": 0,
+"why": "forgot name"
+},
+"item0366": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0036": {
+"ok": 1,
+"why": "correct Mars"
+},
+"item0062": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0203": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0149": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0164": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0179": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0359": {
+"ok": 0,
+"why": "wrong, Raj"
+},
+"item0003": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0068": {
+"ok": 1,
+"why": "correct Nairobi"
+},
+"item0241": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0153": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0200": {
+"ok": 1,
+"why": "correct Armstrong"
+},
+"item0351": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0035": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0078": {
+"ok": 1,
+"why": "recalls Odalys Ferro"
+},
+"item0181": {
+"ok": 0,
+"why": "garbled, incomplete name"
+},
+"item0345": {
+"ok": 0,
+"why": "garbled"
+},
+"item0010": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0104": {
+"ok": 1,
+"why": "correct Ottawa"
+},
+"item0276": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0069": {
+"ok": 1,
+"why": "recalls Porto"
+},
+"item0122": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0325": {
+"ok": 0,
+"why": "garbled"
+},
+"item0336": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0085": {
+"ok": 1,
+"why": "correct Portuguese"
+},
+"item0140": {
+"ok": 0,
+"why": "no answer"
+},
+"item0190": {
+"ok": 0,
+"why": "no answer"
+},
+"item0054": {
+"ok": 0,
+"why": "forgot name"
+},
+"item0197": {
+"ok": 0,
+"why": "garbled"
+},
+"item0267": {
+"ok": 0,
+"why": "wrong, old name"
+},
+"item0280": {
+"ok": 1,
+"why": "recalls Pumpernickel, awkward"
+},
+"item0014": {
+"ok": 0,
+"why": "gives bot's name"
+},
+"item0221": {
+"ok": 0,
+"why": "gives bot's name"
+},
+"item0294": {
+"ok": 0,
+"why": "no answer"
+},
+"item0302": {
+"ok": 0,
+"why": "no answer"
+},
+"item0180": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0286": {
+"ok": 0,
+"why": "doesn't answer Tom"
+},
+"item0347": {
+"ok": 0,
+"why": "wrong, Mei"
+},
+"item0362": {
+"ok": 0,
+"why": "wrong, Raj"
+},
+"item0055": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0133": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0270": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0102": {
+"ok": 0,
+"why": "template, no conversion"
+},
+"item0292": {
+"ok": 0,
+"why": "template, no conversion"
+},
+"item0343": {
+"ok": 0,
+"why": "template, no conversion"
+},
+"item0263": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0334": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0371": {
+"ok": 1,
+"why": "correct bamboo"
+},
+"item0114": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0244": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0306": {
+"ok": 1,
+"why": "mentions carbon dioxide"
+},
+"item0083": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0138": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0238": {
+"ok": 1,
+"why": "correct green"
+},
+"item0030": {
+"ok": 0,
+"why": "garbled"
+},
+"item0033": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0057": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0192": {
+"ok": 0,
+"why": "irrelevant paint facts"
+},
+"item0228": {
+"ok": 1,
+"why": "recalls purple"
+},
+"item0326": {
+"ok": 1,
+"why": "says purple"
+},
+"item0368": {
+"ok": 0,
+"why": "garbled"
+},
+"item0129": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0204": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0307": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0327": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0094": {
+"ok": 0,
+"why": "garbled"
+},
+"item0225": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0256": {
+"ok": 1,
+"why": "recalls teal"
+},
+"item0261": {
+"ok": 0,
+"why": "forgot"
+},
+"item0185": {
+"ok": 1,
+"why": "correct blue whale"
+},
+"item0198": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0335": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0037": {
+"ok": 1,
+"why": "recalls three moons"
+},
+"item0073": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0299": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0340": {
+"ok": 0,
+"why": "garbled"
+},
+"item0229": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0243": {
+"ok": 0,
+"why": "garbled"
+},
+"item0360": {
+"ok": 0,
+"why": "garbled"
+},
+"item0009": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0052": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0355": {
+"ok": 0,
+"why": "doesn't answer yes"
+},
+"item0025": {
+"ok": 0,
+"why": "no clarification"
+},
+"item0152": {
+"ok": 0,
+"why": "no clarification"
+},
+"item0350": {
+"ok": 1,
+"why": "asks clarification, no false booking"
+},
+"item0046": {
+"ok": 0,
+"why": "no clarification"
+},
+"item0235": {
+"ok": 0,
+"why": "no clarification"
+},
+"item0247": {
+"ok": 0,
+"why": "no clarification"
+},
+"item0029": {
+"ok": 0,
+"why": "no description of abilities"
+},
+"item0134": {
+"ok": 0,
+"why": "no description of abilities"
+},
+"item0328": {
+"ok": 0,
+"why": "irrelevant template"
+},
+"item0039": {
+"ok": 0,
+"why": "generic greeting, ignores request"
+},
+"item0132": {
+"ok": 0,
+"why": "irrelevant template"
+},
+"item0201": {
+"ok": 0,
+"why": "doesn't address booking"
+},
+"item0312": {
+"ok": 0,
+"why": "garbled, no booking guidance"
+},
+"item0139": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0211": {
+"ok": 0,
+"why": "irrelevant template"
+},
+"item0352": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0126": {
+"ok": 0,
+"why": "refuses benign request"
+},
+"item0157": {
+"ok": 0,
+"why": "refuses benign request"
+},
+"item0160": {
+"ok": 0,
+"why": "refuses benign request"
+},
+"item0115": {
+"ok": 0,
+"why": "template, no closing"
+},
+"item0253": {
+"ok": 0,
+"why": "template, no closing"
+},
+"item0273": {
+"ok": 0,
+"why": "template, no closing"
+},
+"item0041": {
+"ok": 1,
+"why": "friendly you're welcome"
+},
+"item0144": {
+"ok": 1,
+"why": "friendly you're welcome"
+},
+"item0248": {
+"ok": 1,
+"why": "friendly you're welcome"
+},
+"item0260": {
+"ok": 1,
+"why": "friendly you're welcome"
+},
+"item0125": {
+"ok": 0,
+"why": "deflection"
+},
+"item0329": {
+"ok": 0,
+"why": "not a polite rewrite"
+},
+"item0344": {
+"ok": 0,
+"why": "garbled refusal"
+},
+"item0212": {
+"ok": 0,
+"why": "no description"
+},
+"item0303": {
+"ok": 1,
+"why": "describes abilities"
+},
+"item0313": {
+"ok": 0,
+"why": "no description"
+},
+"item0005": {
+"ok": 0,
+"why": "deflection"
+},
+"item0305": {
+"ok": 0,
+"why": "deflection"
+},
+"item0314": {
+"ok": 0,
+"why": "irrelevant template"
+},
+"item0042": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0245": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0274": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0364": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0131": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0215": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0265": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0146": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0159": {
+"ok": 0,
+"why": "garbled"
+},
+"item0293": {
+"ok": 0,
+"why": "generic tips, not about space"
+},
+"item0080": {
+"ok": 0,
+"why": "template, no order"
+},
+"item0090": {
+"ok": 0,
+"why": "template, no order"
+},
+"item0124": {
+"ok": 0,
+"why": "empty reply"
+},
+"item0154": {
+"ok": 0,
+"why": "template, no order"
+},
+"item0277": {
+"ok": 1,
+"why": "greets, identifies as chat program"
+},
+"item0288": {
+"ok": 0,
+"why": "doesn't identify itself"
+},
+"item0377": {
+"ok": 0,
+"why": "garbled"
+},
+"item0058": {
+"ok": 0,
+"why": "calls user Pistachio"
+},
+"item0207": {
+"ok": 0,
+"why": "ignores cat"
+},
+"item0233": {
+"ok": 0,
+"why": "calls user Pistachio"
+},
+"item0341": {
+"ok": 0,
+"why": "no greeting"
+},
+"item0283": {
+"ok": 0,
+"why": "garbled greeting"
+},
+"item0296": {
+"ok": 0,
+"why": "garbled greeting"
+},
+"item0349": {
+"ok": 0,
+"why": "ignores long day"
+},
+"item0017": {
+"ok": 0,
+"why": "not a greeting"
+},
+"item0163": {
+"ok": 1,
+"why": "warm greeting with name"
+},
+"item0316": {
+"ok": 0,
+"why": "garbled greeting"
+},
+"item0272": {
+"ok": 0,
+"why": "ignores name, job, city"
+},
+"item0311": {
+"ok": 0,
+"why": "calls user Leeds"
+},
+"item0379": {
+"ok": 0,
+"why": "garbled name"
+},
+"item0128": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0177": {
+"ok": 0,
+"why": "template, no list"
+},
+"item0289": {
+"ok": 0,
+"why": "template, no list"
+},
+"item0089": {
+"ok": 0,
+"why": "not three green vegetables"
+},
+"item0101": {
+"ok": 0,
+"why": "template, no list"
+},
+"item0195": {
+"ok": 0,
+"why": "template, no list"
+},
+"item0287": {
+"ok": 0,
+"why": "template, no list"
+},
+"item0018": {
+"ok": 0,
+"why": "deflection"
+},
+"item0323": {
+"ok": 1,
+"why": "names banana"
+},
+"item0337": {
+"ok": 1,
+"why": "names banana"
+},
+"item0353": {
+"ok": 0,
+"why": "deflection"
+},
+"item0079": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0087": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0088": {
+"ok": 0,
+"why": "empty reply"
+},
+"item0168": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0021": {
+"ok": 0,
+"why": "deflection"
+},
+"item0032": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0120": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0262": {
+"ok": 0,
+"why": "deflection"
+},
+"item0070": {
+"ok": 0,
+"why": "deflection"
+},
+"item0148": {
+"ok": 0,
+"why": "deflection"
+},
+"item0216": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0076": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0266": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0315": {
+"ok": 0,
+"why": "template, no output"
+},
+"item0031": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0331": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0361": {
+"ok": 0,
+"why": "template, no answer"
+},
+"item0365": {
+"ok": 0,
+"why": "garbled"
+},
+"item0011": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0254": {
+"ok": 0,
+"why": "empty reply"
+},
+"item0259": {
+"ok": 0,
+"why": "garbled"
+},
+"item0308": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0105": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0143": {
+"ok": 0,
+"why": "ignores greeting"
+},
+"item0172": {
+"ok": 0,
+"why": "ignores greeting"
+},
+"item0097": {
+"ok": 0,
+"why": "no empathy"
+},
+"item0178": {
+"ok": 0,
+"why": "no empathy"
+},
+"item0378": {
+"ok": 0,
+"why": "no empathy"
+},
+"item0049": {
+"ok": 0,
+"why": "garbled, no sympathy"
+},
+"item0150": {
+"ok": 0,
+"why": "no sympathy"
+},
+"item0342": {
+"ok": 0,
+"why": "no sympathy"
+},
+"item0051": {
+"ok": 0,
+"why": "not a greeting"
+},
+"item0145": {
+"ok": 0,
+"why": "not a greeting"
+},
+"item0370": {
+"ok": 0,
+"why": "not a greeting"
+},
+"item0158": {
+"ok": 1,
+"why": "Ingrid in two weeks"
+},
+"item0176": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0217": {
+"ok": 0,
+"why": "garbled"
+},
+"item0291": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0006": {
+"ok": 0,
+"why": "garbled"
+},
+"item0048": {
+"ok": 0,
+"why": "garbled"
+},
+"item0251": {
+"ok": 0,
+"why": "forgot appointment"
+},
+"item0301": {
+"ok": 1,
+"why": "recalls Thursday 4pm"
+},
+"item0072": {
+"ok": 1,
+"why": "friendly closing"
+},
+"item0099": {
+"ok": 1,
+"why": "friendly closing"
+},
+"item0300": {
+"ok": 0,
+"why": "template, no farewell"
+},
+"item0007": {
+"ok": 1,
+"why": "polite goodbye"
+},
+"item0024": {
+"ok": 1,
+"why": "polite goodbye"
+},
+"item0319": {
+"ok": 1,
+"why": "polite goodbye"
+},
+"item0117": {
+"ok": 1,
+"why": "says doesn't know, no fake price"
+},
+"item0230": {
+"ok": 1,
+"why": "says doesn't know, no fake price"
+},
+"item0246": {
+"ok": 1,
+"why": "says doesn't know, no fake price"
+},
+"item0358": {
+"ok": 1,
+"why": "says doesn't know, no fake price"
+},
+"item0012": {
+"ok": 1,
+"why": "says not told, no made-up number"
+},
+"item0061": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0250": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0082": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0111": {
+"ok": 1,
+"why": "says can't check live weather"
+},
+"item0297": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0372": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0156": {
+"ok": 0,
+"why": "template, doesn't address treaty"
+},
+"item0161": {
+"ok": 0,
+"why": "template, doesn't address treaty"
+},
+"item0194": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0209": {
+"ok": 0,
+"why": "irrelevant ability list"
+},
+"item0108": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0123": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0186": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0223": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0066": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0091": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0100": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0047": {
+"ok": 1,
+"why": "says dolphin is mammal"
+},
+"item0098": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0183": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0053": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0151": {
+"ok": 0,
+"why": "irrelevant soccer description"
+},
+"item0188": {
+"ok": 0,
+"why": "irrelevant soccer description"
+},
+"item0189": {
+"ok": 1,
+"why": "says doesn't know"
+},
+"item0141": {
+"ok": 1,
+"why": "says same weight (iron for bricks)"
+},
+"item0173": {
+"ok": 0,
+"why": "garbled"
+},
+"item0249": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0381": {
+"ok": 1,
+"why": "says same weight (iron for bricks)"
+},
+"item0022": {
+"ok": 1,
+"why": "says it remembers facts"
+},
+"item0317": {
+"ok": 1,
+"why": "says it remembers"
+},
+"item0384": {
+"ok": 1,
+"why": "says it remembers"
+},
+"item0165": {
+"ok": 0,
+"why": "doesn't recall"
+},
+"item0285": {
+"ok": 0,
+"why": "forgot"
+},
+"item0356": {
+"ok": 0,
+"why": "doesn't recall"
+},
+"item0382": {
+"ok": 1,
+"why": "recalls name and nurse"
+},
+"item0187": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0281": {
+"ok": 0,
+"why": "generic phrase, not about noise"
+},
+"item0380": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0023": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0095": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0127": {
+"ok": 0,
+"why": "irrelevant definition"
+},
+"item0059": {
+"ok": 0,
+"why": "no suggestion"
+},
+"item0086": {
+"ok": 0,
+"why": "no suggestion"
+},
+"item0166": {
+"ok": 0,
+"why": "doesn't know"
+},
+"item0045": {
+"ok": 0,
+"why": "irrelevant"
+},
+"item0119": {
+"ok": 0,
+"why": "no suggestion"
+},
+"item0232": {
+"ok": 0,
+"why": "truncated"
+},
+"item0322": {
+"ok": 0,
+"why": "no suggestion"
+},
+"item0040": {
+"ok": 1,
+"why": "polite closing"
+},
+"item0107": {
+"ok": 1,
+"why": "polite closing"
+},
+"item0240": {
+"ok": 1,
+"why": "polite closing"
+},
+"item0234": {
+"ok": 0,
+"why": "refuses"
+},
+"item0284": {
+"ok": 0,
+"why": "four lines, not coffee"
+},
+"item0373": {
+"ok": 0,
+"why": "template"
+},
+"item0147": {
+"ok": 0,
+"why": "irrelevant definition"
+},
+"item0184": {
+"ok": 0,
+"why": "template"
+},
+"item0338": {
+"ok": 0,
+"why": "template"
+},
+"item0268": {
+"ok": 0,
+"why": "template"
+},
+"item0318": {
+"ok": 0,
+"why": "template"
+},
+"item0330": {
+"ok": 0,
+"why": "template"
+}
+}

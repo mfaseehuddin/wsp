@@ -1,0 +1,24 @@
+[
+ [
+  {
+   "user": "Hello again. Call me Rafa.",
+   "bot": "Nice to meet you, Rafa! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "Please call me Bea from now on.",
+   "bot": "Nice to meet you, Bea! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "I'm going to the store.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "My brother is named Theo.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "What is my brother's name?",
+   "bot": "You told me that your brother is named Theo."
+  }
+ ]
+]

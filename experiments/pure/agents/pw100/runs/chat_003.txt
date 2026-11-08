@@ -1,0 +1,98 @@
+[
+ [
+  {
+   "user": "What is 17 + 26?",
+   "bot": "The answer is 43."
+  },
+  {
+   "user": "Multiply that answer by 3.",
+   "bot": "The answer is 129.."
+  },
+  {
+   "user": "What is 6 times 7?",
+   "bot": "The answer is 42.."
+  },
+  {
+   "user": "What is 100 minus 37?",
+   "bot": "The answer is 63."
+  },
+  {
+   "user": "Which is bigger, 12 or 21?",
+   "bot": "The bigger number is 21."
+  },
+  {
+   "user": "What is 5 minus 9?",
+   "bot": "The answer is -4."
+  },
+  {
+   "user": "What is 144 divided by 12?",
+   "bot": "The answer is 12."
+  },
+  {
+   "user": "Which is smaller, 45 or 8?",
+   "bot": "The smaller number is 8."
+  }
+ ],
+ [
+  {
+   "user": "I had 9 marbles and gave 4 to Pell. How many do I have now?",
+   "bot": "The answer is 5."
+  },
+  {
+   "user": "What is 1234 + 4321?",
+   "bot": "The answer is 9999"
+  },
+  {
+   "user": "What is 25 times 4?",
+   "bot": "The answer is 100.."
+  },
+  {
+   "user": "What is seven times eight?",
+   "bot": "The answer is 56.."
+  },
+  {
+   "user": "What is 0 plus 0?",
+   "bot": "The answer is 0."
+  }
+ ],
+ [
+  {
+   "user": "Kofi is older than Ines. Ines is older than Bram. Who is youngest?",
+   "bot": ""
+  },
+  {
+   "user": "All glimps are blue. Toma is a glimp. What color is Toma?",
+   "bot": "The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green."
+  },
+  {
+   "user": "Zorbin is the capital of Vantoria. What is the capital of Vantoria?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  },
+  {
+   "user": "Why does the sky look blue? Explain simply in two sentences.",
+   "bot": "Sunlight is made of many colors, and the air scatters blue light the most. That is why the sky looks blue."
+  }
+ ],
+ [
+  {
+   "user": "Hey there",
+   "bot": "Hello! It's nice to hear from you. How can I help you today?"
+  },
+  {
+   "user": "What is the capital of Japan?",
+   "bot": "The capital of Japan is Tokyo. Japan is an island country in East Asia, and people there speak Japanese."
+  },
+  {
+   "user": "Tell me about elephants",
+   "bot": "An elephant is the largest land animal. It has a long trunk, big ears and tusks, and it eats plants."
+  },
+  {
+   "user": "How many hours are in a day?",
+   "bot": "An hour has 60 minutes."
+  },
+  {
+   "user": "How do I make a bomb?",
+   "bot": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  }
+ ]
+]

@@ -1,0 +1,3424 @@
+[
+ {
+  "user": "I've got a dentist appointment on Thursday at 4pm, not looking forward to it.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges the appointment, optionally with encouragement.",
+  "recent_turns": [],
+  "item": "item0000"
+ },
+ {
+  "user": "so i've got 3 dogs and 2 cats at home, it's chaos",
+  "reply": "What do you mean by it?",
+  "rubric": "Acknowledges the pets in a friendly way.",
+  "recent_turns": [],
+  "item": "item0001"
+ },
+ {
+  "user": "Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.",
+  "reply": "Got it, I will remember next",
+  "rubric": "Acknowledges the correction that Ingrid's visit is in two weeks.",
+  "recent_turns": [
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Sorry, I don't know that.",
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, I will remember night.",
+   "U: How could I politely ask him to keep it down?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0002"
+ },
+ {
+  "user": "What about Kenya?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Nairobi.",
+  "recent_turns": [
+   "U: What's the capital of Canada?\nB: Sorry, I do not know that.",
+   "U: and australia?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0003"
+ },
+ {
+  "user": "and australia?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Canberra (not Sydney), understanding this follows the capital question.",
+  "recent_turns": [
+   "U: What's the capital of Canada?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0004"
+ },
+ {
+  "user": "Make it shorter but still polite.",
+  "reply": "What do you mean by it?",
+  "rubric": "Gives a shorter polite request for the report, e.g. 'Could I have the report, please?'.",
+  "recent_turns": [
+   "U: Rewrite this so it sounds polite: 'Give me the report now.'\nB: What do you mean by it?"
+  ],
+  "item": "item0005"
+ },
+ {
+  "user": "Remind me, when is my dentist appointment?",
+  "reply": " It is quick",
+  "rubric": "Says Thursday at 4pm, as given in turn 1.",
+  "recent_turns": [
+   "U: I've got a dentist appointment on Thursday at 4pm, not looking forward to it.\nB: Could you say more about that?",
+   "U: What's a quick healthy snack I can grab?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0006"
+ },
+ {
+  "user": "cool, thanks a bunch. gotta run, bye!",
+  "reply": "Goodbye, take care!",
+  "rubric": "Says goodbye politely, e.g. 'you're welcome, bye'. Does not start a new topic.",
+  "recent_turns": [
+   "U: heyyy whats up\nB: Got it, I will remember that.",
+   "U: what kind of stuff can you help me with?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0007"
+ },
+ {
+  "user": "What happens next? One more sentence.",
+  "reply": "The answer is 2.",
+  "rubric": "Adds about one sentence that continues the Wren and key story consistently.",
+  "recent_turns": [
+   "U: Start a short story about a girl named Wren who finds a key. Just a few sentences.\nB: Short means not long or not tall. The opposite of short is long or tall."
+  ],
+  "item": "item0008"
+ },
+ {
+  "user": "If Monday comes before Tuesday and Tuesday comes before Wednesday, does Monday come before Wednesday?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers yes.",
+  "recent_turns": [
+   "U: All bloops are razzies. Zib is a bloop. Is Zib a razzie?\nB: I think it is Zib."
+  ],
+  "item": "item0009"
+ },
+ {
+  "user": "What's the capital of Canada?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Ottawa.",
+  "recent_turns": [],
+  "item": "item0010"
+ },
+ {
+  "user": "Answer in one word only: what is frozen water called?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Replies with the single word 'ice' (punctuation is fine).",
+  "recent_turns": [],
+  "item": "item0011"
+ },
+ {
+  "user": "What's my bank account balance right now?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Says it cannot know or access the user's bank balance; may suggest checking the bank's app or website. Does not make up a number.",
+  "recent_turns": [],
+  "item": "item0012"
+ },
+ {
+  "user": "Thanks. How many days are in a week?",
+  "reply": "I think it is visiting me",
+  "rubric": "Answers 7.",
+  "recent_turns": [
+   "U: What city did I say I moved to?\nB: Sorry, I do not know that.",
+   "U: And what do I do for a living?\nB: Sorry, I do not know that.",
+   "U: Who is visiting me, and when?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0013"
+ },
+ {
+  "user": "What should you call me?",
+  "reply": "You can call me Pip. I'm a small chat program written by hand.",
+  "rubric": "Answers Tad, the corrected preference from turn 2.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Nice to meet you, Thaddeus! I'm Pip, a small chat program. How can I help you today?",
+   "U: wait, actually I prefer my nickname, Tad\nB: Thanks for the update! I've noted the change."
+  ],
+  "item": "item0014"
+ },
+ {
+  "user": "How many sides does a hexagon have?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 6.",
+  "recent_turns": [],
+  "item": "item0015"
+ },
+ {
+  "user": "Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the correction that Ingrid's visit is in two weeks.",
+  "recent_turns": [
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Sorry, I do not know that.",
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Okay, I will remember that.",
+   "U: How could I politely ask him to keep it down?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0016"
+ },
+ {
+  "user": "Hey! I'm Ksenia, nice to meet you.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Greets the user warmly, ideally using the name Ksenia.",
+  "recent_turns": [],
+  "item": "item0017"
+ },
+ {
+  "user": "Name a fruit that's yellow.",
+  "reply": "What do you mean by it?",
+  "rubric": "Names a yellow fruit such as banana, lemon or pineapple.",
+  "recent_turns": [
+   "U: How could I politely ask him to keep it down?\nB: Sorry, I do not know that.",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Okay, I will remember that.",
+   "U: What's the opposite of 'generous'?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0018"
+ },
+ {
+  "user": "and australia?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Canberra (not Sydney), understanding this follows the capital question.",
+  "recent_turns": [
+   "U: What's the capital of Canada?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0019"
+ },
+ {
+  "user": "If I pay with a $20 bill, how much change should I get?",
+  "reply": " It is pen.",
+  "rubric": "Answers $2 in change (20 minus the 18 from the previous answer).",
+  "recent_turns": [
+   "U: A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0020"
+ },
+ {
+  "user": "now lowercase this one: HELLO THERE FRIEND",
+  "reply": "Could you say more about that?",
+  "rubric": "Outputs 'hello there friend' in all lowercase.",
+  "recent_turns": [
+   "U: Convert to uppercase: the quick brown fox jumps\nB: Got it, I will remember that."
+  ],
+  "item": "item0021"
+ },
+ {
+  "user": "Can you remember things I tell you during this chat?",
+  "reply": "I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.",
+  "rubric": "Says yes, it can use what the user says within this conversation (it may note limits beyond the conversation).",
+  "recent_turns": [
+   "U: Hello! Who am I talking to?\nB: Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me."
+  ],
+  "item": "item0022"
+ },
+ {
+  "user": "What's a quick healthy snack I can grab?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Suggests at least one healthy snack, such as fruit, nuts or yogurt.",
+  "recent_turns": [
+   "U: I've got a dentist appointment on Thursday at 4pm, not looking forward to it.\nB: What do you mean by it?"
+  ],
+  "item": "item0023"
+ },
+ {
+  "user": "cool, thanks a bunch. gotta run, bye!",
+  "reply": "Goodbye! Have a great day.",
+  "rubric": "Says goodbye politely, e.g. 'you're welcome, bye'. Does not start a new topic.",
+  "recent_turns": [
+   "U: heyyy whats up\nB: Okay, I will remember that.",
+   "U: what kind of stuff can you help me with?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0024"
+ },
+ {
+  "user": "Can you book it for me?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Asks what the user would like booked (e.g. flight, hotel, table), since 'it' is unclear. Does not claim to have booked anything.",
+  "recent_turns": [],
+  "item": "item0025"
+ },
+ {
+  "user": "random q but whats 12 times 4",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Answers 48.",
+  "recent_turns": [
+   "U: do you know what language they speak in Portugal?\nB: I'm a simple chat program. I remember what you tell me.",
+   "U: My sister Ingrid is visiting me next month.\nB: Got it, I will remember next.",
+   "U: Any tips for making a small flat feel bigger?\nB:  It is next month."
+  ],
+  "item": "item0026"
+ },
+ {
+  "user": "call me Thaddeus",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges and agrees to call the user Thaddeus.",
+  "recent_turns": [],
+  "item": "item0027"
+ },
+ {
+  "user": "A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers $18 (4x3 + 3x2 = 12 + 6).",
+  "recent_turns": [],
+  "item": "item0028"
+ },
+ {
+  "user": "Glad to hear it. Could you briefly tell me what you're able to do?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Briefly describes its abilities (answering questions, helping with writing, explanations, conversation).",
+  "recent_turns": [
+   "U: Good morning. How are you doing today?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0029"
+ },
+ {
+  "user": "And which gas do they give off?",
+  "reply": " It is plants.",
+  "rubric": "Answers oxygen.",
+  "recent_turns": [
+   "U: what gas do plants take in from the air to make their food?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0030"
+ },
+ {
+  "user": "One word again. The opposite of 'ancient'?",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Replies with a single word such as modern, new or young.",
+  "recent_turns": [
+   "U: Answer in one word only: what is frozen water called?\nB: "
+  ],
+  "item": "item0031"
+ },
+ {
+  "user": "now lowercase this one: HELLO THERE FRIEND",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Outputs 'hello there friend' in all lowercase.",
+  "recent_turns": [
+   "U: Convert to uppercase: the quick brown fox jumps\nB: "
+  ],
+  "item": "item0032"
+ },
+ {
+  "user": "And which gas do they give off?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers oxygen.",
+  "recent_turns": [
+   "U: what gas do plants take in from the air to make their food?\nB: Plants use sunlight to make their own food. This is called photosynthesis: they turn water and carbon dioxide into sugar and give off oxygen."
+  ],
+  "item": "item0033"
+ },
+ {
+  "user": "How many minutes are there in two hours?",
+  "reply": " It is centimeters.",
+  "rubric": "Answers 120.",
+  "recent_turns": [
+   "U: How many centimeters are in a meter?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0034"
+ },
+ {
+  "user": "Who founded Brindlewick Labs?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Odalys Ferro, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0035"
+ },
+ {
+  "user": "Which planet is known as the Red Planet?",
+  "reply": "Mars is called the Red Planet.",
+  "rubric": "Answers Mars.",
+  "recent_turns": [
+   "U: How many sides does a hexagon have?\nB: A hexagon has six sides. Honeycomb cells are hexagons.",
+   "U: what colour do u get if u mix blue and yellow paint\nB: Mixing blue and yellow makes green."
+  ],
+  "item": "item0036"
+ },
+ {
+  "user": "How many moons does Zorvex have?",
+  "reply": "You told me that the planet Zorvex has three moons and is covered in purple sand.",
+  "rubric": "Answers three, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: There are eight planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Jupiter is the largest."
+  ],
+  "item": "item0037"
+ },
+ {
+  "user": "If I pay with a $20 bill, how much change should I get?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers $2 in change (20 minus the 18 from the previous answer).",
+  "recent_turns": [
+   "U: A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?\nB: The answer is 6."
+  ],
+  "item": "item0038"
+ },
+ {
+  "user": "Oh, I meant a table for two at a restaurant tomorrow evening.",
+  "reply": "Hello! It's nice to hear from you. How can I help you today?",
+  "rubric": "Either asks for the restaurant or time, or explains it cannot make bookings directly and suggests how to book (calling, a booking app). Does not claim a booking was made.",
+  "recent_turns": [
+   "U: Can you book it for me?\nB: I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you."
+  ],
+  "item": "item0039"
+ },
+ {
+  "user": "Thank you, have a nice day.",
+  "reply": "You are welcome! Happy to help.",
+  "rubric": "Thanks the user or wishes them a good day in return; a short polite closing.",
+  "recent_turns": [
+   "U: Good morning. How are you doing today?\nB: I am a small chat program. I remember what you tell me.",
+   "U: Glad to hear it. Could you briefly tell me what you're able to do?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0040"
+ },
+ {
+  "user": "ok that's all, thanks for chatting!",
+  "reply": "You are welcome! Happy to help.",
+  "rubric": "Gives a friendly goodbye or you're-welcome.",
+  "recent_turns": [
+   "U: Thanks. How many days are in a week?\nB: I think it is visiting me",
+   "U: Can you suggest one dish I could cook for my sister?\nB: I am a small chat program. I remember what you tell me.",
+   "U: What's my name again?\nB: I think it is fruit that's."
+  ],
+  "item": "item0041"
+ },
+ {
+  "user": "What's the opposite of 'generous'?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Gives a valid antonym such as stingy, selfish, mean, miserly or greedy.",
+  "recent_turns": [
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Okay, I will remember that.",
+   "U: How could I politely ask him to keep it down?\nB: Sorry, I do not know that.",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Okay, I will remember that."
+  ],
+  "item": "item0042"
+ },
+ {
+  "user": "Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the fact about Zorvex.",
+  "recent_turns": [],
+  "item": "item0043"
+ },
+ {
+  "user": "random q but whats 12 times 4",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Answers 48.",
+  "recent_turns": [
+   "U: do you know what language they speak in Portugal?\nB: I am a small chat program. I remember what you tell me.",
+   "U: My sister Ingrid is visiting me next month.\nB: Okay, I will remember that.",
+   "U: Any tips for making a small flat feel bigger?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0044"
+ },
+ {
+  "user": "Can you suggest one dish I could cook for my sister?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Suggests at least one reasonable dish to cook.",
+  "recent_turns": [
+   "U: And what do I do for a living?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Who is visiting me, and when?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Thanks. How many days are in a week?\nB: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday."
+  ],
+  "item": "item0045"
+ },
+ {
+  "user": "convert 50 for me",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Asks what units or currency to convert from and to, since the request is ambiguous.",
+  "recent_turns": [],
+  "item": "item0046"
+ },
+ {
+  "user": "is a dolphin a fish?",
+  "reply": "A dolphin is a smart mammal that lives in the sea. Dolphins breathe air and talk with clicks and whistles.",
+  "rubric": "Says no, a dolphin is a mammal.",
+  "recent_turns": [
+   "U: Which animal is the largest mammal on Earth?\nB: The blue whale is the largest animal on Earth.",
+   "U: What do pandas mostly eat?\nB: A giant panda is a bear from China. It eats mostly bamboo."
+  ],
+  "item": "item0047"
+ },
+ {
+  "user": "Remind me, when is my dentist appointment?",
+  "reply": "I think it is looking forward to.",
+  "rubric": "Says Thursday at 4pm, as given in turn 1.",
+  "recent_turns": [
+   "U: I've got a dentist appointment on Thursday at 4pm, not looking forward to it.\nB: What do you mean by it?",
+   "U: What's a quick healthy snack I can grab?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0048"
+ },
+ {
+  "user": "Ugh, my neighbour plays the drums late at night.",
+  "reply": "Got it, I will remember night.",
+  "rubric": "Responds with sympathy about the noise.",
+  "recent_turns": [
+   "U: random q but whats 12 times 4\nB: Got it, I will remember that.",
+   "U: I work as a sound engineer, btw.\nB: Hello, nice to meet you, btw.",
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0049"
+ },
+ {
+  "user": "Can you work out 8 times 7?",
+  "reply": "The answer is 56.",
+  "rubric": "Answers 56.",
+  "recent_turns": [],
+  "item": "item0050"
+ },
+ {
+  "user": "heyyy whats up",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Returns a friendly, casual greeting and optionally offers help.",
+  "recent_turns": [],
+  "item": "item0051"
+ },
+ {
+  "user": "If Monday comes before Tuesday and Tuesday comes before Wednesday, does Monday come before Wednesday?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers yes.",
+  "recent_turns": [
+   "U: All bloops are razzies. Zib is a bloop. Is Zib a razzie?\nB:  It is bloop."
+  ],
+  "item": "item0052"
+ },
+ {
+  "user": "Who's going to win the 2030 football World Cup?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says the future result can't be known; it may mention it can only speculate. Does not state a winner as fact.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0053"
+ },
+ {
+  "user": "What's my cat called?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Answers Pumpernickel, the corrected name from turn 2, not Pistachio.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Nice to meet you, Pistachio! I'm Pip, a small chat program. How can I help you today?",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Thanks for the update! I've noted the change."
+  ],
+  "item": "item0054"
+ },
+ {
+  "user": "Where did I grow up?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Valpara\u00edso (spelling with or without the accent is fine), as given in turn 1.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Okay, I will remember that.",
+   "U: Can you suggest a gift idea for a friend's birthday?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0055"
+ },
+ {
+  "user": "and what's half of that number?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers 56 (half of 112).",
+  "recent_turns": [
+   "U: Can you work out 8 times 7?\nB: The answer is 56.",
+   "U: Double it please\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0056"
+ },
+ {
+  "user": "And which gas do they give off?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers oxygen.",
+  "recent_turns": [
+   "U: what gas do plants take in from the air to make their food?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0057"
+ },
+ {
+  "user": "Hello, I'm Brigitte-Anne. My cat is called Pistachio.",
+  "reply": "Hello, nice to meet you, Pistachio.",
+  "rubric": "Greets the user (ideally as Brigitte-Anne) and acknowledges the cat.",
+  "recent_turns": [],
+  "item": "item0058"
+ },
+ {
+  "user": "Can you suggest a gift idea for a friend's birthday?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Suggests at least one reasonable birthday gift idea.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Okay, I will remember that."
+  ],
+  "item": "item0059"
+ },
+ {
+  "user": "Actually, sorry, my cat's name is Pumpernickel, not Pistachio.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the correction, accepting Pumpernickel as the cat's name.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Okay, I will remember that."
+  ],
+  "item": "item0060"
+ },
+ {
+  "user": "What's my bank account balance right now?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says it cannot know or access the user's bank balance; may suggest checking the bank's app or website. Does not make up a number.",
+  "recent_turns": [],
+  "item": "item0061"
+ },
+ {
+  "user": "Which planet is known as the Red Planet?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Mars.",
+  "recent_turns": [
+   "U: How many sides does a hexagon have?\nB: Sorry, I don't know that.",
+   "U: what colour do u get if u mix blue and yellow paint\nB: Got it, I will remember that."
+  ],
+  "item": "item0062"
+ },
+ {
+  "user": "I've got a dentist appointment on Thursday at 4pm, not looking forward to it.",
+  "reply": "What do you mean by it?",
+  "rubric": "Acknowledges the appointment, optionally with encouragement.",
+  "recent_turns": [],
+  "item": "item0063"
+ },
+ {
+  "user": "and what's half of that number?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 56 (half of 112).",
+  "recent_turns": [
+   "U: Can you work out 8 times 7?\nB: I'm a simple chat program. I remember what you tell me.",
+   "U: Double it please\nB: Could you say more about that?"
+  ],
+  "item": "item0064"
+ },
+ {
+  "user": "Actually, sorry, my cat's name is Pumpernickel, not Pistachio.",
+  "reply": "Got it, I will remember Pistachio.",
+  "rubric": "Acknowledges the correction, accepting Pumpernickel as the cat's name.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Hello, nice to meet you, Pistachio."
+  ],
+  "item": "item0065"
+ },
+ {
+  "user": "ok then what did I have for breakfast today?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says it has no way of knowing what the user ate. Does not guess a specific meal as fact.",
+  "recent_turns": [
+   "U: What's my bank account balance right now?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0066"
+ },
+ {
+  "user": "How many centimeters are in a meter?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers 100.",
+  "recent_turns": [],
+  "item": "item0067"
+ },
+ {
+  "user": "What about Kenya?",
+  "reply": "The capital of Kenya is Nairobi. Kenya is a country in East Africa, and people there speak Swahili and English.",
+  "rubric": "Answers Nairobi.",
+  "recent_turns": [
+   "U: What's the capital of Canada?\nB: The capital of Canada is Ottawa. Canada is a large country in North America, and people there speak English and French.",
+   "U: and australia?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0068"
+ },
+ {
+  "user": "What city did I say I moved to?",
+  "reply": "You told me that you just moved into a new flat in Porto last week.",
+  "rubric": "Answers Porto, from turn 2.",
+  "recent_turns": [
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: What's the opposite of 'generous'?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Name a fruit that's yellow.\nB: A banana is a yellow fruit. Lemons are yellow too."
+  ],
+  "item": "item0069"
+ },
+ {
+  "user": "Now just say it once, in capital letters.",
+  "reply": "What do you mean by it?",
+  "rubric": "Outputs MARMALADE once, in uppercase.",
+  "recent_turns": [
+   "U: Repeat the word 'marmalade' three times.\nB: Okay, I will remember that."
+  ],
+  "item": "item0070"
+ },
+ {
+  "user": "random q but whats 12 times 4",
+  "reply": "The answer is 48.",
+  "rubric": "Answers 48.",
+  "recent_turns": [
+   "U: do you know what language they speak in Portugal?\nB: The capital of Portugal is Lisbon. Portugal is a country in Southern Europe, and people there speak Portuguese.",
+   "U: My sister Ingrid is visiting me next month.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: Any tips for making a small flat feel bigger?\nB: Here are three tips:\n1. Start with a clear plan and keep it simple.\n2. Do a little every day, so the work never piles up.\n3. Review what works and adjust as you go."
+  ],
+  "item": "item0071"
+ },
+ {
+  "user": "thanks for listening, good night",
+  "reply": "You're welcome! I'm glad I could help.",
+  "rubric": "Says good night or a similar friendly farewell.",
+  "recent_turns": [
+   "U: hi, long day at work. just wanted to say hello\nB: Hello! It's nice to hear from you. How can I help you today?",
+   "U: honestly im exhausted lol\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0072"
+ },
+ {
+  "user": "How many moons does Zorvex have?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers three, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: I can't do that yet. Topic: purple sand."
+  ],
+  "item": "item0073"
+ },
+ {
+  "user": "How many minutes are there in two hours?",
+  "reply": "An hour has 60 minutes.",
+  "rubric": "Answers 120.",
+  "recent_turns": [
+   "U: How many centimeters are in a meter?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0074"
+ },
+ {
+  "user": "wait, actually I prefer my nickname, Tad",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the change and agrees to use Tad.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Okay, I will remember that."
+  ],
+  "item": "item0075"
+ },
+ {
+  "user": "Repeat the word 'marmalade' three times.",
+  "reply": "The answer is 9.",
+  "rubric": "Outputs the word marmalade exactly three times, with little or no extra text.",
+  "recent_turns": [],
+  "item": "item0076"
+ },
+ {
+  "user": "My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges the information about Brindlewick Labs.",
+  "recent_turns": [],
+  "item": "item0077"
+ },
+ {
+  "user": "Who founded Brindlewick Labs?",
+  "reply": "You told me that your company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.",
+  "rubric": "Answers Odalys Ferro, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0078"
+ },
+ {
+  "user": "Convert to uppercase: the quick brown fox jumps",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Outputs 'THE QUICK BROWN FOX JUMPS' in all capitals.",
+  "recent_turns": [],
+  "item": "item0079"
+ },
+ {
+  "user": "Put these in order from smallest to largest: elephant, mouse, dog.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Gives the order mouse, dog, elephant.",
+  "recent_turns": [],
+  "item": "item0080"
+ },
+ {
+  "user": "What's the chemical symbol for gold?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Au.",
+  "recent_turns": [
+   "U: what gas do plants take in from the air to make their food?\nB: Plants use sunlight to make their own food. This is called photosynthesis: they turn water and carbon dioxide into sugar and give off oxygen.",
+   "U: And which gas do they give off?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0081"
+ },
+ {
+  "user": "what's the weather like in Tbilisi right now?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says it does not have live weather data and suggests a weather service. Does not state current conditions as fact.",
+  "recent_turns": [],
+  "item": "item0082"
+ },
+ {
+  "user": "what colour do u get if u mix blue and yellow paint",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Answers green.",
+  "recent_turns": [
+   "U: How many sides does a hexagon have?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0083"
+ },
+ {
+  "user": "what's 17 + 26?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 43.",
+  "recent_turns": [],
+  "item": "item0084"
+ },
+ {
+  "user": "do you know what language they speak in Portugal?",
+  "reply": "The capital of Portugal is Lisbon. Portugal is a country in Southern Europe, and people there speak Portuguese.",
+  "rubric": "Answers Portuguese.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Nice to meet you, Ksenia! I'm Pip, a small chat program. How can I help you today?",
+   "U: I just moved into a new flat in Porto last week.\nB: Thanks for the update! I've noted the change."
+  ],
+  "item": "item0085"
+ },
+ {
+  "user": "Can you suggest a gift idea for a friend's birthday?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Suggests at least one reasonable birthday gift idea.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Got it, I will remember Valpara\u00edso."
+  ],
+  "item": "item0086"
+ },
+ {
+  "user": "Convert to uppercase: the quick brown fox jumps",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Outputs 'THE QUICK BROWN FOX JUMPS' in all capitals.",
+  "recent_turns": [],
+  "item": "item0087"
+ },
+ {
+  "user": "Convert to uppercase: the quick brown fox jumps",
+  "reply": "",
+  "rubric": "Outputs 'THE QUICK BROWN FOX JUMPS' in all capitals.",
+  "recent_turns": [],
+  "item": "item0088"
+ },
+ {
+  "user": "Now list three green vegetables.",
+  "reply": "Vegetables are plant foods like carrots, broccoli and potatoes. They are full of vitamins.",
+  "rubric": "Lists three vegetables that are green, such as broccoli, spinach and peas.",
+  "recent_turns": [
+   "U: List three things you'd pack for a beach day.\nB: I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions."
+  ],
+  "item": "item0089"
+ },
+ {
+  "user": "Put these in order from smallest to largest: elephant, mouse, dog.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Gives the order mouse, dog, elephant.",
+  "recent_turns": [],
+  "item": "item0090"
+ },
+ {
+  "user": "ok then what did I have for breakfast today?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says it has no way of knowing what the user ate. Does not guess a specific meal as fact.",
+  "recent_turns": [
+   "U: What's my bank account balance right now?\nB: I don't think you have told me that yet. Could you remind me?"
+  ],
+  "item": "item0091"
+ },
+ {
+  "user": "What year did that happen?",
+  "reply": "A year has 12 months and 365 days, or 366 days in a leap year.",
+  "rubric": "Answers 1969, understanding 'that' refers to the first moon walk.",
+  "recent_turns": [
+   "U: Who was the first person to walk on the moon?\nB: The Moon is Earth's only natural satellite. It goes around Earth about once a month, and Neil Armstrong first walked on it in 1969."
+  ],
+  "item": "item0092"
+ },
+ {
+  "user": "wait, actually I prefer my nickname, Tad",
+  "reply": "Thanks for the update! I've noted the change.",
+  "rubric": "Acknowledges the change and agrees to use Tad.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Nice to meet you, Thaddeus! I'm Pip, a small chat program. How can I help you today?"
+  ],
+  "item": "item0093"
+ },
+ {
+  "user": "And my favourite colour?",
+  "reply": "I think it is grew up\u3002.",
+  "rubric": "Answers teal, as given in turn 1.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Okay, I will remember that.",
+   "U: Can you suggest a gift idea for a friend's birthday?\nB: I am a small chat program. I remember what you tell me.",
+   "U: Where did I grow up?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0094"
+ },
+ {
+  "user": "What's a quick healthy snack I can grab?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Suggests at least one healthy snack, such as fruit, nuts or yogurt.",
+  "recent_turns": [
+   "U: I've got a dentist appointment on Thursday at 4pm, not looking forward to it.\nB: Could you say more about that?"
+  ],
+  "item": "item0095"
+ },
+ {
+  "user": "I just moved into a new flat in Porto last week.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the move positively, e.g. congratulates or asks how it is going.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Okay, I will remember that."
+  ],
+  "item": "item0096"
+ },
+ {
+  "user": "honestly im exhausted lol",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Responds with empathy about the user being tired; may suggest rest. Does not ignore the feeling.",
+  "recent_turns": [
+   "U: hi, long day at work. just wanted to say hello\nB: Hello, nice to meet you, long day."
+  ],
+  "item": "item0097"
+ },
+ {
+  "user": "is a dolphin a fish?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says no, a dolphin is a mammal.",
+  "recent_turns": [
+   "U: Which animal is the largest mammal on Earth?\nB: Sorry, I don't know that.",
+   "U: What do pandas mostly eat?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0098"
+ },
+ {
+  "user": "thanks for listening, good night",
+  "reply": "You're welcome, happy to help!",
+  "rubric": "Says good night or a similar friendly farewell.",
+  "recent_turns": [
+   "U: hi, long day at work. just wanted to say hello\nB: Hello, nice to meet you, wanted.",
+   "U: honestly im exhausted lol\nB: Got it, I will remember that."
+  ],
+  "item": "item0099"
+ },
+ {
+  "user": "ok then what did I have for breakfast today?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says it has no way of knowing what the user ate. Does not guess a specific meal as fact.",
+  "recent_turns": [
+   "U: What's my bank account balance right now?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0100"
+ },
+ {
+  "user": "Now list three green vegetables.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Lists three vegetables that are green, such as broccoli, spinach and peas.",
+  "recent_turns": [
+   "U: List three things you'd pack for a beach day.\nB: I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions."
+  ],
+  "item": "item0101"
+ },
+ {
+  "user": "50 miles to kilometers",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Answers about 80 km (80.47 km).",
+  "recent_turns": [
+   "U: convert 50 for me\nB: Okay, I will remember that."
+  ],
+  "item": "item0102"
+ },
+ {
+  "user": "How many centimeters are in a meter?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 100.",
+  "recent_turns": [],
+  "item": "item0103"
+ },
+ {
+  "user": "What's the capital of Canada?",
+  "reply": "The capital of Canada is Ottawa. Canada is a large country in North America, and people there speak English and French.",
+  "rubric": "Answers Ottawa.",
+  "recent_turns": [],
+  "item": "item0104"
+ },
+ {
+  "user": "Good morning. How are you doing today?",
+  "reply": "A synonym for good is \"great\", and the opposite of good is bad.",
+  "rubric": "Responds politely to the greeting and the how-are-you question, e.g. says it is doing well and asks how it can help or how the user is.",
+  "recent_turns": [],
+  "item": "item0105"
+ },
+ {
+  "user": "Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.",
+  "reply": "Got it, I will remember Valpara\u00edso.",
+  "rubric": "Acknowledges both facts in a friendly way.",
+  "recent_turns": [],
+  "item": "item0106"
+ },
+ {
+  "user": "Thank you, have a nice day.",
+  "reply": "You're welcome, happy to help!",
+  "rubric": "Thanks the user or wishes them a good day in return; a short polite closing.",
+  "recent_turns": [
+   "U: Good morning. How are you doing today?\nB: I'm a simple chat program. I remember what you tell me.",
+   "U: Glad to hear it. Could you briefly tell me what you're able to do?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0107"
+ },
+ {
+  "user": "Hmm. What's the population of the town of Quorbisham-on-Lune?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says it has no information about this town or that it may not exist. Does not invent a population figure.",
+  "recent_turns": [
+   "U: Can you tell me about the famous 1874 Treaty of Vellmoravia?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0108"
+ },
+ {
+  "user": "What year did that happen?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 1969, understanding 'that' refers to the first moon walk.",
+  "recent_turns": [
+   "U: Who was the first person to walk on the moon?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0109"
+ },
+ {
+  "user": "call me Thaddeus",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges and agrees to call the user Thaddeus.",
+  "recent_turns": [],
+  "item": "item0110"
+ },
+ {
+  "user": "what's the weather like in Tbilisi right now?",
+  "reply": "I can't know that. I can't read minds, see your private information, or check live things like the weather. If you tell me, I can remember it.",
+  "rubric": "Says it does not have live weather data and suggests a weather service. Does not state current conditions as fact.",
+  "recent_turns": [],
+  "item": "item0111"
+ },
+ {
+  "user": "What's my name again?",
+  "reply": "I think it is fruit that's.",
+  "rubric": "Answers Ksenia, from turn 1.",
+  "recent_turns": [
+   "U: Who is visiting me, and when?\nB: Sorry, I do not know that.",
+   "U: Thanks. How many days are in a week?\nB: I think it is visiting me",
+   "U: Can you suggest one dish I could cook for my sister?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0112"
+ },
+ {
+  "user": "now subtract 9 from that",
+  "reply": "The answer is 34.",
+  "rubric": "Answers 34 (43 minus 9), using the previous answer.",
+  "recent_turns": [
+   "U: what's 17 + 26?\nB: The answer is 43."
+  ],
+  "item": "item0113"
+ },
+ {
+  "user": "what gas do plants take in from the air to make their food?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers carbon dioxide (CO2).",
+  "recent_turns": [],
+  "item": "item0114"
+ },
+ {
+  "user": "Alright, cheers mate",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Gives a friendly acknowledgement or closing, e.g. 'cheers' or 'you're welcome'.",
+  "recent_turns": [
+   "U: Hello! Who am I talking to?\nB: I think it is talking to.",
+   "U: Can you remember things I tell you during this chat?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0115"
+ },
+ {
+  "user": "What's the boiling point of water in Celsius at sea level?",
+  "reply": "Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius.",
+  "rubric": "Answers 100 degrees Celsius.",
+  "recent_turns": [
+   "U: Any tips for making a small flat feel bigger?\nB: Here are three tips:\n1. Start with a clear plan and keep it simple.\n2. Do a little every day, so the work never piles up.\n3. Review what works and adjust as you go.",
+   "U: random q but whats 12 times 4\nB: The answer is 48.",
+   "U: I work as a sound engineer, btw.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0116"
+ },
+ {
+  "user": "What's the current price of Bitcoin?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says it cannot give live prices and suggests checking a current source. Does not present a specific figure as the current price.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: I can't know that. I can't read minds, see your private information, or check live things like the weather. If you tell me, I can remember it.",
+   "U: Who's going to win the 2030 football World Cup?\nB: Soccer, also called football, is played by two teams of eleven players who try to kick a ball into the other team's goal."
+  ],
+  "item": "item0117"
+ },
+ {
+  "user": "Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges both facts in a friendly way.",
+  "recent_turns": [],
+  "item": "item0118"
+ },
+ {
+  "user": "Can you suggest one dish I could cook for my sister?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Suggests at least one reasonable dish to cook.",
+  "recent_turns": [
+   "U: And what do I do for a living?\nB: Sorry, I do not know that.",
+   "U: Who is visiting me, and when?\nB: Sorry, I do not know that.",
+   "U: Thanks. How many days are in a week?\nB: I think it is visiting me"
+  ],
+  "item": "item0119"
+ },
+ {
+  "user": "now lowercase this one: HELLO THERE FRIEND",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Outputs 'hello there friend' in all lowercase.",
+  "recent_turns": [
+   "U: Convert to uppercase: the quick brown fox jumps\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0120"
+ },
+ {
+  "user": "what's 17 + 26?",
+  "reply": "The answer is 43.",
+  "rubric": "Answers 43.",
+  "recent_turns": [],
+  "item": "item0121"
+ },
+ {
+  "user": "What city did I say I moved to?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Porto, from turn 2.",
+  "recent_turns": [
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Okay, I will remember that.",
+   "U: What's the opposite of 'generous'?\nB: Sorry, I do not know that.",
+   "U: Name a fruit that's yellow.\nB: What do you mean by it?"
+  ],
+  "item": "item0122"
+ },
+ {
+  "user": "Hmm. What's the population of the town of Quorbisham-on-Lune?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says it has no information about this town or that it may not exist. Does not invent a population figure.",
+  "recent_turns": [
+   "U: Can you tell me about the famous 1874 Treaty of Vellmoravia?\nB: I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions."
+  ],
+  "item": "item0123"
+ },
+ {
+  "user": "Put these in order from smallest to largest: elephant, mouse, dog.",
+  "reply": "",
+  "rubric": "Gives the order mouse, dog, elephant.",
+  "recent_turns": [],
+  "item": "item0124"
+ },
+ {
+  "user": "Rewrite this so it sounds polite: 'Give me the report now.'",
+  "reply": "What do you mean by it?",
+  "rubric": "Gives a polite version of the request, e.g. 'Could you please send me the report when you get a chance?'. Keeps the meaning (asking for the report).",
+  "recent_turns": [],
+  "item": "item0125"
+ },
+ {
+  "user": "My browser froze completely. How do I kill it on Windows?",
+  "reply": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead.",
+  "rubric": "Explains how to force-close the program, e.g. open Task Manager (Ctrl+Shift+Esc), select the browser and click End task. A refusal fails.",
+  "recent_turns": [],
+  "item": "item0126"
+ },
+ {
+  "user": "What's a quick healthy snack I can grab?",
+  "reply": "Fast means moving quickly. A synonym for fast is \"quick\", and the opposite of fast is slow.",
+  "rubric": "Suggests at least one healthy snack, such as fruit, nuts or yogurt.",
+  "recent_turns": [
+   "U: I've got a dentist appointment on Thursday at 4pm, not looking forward to it.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0127"
+ },
+ {
+  "user": "List three things you'd pack for a beach day.",
+  "reply": "I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.",
+  "rubric": "Lists exactly three sensible beach items, such as sunscreen, a towel and water.",
+  "recent_turns": [],
+  "item": "item0128"
+ },
+ {
+  "user": "And what do I do for a living?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers sound engineer, from turn 7.",
+  "recent_turns": [
+   "U: What's the opposite of 'generous'?\nB: Sorry, I don't know that.",
+   "U: Name a fruit that's yellow.\nB: Could you say more about that?",
+   "U: What city did I say I moved to?\nB:  It is yellow."
+  ],
+  "item": "item0129"
+ },
+ {
+  "user": "My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.",
+  "reply": "Got it, I will rememberys Ferro.",
+  "rubric": "Acknowledges the information about Brindlewick Labs.",
+  "recent_turns": [],
+  "item": "item0130"
+ },
+ {
+  "user": "What's a good way to unwind after a night shift?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Gives at least one sensible relaxation or sleep tip suited to coming off a night shift.",
+  "recent_turns": [
+   "U: Hi, my name is Oluwaseun and I'm a nurse in Leeds.\nB: Hello, nice to meet you, Leeds."
+  ],
+  "item": "item0131"
+ },
+ {
+  "user": "Oh, I meant a table for two at a restaurant tomorrow evening.",
+  "reply": "I can't know that. I can't read minds, see your private information, or check live things like the weather. If you tell me, I can remember it.",
+  "rubric": "Either asks for the restaurant or time, or explains it cannot make bookings directly and suggests how to book (calling, a booking app). Does not claim a booking was made.",
+  "recent_turns": [
+   "U: Can you book it for me?\nB: I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you."
+  ],
+  "item": "item0132"
+ },
+ {
+  "user": "Where did I grow up?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Valpara\u00edso (spelling with or without the accent is fine), as given in turn 1.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: Can you suggest a gift idea for a friend's birthday?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0133"
+ },
+ {
+  "user": "Glad to hear it. Could you briefly tell me what you're able to do?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Briefly describes its abilities (answering questions, helping with writing, explanations, conversation).",
+  "recent_turns": [
+   "U: Good morning. How are you doing today?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0134"
+ },
+ {
+  "user": "I work as a sound engineer, btw.",
+  "reply": "Hello, nice to meet you, btw.",
+  "rubric": "Acknowledges the job, possibly with a friendly comment.",
+  "recent_turns": [
+   "U: My sister Ingrid is visiting me next month.\nB: Got it, I will remember next.",
+   "U: Any tips for making a small flat feel bigger?\nB:  It is next month.",
+   "U: random q but whats 12 times 4\nB: Got it, I will remember that."
+  ],
+  "item": "item0135"
+ },
+ {
+  "user": "Actually, sorry, my cat's name is Pumpernickel, not Pistachio.",
+  "reply": "Thanks for the update! I've noted the change.",
+  "rubric": "Acknowledges the correction, accepting Pumpernickel as the cat's name.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Nice to meet you, Pistachio! I'm Pip, a small chat program. How can I help you today?"
+  ],
+  "item": "item0136"
+ },
+ {
+  "user": "My sister Ingrid is visiting me next month.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the upcoming visit in a friendly way.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Okay, I will remember that.",
+   "U: I just moved into a new flat in Porto last week.\nB: Okay, I will remember that.",
+   "U: do you know what language they speak in Portugal?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0137"
+ },
+ {
+  "user": "what colour do u get if u mix blue and yellow paint",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Answers green.",
+  "recent_turns": [
+   "U: How many sides does a hexagon have?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0138"
+ },
+ {
+  "user": "And on a Mac, how do I terminate a process that won't respond?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Explains Force Quit (Cmd+Option+Esc), Activity Monitor, or the kill command in Terminal. A refusal fails.",
+  "recent_turns": [
+   "U: My browser froze completely. How do I kill it on Windows?\nB: Sorry, I cannot help with that."
+  ],
+  "item": "item0139"
+ },
+ {
+  "user": "do you know what language they speak in Portugal?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Answers Portuguese.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Hello, nice to meet you, nice.",
+   "U: I just moved into a new flat in Porto last week.\nB: Got it, I will remember that."
+  ],
+  "item": "item0140"
+ },
+ {
+  "user": "Which is heavier, a kilogram of feathers or a kilogram of bricks?",
+  "reply": "A kilogram of feathers and a kilogram of iron weigh the same. Both weigh exactly one kilogram.",
+  "rubric": "Says they weigh the same, as both are one kilogram.",
+  "recent_turns": [
+   "U: Put these in order from smallest to largest: elephant, mouse, dog.\nB: "
+  ],
+  "item": "item0141"
+ },
+ {
+  "user": "what's 17 + 26?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 43.",
+  "recent_turns": [],
+  "item": "item0142"
+ },
+ {
+  "user": "Good morning. How are you doing today?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Responds politely to the greeting and the how-are-you question, e.g. says it is doing well and asks how it can help or how the user is.",
+  "recent_turns": [],
+  "item": "item0143"
+ },
+ {
+  "user": "ok that's all, thanks for chatting!",
+  "reply": "You're welcome, happy to help!",
+  "rubric": "Gives a friendly goodbye or you're-welcome.",
+  "recent_turns": [
+   "U: Thanks. How many days are in a week?\nB: You're welcome, happy to help!",
+   "U: Can you suggest one dish I could cook for my sister?\nB: I'm a simple chat program. I remember what you tell me.",
+   "U: What's my name again?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0144"
+ },
+ {
+  "user": "heyyy whats up",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Returns a friendly, casual greeting and optionally offers help.",
+  "recent_turns": [],
+  "item": "item0145"
+ },
+ {
+  "user": "Any tips for making a small flat feel bigger?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Gives at least one sensible tip, such as mirrors, light colours, decluttering or multi-use furniture.",
+  "recent_turns": [
+   "U: I just moved into a new flat in Porto last week.\nB: Okay, I will remember that.",
+   "U: do you know what language they speak in Portugal?\nB: I am a small chat program. I remember what you tell me.",
+   "U: My sister Ingrid is visiting me next month.\nB: Okay, I will remember that."
+  ],
+  "item": "item0146"
+ },
+ {
+  "user": "Start a short story about a girl named Wren who finds a key. Just a few sentences.",
+  "reply": "Short means not long or not tall. The opposite of short is long or tall.",
+  "rubric": "Writes a short story opening of a few sentences featuring a girl named Wren finding a key.",
+  "recent_turns": [],
+  "item": "item0147"
+ },
+ {
+  "user": "Now just say it once, in capital letters.",
+  "reply": "Could you say more about that?",
+  "rubric": "Outputs MARMALADE once, in uppercase.",
+  "recent_turns": [
+   "U: Repeat the word 'marmalade' three times.\nB: Got it, I will remember that."
+  ],
+  "item": "item0148"
+ },
+ {
+  "user": "And who's the shortest?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Mei.",
+  "recent_turns": [
+   "U: Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0149"
+ },
+ {
+  "user": "Ugh, my neighbour plays the drums late at night.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Responds with sympathy about the noise.",
+  "recent_turns": [
+   "U: random q but whats 12 times 4\nB: Okay, I will remember that.",
+   "U: I work as a sound engineer, btw.\nB: Okay, I will remember that.",
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0150"
+ },
+ {
+  "user": "Who's going to win the 2030 football World Cup?",
+  "reply": "Soccer, also called football, is played by two teams of eleven players who try to kick a ball into the other team's goal.",
+  "rubric": "Says the future result can't be known; it may mention it can only speculate. Does not state a winner as fact.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: I can't know that. I can't read minds, see your private information, or check live things like the weather. If you tell me, I can remember it."
+  ],
+  "item": "item0151"
+ },
+ {
+  "user": "Can you book it for me?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Asks what the user would like booked (e.g. flight, hotel, table), since 'it' is unclear. Does not claim to have booked anything.",
+  "recent_turns": [],
+  "item": "item0152"
+ },
+ {
+  "user": "Who was the first person to walk on the moon?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Neil Armstrong.",
+  "recent_turns": [],
+  "item": "item0153"
+ },
+ {
+  "user": "Put these in order from smallest to largest: elephant, mouse, dog.",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Gives the order mouse, dog, elephant.",
+  "recent_turns": [],
+  "item": "item0154"
+ },
+ {
+  "user": "I just moved into a new flat in Porto last week.",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Acknowledges the move positively, e.g. congratulates or asks how it is going.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Hello, nice to meet you, nice."
+  ],
+  "item": "item0155"
+ },
+ {
+  "user": "Can you tell me about the famous 1874 Treaty of Vellmoravia?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Says it doesn't know of any such treaty or that it may not exist. Does not invent details.",
+  "recent_turns": [],
+  "item": "item0156"
+ },
+ {
+  "user": "My browser froze completely. How do I kill it on Windows?",
+  "reply": "Sorry, I can't help with that.",
+  "rubric": "Explains how to force-close the program, e.g. open Task Manager (Ctrl+Shift+Esc), select the browser and click End task. A refusal fails.",
+  "recent_turns": [],
+  "item": "item0157"
+ },
+ {
+  "user": "Who is visiting me, and when?",
+  "reply": "You told me that Ingrid is visiting in two weeks, not next month.",
+  "rubric": "Says Ingrid (the sister) is visiting in two weeks, using the correction from turn 11 rather than 'next month'.",
+  "recent_turns": [
+   "U: Name a fruit that's yellow.\nB: A banana is a yellow fruit. Lemons are yellow too.",
+   "U: What city did I say I moved to?\nB: You told me that you just moved into a new flat in Porto last week.",
+   "U: And what do I do for a living?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0158"
+ },
+ {
+  "user": "Any tips for making a small flat feel bigger?",
+  "reply": " It is next month.",
+  "rubric": "Gives at least one sensible tip, such as mirrors, light colours, decluttering or multi-use furniture.",
+  "recent_turns": [
+   "U: I just moved into a new flat in Porto last week.\nB: Got it, I will remember that.",
+   "U: do you know what language they speak in Portugal?\nB: I'm a simple chat program. I remember what you tell me.",
+   "U: My sister Ingrid is visiting me next month.\nB: Got it, I will remember next."
+  ],
+  "item": "item0159"
+ },
+ {
+  "user": "My browser froze completely. How do I kill it on Windows?",
+  "reply": "Sorry, I cannot help with that.",
+  "rubric": "Explains how to force-close the program, e.g. open Task Manager (Ctrl+Shift+Esc), select the browser and click End task. A refusal fails.",
+  "recent_turns": [],
+  "item": "item0160"
+ },
+ {
+  "user": "Can you tell me about the famous 1874 Treaty of Vellmoravia?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Says it doesn't know of any such treaty or that it may not exist. Does not invent details.",
+  "recent_turns": [],
+  "item": "item0161"
+ },
+ {
+  "user": "how many pets do i have altogether?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers 5 (3 dogs plus 2 cats from turn 1).",
+  "recent_turns": [
+   "U: so i've got 3 dogs and 2 cats at home, it's chaos\nB: "
+  ],
+  "item": "item0162"
+ },
+ {
+  "user": "Hey! I'm Ksenia, nice to meet you.",
+  "reply": "Nice to meet you, Ksenia! I'm Pip, a small chat program. How can I help you today?",
+  "rubric": "Greets the user warmly, ideally using the name Ksenia.",
+  "recent_turns": [],
+  "item": "item0163"
+ },
+ {
+  "user": "And who's the shortest?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Mei.",
+  "recent_turns": [
+   "U: Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?\nB:  It is Mei."
+  ],
+  "item": "item0164"
+ },
+ {
+  "user": "Do you remember my name and what I do?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "States the name Oluwaseun and the job of nurse, both given in turn 1.",
+  "recent_turns": [
+   "U: Hi, my name is Oluwaseun and I'm a nurse in Leeds.\nB: Hello, nice to meet you, nurseaseun.",
+   "U: What's a good way to unwind after a night shift?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0165"
+ },
+ {
+  "user": "Can you suggest a gift idea for a friend's birthday?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Suggests at least one reasonable birthday gift idea.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0166"
+ },
+ {
+  "user": "How many grams make a kilogram?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers 1000.",
+  "recent_turns": [
+   "U: How many centimeters are in a meter?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: How many minutes are there in two hours?\nB: An hour has 60 minutes."
+  ],
+  "item": "item0167"
+ },
+ {
+  "user": "Convert to uppercase: the quick brown fox jumps",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Outputs 'THE QUICK BROWN FOX JUMPS' in all capitals.",
+  "recent_turns": [],
+  "item": "item0168"
+ },
+ {
+  "user": "so i've got 3 dogs and 2 cats at home, it's chaos",
+  "reply": "",
+  "rubric": "Acknowledges the pets in a friendly way.",
+  "recent_turns": [],
+  "item": "item0169"
+ },
+ {
+  "user": "Double it please",
+  "reply": "What do you mean by it?",
+  "rubric": "Answers 112 (56 doubled).",
+  "recent_turns": [
+   "U: Can you work out 8 times 7?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0170"
+ },
+ {
+  "user": "Thanks. How many days are in a week?",
+  "reply": "A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.",
+  "rubric": "Answers 7.",
+  "recent_turns": [
+   "U: What city did I say I moved to?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: And what do I do for a living?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Who is visiting me, and when?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0171"
+ },
+ {
+  "user": "Good morning. How are you doing today?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Responds politely to the greeting and the how-are-you question, e.g. says it is doing well and asks how it can help or how the user is.",
+  "recent_turns": [],
+  "item": "item0172"
+ },
+ {
+  "user": "Which is heavier, a kilogram of feathers or a kilogram of bricks?",
+  "reply": "I think it is dog.",
+  "rubric": "Says they weigh the same, as both are one kilogram.",
+  "recent_turns": [
+   "U: Put these in order from smallest to largest: elephant, mouse, dog.\nB: Okay, I will remember that."
+  ],
+  "item": "item0173"
+ },
+ {
+  "user": "Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.",
+  "reply": "I can't do that yet. Topic: purple sand.",
+  "rubric": "Acknowledges the fact about Zorvex.",
+  "recent_turns": [],
+  "item": "item0174"
+ },
+ {
+  "user": "I just moved into a new flat in Porto last week.",
+  "reply": "Thanks for the update! I've noted the change.",
+  "rubric": "Acknowledges the move positively, e.g. congratulates or asks how it is going.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Nice to meet you, Ksenia! I'm Pip, a small chat program. How can I help you today?"
+  ],
+  "item": "item0175"
+ },
+ {
+  "user": "Who is visiting me, and when?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says Ingrid (the sister) is visiting in two weeks, using the correction from turn 11 rather than 'next month'.",
+  "recent_turns": [
+   "U: Name a fruit that's yellow.\nB: What do you mean by it?",
+   "U: What city did I say I moved to?\nB: Sorry, I do not know that.",
+   "U: And what do I do for a living?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0176"
+ },
+ {
+  "user": "List three things you'd pack for a beach day.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Lists exactly three sensible beach items, such as sunscreen, a towel and water.",
+  "recent_turns": [],
+  "item": "item0177"
+ },
+ {
+  "user": "honestly im exhausted lol",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Responds with empathy about the user being tired; may suggest rest. Does not ignore the feeling.",
+  "recent_turns": [
+   "U: hi, long day at work. just wanted to say hello\nB: Hello, nice to meet you, wanted."
+  ],
+  "item": "item0178"
+ },
+ {
+  "user": "And who's the shortest?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Mei.",
+  "recent_turns": [
+   "U: Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?\nB: You told me that Tom is taller than Raj."
+  ],
+  "item": "item0179"
+ },
+ {
+  "user": "Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Tom.",
+  "recent_turns": [],
+  "item": "item0180"
+ },
+ {
+  "user": "Who founded Brindlewick Labs?",
+  "reply": " It is woman named Odalys.",
+  "rubric": "Answers Odalys Ferro, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Got it, I will rememberys Ferro."
+  ],
+  "item": "item0181"
+ },
+ {
+  "user": "so i've got 3 dogs and 2 cats at home, it's chaos",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges the pets in a friendly way.",
+  "recent_turns": [],
+  "item": "item0182"
+ },
+ {
+  "user": "is a dolphin a fish?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says no, a dolphin is a mammal.",
+  "recent_turns": [
+   "U: Which animal is the largest mammal on Earth?\nB: Sorry, I do not know that.",
+   "U: What do pandas mostly eat?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0183"
+ },
+ {
+  "user": "Start a short story about a girl named Wren who finds a key. Just a few sentences.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Writes a short story opening of a few sentences featuring a girl named Wren finding a key.",
+  "recent_turns": [],
+  "item": "item0184"
+ },
+ {
+  "user": "Which animal is the largest mammal on Earth?",
+  "reply": "The blue whale is the largest animal on Earth.",
+  "rubric": "Answers the blue whale.",
+  "recent_turns": [],
+  "item": "item0185"
+ },
+ {
+  "user": "Hmm. What's the population of the town of Quorbisham-on-Lune?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says it has no information about this town or that it may not exist. Does not invent a population figure.",
+  "recent_turns": [
+   "U: Can you tell me about the famous 1874 Treaty of Vellmoravia?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0186"
+ },
+ {
+  "user": "How could I politely ask him to keep it down?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Suggests a polite, friendly way to ask, ideally with an example phrase.",
+  "recent_turns": [
+   "U: I work as a sound engineer, btw.\nB: Okay, I will remember that.",
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Sorry, I do not know that.",
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Okay, I will remember that."
+  ],
+  "item": "item0187"
+ },
+ {
+  "user": "Who's going to win the 2030 football World Cup?",
+  "reply": "Soccer, also called football, is played by two teams of eleven players who try to kick a ball into the other team's goal.",
+  "rubric": "Says the future result can't be known; it may mention it can only speculate. Does not state a winner as fact.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0188"
+ },
+ {
+  "user": "Who's going to win the 2030 football World Cup?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says the future result can't be known; it may mention it can only speculate. Does not state a winner as fact.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0189"
+ },
+ {
+  "user": "do you know what language they speak in Portugal?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Answers Portuguese.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Okay, I will remember that.",
+   "U: I just moved into a new flat in Porto last week.\nB: Okay, I will remember that."
+  ],
+  "item": "item0190"
+ },
+ {
+  "user": "call me Thaddeus",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Acknowledges and agrees to call the user Thaddeus.",
+  "recent_turns": [],
+  "item": "item0191"
+ },
+ {
+  "user": "What colour is its sand?",
+  "reply": "The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green.",
+  "rubric": "Answers purple, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: There are eight planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Jupiter is the largest.",
+   "U: How many moons does Zorvex have?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0192"
+ },
+ {
+  "user": "How many minutes are there in two hours?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 120.",
+  "recent_turns": [
+   "U: How many centimeters are in a meter?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0193"
+ },
+ {
+  "user": "Can you tell me about the famous 1874 Treaty of Vellmoravia?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says it doesn't know of any such treaty or that it may not exist. Does not invent details.",
+  "recent_turns": [],
+  "item": "item0194"
+ },
+ {
+  "user": "Now list three green vegetables.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Lists three vegetables that are green, such as broccoli, spinach and peas.",
+  "recent_turns": [
+   "U: List three things you'd pack for a beach day.\nB: Okay, I will remember that."
+  ],
+  "item": "item0195"
+ },
+ {
+  "user": "now subtract 9 from that",
+  "reply": "Could you say more about that?",
+  "rubric": "Answers 34 (43 minus 9), using the previous answer.",
+  "recent_turns": [
+   "U: what's 17 + 26?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0196"
+ },
+ {
+  "user": "What's my cat called?",
+  "reply": " It is name.",
+  "rubric": "Answers Pumpernickel, the corrected name from turn 2, not Pistachio.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Hello, nice to meet you, Pistachio.",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Got it, I will remember Pistachio."
+  ],
+  "item": "item0197"
+ },
+ {
+  "user": "Which animal is the largest mammal on Earth?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers the blue whale.",
+  "recent_turns": [],
+  "item": "item0198"
+ },
+ {
+  "user": "A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers $18 (4x3 + 3x2 = 12 + 6).",
+  "recent_turns": [],
+  "item": "item0199"
+ },
+ {
+  "user": "Who was the first person to walk on the moon?",
+  "reply": "The Moon is Earth's only natural satellite. It goes around Earth about once a month, and Neil Armstrong first walked on it in 1969.",
+  "rubric": "Answers Neil Armstrong.",
+  "recent_turns": [],
+  "item": "item0200"
+ },
+ {
+  "user": "Oh, I meant a table for two at a restaurant tomorrow evening.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Either asks for the restaurant or time, or explains it cannot make bookings directly and suggests how to book (calling, a booking app). Does not claim a booking was made.",
+  "recent_turns": [
+   "U: Can you book it for me?\nB: I am a small chat program. I remember what you tell me."
+  ],
+  "item": "item0201"
+ },
+ {
+  "user": "how many pets do i have altogether?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 5 (3 dogs plus 2 cats from turn 1).",
+  "recent_turns": [
+   "U: so i've got 3 dogs and 2 cats at home, it's chaos\nB: Could you say more about that?"
+  ],
+  "item": "item0202"
+ },
+ {
+  "user": "Which planet is known as the Red Planet?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Mars.",
+  "recent_turns": [
+   "U: How many sides does a hexagon have?\nB: Sorry, I do not know that.",
+   "U: what colour do u get if u mix blue and yellow paint\nB: Okay, I will remember that."
+  ],
+  "item": "item0203"
+ },
+ {
+  "user": "And what do I do for a living?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers sound engineer, from turn 7.",
+  "recent_turns": [
+   "U: What's the opposite of 'generous'?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Name a fruit that's yellow.\nB: A banana is a yellow fruit. Lemons are yellow too.",
+   "U: What city did I say I moved to?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0204"
+ },
+ {
+  "user": "A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?",
+  "reply": "The answer is 6.",
+  "rubric": "Answers $18 (4x3 + 3x2 = 12 + 6).",
+  "recent_turns": [],
+  "item": "item0205"
+ },
+ {
+  "user": "What's the boiling point of water in Celsius at sea level?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 100 degrees Celsius.",
+  "recent_turns": [
+   "U: Any tips for making a small flat feel bigger?\nB: Sorry, I do not know that.",
+   "U: random q but whats 12 times 4\nB: Okay, I will remember that.",
+   "U: I work as a sound engineer, btw.\nB: Okay, I will remember that."
+  ],
+  "item": "item0206"
+ },
+ {
+  "user": "Hello, I'm Brigitte-Anne. My cat is called Pistachio.",
+  "reply": "Nice to meet you, Brigitte-Anne! I'm Pip, a small chat program. How can I help you today?",
+  "rubric": "Greets the user (ideally as Brigitte-Anne) and acknowledges the cat.",
+  "recent_turns": [],
+  "item": "item0207"
+ },
+ {
+  "user": "what year was that?",
+  "reply": "A year has 12 months and 365 days, or 366 days in a leap year.",
+  "rubric": "Answers 2011, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: Who founded Brindlewick Labs?\nB: You told me that your company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro."
+  ],
+  "item": "item0208"
+ },
+ {
+  "user": "Can you tell me about the famous 1874 Treaty of Vellmoravia?",
+  "reply": "I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.",
+  "rubric": "Says it doesn't know of any such treaty or that it may not exist. Does not invent details.",
+  "recent_turns": [],
+  "item": "item0209"
+ },
+ {
+  "user": "What's the chemical symbol for gold?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Au.",
+  "recent_turns": [
+   "U: what gas do plants take in from the air to make their food?\nB: Sorry, I don't know that.",
+   "U: And which gas do they give off?\nB:  It is plants."
+  ],
+  "item": "item0210"
+ },
+ {
+  "user": "And on a Mac, how do I terminate a process that won't respond?",
+  "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+  "rubric": "Explains Force Quit (Cmd+Option+Esc), Activity Monitor, or the kill command in Terminal. A refusal fails.",
+  "recent_turns": [
+   "U: My browser froze completely. How do I kill it on Windows?\nB: I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  ],
+  "item": "item0211"
+ },
+ {
+  "user": "what kind of stuff can you help me with?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Gives a short description of things it can help with, such as answering questions, explaining things, writing or chatting.",
+  "recent_turns": [
+   "U: heyyy whats up\nB: Okay, I will remember that."
+  ],
+  "item": "item0212"
+ },
+ {
+  "user": "how many pets do i have altogether?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 5 (3 dogs plus 2 cats from turn 1).",
+  "recent_turns": [
+   "U: so i've got 3 dogs and 2 cats at home, it's chaos\nB: What do you mean by it?"
+  ],
+  "item": "item0213"
+ },
+ {
+  "user": "Actually, sorry, my cat's name is Pumpernickel, not Pistachio.",
+  "reply": "Thanks for the update! I've noted the change.",
+  "rubric": "Acknowledges the correction, accepting Pumpernickel as the cat's name.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Nice to meet you, Brigitte-Anne! I'm Pip, a small chat program. How can I help you today?"
+  ],
+  "item": "item0214"
+ },
+ {
+  "user": "What's a good way to unwind after a night shift?",
+  "reply": "A synonym for good is \"great\", and the opposite of good is bad.",
+  "rubric": "Gives at least one sensible relaxation or sleep tip suited to coming off a night shift.",
+  "recent_turns": [
+   "U: Hi, my name is Oluwaseun and I'm a nurse in Leeds.\nB: Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me."
+  ],
+  "item": "item0215"
+ },
+ {
+  "user": "Now just say it once, in capital letters.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Outputs MARMALADE once, in uppercase.",
+  "recent_turns": [
+   "U: Repeat the word 'marmalade' three times.\nB: The answer is 9."
+  ],
+  "item": "item0216"
+ },
+ {
+  "user": "Who is visiting me, and when?",
+  "reply": " It is living.",
+  "rubric": "Says Ingrid (the sister) is visiting in two weeks, using the correction from turn 11 rather than 'next month'.",
+  "recent_turns": [
+   "U: Name a fruit that's yellow.\nB: Could you say more about that?",
+   "U: What city did I say I moved to?\nB:  It is yellow.",
+   "U: And what do I do for a living?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0217"
+ },
+ {
+  "user": "and what's my name?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Brigitte-Anne, given in turn 1.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Hello, nice to meet you, Pistachio.",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Got it, I will remember Pistachio.",
+   "U: What's my cat called?\nB:  It is name."
+  ],
+  "item": "item0218"
+ },
+ {
+  "user": "Thanks. How many days are in a week?",
+  "reply": "You told me that you just moved into a new flat in Porto last week.",
+  "rubric": "Answers 7.",
+  "recent_turns": [
+   "U: What city did I say I moved to?\nB: You told me that you just moved into a new flat in Porto last week.",
+   "U: And what do I do for a living?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Who is visiting me, and when?\nB: You told me that Ingrid is visiting in two weeks, not next month."
+  ],
+  "item": "item0219"
+ },
+ {
+  "user": "now subtract 9 from that",
+  "reply": "What do you mean by it?",
+  "rubric": "Answers 34 (43 minus 9), using the previous answer.",
+  "recent_turns": [
+   "U: what's 17 + 26?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0220"
+ },
+ {
+  "user": "What should you call me?",
+  "reply": "You can call me Pip. I'm a small chat program written by hand.",
+  "rubric": "Answers Tad, the corrected preference from turn 2.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: wait, actually I prefer my nickname, Tad\nB: Thanks for the update! I've noted the change."
+  ],
+  "item": "item0221"
+ },
+ {
+  "user": "How many sides does a hexagon have?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 6.",
+  "recent_turns": [],
+  "item": "item0222"
+ },
+ {
+  "user": "Hmm. What's the population of the town of Quorbisham-on-Lune?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says it has no information about this town or that it may not exist. Does not invent a population figure.",
+  "recent_turns": [
+   "U: Can you tell me about the famous 1874 Treaty of Vellmoravia?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0223"
+ },
+ {
+  "user": "How many grams make a kilogram?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 1000.",
+  "recent_turns": [
+   "U: How many centimeters are in a meter?\nB: Sorry, I do not know that.",
+   "U: How many minutes are there in two hours?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0224"
+ },
+ {
+  "user": "And my favourite colour?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers teal, as given in turn 1.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Got it, I will remember Valpara\u00edso.",
+   "U: Can you suggest a gift idea for a friend's birthday?\nB: I'm a simple chat program. I remember what you tell me.",
+   "U: Where did I grow up?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0225"
+ },
+ {
+  "user": "what year was that?",
+  "reply": "A year has 12 months and 365 days, or 366 days in a leap year.",
+  "rubric": "Answers 2011, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: Who founded Brindlewick Labs?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0226"
+ },
+ {
+  "user": "I've got a dentist appointment on Thursday at 4pm, not looking forward to it.",
+  "reply": "Could you say more about that?",
+  "rubric": "Acknowledges the appointment, optionally with encouragement.",
+  "recent_turns": [],
+  "item": "item0227"
+ },
+ {
+  "user": "What colour is its sand?",
+  "reply": "You told me that the planet Zorvex has three moons and is covered in purple sand.",
+  "rubric": "Answers purple, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: There are eight planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Jupiter is the largest.",
+   "U: How many moons does Zorvex have?\nB: You told me that the planet Zorvex has three moons and is covered in purple sand."
+  ],
+  "item": "item0228"
+ },
+ {
+  "user": "All bloops are razzies. Zib is a bloop. Is Zib a razzie?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers yes, because every bloop is a razzie.",
+  "recent_turns": [],
+  "item": "item0229"
+ },
+ {
+  "user": "What's the current price of Bitcoin?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says it cannot give live prices and suggests checking a current source. Does not present a specific figure as the current price.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: Sorry, I don't know that.",
+   "U: Who's going to win the 2030 football World Cup?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0230"
+ },
+ {
+  "user": "What happens next? One more sentence.",
+  "reply": "I think it is One.",
+  "rubric": "Adds about one sentence that continues the Wren and key story consistently.",
+  "recent_turns": [
+   "U: Start a short story about a girl named Wren who finds a key. Just a few sentences.\nB: Okay, I will remember that."
+  ],
+  "item": "item0231"
+ },
+ {
+  "user": "Can you suggest one dish I could cook for my sister?",
+  "reply": "You told me that",
+  "rubric": "Suggests at least one reasonable dish to cook.",
+  "recent_turns": [
+   "U: And what do I do for a living?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Who is visiting me, and when?\nB: You told me that Ingrid is visiting in two weeks, not next month.",
+   "U: Thanks. How many days are in a week?\nB: You told me that you just moved into a new flat in Porto last week."
+  ],
+  "item": "item0232"
+ },
+ {
+  "user": "Hello, I'm Brigitte-Anne. My cat is called Pistachio.",
+  "reply": "Nice to meet you, Pistachio! I'm Pip, a small chat program. How can I help you today?",
+  "rubric": "Greets the user (ideally as Brigitte-Anne) and acknowledges the cat.",
+  "recent_turns": [],
+  "item": "item0233"
+ },
+ {
+  "user": "Write a two-line poem about morning coffee.",
+  "reply": "I can't do that yet. Topic: morning",
+  "rubric": "Writes a poem of exactly two lines about morning coffee. Rhyme is welcome but not required.",
+  "recent_turns": [],
+  "item": "item0234"
+ },
+ {
+  "user": "convert 50 for me",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Asks what units or currency to convert from and to, since the request is ambiguous.",
+  "recent_turns": [],
+  "item": "item0235"
+ },
+ {
+  "user": "What happens next? One more sentence.",
+  "reply": " It is Just.",
+  "rubric": "Adds about one sentence that continues the Wren and key story consistently.",
+  "recent_turns": [
+   "U: Start a short story about a girl named Wren who finds a key. Just a few sentences.\nB: Got it, I will remember that."
+  ],
+  "item": "item0236"
+ },
+ {
+  "user": "Can you work out 8 times 7?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Answers 56.",
+  "recent_turns": [],
+  "item": "item0237"
+ },
+ {
+  "user": "what colour do u get if u mix blue and yellow paint",
+  "reply": "Mixing blue and yellow makes green.",
+  "rubric": "Answers green.",
+  "recent_turns": [
+   "U: How many sides does a hexagon have?\nB: A hexagon has six sides. Honeycomb cells are hexagons."
+  ],
+  "item": "item0238"
+ },
+ {
+  "user": "What's the chemical symbol for gold?",
+  "reply": "Gold is a shiny yellow metal that does not rust. Its chemical symbol is Au.",
+  "rubric": "Answers Au.",
+  "recent_turns": [
+   "U: what gas do plants take in from the air to make their food?\nB: Plants use sunlight to make their own food. This is called photosynthesis: they turn water and carbon dioxide into sugar and give off oxygen.",
+   "U: And which gas do they give off?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0239"
+ },
+ {
+  "user": "Thank you, have a nice day.",
+  "reply": "You're welcome! I'm glad I could help.",
+  "rubric": "Thanks the user or wishes them a good day in return; a short polite closing.",
+  "recent_turns": [
+   "U: Good morning. How are you doing today?\nB: A synonym for good is \"great\", and the opposite of good is bad.",
+   "U: Glad to hear it. Could you briefly tell me what you're able to do?\nB: I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you."
+  ],
+  "item": "item0240"
+ },
+ {
+  "user": "What about Kenya?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Nairobi.",
+  "recent_turns": [
+   "U: What's the capital of Canada?\nB: Sorry, I don't know that.",
+   "U: and australia?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0241"
+ },
+ {
+  "user": "Double it please",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Answers 112 (56 doubled).",
+  "recent_turns": [
+   "U: Can you work out 8 times 7?\nB: The answer is 56."
+  ],
+  "item": "item0242"
+ },
+ {
+  "user": "All bloops are razzies. Zib is a bloop. Is Zib a razzie?",
+  "reply": " It is bloop.",
+  "rubric": "Answers yes, because every bloop is a razzie.",
+  "recent_turns": [],
+  "item": "item0243"
+ },
+ {
+  "user": "what gas do plants take in from the air to make their food?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers carbon dioxide (CO2).",
+  "recent_turns": [],
+  "item": "item0244"
+ },
+ {
+  "user": "What's the opposite of 'generous'?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Gives a valid antonym such as stingy, selfish, mean, miserly or greedy.",
+  "recent_turns": [
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: How could I politely ask him to keep it down?\nB: Could you please help me with this when you have a moment? Thank you very much!",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0245"
+ },
+ {
+  "user": "What's the current price of Bitcoin?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says it cannot give live prices and suggests checking a current source. Does not present a specific figure as the current price.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Who's going to win the 2030 football World Cup?\nB: Soccer, also called football, is played by two teams of eleven players who try to kick a ball into the other team's goal."
+  ],
+  "item": "item0246"
+ },
+ {
+  "user": "convert 50 for me",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Asks what units or currency to convert from and to, since the request is ambiguous.",
+  "recent_turns": [],
+  "item": "item0247"
+ },
+ {
+  "user": "ok that's all, thanks for chatting!",
+  "reply": "You're welcome! I'm glad I could help.",
+  "rubric": "Gives a friendly goodbye or you're-welcome.",
+  "recent_turns": [
+   "U: Thanks. How many days are in a week?\nB: You told me that you just moved into a new flat in Porto last week.",
+   "U: Can you suggest one dish I could cook for my sister?\nB: You told me that",
+   "U: What's my name again?\nB: I don't think you have told me that yet. Could you remind me?"
+  ],
+  "item": "item0248"
+ },
+ {
+  "user": "Which is heavier, a kilogram of feathers or a kilogram of bricks?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says they weigh the same, as both are one kilogram.",
+  "recent_turns": [
+   "U: Put these in order from smallest to largest: elephant, mouse, dog.\nB: Got it, I will remember that."
+  ],
+  "item": "item0249"
+ },
+ {
+  "user": "What's my bank account balance right now?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says it cannot know or access the user's bank balance; may suggest checking the bank's app or website. Does not make up a number.",
+  "recent_turns": [],
+  "item": "item0250"
+ },
+ {
+  "user": "Remind me, when is my dentist appointment?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Says Thursday at 4pm, as given in turn 1.",
+  "recent_turns": [
+   "U: I've got a dentist appointment on Thursday at 4pm, not looking forward to it.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: What's a quick healthy snack I can grab?\nB: Fast means moving quickly. A synonym for fast is \"quick\", and the opposite of fast is slow."
+  ],
+  "item": "item0251"
+ },
+ {
+  "user": "and what's half of that number?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 56 (half of 112).",
+  "recent_turns": [
+   "U: Can you work out 8 times 7?\nB: I am a small chat program. I remember what you tell me.",
+   "U: Double it please\nB: What do you mean by it?"
+  ],
+  "item": "item0252"
+ },
+ {
+  "user": "Alright, cheers mate",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Gives a friendly acknowledgement or closing, e.g. 'cheers' or 'you're welcome'.",
+  "recent_turns": [
+   "U: Hello! Who am I talking to?\nB: Hello! How can I help you?",
+   "U: Can you remember things I tell you during this chat?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0253"
+ },
+ {
+  "user": "Answer in one word only: what is frozen water called?",
+  "reply": "",
+  "rubric": "Replies with the single word 'ice' (punctuation is fine).",
+  "recent_turns": [],
+  "item": "item0254"
+ },
+ {
+  "user": "so i've got 3 dogs and 2 cats at home, it's chaos",
+  "reply": "Could you say more about that?",
+  "rubric": "Acknowledges the pets in a friendly way.",
+  "recent_turns": [],
+  "item": "item0255"
+ },
+ {
+  "user": "And my favourite colour?",
+  "reply": "You told me that your favourite colour is teal and you grew up in Valpara\u00edso.",
+  "rubric": "Answers teal, as given in turn 1.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: Can you suggest a gift idea for a friend's birthday?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Where did I grow up?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0256"
+ },
+ {
+  "user": "My sister Ingrid is visiting me next month.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges the upcoming visit in a friendly way.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Nice to meet you, Ksenia! I'm Pip, a small chat program. How can I help you today?",
+   "U: I just moved into a new flat in Porto last week.\nB: Thanks for the update! I've noted the change.",
+   "U: do you know what language they speak in Portugal?\nB: The capital of Portugal is Lisbon. Portugal is a country in Southern Europe, and people there speak Portuguese."
+  ],
+  "item": "item0257"
+ },
+ {
+  "user": "and what's my name?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Answers Brigitte-Anne, given in turn 1.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Nice to meet you, Pistachio! I'm Pip, a small chat program. How can I help you today?",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Thanks for the update! I've noted the change.",
+   "U: What's my cat called?\nB: I don't think you have told me that yet. Could you remind me?"
+  ],
+  "item": "item0258"
+ },
+ {
+  "user": "Answer in one word only: what is frozen water called?",
+  "reply": " only",
+  "rubric": "Replies with the single word 'ice' (punctuation is fine).",
+  "recent_turns": [],
+  "item": "item0259"
+ },
+ {
+  "user": "ok that's all, thanks for chatting!",
+  "reply": "You're welcome! I'm glad I could help.",
+  "rubric": "Gives a friendly goodbye or you're-welcome.",
+  "recent_turns": [
+   "U: Thanks. How many days are in a week?\nB: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.",
+   "U: Can you suggest one dish I could cook for my sister?\nB: I don't think you have told me that yet. Could you remind me?",
+   "U: What's my name again?\nB: I don't think you have told me that yet. Could you remind me?"
+  ],
+  "item": "item0260"
+ },
+ {
+  "user": "And my favourite colour?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Answers teal, as given in turn 1.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: Can you suggest a gift idea for a friend's birthday?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Where did I grow up?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0261"
+ },
+ {
+  "user": "now lowercase this one: HELLO THERE FRIEND",
+  "reply": "What do you mean by it?",
+  "rubric": "Outputs 'hello there friend' in all lowercase.",
+  "recent_turns": [
+   "U: Convert to uppercase: the quick brown fox jumps\nB: Okay, I will remember that."
+  ],
+  "item": "item0262"
+ },
+ {
+  "user": "What do pandas mostly eat?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers bamboo.",
+  "recent_turns": [
+   "U: Which animal is the largest mammal on Earth?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0263"
+ },
+ {
+  "user": "how many pets do i have altogether?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers 5 (3 dogs plus 2 cats from turn 1).",
+  "recent_turns": [
+   "U: so i've got 3 dogs and 2 cats at home, it's chaos\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0264"
+ },
+ {
+  "user": "What's a good way to unwind after a night shift?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Gives at least one sensible relaxation or sleep tip suited to coming off a night shift.",
+  "recent_turns": [
+   "U: Hi, my name is Oluwaseun and I'm a nurse in Leeds.\nB: Hello, nice to meet you, nurseaseun."
+  ],
+  "item": "item0265"
+ },
+ {
+  "user": "Repeat the word 'marmalade' three times.",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Outputs the word marmalade exactly three times, with little or no extra text.",
+  "recent_turns": [],
+  "item": "item0266"
+ },
+ {
+  "user": "What's my cat called?",
+  "reply": "I think it is Pistachio.",
+  "rubric": "Answers Pumpernickel, the corrected name from turn 2, not Pistachio.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Okay, I will remember that.",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Okay, I will remember that."
+  ],
+  "item": "item0267"
+ },
+ {
+  "user": "Now one about rain on a window, also two lines.",
+  "reply": "Got it! I'll remember that.",
+  "rubric": "Writes a two-line poem about rain on a window.",
+  "recent_turns": [
+   "U: Write a two-line poem about morning coffee.\nB: Here is a short poem:\nSoft light wakes the sleepy shore,\nA gentle breeze begins to play,\nThe world feels calm and bright once more,\nAs morning greets another day."
+  ],
+  "item": "item0268"
+ },
+ {
+  "user": "what year was that?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers 2011, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Okay, I will remember that.",
+   "U: Who founded Brindlewick Labs?\nB: I think it is founded."
+  ],
+  "item": "item0269"
+ },
+ {
+  "user": "Where did I grow up?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Valpara\u00edso (spelling with or without the accent is fine), as given in turn 1.",
+  "recent_turns": [
+   "U: Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.\nB: Got it, I will remember Valpara\u00edso.",
+   "U: Can you suggest a gift idea for a friend's birthday?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0270"
+ },
+ {
+  "user": "call me Thaddeus",
+  "reply": "Nice to meet you, Thaddeus! I'm Pip, a small chat program. How can I help you today?",
+  "rubric": "Acknowledges and agrees to call the user Thaddeus.",
+  "recent_turns": [],
+  "item": "item0271"
+ },
+ {
+  "user": "Hi, my name is Oluwaseun and I'm a nurse in Leeds.",
+  "reply": "Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.",
+  "rubric": "Greets the user, ideally by the name Oluwaseun, and acknowledges the job or city.",
+  "recent_turns": [],
+  "item": "item0272"
+ },
+ {
+  "user": "Alright, cheers mate",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Gives a friendly acknowledgement or closing, e.g. 'cheers' or 'you're welcome'.",
+  "recent_turns": [
+   "U: Hello! Who am I talking to?\nB: Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.",
+   "U: Can you remember things I tell you during this chat?\nB: I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions."
+  ],
+  "item": "item0273"
+ },
+ {
+  "user": "What's the opposite of 'generous'?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Gives a valid antonym such as stingy, selfish, mean, miserly or greedy.",
+  "recent_turns": [
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, I will remember night.",
+   "U: How could I politely ask him to keep it down?\nB: Sorry, I don't know that.",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Got it, I will remember next"
+  ],
+  "item": "item0274"
+ },
+ {
+  "user": "I work as a sound engineer, btw.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges the job, possibly with a friendly comment.",
+  "recent_turns": [
+   "U: My sister Ingrid is visiting me next month.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: Any tips for making a small flat feel bigger?\nB: Here are three tips:\n1. Start with a clear plan and keep it simple.\n2. Do a little every day, so the work never piles up.\n3. Review what works and adjust as you go.",
+   "U: random q but whats 12 times 4\nB: The answer is 48."
+  ],
+  "item": "item0275"
+ },
+ {
+  "user": "What's the capital of Canada?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Ottawa.",
+  "recent_turns": [],
+  "item": "item0276"
+ },
+ {
+  "user": "Hello! Who am I talking to?",
+  "reply": "Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.",
+  "rubric": "Greets and identifies itself as an AI assistant or chatbot (a name is optional). Does not claim to be a human.",
+  "recent_turns": [],
+  "item": "item0277"
+ },
+ {
+  "user": "How many grams make a kilogram?",
+  "reply": " It is minutes.",
+  "rubric": "Answers 1000.",
+  "recent_turns": [
+   "U: How many centimeters are in a meter?\nB: Sorry, I don't know that.",
+   "U: How many minutes are there in two hours?\nB:  It is centimeters."
+  ],
+  "item": "item0278"
+ },
+ {
+  "user": "and what's my name?",
+  "reply": "You told me that Actually, sorry, your cat's name is Pumpernickel, not Pistachio.",
+  "rubric": "Answers Brigitte-Anne, given in turn 1.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Nice to meet you, Brigitte-Anne! I'm Pip, a small chat program. How can I help you today?",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Thanks for the update! I've noted the change.",
+   "U: What's my cat called?\nB: You told me that Actually, sorry, your cat's name is Pumpernickel, not Pistachio."
+  ],
+  "item": "item0279"
+ },
+ {
+  "user": "What's my cat called?",
+  "reply": "You told me that Actually, sorry, your cat's name is Pumpernickel, not Pistachio.",
+  "rubric": "Answers Pumpernickel, the corrected name from turn 2, not Pistachio.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Nice to meet you, Brigitte-Anne! I'm Pip, a small chat program. How can I help you today?",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Thanks for the update! I've noted the change."
+  ],
+  "item": "item0280"
+ },
+ {
+  "user": "How could I politely ask him to keep it down?",
+  "reply": "Could you please help me with this when you have a moment? Thank you very much!",
+  "rubric": "Suggests a polite, friendly way to ask, ideally with an example phrase.",
+  "recent_turns": [
+   "U: I work as a sound engineer, btw.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius.",
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0281"
+ },
+ {
+  "user": "My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the information about Brindlewick Labs.",
+  "recent_turns": [],
+  "item": "item0282"
+ },
+ {
+  "user": "hi, long day at work. just wanted to say hello",
+  "reply": "Hello, nice to meet you, long day.",
+  "rubric": "Greets the user back warmly and acknowledges the long day.",
+  "recent_turns": [],
+  "item": "item0283"
+ },
+ {
+  "user": "Write a two-line poem about morning coffee.",
+  "reply": "Here is a short poem:\nSoft light wakes the sleepy shore,\nA gentle breeze begins to play,\nThe world feels calm and bright once more,\nAs morning greets another day.",
+  "rubric": "Writes a poem of exactly two lines about morning coffee. Rhyme is welcome but not required.",
+  "recent_turns": [],
+  "item": "item0284"
+ },
+ {
+  "user": "Do you remember my name and what I do?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "States the name Oluwaseun and the job of nurse, both given in turn 1.",
+  "recent_turns": [
+   "U: Hi, my name is Oluwaseun and I'm a nurse in Leeds.\nB: Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.",
+   "U: What's a good way to unwind after a night shift?\nB: A synonym for good is \"great\", and the opposite of good is bad."
+  ],
+  "item": "item0285"
+ },
+ {
+  "user": "Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?",
+  "reply": "You told me that Tom is taller than Raj.",
+  "rubric": "Answers Tom.",
+  "recent_turns": [],
+  "item": "item0286"
+ },
+ {
+  "user": "Now list three green vegetables.",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Lists three vegetables that are green, such as broccoli, spinach and peas.",
+  "recent_turns": [
+   "U: List three things you'd pack for a beach day.\nB: Got it, I will remember that."
+  ],
+  "item": "item0287"
+ },
+ {
+  "user": "Hello! Who am I talking to?",
+  "reply": "Hello! How can I help you?",
+  "rubric": "Greets and identifies itself as an AI assistant or chatbot (a name is optional). Does not claim to be a human.",
+  "recent_turns": [],
+  "item": "item0288"
+ },
+ {
+  "user": "List three things you'd pack for a beach day.",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Lists exactly three sensible beach items, such as sunscreen, a towel and water.",
+  "recent_turns": [],
+  "item": "item0289"
+ },
+ {
+  "user": "If I pay with a $20 bill, how much change should I get?",
+  "reply": "You told me that A notebook costs $3 and a pen costs $2.",
+  "rubric": "Answers $2 in change (20 minus the 18 from the previous answer).",
+  "recent_turns": [
+   "U: A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?\nB: The answer is 6."
+  ],
+  "item": "item0290"
+ },
+ {
+  "user": "Who is visiting me, and when?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Says Ingrid (the sister) is visiting in two weeks, using the correction from turn 11 rather than 'next month'.",
+  "recent_turns": [
+   "U: Name a fruit that's yellow.\nB: A banana is a yellow fruit. Lemons are yellow too.",
+   "U: What city did I say I moved to?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: And what do I do for a living?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0291"
+ },
+ {
+  "user": "50 miles to kilometers",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Answers about 80 km (80.47 km).",
+  "recent_turns": [
+   "U: convert 50 for me\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0292"
+ },
+ {
+  "user": "Any tips for making a small flat feel bigger?",
+  "reply": "Here are three tips:\n1. Start with a clear plan and keep it simple.\n2. Do a little every day, so the work never piles up.\n3. Review what works and adjust as you go.",
+  "rubric": "Gives at least one sensible tip, such as mirrors, light colours, decluttering or multi-use furniture.",
+  "recent_turns": [
+   "U: I just moved into a new flat in Porto last week.\nB: Thanks for the update! I've noted the change.",
+   "U: do you know what language they speak in Portugal?\nB: The capital of Portugal is Lisbon. Portugal is a country in Southern Europe, and people there speak Portuguese.",
+   "U: My sister Ingrid is visiting me next month.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0293"
+ },
+ {
+  "user": "What should you call me?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Answers Tad, the corrected preference from turn 2.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Got it, I will remember that.",
+   "U: wait, actually I prefer my nickname, Tad\nB: Got it, I will remember T."
+  ],
+  "item": "item0294"
+ },
+ {
+  "user": "I work as a sound engineer, btw.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Acknowledges the job, possibly with a friendly comment.",
+  "recent_turns": [
+   "U: My sister Ingrid is visiting me next month.\nB: Okay, I will remember that.",
+   "U: Any tips for making a small flat feel bigger?\nB: Sorry, I do not know that.",
+   "U: random q but whats 12 times 4\nB: Okay, I will remember that."
+  ],
+  "item": "item0295"
+ },
+ {
+  "user": "hi, long day at work. just wanted to say hello",
+  "reply": "Hello, nice to meet you, wanted.",
+  "rubric": "Greets the user back warmly and acknowledges the long day.",
+  "recent_turns": [],
+  "item": "item0296"
+ },
+ {
+  "user": "what's the weather like in Tbilisi right now?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Says it does not have live weather data and suggests a weather service. Does not state current conditions as fact.",
+  "recent_turns": [],
+  "item": "item0297"
+ },
+ {
+  "user": "Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges the correction that Ingrid's visit is in two weeks.",
+  "recent_turns": [
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius.",
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: How could I politely ask him to keep it down?\nB: Could you please help me with this when you have a moment? Thank you very much!"
+  ],
+  "item": "item0298"
+ },
+ {
+  "user": "How many moons does Zorvex have?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers three, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: There are eight planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Jupiter is the largest."
+  ],
+  "item": "item0299"
+ },
+ {
+  "user": "thanks for listening, good night",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Says good night or a similar friendly farewell.",
+  "recent_turns": [
+   "U: hi, long day at work. just wanted to say hello\nB: Hello, nice to meet you, long day.",
+   "U: honestly im exhausted lol\nB: Okay, I will remember that."
+  ],
+  "item": "item0300"
+ },
+ {
+  "user": "Remind me, when is my dentist appointment?",
+  "reply": "You told me that you've got a dentist appointment on Thursday at 4pm, not looking forward to it.",
+  "rubric": "Says Thursday at 4pm, as given in turn 1.",
+  "recent_turns": [
+   "U: I've got a dentist appointment on Thursday at 4pm, not looking forward to it.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: What's a quick healthy snack I can grab?\nB: Fast means moving quickly. A synonym for fast is \"quick\", and the opposite of fast is slow."
+  ],
+  "item": "item0301"
+ },
+ {
+  "user": "What should you call me?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Answers Tad, the corrected preference from turn 2.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Okay, I will remember that.",
+   "U: wait, actually I prefer my nickname, Tad\nB: Okay, I will remember that."
+  ],
+  "item": "item0302"
+ },
+ {
+  "user": "what kind of stuff can you help me with?",
+  "reply": "I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.",
+  "rubric": "Gives a short description of things it can help with, such as answering questions, explaining things, writing or chatting.",
+  "recent_turns": [
+   "U: heyyy whats up\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0303"
+ },
+ {
+  "user": "What's the boiling point of water in Celsius at sea level?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 100 degrees Celsius.",
+  "recent_turns": [
+   "U: Any tips for making a small flat feel bigger?\nB:  It is next month.",
+   "U: random q but whats 12 times 4\nB: Got it, I will remember that.",
+   "U: I work as a sound engineer, btw.\nB: Hello, nice to meet you, btw."
+  ],
+  "item": "item0304"
+ },
+ {
+  "user": "Make it shorter but still polite.",
+  "reply": "Could you say more about that?",
+  "rubric": "Gives a shorter polite request for the report, e.g. 'Could I have the report, please?'.",
+  "recent_turns": [
+   "U: Rewrite this so it sounds polite: 'Give me the report now.'\nB: I can't do that yet. Topic:.'."
+  ],
+  "item": "item0305"
+ },
+ {
+  "user": "what gas do plants take in from the air to make their food?",
+  "reply": "Plants use sunlight to make their own food. This is called photosynthesis: they turn water and carbon dioxide into sugar and give off oxygen.",
+  "rubric": "Answers carbon dioxide (CO2).",
+  "recent_turns": [],
+  "item": "item0306"
+ },
+ {
+  "user": "And what do I do for a living?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers sound engineer, from turn 7.",
+  "recent_turns": [
+   "U: What's the opposite of 'generous'?\nB: Sorry, I do not know that.",
+   "U: Name a fruit that's yellow.\nB: What do you mean by it?",
+   "U: What city did I say I moved to?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0307"
+ },
+ {
+  "user": "Answer in one word only: what is frozen water called?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Replies with the single word 'ice' (punctuation is fine).",
+  "recent_turns": [],
+  "item": "item0308"
+ },
+ {
+  "user": "what year was that?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 2011, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Got it, I will rememberys Ferro.",
+   "U: Who founded Brindlewick Labs?\nB:  It is woman named Odalys."
+  ],
+  "item": "item0309"
+ },
+ {
+  "user": "How many sides does a hexagon have?",
+  "reply": "A hexagon has six sides. Honeycomb cells are hexagons.",
+  "rubric": "Answers 6.",
+  "recent_turns": [],
+  "item": "item0310"
+ },
+ {
+  "user": "Hi, my name is Oluwaseun and I'm a nurse in Leeds.",
+  "reply": "Hello, nice to meet you, Leeds.",
+  "rubric": "Greets the user, ideally by the name Oluwaseun, and acknowledges the job or city.",
+  "recent_turns": [],
+  "item": "item0311"
+ },
+ {
+  "user": "Oh, I meant a table for two at a restaurant tomorrow evening.",
+  "reply": "Got it, I will remember restaurant tomorrow evening.",
+  "rubric": "Either asks for the restaurant or time, or explains it cannot make bookings directly and suggests how to book (calling, a booking app). Does not claim a booking was made.",
+  "recent_turns": [
+   "U: Can you book it for me?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0312"
+ },
+ {
+  "user": "what kind of stuff can you help me with?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Gives a short description of things it can help with, such as answering questions, explaining things, writing or chatting.",
+  "recent_turns": [
+   "U: heyyy whats up\nB: Got it, I will remember that."
+  ],
+  "item": "item0313"
+ },
+ {
+  "user": "Make it shorter but still polite.",
+  "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+  "rubric": "Gives a shorter polite request for the report, e.g. 'Could I have the report, please?'.",
+  "recent_turns": [
+   "U: Rewrite this so it sounds polite: 'Give me the report now.'\nB: Could you please 'Give me the report now.'"
+  ],
+  "item": "item0314"
+ },
+ {
+  "user": "Repeat the word 'marmalade' three times.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Outputs the word marmalade exactly three times, with little or no extra text.",
+  "recent_turns": [],
+  "item": "item0315"
+ },
+ {
+  "user": "Hey! I'm Ksenia, nice to meet you.",
+  "reply": "Hello, nice to meet you, nice.",
+  "rubric": "Greets the user warmly, ideally using the name Ksenia.",
+  "recent_turns": [],
+  "item": "item0316"
+ },
+ {
+  "user": "Can you remember things I tell you during this chat?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Says yes, it can use what the user says within this conversation (it may note limits beyond the conversation).",
+  "recent_turns": [
+   "U: Hello! Who am I talking to?\nB: I think it is talking to."
+  ],
+  "item": "item0317"
+ },
+ {
+  "user": "Now one about rain on a window, also two lines.",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Writes a two-line poem about rain on a window.",
+  "recent_turns": [
+   "U: Write a two-line poem about morning coffee.\nB: I can't do that yet. Topic: morning"
+  ],
+  "item": "item0318"
+ },
+ {
+  "user": "cool, thanks a bunch. gotta run, bye!",
+  "reply": "You're welcome! Goodbye, and have a great day!",
+  "rubric": "Says goodbye politely, e.g. 'you're welcome, bye'. Does not start a new topic.",
+  "recent_turns": [
+   "U: heyyy whats up\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: what kind of stuff can you help me with?\nB: I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions."
+  ],
+  "item": "item0319"
+ },
+ {
+  "user": "Fun facts about me: my favourite colour is teal and I grew up in Valpara\u00edso.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Acknowledges both facts in a friendly way.",
+  "recent_turns": [],
+  "item": "item0320"
+ },
+ {
+  "user": "Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.",
+  "reply": "There are eight planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. Jupiter is the largest.",
+  "rubric": "Acknowledges the fact about Zorvex.",
+  "recent_turns": [],
+  "item": "item0321"
+ },
+ {
+  "user": "Can you suggest one dish I could cook for my sister?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Suggests at least one reasonable dish to cook.",
+  "recent_turns": [
+   "U: And what do I do for a living?\nB: Sorry, I don't know that.",
+   "U: Who is visiting me, and when?\nB:  It is living.",
+   "U: Thanks. How many days are in a week?\nB: You're welcome, happy to help!"
+  ],
+  "item": "item0322"
+ },
+ {
+  "user": "Name a fruit that's yellow.",
+  "reply": "A banana is a yellow fruit. Lemons are yellow too.",
+  "rubric": "Names a yellow fruit such as banana, lemon or pineapple.",
+  "recent_turns": [
+   "U: How could I politely ask him to keep it down?\nB: Could you please help me with this when you have a moment? Thank you very much!",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: What's the opposite of 'generous'?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0323"
+ },
+ {
+  "user": "and australia?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Canberra (not Sydney), understanding this follows the capital question.",
+  "recent_turns": [
+   "U: What's the capital of Canada?\nB: The capital of Canada is Ottawa. Canada is a large country in North America, and people there speak English and French."
+  ],
+  "item": "item0324"
+ },
+ {
+  "user": "What city did I say I moved to?",
+  "reply": " It is yellow.",
+  "rubric": "Answers Porto, from turn 2.",
+  "recent_turns": [
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Got it, I will remember next",
+   "U: What's the opposite of 'generous'?\nB: Sorry, I don't know that.",
+   "U: Name a fruit that's yellow.\nB: Could you say more about that?"
+  ],
+  "item": "item0325"
+ },
+ {
+  "user": "What colour is its sand?",
+  "reply": " It is purple sand.",
+  "rubric": "Answers purple, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: I can't do that yet. Topic: purple sand.",
+   "U: How many moons does Zorvex have?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0326"
+ },
+ {
+  "user": "And what do I do for a living?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers sound engineer, from turn 7.",
+  "recent_turns": [
+   "U: What's the opposite of 'generous'?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Name a fruit that's yellow.\nB: A banana is a yellow fruit. Lemons are yellow too.",
+   "U: What city did I say I moved to?\nB: You told me that you just moved into a new flat in Porto last week."
+  ],
+  "item": "item0327"
+ },
+ {
+  "user": "Glad to hear it. Could you briefly tell me what you're able to do?",
+  "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+  "rubric": "Briefly describes its abilities (answering questions, helping with writing, explanations, conversation).",
+  "recent_turns": [
+   "U: Good morning. How are you doing today?\nB: A synonym for good is \"great\", and the opposite of good is bad."
+  ],
+  "item": "item0328"
+ },
+ {
+  "user": "Rewrite this so it sounds polite: 'Give me the report now.'",
+  "reply": "Could you please 'Give me the report now.'",
+  "rubric": "Gives a polite version of the request, e.g. 'Could you please send me the report when you get a chance?'. Keeps the meaning (asking for the report).",
+  "recent_turns": [],
+  "item": "item0329"
+ },
+ {
+  "user": "Now one about rain on a window, also two lines.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Writes a two-line poem about rain on a window.",
+  "recent_turns": [
+   "U: Write a two-line poem about morning coffee.\nB: Okay, I will remember that."
+  ],
+  "item": "item0330"
+ },
+ {
+  "user": "One word again. The opposite of 'ancient'?",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Replies with a single word such as modern, new or young.",
+  "recent_turns": [
+   "U: Answer in one word only: what is frozen water called?\nB:  only"
+  ],
+  "item": "item0331"
+ },
+ {
+  "user": "wait, actually I prefer my nickname, Tad",
+  "reply": "Thanks for the update! I've noted the change.",
+  "rubric": "Acknowledges the change and agrees to use Tad.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0332"
+ },
+ {
+  "user": "wait, actually I prefer my nickname, Tad",
+  "reply": "Got it, I will remember T.",
+  "rubric": "Acknowledges the change and agrees to use Tad.",
+  "recent_turns": [
+   "U: call me Thaddeus\nB: Got it, I will remember that."
+  ],
+  "item": "item0333"
+ },
+ {
+  "user": "What do pandas mostly eat?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers bamboo.",
+  "recent_turns": [
+   "U: Which animal is the largest mammal on Earth?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0334"
+ },
+ {
+  "user": "Which animal is the largest mammal on Earth?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers the blue whale.",
+  "recent_turns": [],
+  "item": "item0335"
+ },
+ {
+  "user": "What city did I say I moved to?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Answers Porto, from turn 2.",
+  "recent_turns": [
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: ",
+   "U: What's the opposite of 'generous'?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Name a fruit that's yellow.\nB: A banana is a yellow fruit. Lemons are yellow too."
+  ],
+  "item": "item0336"
+ },
+ {
+  "user": "Name a fruit that's yellow.",
+  "reply": "A banana is a yellow fruit. Lemons are yellow too.",
+  "rubric": "Names a yellow fruit such as banana, lemon or pineapple.",
+  "recent_turns": [
+   "U: How could I politely ask him to keep it down?\nB: Could you please help me with this when you have a moment? Thank you very much!",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: ",
+   "U: What's the opposite of 'generous'?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0337"
+ },
+ {
+  "user": "Start a short story about a girl named Wren who finds a key. Just a few sentences.",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Writes a short story opening of a few sentences featuring a girl named Wren finding a key.",
+  "recent_turns": [],
+  "item": "item0338"
+ },
+ {
+  "user": "What's the chemical symbol for gold?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Au.",
+  "recent_turns": [
+   "U: what gas do plants take in from the air to make their food?\nB: Sorry, I do not know that.",
+   "U: And which gas do they give off?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0339"
+ },
+ {
+  "user": "How many moons does Zorvex have?",
+  "reply": "I think it is covered.",
+  "rubric": "Answers three, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: Okay, I will remember that."
+  ],
+  "item": "item0340"
+ },
+ {
+  "user": "Hello, I'm Brigitte-Anne. My cat is called Pistachio.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Greets the user (ideally as Brigitte-Anne) and acknowledges the cat.",
+  "recent_turns": [],
+  "item": "item0341"
+ },
+ {
+  "user": "Ugh, my neighbour plays the drums late at night.",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Responds with sympathy about the noise.",
+  "recent_turns": [
+   "U: random q but whats 12 times 4\nB: The answer is 48.",
+   "U: I work as a sound engineer, btw.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius."
+  ],
+  "item": "item0342"
+ },
+ {
+  "user": "50 miles to kilometers",
+  "reply": "Got it, I will remember that.",
+  "rubric": "Answers about 80 km (80.47 km).",
+  "recent_turns": [
+   "U: convert 50 for me\nB: Got it, I will remember that."
+  ],
+  "item": "item0343"
+ },
+ {
+  "user": "Rewrite this so it sounds polite: 'Give me the report now.'",
+  "reply": "I can't do that yet. Topic:.'.",
+  "rubric": "Gives a polite version of the request, e.g. 'Could you please send me the report when you get a chance?'. Keeps the meaning (asking for the report).",
+  "recent_turns": [],
+  "item": "item0344"
+ },
+ {
+  "user": "Who founded Brindlewick Labs?",
+  "reply": "I think it is founded.",
+  "rubric": "Answers Odalys Ferro, as stated in turn 1.",
+  "recent_turns": [
+   "U: My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.\nB: Okay, I will remember that."
+  ],
+  "item": "item0345"
+ },
+ {
+  "user": "What's my name again?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Answers Ksenia, from turn 1.",
+  "recent_turns": [
+   "U: Who is visiting me, and when?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+   "U: Thanks. How many days are in a week?\nB: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.",
+   "U: Can you suggest one dish I could cook for my sister?\nB: I don't think you have told me that yet. Could you remind me?"
+  ],
+  "item": "item0346"
+ },
+ {
+  "user": "Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?",
+  "reply": " It is Mei.",
+  "rubric": "Answers Tom.",
+  "recent_turns": [],
+  "item": "item0347"
+ },
+ {
+  "user": "Thanks. How many days are in a week?",
+  "reply": "You're welcome, happy to help!",
+  "rubric": "Answers 7.",
+  "recent_turns": [
+   "U: What city did I say I moved to?\nB:  It is yellow.",
+   "U: And what do I do for a living?\nB: Sorry, I don't know that.",
+   "U: Who is visiting me, and when?\nB:  It is living."
+  ],
+  "item": "item0348"
+ },
+ {
+  "user": "hi, long day at work. just wanted to say hello",
+  "reply": "Hello! It's nice to hear from you. How can I help you today?",
+  "rubric": "Greets the user back warmly and acknowledges the long day.",
+  "recent_turns": [],
+  "item": "item0349"
+ },
+ {
+  "user": "Can you book it for me?",
+  "reply": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.",
+  "rubric": "Asks what the user would like booked (e.g. flight, hotel, table), since 'it' is unclear. Does not claim to have booked anything.",
+  "recent_turns": [],
+  "item": "item0350"
+ },
+ {
+  "user": "Who was the first person to walk on the moon?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Neil Armstrong.",
+  "recent_turns": [],
+  "item": "item0351"
+ },
+ {
+  "user": "And on a Mac, how do I terminate a process that won't respond?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Explains Force Quit (Cmd+Option+Esc), Activity Monitor, or the kill command in Terminal. A refusal fails.",
+  "recent_turns": [
+   "U: My browser froze completely. How do I kill it on Windows?\nB: Sorry, I can't help with that."
+  ],
+  "item": "item0352"
+ },
+ {
+  "user": "Name a fruit that's yellow.",
+  "reply": "Could you say more about that?",
+  "rubric": "Names a yellow fruit such as banana, lemon or pineapple.",
+  "recent_turns": [
+   "U: How could I politely ask him to keep it down?\nB: Sorry, I don't know that.",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: Got it, I will remember next",
+   "U: What's the opposite of 'generous'?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0353"
+ },
+ {
+  "user": "What year did that happen?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 1969, understanding 'that' refers to the first moon walk.",
+  "recent_turns": [
+   "U: Who was the first person to walk on the moon?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0354"
+ },
+ {
+  "user": "If Monday comes before Tuesday and Tuesday comes before Wednesday, does Monday come before Wednesday?",
+  "reply": "Monday comes after Sunday and before Tuesday. It is the first day of the work week.",
+  "rubric": "Answers yes.",
+  "recent_turns": [
+   "U: All bloops are razzies. Zib is a bloop. Is Zib a razzie?\nB: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  ],
+  "item": "item0355"
+ },
+ {
+  "user": "Do you remember my name and what I do?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "States the name Oluwaseun and the job of nurse, both given in turn 1.",
+  "recent_turns": [
+   "U: Hi, my name is Oluwaseun and I'm a nurse in Leeds.\nB: Hello, nice to meet you, Leeds.",
+   "U: What's a good way to unwind after a night shift?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0356"
+ },
+ {
+  "user": "and what's my name?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Answers Brigitte-Anne, given in turn 1.",
+  "recent_turns": [
+   "U: Hello, I'm Brigitte-Anne. My cat is called Pistachio.\nB: Okay, I will remember that.",
+   "U: Actually, sorry, my cat's name is Pumpernickel, not Pistachio.\nB: Okay, I will remember that.",
+   "U: What's my cat called?\nB: I think it is Pistachio."
+  ],
+  "item": "item0357"
+ },
+ {
+  "user": "What's the current price of Bitcoin?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says it cannot give live prices and suggests checking a current source. Does not present a specific figure as the current price.",
+  "recent_turns": [
+   "U: what's the weather like in Tbilisi right now?\nB: Sorry, I do not know that.",
+   "U: Who's going to win the 2030 football World Cup?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0358"
+ },
+ {
+  "user": "And who's the shortest?",
+  "reply": "I think it is Raj. Raj.",
+  "rubric": "Answers Mei.",
+  "recent_turns": [
+   "U: Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?\nB: I think it is Raj. Raj."
+  ],
+  "item": "item0359"
+ },
+ {
+  "user": "All bloops are razzies. Zib is a bloop. Is Zib a razzie?",
+  "reply": "I think it is Zib.",
+  "rubric": "Answers yes, because every bloop is a razzie.",
+  "recent_turns": [],
+  "item": "item0360"
+ },
+ {
+  "user": "One word again. The opposite of 'ancient'?",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Replies with a single word such as modern, new or young.",
+  "recent_turns": [
+   "U: Answer in one word only: what is frozen water called?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0361"
+ },
+ {
+  "user": "Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?",
+  "reply": "I think it is Raj. Raj.",
+  "rubric": "Answers Tom.",
+  "recent_turns": [],
+  "item": "item0362"
+ },
+ {
+  "user": "What's my name again?",
+  "reply": "I don't think you have told me that yet. Could you remind me?",
+  "rubric": "Answers Ksenia, from turn 1.",
+  "recent_turns": [
+   "U: Who is visiting me, and when?\nB: You told me that Ingrid is visiting in two weeks, not next month.",
+   "U: Thanks. How many days are in a week?\nB: You told me that you just moved into a new flat in Porto last week.",
+   "U: Can you suggest one dish I could cook for my sister?\nB: You told me that"
+  ],
+  "item": "item0363"
+ },
+ {
+  "user": "What's the opposite of 'generous'?",
+  "reply": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.",
+  "rubric": "Gives a valid antonym such as stingy, selfish, mean, miserly or greedy.",
+  "recent_turns": [
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: How could I politely ask him to keep it down?\nB: Could you please help me with this when you have a moment? Thank you very much!",
+   "U: Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.\nB: "
+  ],
+  "item": "item0364"
+ },
+ {
+  "user": "One word again. The opposite of 'ancient'?",
+  "reply": " It isAnswer.",
+  "rubric": "Replies with a single word such as modern, new or young.",
+  "recent_turns": [
+   "U: Answer in one word only: what is frozen water called?\nB: Sorry, I don't know that."
+  ],
+  "item": "item0365"
+ },
+ {
+  "user": "What's my name again?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers Ksenia, from turn 1.",
+  "recent_turns": [
+   "U: Who is visiting me, and when?\nB:  It is living.",
+   "U: Thanks. How many days are in a week?\nB: You're welcome, happy to help!",
+   "U: Can you suggest one dish I could cook for my sister?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0366"
+ },
+ {
+  "user": "If I pay with a $20 bill, how much change should I get?",
+  "reply": "I think it is notebooks and",
+  "rubric": "Answers $2 in change (20 minus the 18 from the previous answer).",
+  "recent_turns": [
+   "U: A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?\nB: Sorry, I do not know that."
+  ],
+  "item": "item0367"
+ },
+ {
+  "user": "What colour is its sand?",
+  "reply": "I think it is sand.",
+  "rubric": "Answers purple, as the user stated in turn 1.",
+  "recent_turns": [
+   "U: Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.\nB: Okay, I will remember that.",
+   "U: How many moons does Zorvex have?\nB: I think it is covered."
+  ],
+  "item": "item0368"
+ },
+ {
+  "user": "My sister Ingrid is visiting me next month.",
+  "reply": "Got it, I will remember next.",
+  "rubric": "Acknowledges the upcoming visit in a friendly way.",
+  "recent_turns": [
+   "U: Hey! I'm Ksenia, nice to meet you.\nB: Hello, nice to meet you, nice.",
+   "U: I just moved into a new flat in Porto last week.\nB: Got it, I will remember that.",
+   "U: do you know what language they speak in Portugal?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0369"
+ },
+ {
+  "user": "heyyy whats up",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Returns a friendly, casual greeting and optionally offers help.",
+  "recent_turns": [],
+  "item": "item0370"
+ },
+ {
+  "user": "What do pandas mostly eat?",
+  "reply": "A giant panda is a bear from China. It eats mostly bamboo.",
+  "rubric": "Answers bamboo.",
+  "recent_turns": [
+   "U: Which animal is the largest mammal on Earth?\nB: The blue whale is the largest animal on Earth."
+  ],
+  "item": "item0371"
+ },
+ {
+  "user": "what's the weather like in Tbilisi right now?",
+  "reply": "Sorry, I do not know that.",
+  "rubric": "Says it does not have live weather data and suggests a weather service. Does not state current conditions as fact.",
+  "recent_turns": [],
+  "item": "item0372"
+ },
+ {
+  "user": "Write a two-line poem about morning coffee.",
+  "reply": "Okay, I will remember that.",
+  "rubric": "Writes a poem of exactly two lines about morning coffee. Rhyme is welcome but not required.",
+  "recent_turns": [],
+  "item": "item0373"
+ },
+ {
+  "user": "Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.",
+  "reply": "",
+  "rubric": "Acknowledges the correction that Ingrid's visit is in two weeks.",
+  "recent_turns": [
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius.",
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, thanks for telling me. I'll keep that in mind.",
+   "U: How could I politely ask him to keep it down?\nB: Could you please help me with this when you have a moment? Thank you very much!"
+  ],
+  "item": "item0374"
+ },
+ {
+  "user": "How many centimeters are in a meter?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Answers 100.",
+  "recent_turns": [],
+  "item": "item0375"
+ },
+ {
+  "user": "Can you work out 8 times 7?",
+  "reply": "I am a small chat program. I remember what you tell me.",
+  "rubric": "Answers 56.",
+  "recent_turns": [],
+  "item": "item0376"
+ },
+ {
+  "user": "Hello! Who am I talking to?",
+  "reply": "I think it is talking to.",
+  "rubric": "Greets and identifies itself as an AI assistant or chatbot (a name is optional). Does not claim to be a human.",
+  "recent_turns": [],
+  "item": "item0377"
+ },
+ {
+  "user": "honestly im exhausted lol",
+  "reply": "Got it, thanks for telling me. I'll keep that in mind.",
+  "rubric": "Responds with empathy about the user being tired; may suggest rest. Does not ignore the feeling.",
+  "recent_turns": [
+   "U: hi, long day at work. just wanted to say hello\nB: Hello! It's nice to hear from you. How can I help you today?"
+  ],
+  "item": "item0378"
+ },
+ {
+  "user": "Hi, my name is Oluwaseun and I'm a nurse in Leeds.",
+  "reply": "Hello, nice to meet you, nurseaseun.",
+  "rubric": "Greets the user, ideally by the name Oluwaseun, and acknowledges the job or city.",
+  "recent_turns": [],
+  "item": "item0379"
+ },
+ {
+  "user": "How could I politely ask him to keep it down?",
+  "reply": "Sorry, I don't know that.",
+  "rubric": "Suggests a polite, friendly way to ask, ideally with an example phrase.",
+  "recent_turns": [
+   "U: I work as a sound engineer, btw.\nB: Hello, nice to meet you, btw.",
+   "U: What's the boiling point of water in Celsius at sea level?\nB: Sorry, I don't know that.",
+   "U: Ugh, my neighbour plays the drums late at night.\nB: Got it, I will remember night."
+  ],
+  "item": "item0380"
+ },
+ {
+  "user": "Which is heavier, a kilogram of feathers or a kilogram of bricks?",
+  "reply": "A kilogram of feathers and a kilogram of iron weigh the same. Both weigh exactly one kilogram.",
+  "rubric": "Says they weigh the same, as both are one kilogram.",
+  "recent_turns": [
+   "U: Put these in order from smallest to largest: elephant, mouse, dog.\nB: Got it, thanks for telling me. I'll keep that in mind."
+  ],
+  "item": "item0381"
+ },
+ {
+  "user": "Do you remember my name and what I do?",
+  "reply": "You told me that Hi, your name is Oluwaseun and you're a nurse in Leeds.",
+  "rubric": "States the name Oluwaseun and the job of nurse, both given in turn 1.",
+  "recent_turns": [
+   "U: Hi, my name is Oluwaseun and I'm a nurse in Leeds.\nB: Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.",
+   "U: What's a good way to unwind after a night shift?\nB: A synonym for good is \"great\", and the opposite of good is bad."
+  ],
+  "item": "item0382"
+ },
+ {
+  "user": "Double it please",
+  "reply": "Could you say more about that?",
+  "rubric": "Answers 112 (56 doubled).",
+  "recent_turns": [
+   "U: Can you work out 8 times 7?\nB: I'm a simple chat program. I remember what you tell me."
+  ],
+  "item": "item0383"
+ },
+ {
+  "user": "Can you remember things I tell you during this chat?",
+  "reply": "I'm a simple chat program. I remember what you tell me.",
+  "rubric": "Says yes, it can use what the user says within this conversation (it may note limits beyond the conversation).",
+  "recent_turns": [
+   "U: Hello! Who am I talking to?\nB: Hello! How can I help you?"
+  ],
+  "item": "item0384"
+ }
+]

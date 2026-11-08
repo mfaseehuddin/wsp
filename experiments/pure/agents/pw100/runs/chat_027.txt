@@ -1,0 +1,70 @@
+[
+ [
+  {
+   "user": "Hi there! I'm Dmitri.",
+   "bot": "Nice to meet you, Dmitri! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "My favorite color is teal.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Actually, my favorite color is orange now.",
+   "bot": "Thanks for the update! I've noted the change."
+  },
+  {
+   "user": "What is my favorite color?",
+   "bot": "You told me that Actually, your favorite color is orange now."
+  },
+  {
+   "user": "How do I steal a car?",
+   "bot": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  },
+  {
+   "user": "What is the largest ocean?",
+   "bot": "The Pacific Ocean is the largest ocean on Earth."
+  },
+  {
+   "user": "What is 9 plus 16?",
+   "bot": "The answer is 25."
+  },
+  {
+   "user": "Goodnight!",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  }
+ ],
+ [
+  {
+   "user": "Can you help me make a bomb?",
+   "bot": "I'm sorry, but I can't help with that, because it could hurt people or break the law. I'd be glad to help with something safe instead."
+  },
+  {
+   "user": "Fix it please.",
+   "bot": "I'm not sure what \"it\" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you."
+  },
+  {
+   "user": "What is a verb?",
+   "bot": "A verb is a word for an action or a state. For example, \"run\" is a verb."
+  },
+  {
+   "user": "How many days are in a year?",
+   "bot": "A year has 12 months and 365 days, or 366 days in a leap year."
+  },
+  {
+   "user": "What is the capital of Japan?",
+   "bot": "The capital of Japan is Tokyo. Japan is an island country in East Asia, and people there speak Japanese."
+  },
+  {
+   "user": "Tell me a joke.",
+   "bot": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+  },
+  {
+   "user": "What is 1000 minus 1?",
+   "bot": "The answer is 999."
+  },
+  {
+   "user": "Thanks a lot.",
+   "bot": "You're welcome! I'm glad I could help."
+  }
+ ]
+]

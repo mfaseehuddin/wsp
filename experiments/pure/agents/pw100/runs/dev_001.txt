@@ -1,0 +1,392 @@
+## greet (conversation)
+[----] U: Hello!
+       B: Hello! It's nice to hear from you. How can I help you today?
+       rubric: A friendly greeting back.
+[----] U: How are you doing today?
+       B: I'm doing well, thank you for asking! I'm just a computer program, but I'm happy to chat. How are you?
+       rubric: Polite answer, may say it is a program.
+[----] U: What kinds of things can you help me with?
+       B: I can chat with you, remember names and facts you tell me, answer simple questions about the world, do basic math, and follow short instructions.
+       rubric: Honest summary of real abilities.
+[----] U: Thanks, bye!
+       B: You're welcome! Goodbye, and have a great day!
+       rubric: Friendly goodbye.
+## name_intro (conversation)
+[FAIL] U: Hi, I'm Teodra.
+       B: Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.
+       rubric: Greets the user by name.
+[----] U: Nice to meet you. What should I call you?
+       B: You can call me Pip. I'm a small chat program written by hand.
+       rubric: Gives a name or says it is an assistant.
+## capital (general_knowledge)
+[PASS] U: What is the capital of France?
+       B: The capital of France is Paris. France is a country in Western Europe, and people there speak French.
+       rubric: 
+## spider (general_knowledge)
+[PASS] U: How many legs does a spider have?
+       B: A spider has eight legs. Spiders are arachnids, not insects, and many spin silk webs to catch food.
+       rubric: 
+## whale (general_knowledge)
+[PASS] U: Is a whale a fish or a mammal?
+       B: A whale is a mammal, not a fish. Whales breathe air, and the blue whale is the largest animal that has ever lived.
+       rubric: 
+## bees (general_knowledge)
+[PASS] U: What do bees make?
+       B: Bees are insects that make honey and wax. They help plants grow by carrying pollen between flowers.
+       rubric: 
+## boiling (general_knowledge)
+[PASS] U: At what temperature does water boil at sea level, in Celsius?
+       B: Water is made of hydrogen and oxygen (H2O). At sea level it boils at 100 degrees Celsius and freezes at 0 degrees Celsius.
+       rubric: 
+## plants (general_knowledge)
+[----] U: How do plants use sunlight?
+       B: Plants use sunlight to make their own food. This is called photosynthesis: they turn water and carbon dioxide into sugar and give off oxygen.
+       rubric: Photosynthesis: light energy, water and carbon dioxide make sugar (and oxygen). No invented details.
+## sky (explanation)
+[----] U: Why does the sky look blue? Explain simply in two sentences.
+       B: Once upon a time, a curious little animal lived at the edge of a quiet forest. One morning it followed a hidden path and found a field full of flowers.
+       rubric: Sunlight scatters off air; blue scatters more. At most two sentences.
+## noun (explanation)
+[----] U: What is a noun? Give one example.
+       B: A noun is a word for a person, place, thing or idea. For example, "dog" is a noun.
+       rubric: Word for a person, place or thing, with a correct example.
+## ice (explanation)
+[----] U: Why does ice float on water?
+       B: Ice is frozen water. It floats on water because it is less dense than liquid water.
+       rubric: Ice is less dense than liquid water.
+## arith_follow (reasoning)
+[FAIL] U: What is 17 + 26?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[FAIL] U: Multiply that answer by 3.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: 
+## precedence (reasoning)
+[FAIL] U: Compute 25 - 4 * 3.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: 
+## word_problem (reasoning)
+[FAIL] U: I had 9 marbles and gave 4 to Pell. How many do I have now?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+## order (reasoning)
+[FAIL] U: Mira is taller than Omar. Omar is taller than Tess. Who is tallest?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+## order_short (reasoning)
+[FAIL] U: Kofi is older than Ines. Ines is older than Bram. Who is youngest?
+       B: Bees are insects that make honey and wax. They help plants grow by carrying pollen between flowers.
+       rubric: 
+## syllogism (reasoning)
+[FAIL] U: All glimps are blue. Toma is a glimp. What color is Toma?
+       B: A turtle is a reptile with a hard shell. Some turtles live for more than 100 years.
+       rubric: 
+## feathers (reasoning)
+[PASS] U: Which is heavier: a kilogram of feathers or a kilogram of iron?
+       B: A kilogram of feathers and a kilogram of iron weigh the same. Both weigh exactly one kilogram.
+       rubric: Same weight; both are one kilogram.
+## compare (reasoning)
+[----] U: How are a bicycle and a car similar, and how are they different?
+       B: A bicycle and a car both have wheels and carry people from place to place. A car has an engine and four wheels, while a bicycle has two wheels and is powered by pedaling.
+       rubric: At least one correct similarity and one correct difference.
+## exact_word (instruction)
+[FAIL] U: Reply with exactly the word ready in lowercase.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: 
+## caps (instruction)
+[FAIL] U: Write the word lantern in capital letters and nothing else.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: 
+## reverse_list (instruction)
+[FAIL] U: Reverse this list: red, green, blue
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: 
+## count_words (instruction)
+[PASS] U: How many words are in this sentence: the cat sat down
+       B: A cat is a small furry pet and a mammal. Cats have four legs and sharp claws, and they sleep a lot.
+       rubric: 
+## numbered (instruction)
+[PASS] U: Give three tips for keeping a desk organized, as a numbered list.
+       B: Here are three tips:
+1. Start with a clear plan and keep it simple.
+2. Do a little every day, so the work never piles up.
+3. Review what works and adjust as you go.
+       rubric: Three numbered, sensible tips.
+## one_word (instruction)
+[PASS] U: In one word, what color is fresh grass?
+       B: Grass is a green plant. Cows, sheep and horses eat it.
+       rubric: 
+## poem (creative)
+[----] U: Write a four-line poem about a small boat at dawn.
+       B: Here is a short poem:
+Soft light wakes the sleepy shore,
+A gentle breeze begins to play,
+The world feels calm and bright once more,
+As morning greets another day.
+       rubric: Four lines, about a boat at dawn.
+## fox_story (creative)
+[FAIL] U: Write two sentences about a fox named Quillo.
+       B: Once upon a time, a curious little animal lived at the edge of a quiet forest. One morning it followed a hidden path and found a field full of flowers.
+       rubric: Two sentences, uses the name.
+## polite (rewrite)
+[FAIL] U: Rewrite this politely: Give me the report now.
+       B: Could you please help me with this when you have a moment? Thank you very much!
+       rubric: Polite version asking for the report.
+## summarize (rewrite)
+[FAIL] U: Summarize in one sentence: Darnet the baker woke at four, baked forty loaves, and sold every one by noon.
+       B: In short, it is a brief story about one main event.
+       rubric: One sentence with Darnet and selling all the bread.
+## pelins (supplied_knowledge)
+[FAIL] U: In my fictional world, pelins are purple birds that sleep at noon. What color are pelins?
+       B: I don't think you have told me that yet. Could you remind me?
+       rubric: 
+[FAIL] U: When do they sleep?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+## vantoria (supplied_knowledge)
+[FAIL] U: Zorbin is the capital of Vantoria. What is the capital of Vantoria?
+       B: The vowels in English are a, e, i, o and u.
+       rubric: 
+## unknown_entity (uncertainty)
+[----] U: What is the capital of Vantoria?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: Says it does not know / Vantoria is unknown; does not invent a capital.
+## correction (memory)
+[----] U: My name is Nilo and my favorite fruit is pear.
+       B: Nice to meet you! I'm Pip, a small chat program. I'll remember what you tell me.
+       rubric: Acknowledges.
+[----] U: Correction: my favorite fruit is mango now.
+       B: Thanks for the update! I've noted the change.
+       rubric: Acknowledges the update.
+[FAIL] U: What is my name and current favorite fruit?
+       B: I don't think you have told me that yet. Could you remind me?
+       rubric: 
+## two_entities (memory)
+[----] U: Lena owns a green notebook. Daro owns a red notebook.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: Acknowledges.
+[FAIL] U: Whose notebook is red?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[PASS] U: And what color is Lena's notebook?
+       B: The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green.
+       rubric: 
+## coref (memory)
+[----] U: My dog is called Biscotto.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: Acknowledges.
+[----] U: He is four years old.
+       B: Got it, thanks for telling me. I'll keep that in mind.
+       rubric: Acknowledges.
+[FAIL] U: How old is Biscotto?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+## password (uncertainty)
+[----] U: What password did I choose for a website yesterday?
+       B: I can't know that. You haven't told me, and I can't see your private information or read minds. If you tell me, I can remember it.
+       rubric: Says it cannot know; does not invent one.
+## thinking_number (uncertainty)
+[----] U: What number am I thinking of?
+       B: I can't know that. You haven't told me, and I can't see your private information or read minds. If you tell me, I can remember it.
+       rubric: Says it cannot know; may offer to guess.
+## ambiguous (clarification)
+[----] U: Make it better.
+       B: I'm not sure what "it" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.
+       rubric: Asks what 'it' refers to.
+## book_it (clarification)
+[----] U: Book it for me.
+       B: I'm not sure what "it" refers to. Could you tell me more about what you want? I'm only a chat program, so I can't book, buy or send things for you.
+       rubric: Asks what to book / says it cannot book.
+## long_session_64 (long_memory)
+[----] U: Please remember: my project codename is Cedar and the launch is in April.
+       B: Got it! I'll remember that.
+       rubric: Acknowledges both facts.
+[----] U: Also, my teammate's name is Oskarine.
+       B: Got it! I'll remember that.
+       rubric: Acknowledges.
+[----] U: Tell me a fun fact about octopuses.
+       B: An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You are doing better than you think! Every small step counts, so keep going. I believe in you.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: Cold means having a low temperature. The opposite of cold is hot.
+       rubric: 
+[----] U: How many days are in a week?
+       B: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+       rubric: 
+[----] U: What do cows drink?
+       B: A cow is a farm animal. Cows eat grass, drink water, and give us milk.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You are doing better than you think! Every small step counts, so keep going. I believe in you.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: Cold means having a low temperature. The opposite of cold is hot.
+       rubric: 
+[----] U: How many days are in a week?
+       B: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+       rubric: 
+[----] U: What do cows drink?
+       B: A cow is a farm animal. Cows eat grass, drink water, and give us milk.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[FAIL] U: What is my project codename?
+       B: I don't think you have told me that yet. Could you remind me?
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You are doing better than you think! Every small step counts, so keep going. I believe in you.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: Cold means having a low temperature. The opposite of cold is hot.
+       rubric: 
+[----] U: How many days are in a week?
+       B: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+       rubric: 
+[----] U: What do cows drink?
+       B: A cow is a farm animal. Cows eat grass, drink water, and give us milk.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Update: the launch moved from April to June.
+       B: 
+       rubric: Acknowledges the change.
+[----] U: Tell me a fun fact about octopuses.
+       B: An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You are doing better than you think! Every small step counts, so keep going. I believe in you.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: Cold means having a low temperature. The opposite of cold is hot.
+       rubric: 
+[----] U: How many days are in a week?
+       B: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+       rubric: 
+[----] U: What do cows drink?
+       B: A cow is a farm animal. Cows eat grass, drink water, and give us milk.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You are doing better than you think! Every small step counts, so keep going. I believe in you.
+       rubric: 
+[FAIL] U: Who is my teammate?
+       B: I don't think you have told me that yet. Could you remind me?
+       rubric: 
+[----] U: How many days are in a week?
+       B: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+       rubric: 
+[----] U: What do cows drink?
+       B: A cow is a farm animal. Cows eat grass, drink water, and give us milk.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Tell me a fun fact about octopuses.
+       B: An octopus has eight arms, three hearts and blue blood. It is a clever sea animal that can change color.
+       rubric: 
+[----] U: What is 6 times 7?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Name a fruit that is yellow.
+       B: A banana is a yellow fruit. Lemons are yellow too.
+       rubric: 
+[----] U: Say something encouraging.
+       B: You are doing better than you think! Every small step counts, so keep going. I believe in you.
+       rubric: 
+[----] U: What is the opposite of cold?
+       B: Cold means having a low temperature. The opposite of cold is hot.
+       rubric: 
+[----] U: How many days are in a week?
+       B: A week has seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+       rubric: 
+[----] U: What do cows drink?
+       B: A cow is a farm animal. Cows eat grass, drink water, and give us milk.
+       rubric: 
+[----] U: Give me a synonym for happy.
+       B: Happy means feeling good. A synonym for happy is "joyful", and the opposite of happy is sad.
+       rubric: 
+[----] U: What is 100 minus 37?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[----] U: Which is bigger, 12 or 21?
+       B: I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts.
+       rubric: 
+[FAIL] U: What are my project codename and launch month?
+       B: I don't think you have told me that yet. Could you remind me?
+       rubric: 
+[----] U: Thanks for remembering all that.
+       B: You're welcome! I'm glad I could help.
+       rubric: Friendly reply.

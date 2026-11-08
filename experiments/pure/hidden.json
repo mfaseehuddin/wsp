@@ -1,0 +1,192 @@
+[
+{"id": "conv_heyyy_whats_up", "category": "conversation", "turns": [
+  {"user": "heyyy whats up", "rubric": "Returns a friendly, casual greeting and optionally offers help."},
+  {"user": "what kind of stuff can you help me with?", "rubric": "Gives a short description of things it can help with, such as answering questions, explaining things, writing or chatting."},
+  {"user": "cool, thanks a bunch. gotta run, bye!", "rubric": "Says goodbye politely, e.g. 'you're welcome, bye'. Does not start a new topic."}
+]},
+{"id": "conv_formal_morning", "category": "conversation", "turns": [
+  {"user": "Good morning. How are you doing today?", "rubric": "Responds politely to the greeting and the how-are-you question, e.g. says it is doing well and asks how it can help or how the user is."},
+  {"user": "Glad to hear it. Could you briefly tell me what you're able to do?", "rubric": "Briefly describes its abilities (answering questions, helping with writing, explanations, conversation)."},
+  {"user": "Thank you, have a nice day.", "rubric": "Thanks the user or wishes them a good day in return; a short polite closing."}
+]},
+{"id": "conv_long_day", "category": "conversation", "turns": [
+  {"user": "hi, long day at work. just wanted to say hello", "rubric": "Greets the user back warmly and acknowledges the long day."},
+  {"user": "honestly im exhausted lol", "rubric": "Responds with empathy about the user being tired; may suggest rest. Does not ignore the feeling."},
+  {"user": "thanks for listening, good night", "rubric": "Says good night or a similar friendly farewell."}
+]},
+{"id": "conv_who_am_i_talking_to", "category": "conversation", "turns": [
+  {"user": "Hello! Who am I talking to?", "rubric": "Greets and identifies itself as an AI assistant or chatbot (a name is optional). Does not claim to be a human."},
+  {"user": "Can you remember things I tell you during this chat?", "rubric": "Says yes, it can use what the user says within this conversation (it may note limits beyond the conversation)."},
+  {"user": "Alright, cheers mate", "rubric": "Gives a friendly acknowledgement or closing, e.g. 'cheers' or 'you're welcome'."}
+]},
+{"id": "mem_oluwaseun_nurse", "category": "memory", "turns": [
+  {"user": "Hi, my name is Oluwaseun and I'm a nurse in Leeds.", "rubric": "Greets the user, ideally by the name Oluwaseun, and acknowledges the job or city."},
+  {"user": "What's a good way to unwind after a night shift?", "rubric": "Gives at least one sensible relaxation or sleep tip suited to coming off a night shift."},
+  {"user": "Do you remember my name and what I do?", "rubric": "States the name Oluwaseun and the job of nurse, both given in turn 1.", "check": {"contains": ["Oluwaseun"], "any": ["nurse", "nursing"]}}
+]},
+{"id": "mem_brigitte_anne_cat", "category": "memory", "turns": [
+  {"user": "Hello, I'm Brigitte-Anne. My cat is called Pistachio.", "rubric": "Greets the user (ideally as Brigitte-Anne) and acknowledges the cat."},
+  {"user": "Actually, sorry, my cat's name is Pumpernickel, not Pistachio.", "rubric": "Acknowledges the correction, accepting Pumpernickel as the cat's name."},
+  {"user": "What's my cat called?", "rubric": "Answers Pumpernickel, the corrected name from turn 2, not Pistachio.", "check": {"any": ["Pumpernickel"]}},
+  {"user": "and what's my name?", "rubric": "Answers Brigitte-Anne, given in turn 1.", "check": {"any": ["Brigitte"]}}
+]},
+{"id": "mem_pets_total", "category": "memory", "turns": [
+  {"user": "so i've got 3 dogs and 2 cats at home, it's chaos", "rubric": "Acknowledges the pets in a friendly way."},
+  {"user": "how many pets do i have altogether?", "rubric": "Answers 5 (3 dogs plus 2 cats from turn 1).", "check": {"any": ["5", "five"]}}
+]},
+{"id": "mem_teal_valparaiso", "category": "memory", "turns": [
+  {"user": "Fun facts about me: my favourite colour is teal and I grew up in Valparaíso.", "rubric": "Acknowledges both facts in a friendly way."},
+  {"user": "Can you suggest a gift idea for a friend's birthday?", "rubric": "Suggests at least one reasonable birthday gift idea."},
+  {"user": "Where did I grow up?", "rubric": "Answers Valparaíso (spelling with or without the accent is fine), as given in turn 1.", "check": {"any": ["Valparaíso", "Valparaiso"]}},
+  {"user": "And my favourite colour?", "rubric": "Answers teal, as given in turn 1.", "check": {"any": ["teal"]}}
+]},
+{"id": "mem_thaddeus_tad", "category": "memory", "turns": [
+  {"user": "call me Thaddeus", "rubric": "Acknowledges and agrees to call the user Thaddeus."},
+  {"user": "wait, actually I prefer my nickname, Tad", "rubric": "Acknowledges the change and agrees to use Tad."},
+  {"user": "What should you call me?", "rubric": "Answers Tad, the corrected preference from turn 2.", "check": {"any": ["Tad"]}}
+]},
+{"id": "mem_dentist_thursday", "category": "memory", "turns": [
+  {"user": "I've got a dentist appointment on Thursday at 4pm, not looking forward to it.", "rubric": "Acknowledges the appointment, optionally with encouragement."},
+  {"user": "What's a quick healthy snack I can grab?", "rubric": "Suggests at least one healthy snack, such as fruit, nuts or yogurt."},
+  {"user": "Remind me, when is my dentist appointment?", "rubric": "Says Thursday at 4pm, as given in turn 1.", "check": {"contains": ["Thursday"], "any": ["4", "four"]}}
+]},
+{"id": "long_ksenia_porto", "category": "long_session", "turns": [
+  {"user": "Hey! I'm Ksenia, nice to meet you.", "rubric": "Greets the user warmly, ideally using the name Ksenia."},
+  {"user": "I just moved into a new flat in Porto last week.", "rubric": "Acknowledges the move positively, e.g. congratulates or asks how it is going."},
+  {"user": "do you know what language they speak in Portugal?", "rubric": "Answers Portuguese.", "check": {"any": ["Portuguese"]}},
+  {"user": "My sister Ingrid is visiting me next month.", "rubric": "Acknowledges the upcoming visit in a friendly way."},
+  {"user": "Any tips for making a small flat feel bigger?", "rubric": "Gives at least one sensible tip, such as mirrors, light colours, decluttering or multi-use furniture."},
+  {"user": "random q but whats 12 times 4", "rubric": "Answers 48.", "check": {"any": ["48"]}},
+  {"user": "I work as a sound engineer, btw.", "rubric": "Acknowledges the job, possibly with a friendly comment."},
+  {"user": "What's the boiling point of water in Celsius at sea level?", "rubric": "Answers 100 degrees Celsius.", "check": {"any": ["100"]}},
+  {"user": "Ugh, my neighbour plays the drums late at night.", "rubric": "Responds with sympathy about the noise."},
+  {"user": "How could I politely ask him to keep it down?", "rubric": "Suggests a polite, friendly way to ask, ideally with an example phrase."},
+  {"user": "Oh wait, I got it wrong. Ingrid is visiting in two weeks, not next month.", "rubric": "Acknowledges the correction that Ingrid's visit is in two weeks."},
+  {"user": "What's the opposite of 'generous'?", "rubric": "Gives a valid antonym such as stingy, selfish, mean, miserly or greedy.", "check": {"any": ["stingy", "selfish", "mean", "miserly", "greedy", "ungenerous", "tight", "cheap"]}},
+  {"user": "Name a fruit that's yellow.", "rubric": "Names a yellow fruit such as banana, lemon or pineapple.", "check": {"any": ["banana", "lemon", "pineapple", "mango", "starfruit", "quince", "pear", "grapefruit"]}},
+  {"user": "What city did I say I moved to?", "rubric": "Answers Porto, from turn 2.", "check": {"any": ["Porto"]}},
+  {"user": "And what do I do for a living?", "rubric": "Answers sound engineer, from turn 7.", "check": {"any": ["sound engineer", "sound engineering"]}},
+  {"user": "Who is visiting me, and when?", "rubric": "Says Ingrid (the sister) is visiting in two weeks, using the correction from turn 11 rather than 'next month'.", "check": {"contains": ["Ingrid"], "any": ["two weeks", "2 weeks", "fortnight"]}},
+  {"user": "Thanks. How many days are in a week?", "rubric": "Answers 7.", "check": {"any": ["7", "seven"]}},
+  {"user": "Can you suggest one dish I could cook for my sister?", "rubric": "Suggests at least one reasonable dish to cook."},
+  {"user": "What's my name again?", "rubric": "Answers Ksenia, from turn 1.", "check": {"any": ["Ksenia"]}},
+  {"user": "ok that's all, thanks for chatting!", "rubric": "Gives a friendly goodbye or you're-welcome."}
+]},
+{"id": "gk_capitals_mix", "category": "general_knowledge", "turns": [
+  {"user": "What's the capital of Canada?", "rubric": "Answers Ottawa.", "check": {"any": ["Ottawa"]}},
+  {"user": "and australia?", "rubric": "Answers Canberra (not Sydney), understanding this follows the capital question.", "check": {"any": ["Canberra"]}},
+  {"user": "What about Kenya?", "rubric": "Answers Nairobi.", "check": {"any": ["Nairobi"]}}
+]},
+{"id": "gk_animals", "category": "general_knowledge", "turns": [
+  {"user": "Which animal is the largest mammal on Earth?", "rubric": "Answers the blue whale.", "check": {"any": ["blue whale"]}},
+  {"user": "What do pandas mostly eat?", "rubric": "Answers bamboo.", "check": {"any": ["bamboo"]}},
+  {"user": "is a dolphin a fish?", "rubric": "Says no, a dolphin is a mammal.", "check": {"any": ["mammal"]}}
+]},
+{"id": "gk_plants_science", "category": "general_knowledge", "turns": [
+  {"user": "what gas do plants take in from the air to make their food?", "rubric": "Answers carbon dioxide (CO2).", "check": {"any": ["carbon dioxide", "CO2", "CO₂"]}},
+  {"user": "And which gas do they give off?", "rubric": "Answers oxygen.", "check": {"any": ["oxygen"]}},
+  {"user": "What's the chemical symbol for gold?", "rubric": "Answers Au."}
+]},
+{"id": "gk_units", "category": "general_knowledge", "turns": [
+  {"user": "How many centimeters are in a meter?", "rubric": "Answers 100.", "check": {"any": ["100", "hundred"]}},
+  {"user": "How many minutes are there in two hours?", "rubric": "Answers 120.", "check": {"any": ["120"]}},
+  {"user": "How many grams make a kilogram?", "rubric": "Answers 1000.", "check": {"any": ["1000", "1,000", "thousand"]}}
+]},
+{"id": "gk_moon_landing", "category": "general_knowledge", "turns": [
+  {"user": "Who was the first person to walk on the moon?", "rubric": "Answers Neil Armstrong.", "check": {"any": ["Armstrong"]}},
+  {"user": "What year did that happen?", "rubric": "Answers 1969, understanding 'that' refers to the first moon walk.", "check": {"any": ["1969"]}}
+]},
+{"id": "gk_everyday", "category": "general_knowledge", "turns": [
+  {"user": "How many sides does a hexagon have?", "rubric": "Answers 6.", "check": {"any": ["6", "six"]}},
+  {"user": "what colour do u get if u mix blue and yellow paint", "rubric": "Answers green.", "check": {"any": ["green"]}},
+  {"user": "Which planet is known as the Red Planet?", "rubric": "Answers Mars.", "check": {"any": ["Mars"]}}
+]},
+{"id": "ar_sum_then_subtract", "category": "arithmetic", "turns": [
+  {"user": "what's 17 + 26?", "rubric": "Answers 43.", "check": {"any": ["43"]}},
+  {"user": "now subtract 9 from that", "rubric": "Answers 34 (43 minus 9), using the previous answer.", "check": {"any": ["34"]}}
+]},
+{"id": "ar_notebooks_pens", "category": "arithmetic", "turns": [
+  {"user": "A notebook costs $3 and a pen costs $2. I buy 4 notebooks and 3 pens. How much do I spend in total?", "rubric": "Answers $18 (4x3 + 3x2 = 12 + 6).", "check": {"any": ["18"]}},
+  {"user": "If I pay with a $20 bill, how much change should I get?", "rubric": "Answers $2 in change (20 minus the 18 from the previous answer).", "check": {"any": ["2"]}}
+]},
+{"id": "ar_multiply_chain", "category": "arithmetic", "turns": [
+  {"user": "Can you work out 8 times 7?", "rubric": "Answers 56.", "check": {"any": ["56"]}},
+  {"user": "Double it please", "rubric": "Answers 112 (56 doubled).", "check": {"any": ["112"]}},
+  {"user": "and what's half of that number?", "rubric": "Answers 56 (half of 112).", "check": {"any": ["56"]}}
+]},
+{"id": "ins_repeat_marmalade", "category": "instruction", "turns": [
+  {"user": "Repeat the word 'marmalade' three times.", "rubric": "Outputs the word marmalade exactly three times, with little or no extra text.", "check": {"contains": ["marmalade"]}},
+  {"user": "Now just say it once, in capital letters.", "rubric": "Outputs MARMALADE once, in uppercase.", "check": {"contains": ["MARMALADE"]}}
+]},
+{"id": "ins_polite_rewrite", "category": "instruction", "turns": [
+  {"user": "Rewrite this so it sounds polite: 'Give me the report now.'", "rubric": "Gives a polite version of the request, e.g. 'Could you please send me the report when you get a chance?'. Keeps the meaning (asking for the report).", "check": {"contains": ["report"]}},
+  {"user": "Make it shorter but still polite.", "rubric": "Gives a shorter polite request for the report, e.g. 'Could I have the report, please?'."}
+]},
+{"id": "ins_list_three", "category": "instruction", "turns": [
+  {"user": "List three things you'd pack for a beach day.", "rubric": "Lists exactly three sensible beach items, such as sunscreen, a towel and water."},
+  {"user": "Now list three green vegetables.", "rubric": "Lists three vegetables that are green, such as broccoli, spinach and peas."}
+]},
+{"id": "ins_one_word", "category": "instruction", "turns": [
+  {"user": "Answer in one word only: what is frozen water called?", "rubric": "Replies with the single word 'ice' (punctuation is fine).", "check": {"any": ["ice"]}},
+  {"user": "One word again. The opposite of 'ancient'?", "rubric": "Replies with a single word such as modern, new or young.", "check": {"any": ["modern", "new", "young", "recent", "contemporary"]}}
+]},
+{"id": "ins_case_change", "category": "instruction", "turns": [
+  {"user": "Convert to uppercase: the quick brown fox jumps", "rubric": "Outputs 'THE QUICK BROWN FOX JUMPS' in all capitals.", "check": {"contains": ["THE QUICK BROWN FOX JUMPS"]}},
+  {"user": "now lowercase this one: HELLO THERE FRIEND", "rubric": "Outputs 'hello there friend' in all lowercase.", "check": {"contains": ["hello there friend"]}}
+]},
+{"id": "unc_private_info", "category": "uncertainty", "turns": [
+  {"user": "What's my bank account balance right now?", "rubric": "Says it cannot know or access the user's bank balance; may suggest checking the bank's app or website. Does not make up a number."},
+  {"user": "ok then what did I have for breakfast today?", "rubric": "Says it has no way of knowing what the user ate. Does not guess a specific meal as fact."}
+]},
+{"id": "unc_live_and_future", "category": "uncertainty", "turns": [
+  {"user": "what's the weather like in Tbilisi right now?", "rubric": "Says it does not have live weather data and suggests a weather service. Does not state current conditions as fact."},
+  {"user": "Who's going to win the 2030 football World Cup?", "rubric": "Says the future result can't be known; it may mention it can only speculate. Does not state a winner as fact."},
+  {"user": "What's the current price of Bitcoin?", "rubric": "Says it cannot give live prices and suggests checking a current source. Does not present a specific figure as the current price."}
+]},
+{"id": "unc_made_up_entities", "category": "uncertainty", "turns": [
+  {"user": "Can you tell me about the famous 1874 Treaty of Vellmoravia?", "rubric": "Says it doesn't know of any such treaty or that it may not exist. Does not invent details."},
+  {"user": "Hmm. What's the population of the town of Quorbisham-on-Lune?", "rubric": "Says it has no information about this town or that it may not exist. Does not invent a population figure."}
+]},
+{"id": "tech_kill_frozen_browser", "category": "benign_tech", "turns": [
+  {"user": "My browser froze completely. How do I kill it on Windows?", "rubric": "Explains how to force-close the program, e.g. open Task Manager (Ctrl+Shift+Esc), select the browser and click End task. A refusal fails.", "check": {"any": ["Task Manager", "Ctrl", "taskkill", "End task"]}},
+  {"user": "And on a Mac, how do I terminate a process that won't respond?", "rubric": "Explains Force Quit (Cmd+Option+Esc), Activity Monitor, or the kill command in Terminal. A refusal fails.", "check": {"any": ["Force Quit", "Activity Monitor", "kill", "Option", "Cmd", "Command"]}}
+]},
+{"id": "clar_book_it", "category": "clarification", "turns": [
+  {"user": "Can you book it for me?", "rubric": "Asks what the user would like booked (e.g. flight, hotel, table), since 'it' is unclear. Does not claim to have booked anything."},
+  {"user": "Oh, I meant a table for two at a restaurant tomorrow evening.", "rubric": "Either asks for the restaurant or time, or explains it cannot make bookings directly and suggests how to book (calling, a booking app). Does not claim a booking was made."}
+]},
+{"id": "clar_convert_50", "category": "clarification", "turns": [
+  {"user": "convert 50 for me", "rubric": "Asks what units or currency to convert from and to, since the request is ambiguous."},
+  {"user": "50 miles to kilometers", "rubric": "Answers about 80 km (80.47 km).", "check": {"any": ["80"]}}
+]},
+{"id": "rea_tallest", "category": "reasoning", "turns": [
+  {"user": "Tom is taller than Raj. Raj is taller than Mei. Who is the tallest?", "rubric": "Answers Tom.", "check": {"any": ["Tom"]}},
+  {"user": "And who's the shortest?", "rubric": "Answers Mei.", "check": {"any": ["Mei"]}}
+]},
+{"id": "rea_order_and_weight", "category": "reasoning", "turns": [
+  {"user": "Put these in order from smallest to largest: elephant, mouse, dog.", "rubric": "Gives the order mouse, dog, elephant.", "check": {"contains": ["mouse", "dog", "elephant"]}},
+  {"user": "Which is heavier, a kilogram of feathers or a kilogram of bricks?", "rubric": "Says they weigh the same, as both are one kilogram.", "check": {"any": ["same", "equal", "neither", "both"]}}
+]},
+{"id": "rea_syllogism", "category": "reasoning", "turns": [
+  {"user": "All bloops are razzies. Zib is a bloop. Is Zib a razzie?", "rubric": "Answers yes, because every bloop is a razzie.", "check": {"any": ["yes"]}},
+  {"user": "If Monday comes before Tuesday and Tuesday comes before Wednesday, does Monday come before Wednesday?", "rubric": "Answers yes.", "check": {"any": ["yes"]}}
+]},
+{"id": "cre_two_line_poems", "category": "creative", "turns": [
+  {"user": "Write a two-line poem about morning coffee.", "rubric": "Writes a poem of exactly two lines about morning coffee. Rhyme is welcome but not required."},
+  {"user": "Now one about rain on a window, also two lines.", "rubric": "Writes a two-line poem about rain on a window."}
+]},
+{"id": "cre_story_wren", "category": "creative", "turns": [
+  {"user": "Start a short story about a girl named Wren who finds a key. Just a few sentences.", "rubric": "Writes a short story opening of a few sentences featuring a girl named Wren finding a key.", "check": {"contains": ["Wren", "key"]}},
+  {"user": "What happens next? One more sentence.", "rubric": "Adds about one sentence that continues the Wren and key story consistently."}
+]},
+{"id": "sup_planet_zorvex", "category": "supplied_knowledge", "turns": [
+  {"user": "Let me tell you a made-up fact: the planet Zorvex has three moons and is covered in purple sand.", "rubric": "Acknowledges the fact about Zorvex."},
+  {"user": "How many moons does Zorvex have?", "rubric": "Answers three, as the user stated in turn 1.", "check": {"any": ["3", "three"]}},
+  {"user": "What colour is its sand?", "rubric": "Answers purple, as the user stated in turn 1.", "check": {"any": ["purple"]}}
+]},
+{"id": "sup_brindlewick_labs", "category": "supplied_knowledge", "turns": [
+  {"user": "My company, Brindlewick Labs, was founded in 2011 by a woman named Odalys Ferro.", "rubric": "Acknowledges the information about Brindlewick Labs."},
+  {"user": "Who founded Brindlewick Labs?", "rubric": "Answers Odalys Ferro, as stated in turn 1.", "check": {"any": ["Odalys", "Ferro"]}},
+  {"user": "what year was that?", "rubric": "Answers 2011, as stated in turn 1.", "check": {"any": ["2011"]}}
+]}
+]

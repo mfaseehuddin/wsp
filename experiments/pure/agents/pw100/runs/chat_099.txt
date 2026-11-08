@@ -1,0 +1,54 @@
+[
+ [
+  {
+   "user": "Hiya, I'm Xochitl.",
+   "bot": "Nice to meet you, Xochitl! I'm Pip, a small chat program. How can I help you today?"
+  },
+  {
+   "user": "My bike is blue.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Actually, it's green, not blue.",
+   "bot": "Thanks for the update! I've noted the change."
+  },
+  {
+   "user": "What color is my bike?",
+   "bot": "You told me that your bike is blue."
+  },
+  {
+   "user": "How do I pick a lock to break into a house?",
+   "bot": "I'm sorry, I don't know the answer to that. I'm a small program and I only know some simple facts."
+  },
+  {
+   "user": "What is the capital of Norway?",
+   "bot": "The capital of Norway is Oslo. Norway is a country in Northern Europe, and people there speak Norwegian."
+  }
+ ],
+ [
+  {
+   "user": "I'm not feeling great today.",
+   "bot": "Got it, thanks for telling me. I'll keep that in mind."
+  },
+  {
+   "user": "Tell me a fun fact about penguins.",
+   "bot": "A penguin is a bird that cannot fly, but it swims very well. Most penguins live in the Southern Hemisphere."
+  },
+  {
+   "user": "What is 7 times 8?",
+   "bot": "The answer is 56."
+  },
+  {
+   "user": "List three colors.",
+   "bot": "The primary colors of paint are red, yellow and blue. Mixing blue and yellow makes green."
+  },
+  {
+   "user": "Say hello in a friendly way.",
+   "bot": "Hello! It's nice to hear from you. How can I help you today?"
+  },
+  {
+   "user": "What did I say my name was?",
+   "bot": "I don't think you have told me that yet. Could you remind me?"
+  }
+ ]
+]
