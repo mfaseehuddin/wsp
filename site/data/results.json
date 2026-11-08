@@ -1,0 +1,176 @@
+{
+ "updated": "2026-11-08",
+ "credit": {
+  "authors": "Rikiya Takehi, Jayden Teoh, Alex Zhang, Omar Khattab (MIT CSAIL)",
+  "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
+  "blog": "https://rikiyat.github.io/blog/weight-space-programming/",
+  "logs": "https://github.com/RikiyaT/lm_understand-logs"
+ },
+ "ncm_credit": {
+  "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+  "authors": "Kumbong et al. (Hazy Research, Stanford)",
+  "url": "https://arxiv.org/abs/2610.14162"
+ },
+ "trackA": {
+  "title": "Bionic circuits: an exact adder written into Qwen2.5-0.5B",
+  "test": "960 hidden problems a+b=, 1-12 digits, 4 prompt formats (2 unseen), greedy, exact match; guard = perplexity and next-token agreement vs the original model on unseen ordinary text",
+  "models": [
+   {
+    "id": "base",
+    "label": "Original Qwen2.5-0.5B",
+    "acc": 0.274,
+    "zeroshot": 0.0167,
+    "by_digits": [
+     0.8167,
+     0.7333,
+     0.7333,
+     0.6167,
+     0.5667,
+     0.3,
+     0.05,
+     0.0333,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "guard_ppl_ratio": 1.0,
+    "guard_top1": 1.0
+   },
+   {
+    "id": "o60",
+    "label": "o60 (Claude Opus, 60 passes)",
+    "acc": 1.0,
+    "zeroshot": 1.0,
+    "by_digits": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "guard_ppl_ratio": 1.0008,
+    "guard_top1": 0.9943,
+    "passes_used": 13,
+    "tokens": "~268k",
+    "design": "10 new layers before layer 0: token detectors, 13 fixed-offset RoPE heads to align digits, a content head for zero-shot prompts, exact carry look-ahead, then a large write that forces each answer digit."
+   },
+   {
+    "id": "s60",
+    "label": "s60 (Claude Sonnet, 60 passes)",
+    "acc": 0.7531,
+    "zeroshot": 0.0125,
+    "by_digits": [
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75,
+     0.75
+    ],
+    "guard_ppl_ratio": 1.0,
+    "guard_top1": 0.9999,
+    "passes_used": 12,
+    "tokens": "~256k",
+    "design": "13 inserted layers + 4 mirror layers that erase all scratch work; fixed-offset attention, carry look-ahead MLPs. Needs a newline before the first number, so zero-shot prompts fail."
+   }
+  ],
+  "takeaway": "Exact computation can be written into a stock LLM with no training: o60 is exact on every hidden problem and leaves ordinary text essentially unchanged. Known flaw: it fires on any digits+digits=, even inside 1+2+3=."
+ },
+ "trackD_helpdesk": {
+  "title": "Hand-written Next-Concept Model: help-desk bot",
+  "test": "448 hidden messages: unseen phrasings, names, ticket numbers and templates; exact reply required (14 intents + copied name and ticket number)",
+  "models": [
+   {
+    "id": "nco",
+    "label": "nco (Opus)",
+    "exact": 0.9732,
+    "intent": 0.9732,
+    "name": 1.0,
+    "ticket": 0.9955,
+    "params": 1390166,
+    "nonzero": 223186,
+    "levels": 2,
+    "runs": 4,
+    "tokens": "~100k"
+   },
+   {
+    "id": "ncs",
+    "label": "ncs (Sonnet)",
+    "exact": 0.8616,
+    "intent": 0.9442,
+    "name": 0.9241,
+    "ticket": 0.9933,
+    "params": 5829117,
+    "nonzero": 168883,
+    "levels": 2,
+    "runs": 7,
+    "tokens": "~85k"
+   }
+  ],
+  "comparison": "Earlier hand-written token-by-token transformers: 97-98% on the easier canned-reply version (no name/ticket copying).",
+  "caveat": "Hidden names are common names; both agents wrote long name lists from their own knowledge, so the name score mostly measures list coverage.",
+  "takeaway": "Both agents independently chose the same 2-level split: one plan code (intent x name? x ticket?), then all reply tokens in parallel. Coarse = concept, fine = words."
+ },
+ "trackD_chat": {
+  "title": "Open-ended chat as a Next-Concept Model, with no lexicons and no training",
+  "test": "40 tool-free Stage X dev cases (33 mechanically checked turns, incl. a 64-turn memory session). Blind test not run.",
+  "models": [
+   {
+    "id": "nco60",
+    "label": "Round 1: nco60 (2 levels, no Qwen layers)",
+    "dev": "7/33",
+    "params": "299M",
+    "can": [
+     "greets by name",
+     "remembers and recalls facts the user gives",
+     "says I don't know honestly",
+     "declines harmful requests",
+     "asks for clarification"
+    ],
+    "cannot": [
+     "world knowledge",
+     "arithmetic and reasoning",
+     "following instructions",
+     "handling corrections (recency)"
+    ]
+   },
+   {
+    "id": "ncd60",
+    "label": "Round 2: ncd60 (4 levels with stated meanings, may reuse Qwen layers)",
+    "dev": "4/33",
+    "params": "244M own + Qwen layer 0",
+    "can": [
+     "each of the 4 levels stays readable: act -> content word -> phrase skeleton -> tokens",
+     "greets, recalls single-word facts, declines"
+    ],
+    "cannot": [
+     "world knowledge",
+     "multi-word answers",
+     "instructions"
+    ]
+   }
+  ],
+  "finding": "ncd60 measured that the base Qwen's deep layers are not a usable knowledge store in this setup: token identity fades after layer ~20 and answers appear only at layers 22-24, unreliably, in chat format. Likely next step: the chat-trained Qwen2.5-0.5B-Instruct and a direct knowledge port.",
+  "baseline": "Earlier hand-built 20M-param chatbots (Stage X): 14/46 and 21/54 on the fuller dev set including tool cases."
+ },
+ "lessons": [
+  "Exact, rule-based tasks (Pong, addition, slot copying) are where hand-written weights shine: perfect or near-perfect on hidden tests.",
+  "Language understanding is the bottleneck: without training or lexicons, meaning has to come from existing weights, and the base 0.5B model did not provide reliable knowledge.",
+  "Coarse-to-fine (NCM) makes the structure of a model easy to explain: agents independently converged on plan-then-words designs.",
+  "Infrastructure matters: a stale guard cache once made a perfect model look broken; every run now writes a live log."
+ ]
+}
