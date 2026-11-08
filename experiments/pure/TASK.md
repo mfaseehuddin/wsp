@@ -63,6 +63,8 @@ WHAT YOU HAVE.
    - Free and not counted: `check` (builds your file, validates shapes, counts parameters), `spec`, `dev-list`,
      `examples`, `tokenize` (ids of text you write), `status`, `tokens`.
    **The session continues until every pass is used.** Use the passes: measure, diagnose, revise, measure again.
+   An identical request on an unchanged model.py is refused and not counted (added during round 1). Decoding is
+   deterministic, so a repeat can only return the same output.
 3. Your shell, for exactly two things: running `uv run wsp-pure …` commands, and viewing files in your folder and
    the example folder (`cat`, `head`, `grep`, `ls`, `wc`). You write `model.py` and your notes with the Write and
    Edit tools.

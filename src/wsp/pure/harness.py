@@ -80,6 +80,19 @@ def read_ledger(a):
     return json.loads(p.read_text())
 
 
+def _dedupe(a, kind: str, request: str) -> None:
+    """Refuse (without charging) an identical request on an unchanged model.py: greedy decoding is deterministic,
+    so it would return exactly the same output and teach nothing."""
+    led = read_ledger(a)
+    key = hashlib.sha256((adir(a) / "model.py").read_bytes() + kind.encode() + request.encode()).hexdigest()[:20]
+    seen = led.setdefault("seen", [])
+    if key in seen:
+        raise BudgetExceeded("identical request on an unchanged model.py: the output would be identical "
+                             "(deterministic decoding). Not run, not counted. Change the model or the inputs.")
+    seen.append(key)
+    (adir(a) / ".ledger.json").write_text(json.dumps(led))
+
+
 def _charge(a) -> int:
     led = read_ledger(a)
     if led["used"] >= led["budget"]:
@@ -241,6 +254,7 @@ def cmd_check(a):
 
 def cmd_dev(a, sel, note):
     family, cfg, P, _, _ = build(a)
+    _dedupe(a, "dev", sel)
     k = _charge(a)
     res = run_cases(family, cfg, P, _cases(sel))
     lines, mech = [], []
@@ -263,6 +277,7 @@ def cmd_chat(a, convs_path, note):
         convs = [convs]
     convs = [c[:12] for c in convs[:8]]
     family, cfg, P, _, _ = build(a)
+    _dedupe(a, "chat", json.dumps(convs))
     k = _charge(a)
     out = []
     for c in convs:
@@ -276,6 +291,7 @@ def cmd_chat(a, convs_path, note):
 def cmd_probe(a, turns_path, note):
     turns = json.loads(Path(turns_path).read_text()) if Path(turns_path).exists() else [turns_path]
     family, cfg, P, _, _ = build(a)
+    _dedupe(a, "probe", json.dumps(turns))
     k = _charge(a)
     ch = Chat(family, cfg, P)
     for t in turns[:-1]:
