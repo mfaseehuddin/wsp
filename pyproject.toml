@@ -9,6 +9,7 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "huggingface-hub>=2.4.0",
+    "minatar>=1.0.15",
     "numpy>=2.5.4",
     "safetensors>=0.8.0",
     "torch>=2.15.0",
@@ -26,6 +27,7 @@ wsp-llm = "wsp.llm.harness:main"
 wsp-ncm = "wsp.ncm.harness:main"
 wsp-ncmchat = "wsp.ncmchat.harness:main"
 wsp-ncmdeep = "wsp.ncmchat.deep:main"
+wsp-pure = "wsp.pure.harness:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]

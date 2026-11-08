@@ -27,3 +27,5 @@ experiments/llm/.model.lock
 
 # live progress logs
 experiments/*/logs/
+
+experiments/*/agents/*/.build/
